@@ -1,56 +1,109 @@
 # Consulting Report Framework
 
-A reusable framework for generating high-quality, McKinsey-style market analysis and consulting reports. Produces boardroom-ready PDF deliverables from Markdown source files.
+A reusable framework for generating boardroom-ready consulting reports from Markdown. Produces polished PDF deliverables with enforced structural rigor (Pyramid Principle, MECE, SCR), data integrity constraints, and professional typography.
 
-## Features
-*   **Strict Quality Enforcement:** Prevents AI jargon, em-dashes, emojis, and vague recommendations. Every output reads as a professionally written consulting deliverable.
-*   **Structured Templates:** Includes templates for Market Analysis, Strategic Assessment, Due Diligence, and Industry Outlook reports.
-*   **Pyramid Principle:** All arguments are structured answer-first with MECE frameworks and SCR framing.
-*   **Data Integrity:** Encourages exhibits (not tables) with mandatory source lines, verifiable data, and Python-generated charts.
-*   **Automated PDF Generation:** Converts Markdown to a polished, client-ready PDF using Pandoc and Headless Chrome.
+## Design Standards
+
+This framework enforces design standards derived from deep research of top-tier consulting report design:
+
+- **Pyramid Principle:** Answer first, then evidence. Every section leads with a bold governing thought.
+- **Action Titles:** Section headings and exhibit titles are insight-driven sentences, not descriptive labels.
+- **MECE:** All categorizations, frameworks, and segmentations are mutually exclusive and collectively exhaustive.
+- **SCR Framing:** Executive summaries use Situation-Complication-Resolution to create urgency and justify the recommendation.
+- **Data Recency:** All data must be the most recent available. Stale data is flagged explicitly.
+- **Anti-Slop:** 70+ banned AI-generated words/phrases. No em-dashes, no colons in prose, no emojis.
+- **Exhibit Standards:** Every exhibit has a numbered action title, a source line, and tells a self-contained story.
+
+## Typography and Color System
+
+| Element | Font | Rationale |
+|---|---|---|
+| Headings | Arial / Helvetica | Clarity, modernity, data hierarchy |
+| Body Text | Georgia | High x-height serif for dense analytical readability |
+| Tables & Data | Arial / Helvetica | Maximum legibility for numbers |
+
+| Token | Color | Usage |
+|---|---|---|
+| `TEXT_PRIMARY` | `#1A1A2E` | Body text (near-black, soft contrast) |
+| `BRAND_PRIMARY` | `#0F3460` | Headings, borders, highlighted data |
+| `BRAND_SECONDARY` | `#1A936F` | Accent (teal-green for positive changes) |
+| `BRAND_ACCENT` | `#E76F51` | Warm terracotta for tertiary emphasis |
+| `POSITIVE_GREEN` | `#2D6A4F` | Growth, positive deltas in charts |
+| `NEGATIVE_RED` | `#C1292E` | Risk, negative deltas in charts |
+| `NEUTRAL_GRAY` | `#BBBBBB` | Background/context data in charts |
 
 ## Setup
 
-1.  **Prerequisites:** You need `pandoc` and `Google Chrome` installed to generate PDFs.
-    *   Mac: `brew install pandoc`
+1.  **Prerequisites:** `pandoc` and `Google Chrome` for PDF generation.
+    ```bash
+    brew install pandoc
+    ```
 2.  **Make script executable:**
     ```bash
     chmod +x scripts/generate_pdf.sh
+    ```
+3.  **Python dependencies** (for chart generation):
+    ```bash
+    pip install matplotlib seaborn
     ```
 
 ## Usage Workflow
 
 1.  **Start a new report:**
     *   Ask the AI: "I want to write a new report. Read the `AI_INSTRUCTIONS.md` file first."
-    *   Choose a template from the `templates/` directory and copy it to a new file in the `reports/` directory.
+    *   Choose a template from `templates/` and copy it to `reports/`.
+
 2.  **Drafting:**
-    *   The AI will assist in drafting the report based strictly on the rules in `AI_INSTRUCTIONS.md`.
-    *   Charts are generated via Python scripts stored alongside the report.
+    *   The AI drafts the report following strict rules from `AI_INSTRUCTIONS.md`.
+    *   Charts are generated via Python scripts using `assets/chart_style.py`.
+
 3.  **Generating the PDF:**
-    *   Run the script from the root of this repo:
     ```bash
+    # Single-column consulting style (default)
     ./scripts/generate_pdf.sh reports/my_report.md reports/my_report.pdf
-    ```
-    *   For IEEE-style two-column layout:
-    ```bash
+
+    # Two-column IEEE academic style
     ./scripts/generate_pdf.sh reports/my_report.md reports/my_report.pdf ieee
     ```
 
 ## Directory Structure
 
-*   `AI_INSTRUCTIONS.md`: **Crucial.** Contains the prompt/rules the AI must follow. Point the AI here at the start of any session.
-*   `templates/`: Markdown templates for different report types (Market Analysis, Strategic Assessment, Due Diligence, Industry Outlook).
-*   `scripts/`: Automation scripts (PDF generation, chart generation helpers).
-*   `reports/`: Your actual consulting reports go here.
-*   `assets/`: Shared chart color palettes and style utilities for Python chart generation.
-*   `pdf-style.css`: CSS rules that format the single-column consulting-style PDF.
-*   `pdf-style-ieee.css`: CSS rules for two-column IEEE-style PDF layout.
+```
+consulting-report-framework/
+├── AI_INSTRUCTIONS.md          # Core rules: Pyramid Principle, MECE, SCR, anti-slop,
+│                               # data recency, exhibit standards, quality checklist
+├── README.md
+├── .gitignore
+├── pdf-style.css               # Single-column consulting style (Georgia + Arial)
+├── pdf-style-ieee.css          # Two-column IEEE academic style
+├── assets/
+│   └── chart_style.py          # Matplotlib/seaborn style config, color palette,
+│                               # helper functions (save_chart, highlight_bar, etc.)
+├── reports/                    # Your reports go here
+├── scripts/
+│   └── generate_pdf.sh         # Markdown → PDF converter (both styles)
+└── templates/
+    ├── market_analysis.md      # TAM/SAM/SOM, competitive analysis, market entry
+    ├── strategic_assessment.md # Growth diagnostics, options analysis, transformation
+    ├── due_diligence.md        # Investment thesis, commercial DD, valuation
+    └── industry_outlook.md     # Sector trends, disruption mapping, 5-year scenarios
+```
 
 ## Report Types
 
-| Template | Use Case |
-|---|---|
-| `market_analysis.md` | TAM/SAM/SOM sizing, competitive analysis, market entry |
-| `strategic_assessment.md` | Growth diagnostics, transformation roadmaps, strategy evaluations |
-| `due_diligence.md` | Investment thesis, commercial DD, M&A target evaluation |
-| `industry_outlook.md` | Sector trends, disruption mapping, 5-year outlook |
+| Template | Use Case | Key Frameworks |
+|---|---|---|
+| `market_analysis.md` | Market sizing and competitive analysis | TAM/SAM/SOM, Porter's Five Forces, positioning maps |
+| `strategic_assessment.md` | Company-level strategy and transformation | SCR, weighted options analysis, implementation roadmap |
+| `due_diligence.md` | Investment thesis and M&A evaluation | Comps, DCF, precedent transactions, risk matrix |
+| `industry_outlook.md` | Sector-level trends and outlook | Scenario analysis (bull/base/bear), disruption vectors |
+
+## Quality Standards Enforced
+
+Every report is validated against a comprehensive checklist covering:
+
+- **Structure:** Cover page, executive summary, governing thoughts, section numbering, pyramid principle
+- **Data:** Recency verification, source citations, exhibit numbering, action titles
+- **Recommendations:** Specificity (who, what, when, quantified impact), prioritization matrix
+- **Writing:** Anti-slop vocabulary filter, active voice, sentence length limits, probabilistic language
+- **Output:** Clean PDF rendering, page numbers, no browser artifacts
