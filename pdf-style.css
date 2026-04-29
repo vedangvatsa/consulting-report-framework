@@ -1,0 +1,189 @@
+@page {
+  size: letter;
+  margin: 1in 1.25in;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #2B2D42;
+  max-width: 100%;
+}
+
+/* Cover Page */
+.cover-page {
+  text-align: center;
+  padding-top: 3in;
+  padding-bottom: 2in;
+  page-break-after: always;
+  break-after: page;
+}
+
+.cover-page strong:first-child {
+  font-size: 28pt;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #003B5C;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #003B5C;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+  border-bottom: 3px solid #0077B6;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 16pt;
+  font-weight: 600;
+  color: #003B5C;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h3 {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #0077B6;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 0.8em;
+  orphans: 3;
+  widows: 3;
+}
+
+/* Governing thoughts (bold paragraphs at section start) */
+p > strong:first-child:last-child {
+  color: #003B5C;
+  font-size: 11pt;
+}
+
+/* Exhibits / Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0 0.5em 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+th {
+  background-color: #003B5C;
+  color: #FFFFFF;
+  border: 1px solid #003B5C;
+  padding: 8px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+td {
+  border: 1px solid #D1D5DB;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #F8F9FA;
+}
+
+tr:hover {
+  background-color: #EDF2F4;
+}
+
+/* Source lines below exhibits */
+table + p > em:first-child {
+  font-size: 8pt;
+  color: #8D99AE;
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+/* Exhibit titles */
+p:has(> strong:only-child) {
+  page-break-after: avoid;
+  break-after: avoid;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+/* Lists */
+ul, ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+  line-height: 1.5;
+}
+
+/* Horizontal rules as section dividers */
+hr {
+  border: none;
+  border-top: 1px solid #D1D5DB;
+  margin: 2em 0;
+}
+
+/* Links */
+a {
+  color: #0077B6;
+  text-decoration: none;
+}
+
+/* Blockquotes for callouts */
+blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background-color: #F0F7FC;
+  border-left: 4px solid #0077B6;
+  font-style: normal;
+  color: #003B5C;
+}
+
+/* Images and charts */
+img {
+  max-width: 100%;
+  max-height: 4in;
+  object-fit: contain;
+  height: auto;
+  display: block;
+  margin: 1em auto 0.5em auto;
+}
+
+/* Page numbers */
+@page {
+  @bottom-center {
+    content: counter(page);
+    font-size: 9pt;
+    color: #8D99AE;
+  }
+}
+
+/* Bold text styling */
+strong {
+  font-weight: 600;
+  color: #2B2D42;
+}
+
+/* Emphasis */
+em {
+  font-style: italic;
+}
