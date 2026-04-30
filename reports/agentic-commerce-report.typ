@@ -31,7 +31,7 @@
 
 #section-divider("01", "Market Definition", "Defining agentic commerce and establishing the analytical framework")
 
-#block(breakable: false, above: 0.8em, below: 0.8em)[
+#block(breakable: true, above: 0.8em, below: 0.8em)[
   #image("images/ai-commerce.jpg", width: 100%)
   #v(0.1em)
   #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. AI agents are beginning to handle end-to-end purchase journeys on behalf of consumers.]
@@ -260,7 +260,7 @@ The value shift is most acute for merchants that rely on brand recognition and S
 
 Merchants can defend their position through three strategies. First, they can invest in data quality to become the preferred agent-facing supplier. Second, they can build direct agent integrations that bypass platform intermediaries. Third, they can focus on categories where brand trust remains critical, such as luxury goods, health products, and financial services. Companies that treat agent optimization as a core competency, rather than an afterthought, will maintain pricing power in the new value chain.
 
-#block(breakable: false, above: 0.8em, below: 0.8em)[
+#block(breakable: true, above: 0.8em, below: 0.8em)[
   #image("images/digital-payment.jpg", width: 100%)
   #v(0.1em)
   #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. Digital payment infrastructure is the critical bottleneck for agent-mediated commerce.]
@@ -268,7 +268,7 @@ Merchants can defend their position through three strategies. First, they can in
 
 #section-divider("06", "Growth Drivers and Risks", "Forces accelerating adoption and headwinds that could slow the trajectory")
 
-#block(breakable: false, above: 0.8em, below: 0.8em)[
+#block(breakable: true, above: 0.8em, below: 0.8em)[
   #image("images/warehouse.jpg", width: 100%)
   #v(0.1em)
   #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. B2B procurement and supply chain operations are early candidates for agent-mediated automation.]
@@ -297,6 +297,8 @@ The adoption trajectory for agentic commerce follows a pattern familiar from mob
 #chart-exhibit(12, "Consumer comfort drops sharply from discovery to autonomous purchasing",
   "charts/consumer_trust.png",
   "Author analysis based on PwC (2026), Visa (2026), consumer survey data")
+
+The trust gap widens at each stage of the purchase funnel. Consumers are comfortable asking agents for product recommendations (72% approval). Comfort drops to 41% when agents add items to cart. Only 14% of consumers trust agents to complete purchases autonomously with their payment credentials. This gradient suggests that hybrid models, where agents recommend and humans approve, will dominate the first wave of adoption.
 
 #table-exhibit(13, "Regulatory approaches diverge across the three largest markets",
   "Hogan Lovells (2026), Data Innovation Institute (2026), UK Government (2026)")[
@@ -334,9 +336,13 @@ We model three scenarios weighted by probability of occurrence. The bear case (2
   "charts/penetration_timeline.png",
   "Author analysis triangulating Juniper, McKinsey, Morgan Stanley")
 
+The penetration curve follows an S-shape pattern consistent with prior technology transitions. Mobile commerce took 8 years to go from 5% to 15% of total e-commerce (2012-2020). Agent-mediated commerce is projected to reach that same threshold in 4-5 years (2026-2030) due to the pre-existing digital commerce infrastructure.
+
 #chart-exhibit(15, "Base case projects $6.3T in combined agent-mediated commerce by 2030",
   "charts/scenario_analysis.png",
   "Author analysis")
+
+The scenario spread reflects genuine uncertainty about adoption timing, not market direction. All three scenarios agree that agent-mediated commerce will grow. The disagreement is about pace. The bear case delays mass adoption to 2029-2031. The bull case accelerates it to 2027-2028.
 
 #table-exhibit(16, "Scenario assumptions and implications",
   "Author analysis triangulating McKinsey, Bain, Morgan Stanley, Juniper, Gartner")[
@@ -358,9 +364,11 @@ We model three scenarios weighted by probability of occurrence. The bear case (2
   )
 ]
 
+The probability-weighted expected value across all three scenarios is \$6.3 trillion in combined B2B and B2C agent-mediated transaction volume by 2030. The tech solutions market (middleware, identity, payment orchestration) reaches \$23-25B in the base case. Early-stage investors should note that the infrastructure layer offers the best risk-adjusted returns because it benefits regardless of which scenario materializes.
+
 == Strategic Recommendations
 
-#block(breakable: false, above: 0.8em, below: 0.8em)[
+#block(breakable: true, above: 0.8em, below: 0.8em)[
   #image("images/boardroom.jpg", width: 100%)
   #v(0.1em)
   #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. Strategic decisions made in the next 12-24 months will determine competitive positioning in the agentic commerce era.]

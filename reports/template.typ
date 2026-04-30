@@ -93,21 +93,20 @@
 }
 
 // ============================================================
-// SECTION DIVIDER (full-page blue break)
+// SECTION DIVIDER (inline navy banner, no pagebreak)
 // ============================================================
 #let section-divider(number, title, subtitle) = {
-  pagebreak(weak: true)
-  page(margin: (x: 0in, y: 0in), footer: none)[
-    #rect(width: 100%, height: 100%, fill: navy)[
-      #pad(x: 1.5in, y: 2.5in)[
-        #text(size: 64pt, weight: "bold", fill: rgb("#FFFFFF10"))[#number]
-        #v(-0.5em)
-        #text(font: "Georgia", size: 28pt, weight: "bold", fill: white)[#title]
-        #v(0.6em)
-        #line(length: 60pt, stroke: 2pt + mckinsey-blue)
-        #v(0.5em)
-        #text(size: 12pt, fill: rgb("#FFFFFFAA"))[#subtitle]
-      ]
+  block(breakable: false, above: 1.5em, below: 1.2em)[
+    #rect(width: 100%, fill: navy, radius: 0pt,
+      inset: (x: 28pt, y: 22pt))[
+      #grid(columns: (auto, 1fr), column-gutter: 16pt,
+        text(size: 32pt, weight: "bold", fill: rgb("#FFFFFF30"))[#number],
+        [
+          #text(font: "Georgia", size: 16pt, weight: "bold", fill: white)[#title]
+          #v(0.3em)
+          #text(size: 9pt, fill: rgb("#FFFFFFAA"))[#subtitle]
+        ]
+      )
     ]
   ]
 }
@@ -210,14 +209,16 @@
 // TIMELINE ITEM (implementation roadmap)
 // ============================================================
 #let timeline-item(marker, title, desc) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
-    #grid(columns: (80pt, 1fr), column-gutter: 16pt,
-      rect(radius: 0pt, fill: mckinsey-blue, inset: (x: 10pt, y: 8pt))[
-        #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
+  block(breakable: true, above: 0.4em, below: 0.4em)[
+    #grid(columns: (90pt, 1fr), column-gutter: 20pt,
+      align: (center + horizon, left + top),
+      rect(radius: 0pt, fill: mckinsey-blue, width: 90pt, height: 32pt,
+        inset: (x: 8pt, y: 7pt))[
+        #align(center + horizon)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
       ],
       [
         #text(size: 10.5pt, weight: "bold", fill: dark-blue)[#title]
-        #v(0.2em)
+        #v(0.15em)
         #text(size: 9.5pt, fill: steel)[#desc]
       ]
     )

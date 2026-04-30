@@ -251,11 +251,11 @@ These rules come from production debugging. Violating them produces broken outpu
 - NEVER double-escape. `\\$` will render a literal backslash.
 
 **Page Breaks:**
-- `chart-exhibit()` and `table-exhibit()` are `breakable: false`. This prevents charts/tables from splitting across pages.
-- Do NOT set `set block(breakable: false)` globally. This causes huge empty gaps at page bottoms because entire blocks jump to the next page.
-- Only specific components should be unbreakable: exhibits, KPI grids, callouts, timeline items.
-- Regular paragraphs and lists must remain breakable for natural text flow.
-- Use `pagebreak(weak: true)` in section dividers to avoid creating blank pages.
+- `chart-exhibit()` and `kpi-grid()` are `breakable: false`. Charts and KPI grids cannot split across pages.
+- `table-exhibit()`, `callout()`, `highlight-stat()`, and `timeline-item()` are `breakable: true`. They flow naturally across page boundaries.
+- NEVER set `breakable: false` on elements that precede a section divider. This creates huge empty gaps.
+- Do NOT set `set block(breakable: false)` globally.
+- Use `pagebreak(weak: true)` only when absolutely necessary.
 
 **Sticky Headings:**
 - All heading levels use `block(sticky: true)`. This prevents orphaned headings at the bottom of a page.
@@ -393,7 +393,7 @@ label_offsets = {
 | Professional tables | 5 |
 | KPI hero number panels | 2 |
 | Callout/insight boxes | 4 |
-| Section divider pages | 3 |
+| Section divider banners | 3 |
 | 2x2 matrix or positioning map | 1 |
 | Timeline or process flow | 1 |
 | **Total visual elements** | **22** |
@@ -415,11 +415,11 @@ label_offsets = {
 - 3-4 cards per grid
 
 ### 9.5 Section Dividers
-- Full-page navy background
-- Ghost section number (48pt, very low opacity `#FFFFFF18`)
-- Section title in Georgia, 26pt, white
-- Subtitle in 11pt, semi-transparent white
-- Forces page break before and after
+- **Inline navy banner** (NOT full-page). Section dividers flow with content, no forced pagebreaks
+- Navy background rect with section number (32pt, ghosted) and title in Georgia 16pt white
+- Subtitle in 9pt semi-transparent white
+- `breakable: false` with `above: 1.5em, below: 1.2em`
+- NEVER use `pagebreak()` or `page()` in section dividers. Full-page dividers waste entire pages of space
 
 ### 9.6 Callout Boxes
 - Navy left border (3pt)
