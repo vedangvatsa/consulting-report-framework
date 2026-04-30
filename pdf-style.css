@@ -325,8 +325,7 @@ li strong {
 }
 
 /* ============================================================
-   SECTION DIVIDERS
-   Subtle, clean horizontal rules between major sections.
+   SECTION DIVIDERS (Horizontal Rules)
    ============================================================ */
 hr {
   border: none;
@@ -373,7 +372,6 @@ em {
 
 /* ============================================================
    SOURCES / REFERENCES SECTION
-   Left-aligned to prevent ugly justified gaps with long URLs.
    ============================================================ */
 #sources ~ p,
 h2#sources + p,
@@ -428,6 +426,218 @@ h2#sources ~ p,
   border-bottom: none;
 }
 
+
+/* ============================================================
+   COLORED SECTION DIVIDER PANELS
+   Full-width colored panels for visual rhythm between major sections.
+   Use at the start of each numbered section (every 3-5 pages).
+   ============================================================ */
+.section-divider {
+  background-color: #16213E;
+  color: #FFFFFF;
+  padding: 2.5em 2em;
+  margin: 2em -1.25in;
+  width: calc(100% + 2.5in);
+  page-break-before: always;
+  break-before: page;
+  page-break-after: avoid;
+  break-after: avoid;
+  text-align: left;
+  position: relative;
+}
+
+.section-divider h2 {
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  font-size: 22pt;
+  font-weight: 700;
+  color: #FFFFFF;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.section-divider .section-number {
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  font-size: 42pt;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.15);
+  display: block;
+  margin-bottom: 0.1em;
+  line-height: 1;
+}
+
+.section-divider .section-subtitle {
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  font-size: 11pt;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5em;
+  text-indent: 0;
+  text-align: left;
+}
+
+/* ============================================================
+   ICON GRID
+   For feature/capability comparisons. 3-column layout.
+   ============================================================ */
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2em;
+  margin: 1.5em 0 2em 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.icon-item {
+  flex: 1;
+  min-width: 140px;
+  max-width: 32%;
+  text-align: center;
+  padding: 1em;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+}
+
+.icon-item .icon-circle {
+  font-size: 28pt;
+  margin-bottom: 0.3em;
+  display: block;
+}
+
+.icon-item strong {
+  font-size: 10pt;
+  color: #16213E;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.icon-item p {
+  font-size: 8.5pt;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  text-indent: 0;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   TIMELINE / PROCESS FLOW
+   Vertical timeline for implementation roadmaps.
+   ============================================================ */
+.timeline {
+  margin: 1.5em 0 2em 0;
+  padding-left: 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 1.2em;
+  padding-bottom: 1.2em;
+  border-bottom: 0.5pt solid #EEE;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-marker {
+  flex: 0 0 80px;
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #0F3460;
+  padding: 6px 10px;
+  text-align: center;
+  border-radius: 3px;
+  height: fit-content;
+  margin-right: 1em;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content strong {
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  font-size: 11pt;
+  color: #16213E;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.timeline-content p {
+  font-size: 9.5pt;
+  color: #555;
+  margin: 0;
+  text-indent: 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ENHANCED COVER PAGE
+   With colored accent border for visual impact.
+   ============================================================ */
+.cover-page {
+  text-align: center;
+  padding-top: 2.5in;
+  padding-bottom: 1.5in;
+  page-break-after: always;
+  break-after: page;
+  border-bottom: none;
+  border-top: 6pt solid #0F3460;
+}
+
+/* ============================================================
+   TWO-COLUMN LAYOUT
+   For side-by-side comparisons.
+   ============================================================ */
+.two-col {
+  display: flex;
+  gap: 1.5em;
+  margin: 1em 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.two-col > div {
+  flex: 1;
+}
+
+/* ============================================================
+   HIGHLIGHT BOX
+   For important statistics or pull quotes within body text.
+   ============================================================ */
+.highlight-box {
+  background: linear-gradient(135deg, #F5F5F0 0%, #EDF2F7 100%);
+  border-left: 4pt solid #1A936F;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.highlight-box .big-number {
+  font-size: 32pt;
+  font-weight: 700;
+  color: #16213E;
+  display: block;
+  line-height: 1.1;
+}
+
+.highlight-box .big-label {
+  font-size: 10pt;
+  color: #555;
+  margin-top: 0.3em;
+  display: block;
+}
+
 /* ============================================================
    PRINT OPTIMIZATIONS
    ============================================================ */
@@ -441,11 +651,16 @@ h2#sources ~ p,
     page-break-after: always;
   }
 
+  .section-divider {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   h2 {
     page-break-after: avoid;
   }
 
-  table, blockquote, img {
+  table, blockquote, img, .kpi-grid, .icon-grid, .timeline {
     page-break-inside: avoid;
   }
 }
