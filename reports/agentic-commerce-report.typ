@@ -12,8 +12,8 @@
 *Autonomous AI agents are poised to intermediate \$1.5--5 trillion in global commerce by 2030, creating the largest structural shift in digital trade since the shopping cart.*
 
 #kpi-grid(
-  kpi-card("\$6.4T", "Global E-Commerce 2025", "+8.2% YoY"),
-  kpi-card("\$1.5T", "Agent-Mediated TTV 2030", "Juniper Research"),
+  kpi-card("$6.4T", "Global E-Commerce 2025", "+8.2% YoY"),
+  kpi-card("$1.5T", "Agent-Mediated TTV 2030", "Juniper Research"),
   kpi-card("35.7%", "Tech Solutions CAGR", "2026-2033"),
   kpi-card("90%", "B2B via Agents by 2028", "Gartner forecast"),
 )
@@ -64,7 +64,7 @@
 
 *The agentic commerce opportunity spans \$1.5-5 trillion in mediated transaction value by 2030, with the technology solutions market reaching ~\$65 billion by 2033.*
 
-#chart-exhibit(1, "Agent-mediated commerce could reach \$6.3T in combined TTV by 2030",
+#chart-exhibit(1, "Agent-mediated commerce could reach $6.3T in combined TTV by 2030",
   "charts/market_growth_area.png",
   "Author analysis triangulating McKinsey (2025), Juniper Research (2026), Gartner (2026)")
 
@@ -231,7 +231,7 @@
 
 #kpi-grid(
   kpi-card("<5%", "LLM Error Rate", "Q1 2026 benchmarks"),
-  kpi-card("\$15T+", "B2B via Agents 2028", "Gartner forecast"),
+  kpi-card("$15T+", "B2B via Agents 2028", "Gartner forecast"),
   kpi-card("59%", "Mobile Commerce 2025", "Adoption precedent"),
 )
 
@@ -278,7 +278,7 @@
   "charts/penetration_timeline.png",
   "Author analysis triangulating Juniper, McKinsey, Morgan Stanley")
 
-#chart-exhibit(15, "Base case projects \$6.3T in combined agent-mediated commerce by 2030",
+#chart-exhibit(15, "Base case projects $6.3T in combined agent-mediated commerce by 2030",
   "charts/scenario_analysis.png",
   "Author analysis")
 
@@ -311,7 +311,7 @@
 #timeline-item("Q4 2026", "Platforms: Ship protocol support",
   "Native support for ACP + UCP. Agent-facing APIs alongside human-facing storefronts.")
 #timeline-item("Q1 2027", "Enterprise: Launch procurement agent pilots",
-  "Deploy specialized agent clusters for indirect procurement. Human-in-the-loop above \$5,000.")
+  "Deploy specialized agent clusters for indirect procurement. Human-in-the-loop above $5,000.")
 #timeline-item("Q2 2027", "Investors: Deploy infrastructure capital",
   "Target payment orchestration, identity verification, agent middleware at Seed-Series B stage.")
 #timeline-item("2028", "Scale and optimize",
