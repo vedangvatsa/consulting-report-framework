@@ -110,23 +110,27 @@
 }
 
 // --- COMPONENT: Chart Exhibit (keeps title + chart + source together) ---
-#let chart-exhibit(number, title, path, src, width: 85%) = {
-  block(breakable: false, above: 1em, below: 1em)[
+#let chart-exhibit(number, title, path, src, width: 90%) = {
+  block(above: 0.8em, below: 0.8em)[
     #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
-    #v(0.3em)
-    #image(path, width: width)
     #v(0.2em)
+    #image(path, width: width)
+    #v(0.1em)
     #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
   ]
 }
 
 // --- COMPONENT: Table Exhibit (keeps title + table + source together) ---
 #let table-exhibit(number, title, src, body) = {
-  block(breakable: false, above: 1em, below: 1em)[
-    #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
-    #v(0.3em)
-    #body
+  block(above: 0.8em, below: 0.8em)[
+    #if number != none {
+      text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+    } else {
+      text(size: 9.5pt, weight: "bold", fill: navy)[#title]
+    }
     #v(0.2em)
+    #body
+    #v(0.1em)
     #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
   ]
 }
