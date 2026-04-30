@@ -18,7 +18,6 @@
   kpi-card("90%", "B2B Agents 2028", "Gartner"),
 )
 
-#v(0.8em)
 
 *Situation.* Global e-commerce reached \$6.4 trillion in 2025, growing 8.2% year-over-year. Yet the fundamental transaction model, where a human browses, selects, and checks out, has remained structurally unchanged since Amazon launched 1-Click ordering in 1999. Every subsequent innovation (mobile payments, social commerce, buy-now-pay-later) optimized the existing flow rather than replacing it.
 
@@ -80,6 +79,8 @@ We triangulate five tier-1 estimates below, noting that the 3x variance across s
   "charts/market_growth_area.png",
   "Author analysis triangulating McKinsey (2025), Juniper Research (2026), Gartner (2026)")
 
+The wide variance across analyst estimates reflects differences in scope, not disagreement on direction. McKinsey measures gross transaction value across all agent-mediated commerce. Juniper counts only fully autonomous purchases. Bain and Morgan Stanley focus on the U.S. market alone.
+
 #table-exhibit(2, "Analyst estimates vary by 3x depending on metric measured",
   "McKinsey (2025), Juniper Research (2026), Bain (2025), Morgan Stanley (2026), Grand View Research (2026)")[
   #table(
@@ -99,6 +100,8 @@ We triangulate five tier-1 estimates below, noting that the 3x variance across s
     [Grand View Research], [Technology solutions], [~\$65B (2033)], [Global],
   )
 ]
+
+B2B indirect procurement offers the largest near-term opportunity. Unlike consumer retail, B2B purchasing is already structured, rule-based, and repetitive. Agents can handle purchase orders, vendor comparisons, and compliance checks with minimal human oversight.
 
 #table-exhibit(3, "B2B indirect procurement represents the highest near-term SAM",
   "Statista (2026), Gartner (2026), Author analysis")[
@@ -150,13 +153,19 @@ The second battle is for protocol dominance: which standards will govern machine
   )
 ]
 
+Google holds a structural advantage through protocol ownership (UCP, A2A, AP2) and Android distribution. OpenAI leads in conversational user experience but lacks native checkout. Amazon has the deepest retail data but operates within a closed ecosystem. Perplexity differentiates on transparency but lacks scale.
+
 #chart-exhibit(6, "Google occupies the strongest position with broad capabilities and open protocols",
   "charts/competitive_matrix.png",
   "Author analysis, April 2026")
 
+The protocol landscape is consolidating around three dominant standards. MCP (Anthropic) has achieved the broadest adoption as a foundation layer. UCP (Google) is gaining traction for cross-platform discovery. ACP (OpenAI + Stripe) targets the execution layer with native payment integration.
+
 #chart-exhibit(7, "MCP leads protocol adoption with 78% of agent-enabled platforms",
   "charts/protocol_adoption.png",
   "Author analysis based on platform integration announcements, April 2026")
+
+The six competing protocols map to distinct layers of the commerce stack. No single protocol covers the full journey from discovery to payment. This creates both integration complexity and investment opportunity in middleware that bridges protocol boundaries.
 
 #table-exhibit(8, "Six protocols compete to define the agentic commerce stack",
   "Anthropic (2025), Google (2026), OpenAI (2026), Stripe (2026)")[
@@ -185,7 +194,7 @@ The second battle is for protocol dominance: which standards will govern machine
 
 #highlight-stat("4 Layers", "Foundation  >  Coordination  >  Execution  >  Payment/Trust")
 
-#v(0.8em)
+The stack mirrors the evolution of web infrastructure. Just as HTTP, TCP/IP, and SSL formed distinct layers that enabled web commerce in the 1990s, MCP, A2A, ACP, and AP2 are forming the foundation for agent-mediated transactions.
 
 #table-exhibit(9, "The agentic commerce stack operates across four distinct layers",
   "Author analysis based on protocol documentation, 2026")[
@@ -217,6 +226,8 @@ The second battle is for protocol dominance: which standards will govern machine
 #chart-exhibit(10, "Agent providers capture 40% of new value, displacing merchants",
   "charts/value_chain_shift.png",
   "McKinsey (2026), IBM (2026), Author analysis")
+
+The value shift is most acute for merchants that rely on brand recognition and SEO for customer acquisition. When an agent selects products based on price, specifications, and delivery speed, the merchant's brand becomes invisible. This creates a commoditization risk comparable to what white-label manufacturers experienced in the rise of Amazon Basics.
 
 #table-exhibit(11, "Value capture shifts dramatically in agentic commerce",
   "McKinsey (2026), Author analysis")[
@@ -259,7 +270,6 @@ The adoption trajectory for agentic commerce follows a pattern familiar from mob
   kpi-card("59%", "Mobile Commerce 2025", "Adoption precedent"),
 )
 
-#v(0.8em)
 
 + *LLM Reasoning.* Foundation models crossed the reliability threshold. Error rates on structured commerce tasks dropped below 5% in Q1 2026.
 + *Protocol Standardization.* MCP, A2A, ACP, UCP, and AP2 launched within 12 months, compressing integration timelines.
@@ -351,7 +361,6 @@ The strategic imperative differs by stakeholder. Merchants face the most urgent 
 #timeline-item("2028", "Scale and optimize",
   "Measure agent-mediated traffic, conversion, and CAC. Winners established, valuations reflect it.")
 
-#v(0.8em)
 
 #table-exhibit(17, "Infrastructure investment offers the highest risk-adjusted returns",
   "Author analysis")[
