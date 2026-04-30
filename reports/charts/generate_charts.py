@@ -242,10 +242,19 @@ companies = {
     'Perplexity': (70, 45, '#F4A261'),
 }
 
+# Custom label offsets to prevent overlap with bubbles
+label_offsets = {
+    'Google\n(Gemini)': (25, 0, 'left'),
+    'OpenAI\n(ChatGPT)': (0, -28, 'center'),
+    'Amazon\n(Rufus)': (-25, -5, 'right'),
+    'Perplexity': (0, -25, 'center'),
+}
+
 for name, (x, y, color) in companies.items():
     ax.scatter(x, y, s=800, c=color, alpha=0.85, zorder=5, edgecolors='white', linewidth=2)
-    ax.annotate(name, xy=(x, y), xytext=(0, -22), textcoords='offset points',
-                ha='center', fontsize=8, fontweight='bold', color=TEXT_COLOR)
+    dx, dy, ha = label_offsets[name]
+    ax.annotate(name, xy=(x, y), xytext=(dx, dy), textcoords='offset points',
+                ha=ha, fontsize=8, fontweight='bold', color=TEXT_COLOR)
 
 ax.set_xlim(0, 100)
 ax.set_ylim(0, 100)

@@ -22,9 +22,6 @@
   set list(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
   set enum(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
 
-  // Prevent all blocks, figures, tables from splitting across pages
-  set block(breakable: false)
-
   show heading.where(level: 1): it => {
     set text(font: "Georgia", size: 22pt, weight: "bold", fill: navy)
     block(above: 1em, below: 0.6em, it.body)
