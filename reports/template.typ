@@ -1,73 +1,85 @@
-// McKinsey-Style Consulting Report Template
-// Typst-native, print-ready, boardroom-grade
+// ============================================================
+// McKinsey-Standard Consulting Report Template
+// Based on McKinsey Global Institute design language:
+// - Bower (Georgia substitute) for headlines
+// - McKinsey Sans (Helvetica Neue substitute) for body
+// - Blue-dominant palette with neutral grays
+// - Generous whitespace, strict grid, exhibit discipline
+// ============================================================
 
-// --- COLOR SYSTEM (Navy-only accent, zero decorative colors) ---
-#let navy = rgb("#16213E")
-#let accent = rgb("#1A936F")
-#let steel = rgb("#4A5568")
-#let light-bg = rgb("#F7F8FA")
-#let brand = rgb("#0F3460")
-#let red-neg = rgb("#C0392B")
-#let rule-gray = rgb("#E2E8F0")
+// --- COLOR SYSTEM (McKinsey Blue palette) ---
+#let mckinsey-blue = rgb("#005EB8")      // Primary brand blue
+#let dark-blue = rgb("#003A70")          // Deep headings
+#let navy = rgb("#16213E")               // Darkest (cover, dividers)
+#let steel = rgb("#5E6B7A")              // Body-secondary, captions
+#let silver = rgb("#A2AAAD")             // Chart axes, light borders
+#let light-bg = rgb("#F5F5F5")           // Exhibit backgrounds
+#let white = rgb("#FFFFFF")
+#let highlight-blue = rgb("#0091DA")     // Accent for key data points
+#let red-neg = rgb("#D63B2F")            // Negative/risk only
+#let dark-text = rgb("#2D2D2D")          // Body text
 
 // ============================================================
 // DOCUMENT WRAPPER
 // ============================================================
 #let report(title: "", subtitle: "", author: "", date: "", body) = {
   set document(title: title, author: author)
-  set page(paper: "us-letter", margin: (x: 1.2in, y: 1in),
+  set page(paper: "us-letter", margin: (x: 1in, y: 0.9in),
     footer: context {
       if counter(page).get().first() > 1 {
-        set text(8pt, fill: steel)
+        set text(8pt, fill: silver)
         h(1fr) + str(counter(page).get().first()) + h(1fr)
       }
     }
   )
 
   // --- GLOBAL TYPOGRAPHY ---
-  set text(font: "Helvetica Neue", size: 10pt, fill: rgb("#333"))
-  set par(justify: true, leading: 0.7em, spacing: 0.8em)
+  set text(font: "Helvetica Neue", size: 10.5pt, fill: dark-text)
+  set par(justify: true, leading: 0.75em, spacing: 0.85em)
   set heading(numbering: none)
-  set list(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
-  set enum(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
+  set list(indent: 0.8em, body-indent: 0.5em, spacing: 0.65em)
+  set enum(indent: 0.8em, body-indent: 0.5em, spacing: 0.65em)
 
-  // --- HEADING STYLES (sticky: keeps heading with following content) ---
+  // --- HEADING STYLES ---
   show heading.where(level: 1): it => {
-    set text(font: "Georgia", size: 22pt, weight: "bold", fill: navy)
-    block(sticky: true, above: 1em, below: 0.6em, it.body)
+    set text(font: "Georgia", size: 22pt, weight: "bold", fill: dark-blue)
+    block(sticky: true, above: 1.2em, below: 0.6em, it.body)
   }
   show heading.where(level: 2): it => {
-    set text(font: "Helvetica Neue", size: 14pt, weight: "bold", fill: navy)
-    block(sticky: true, above: 1.5em, below: 0.5em)[
+    set text(font: "Helvetica Neue", size: 13pt, weight: "bold", fill: dark-blue)
+    block(sticky: true, above: 1.4em, below: 0.5em)[
       #it.body
-      #v(0.3em)
-      #line(length: 100%, stroke: 0.5pt + rule-gray)
+      #v(0.25em)
+      #line(length: 100%, stroke: 0.75pt + silver)
     ]
   }
   show heading.where(level: 3): it => {
-    set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: navy)
+    set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: dark-blue)
     block(sticky: true, above: 1em, below: 0.4em, it.body)
   }
 
   // --- GLOBAL TABLE STYLING ---
-  show table: set text(size: 8.5pt)
-  set table(inset: (x: 8pt, y: 6pt))
+  show table: set text(size: 9pt)
+  set table(inset: (x: 10pt, y: 7pt))
 
   // --- COVER PAGE ---
-  page(margin: (x: 1.2in, y: 0in), footer: none)[
-    #v(0.8in)
-    #rect(width: 100%, height: 6pt, fill: brand)
-    #v(2in)
-    #align(center)[
-      #text(font: "Georgia", size: 32pt, weight: "bold", fill: navy)[#title]
-      #v(0.5em)
-      #text(size: 13pt, fill: steel)[#subtitle]
-      #v(2em)
-      #text(size: 11pt, fill: steel)[#author #h(1em) | #h(1em) #date]
+  page(margin: (x: 0in, y: 0in), footer: none)[
+    // Full-bleed blue header bar
+    #rect(width: 100%, height: 38%, fill: navy)[
+      #pad(x: 1.2in, top: 1.8in)[
+        #text(font: "Georgia", size: 36pt, weight: "bold", fill: white)[#title]
+        #v(0.6em)
+        #text(font: "Helvetica Neue", size: 14pt, fill: rgb("#FFFFFFCC"))[#subtitle]
+      ]
+    ]
+    #pad(x: 1.2in, top: 1.5in)[
+      #text(size: 11pt, fill: steel)[#author]
+      #v(0.3em)
+      #text(size: 11pt, fill: steel)[#date]
       #v(3em)
-      #rect(width: 60%, height: 0.5pt, fill: rgb("#DDD"))
-      #v(1em)
-      #text(size: 7.5pt, fill: rgb("#AAA"), style: "italic")[
+      #line(length: 40%, stroke: 0.5pt + silver)
+      #v(0.8em)
+      #text(size: 7.5pt, fill: silver, style: "italic")[
         This document has been prepared for the exclusive use of internal strategy teams.\
         It contains proprietary and confidential information. The author accepts no liability\
         for decisions made in reliance on this report.
@@ -79,18 +91,20 @@
 }
 
 // ============================================================
-// SECTION DIVIDER (full-page navy break)
+// SECTION DIVIDER (full-page blue break)
 // ============================================================
 #let section-divider(number, title, subtitle) = {
   pagebreak(weak: true)
   page(margin: (x: 0in, y: 0in), footer: none)[
     #rect(width: 100%, height: 100%, fill: navy)[
       #pad(x: 1.5in, y: 2.5in)[
-        #text(size: 48pt, weight: "bold", fill: rgb("#FFFFFF18"))[#number]
-        #v(-0.3em)
-        #text(font: "Georgia", size: 26pt, weight: "bold", fill: white)[#title]
+        #text(size: 64pt, weight: "bold", fill: rgb("#FFFFFF10"))[#number]
+        #v(-0.5em)
+        #text(font: "Georgia", size: 28pt, weight: "bold", fill: white)[#title]
+        #v(0.6em)
+        #line(length: 60pt, stroke: 2pt + mckinsey-blue)
         #v(0.5em)
-        #text(size: 11pt, fill: rgb("#FFFFFFAA"))[#subtitle]
+        #text(size: 12pt, fill: rgb("#FFFFFFAA"))[#subtitle]
       ]
     ]
   ]
@@ -101,32 +115,32 @@
 // ============================================================
 #let kpi-card(value, label, delta) = {
   rect(width: 100%, radius: 0pt,
-    stroke: (bottom: 2pt + brand, rest: 0.5pt + rule-gray),
-    inset: 14pt, fill: white)[
+    stroke: (bottom: 2.5pt + mckinsey-blue, rest: 0.5pt + rgb("#E0E0E0")),
+    inset: 16pt, fill: white)[
     #align(center)[
-      #text(size: 24pt, weight: "bold", fill: navy)[#value]
-      #v(0.2em)
+      #text(size: 26pt, weight: "bold", fill: dark-blue)[#value]
+      #v(0.25em)
       #text(size: 7.5pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
       #v(0.15em)
-      #text(size: 7pt, fill: steel)[#delta]
+      #text(size: 7pt, fill: silver)[#delta]
     ]
   ]
 }
 
 #let kpi-grid(..cards) = {
   let items = cards.pos()
-  block(breakable: false)[
-    #grid(columns: items.len(), column-gutter: 12pt, ..items)
+  block(breakable: false, above: 0.8em, below: 0.8em)[
+    #grid(columns: items.len(), column-gutter: 14pt, ..items)
   ]
 }
 
 // ============================================================
-// CALLOUT BOX (navy left-border, gray bg)
+// CALLOUT BOX (blue left-border, light bg)
 // ============================================================
 #let callout(body) = {
   block(breakable: false, above: 0.8em, below: 0.8em)[
-    #rect(width: 100%, stroke: (left: 3pt + navy, rest: none),
-      radius: 0pt, inset: (left: 16pt, rest: 12pt), fill: light-bg)[
+    #rect(width: 100%, stroke: (left: 3pt + mckinsey-blue, rest: none),
+      radius: 0pt, inset: (left: 18pt, rest: 14pt), fill: light-bg)[
       #set text(size: 9.5pt)
       #body
     ]
@@ -134,61 +148,43 @@
 }
 
 // ============================================================
-// CHART EXHIBIT (title + chart + source, unbreakable)
+// CHART EXHIBIT
+// Blue rule above, title, chart, source below.
 // Title comes from Typst, NOT from matplotlib.
 // ============================================================
-#let chart-exhibit(number, title, path, src, width: 90%) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
-    #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
-    #v(0.2em)
+#let chart-exhibit(number, title, path, src, width: 92%) = {
+  block(breakable: false, above: 1em, below: 1em)[
+    #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
+    #v(0.3em)
+    #text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
+    #h(6pt)
+    #text(size: 9.5pt, fill: dark-text)[#title]
+    #v(0.4em)
     #image(path, width: width)
-    #v(0.1em)
-    #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
+    #v(0.2em)
+    #text(size: 7pt, style: "italic", fill: silver)[Source: #src]
   ]
 }
 
 // ============================================================
-// TABLE EXHIBIT (title + table + source, unbreakable)
+// TABLE EXHIBIT
+// Blue rule above, title, table, source below.
 // ============================================================
 #let table-exhibit(number, title, src, body) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: false, above: 1em, below: 1em)[
+    #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
+    #v(0.3em)
     #if number != none {
-      text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+      text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
+      h(6pt)
+      text(size: 9.5pt, fill: dark-text)[#title]
     } else {
-      text(size: 9.5pt, weight: "bold", fill: navy)[#title]
+      text(size: 9.5pt, weight: "bold", fill: dark-blue)[#title]
     }
-    #v(0.2em)
+    #v(0.4em)
     #body
-    #v(0.1em)
-    #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
-  ]
-}
-
-// ============================================================
-// SIDEBAR LAYOUT (McKinsey-style: main content + side callout)
-// Use for data-dense pages: narrative left, key stat right.
-// ============================================================
-#let sidebar-layout(main, side, ratio: 70%) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
-    #grid(
-      columns: (ratio, 1fr),
-      column-gutter: 20pt,
-      main,
-      rect(width: 100%, radius: 0pt, inset: 14pt,
-        fill: light-bg, stroke: (left: 2pt + navy, rest: none))[
-        #set text(size: 9pt)
-        #side
-      ]
-    )
-  ]
-}
-
-// ============================================================
-// TWO-COLUMN TEXT (for dense comparison layouts)
-// ============================================================
-#let two-col(left, right) = {
-  block(above: 0.8em, below: 0.8em)[
-    #grid(columns: (1fr, 1fr), column-gutter: 24pt, left, right)
+    #v(0.2em)
+    #text(size: 7pt, style: "italic", fill: silver)[Source: #src]
   ]
 }
 
@@ -197,11 +193,11 @@
 // ============================================================
 #let highlight-stat(value, label) = {
   block(breakable: false, above: 0.8em, below: 0.8em)[
-    #rect(width: 100%, radius: 0pt, inset: 16pt,
-      fill: light-bg, stroke: (left: 3pt + navy, rest: none))[
-      #text(size: 28pt, weight: "bold", fill: navy)[#value]
-      #v(0.1em)
-      #text(size: 9pt, fill: steel)[#label]
+    #rect(width: 100%, radius: 0pt, inset: 18pt,
+      fill: light-bg, stroke: (left: 3pt + mckinsey-blue, rest: none))[
+      #text(size: 28pt, weight: "bold", fill: dark-blue)[#value]
+      #v(0.15em)
+      #text(size: 9.5pt, fill: steel)[#label]
     ]
   ]
 }
@@ -212,32 +208,15 @@
 #let timeline-item(marker, title, desc) = {
   block(breakable: false, above: 0.6em, below: 0.6em)[
     #grid(columns: (80pt, 1fr), column-gutter: 16pt,
-      rect(radius: 0pt, fill: brand, inset: (x: 10pt, y: 8pt))[
+      rect(radius: 0pt, fill: mckinsey-blue, inset: (x: 10pt, y: 8pt))[
         #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
       ],
       [
-        #text(size: 10pt, weight: "bold", fill: navy)[#title]
+        #text(size: 10.5pt, weight: "bold", fill: dark-blue)[#title]
         #v(0.2em)
-        #text(size: 9pt, fill: steel)[#desc]
+        #text(size: 9.5pt, fill: steel)[#desc]
       ]
     )
-  ]
-}
-
-// ============================================================
-// PULL QUOTE (for key executive statements or findings)
-// ============================================================
-#let pull-quote(text-content, attribution: none) = {
-  block(breakable: false, above: 1em, below: 1em)[
-    #align(center)[
-      #rect(width: 80%, radius: 0pt, inset: 20pt, stroke: none)[
-        #text(font: "Georgia", size: 13pt, style: "italic", fill: navy)[#text-content]
-        #if attribution != none {
-          v(0.5em)
-          text(size: 8pt, fill: steel)[ -- #attribution]
-        }
-      ]
-    ]
   ]
 }
 
@@ -246,12 +225,16 @@
 // ============================================================
 #let exhibit(number, title) = {
   v(0.8em, weak: true)
-  text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+  line(length: 100%, stroke: 1.5pt + mckinsey-blue)
+  v(0.3em, weak: true)
+  text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
+  h(6pt)
+  text(size: 9.5pt, fill: dark-text)[#title]
   v(0.3em, weak: true)
 }
 
 #let source(txt) = {
   v(0.2em, weak: true)
-  text(size: 7.5pt, style: "italic", fill: steel)[Source: #txt]
+  text(size: 7pt, style: "italic", fill: silver)[Source: #txt]
   v(0.8em, weak: true)
 }
