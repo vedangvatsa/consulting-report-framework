@@ -111,7 +111,7 @@
 
 // --- COMPONENT: Chart Exhibit (keeps title + chart + source together) ---
 #let chart-exhibit(number, title, path, src, width: 90%) = {
-  block(above: 0.8em, below: 0.8em)[
+  block(breakable: false, above: 0.8em, below: 0.8em)[
     #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
     #v(0.2em)
     #image(path, width: width)
@@ -122,7 +122,7 @@
 
 // --- COMPONENT: Table Exhibit (keeps title + table + source together) ---
 #let table-exhibit(number, title, src, body) = {
-  block(above: 0.8em, below: 0.8em)[
+  block(breakable: false, above: 0.8em, below: 0.8em)[
     #if number != none {
       text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
     } else {
