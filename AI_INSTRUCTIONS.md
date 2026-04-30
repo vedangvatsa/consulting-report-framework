@@ -304,9 +304,17 @@ These produce "AI slop" output. Never use them:
 | Icon grids with emoji circles | Clean two-column tables |
 | Multiple accent colors | McKinsey Blue (#005EB8) as the only accent |
 | Decorative elements, shadows, glows | Clean lines and white space |
-| Em-dashes (`---`) in Typst prose | Commas, periods, or parentheses |
+| Em-dashes (`---` or `—`) in prose | Commas, periods, or parentheses |
+| En-dashes (`--` or `–`) in prose | Commas, periods, or parentheses |
+| Colons (`:`) in running prose | Periods or commas. Colons allowed only in exhibit titles, headers, and citations |
+| Semicolons (`;`) in prose | Break into two sentences |
 | Justified text in table cells | Left-aligned table text |
 | Half-empty pages with no content | Fill with prose or reorganize |
+| AI slop words (delve, tapestry, robust, foster, pivotal, catalyst, transformative, unprecedented, seamless, leverage, empower, unlock, synergy, paradigm shift, landscape, furthermore, moreover, simultaneously, noteworthy, consequently, hence, thereby, streamline, bolster, spearhead, reshape, reimagine, facilitate) | Plain, direct language |
+| Hedging without data ("somewhat", "perhaps", "it seems") | Precise probabilistic language ("we estimate 60-70% probability") |
+| Passive voice ("growth was observed") | Active voice ("revenue grew 14%") |
+| Descriptive titles ("Revenue by Region") | Action titles ("APAC revenue grew 14%, outpacing all other regions") |
+| Sentences over 25 words | Break into two sentences |
 
 The aesthetic must be austere, restrained, and authoritative. Think McKinsey, not Canva.
 
