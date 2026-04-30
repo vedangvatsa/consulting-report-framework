@@ -18,7 +18,7 @@
   kpi-card("90%", "B2B via Agents by 2028", "Gartner forecast"),
 )
 
-#v(0.5em)
+#v(0.8em)
 
 *Situation.* Global e-commerce reached \$6.4 trillion in 2025. The transaction model where a human browses, selects, and checks out has remained unchanged for two decades.
 
@@ -34,7 +34,7 @@
 
 *Agentic commerce represents a structural break from two decades of static e-commerce, transferring discovery, evaluation, negotiation, and transaction execution to autonomous AI systems.*
 
-#v(0.3em)
+#v(0.8em)
 
 #table-exhibit(none, "Core capabilities that define agentic commerce systems", "Author analysis")[
   #table(
@@ -169,7 +169,7 @@
 
 #highlight-stat("4 Layers", "Foundation  >  Coordination  >  Execution  >  Payment/Trust")
 
-#v(0.5em)
+#v(0.8em)
 
 #table-exhibit(9, "The agentic commerce stack operates across four distinct layers",
   "Author analysis based on protocol documentation, 2026")[
@@ -235,7 +235,7 @@
   kpi-card("59%", "Mobile Commerce 2025", "Adoption precedent"),
 )
 
-#v(0.5em)
+#v(0.8em)
 
 + *LLM Reasoning.* Foundation models crossed the reliability threshold. Error rates on structured commerce tasks dropped below 5% in Q1 2026.
 + *Protocol Standardization.* MCP, A2A, ACP, UCP, and AP2 launched within 12 months, compressing integration timelines.
@@ -317,7 +317,7 @@
 #timeline-item("2028", "Scale and optimize",
   "Measure agent-mediated traffic, conversion, and CAC. Winners established, valuations reflect it.")
 
-#v(0.5em)
+#v(0.8em)
 
 #table-exhibit(17, "Infrastructure investment offers the highest risk-adjusted returns",
   "Author analysis")[

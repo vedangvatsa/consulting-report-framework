@@ -17,15 +17,17 @@
     }
   )
   set text(font: "Helvetica Neue", size: 10pt, fill: rgb("#333"))
-  set par(justify: true, leading: 0.7em)
+  set par(justify: true, leading: 0.7em, spacing: 0.8em)
   set heading(numbering: none)
+  set list(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
+  set enum(indent: 0.8em, body-indent: 0.5em, spacing: 0.6em)
 
   // Prevent all blocks, figures, tables from splitting across pages
   set block(breakable: false)
 
   show heading.where(level: 1): it => {
     set text(font: "Georgia", size: 22pt, weight: "bold", fill: navy)
-    block(above: 0.5em, below: 0.4em, it.body)
+    block(above: 1em, below: 0.6em, it.body)
   }
   show heading.where(level: 2): it => {
     set text(font: "Helvetica Neue", size: 14pt, weight: "bold", fill: navy)
@@ -34,7 +36,7 @@
   }
   show heading.where(level: 3): it => {
     set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: navy)
-    block(above: 1.2em, below: 0.4em, it.body)
+    block(above: 1em, below: 0.5em, it.body)
   }
   show table: set text(size: 8.5pt)
 
