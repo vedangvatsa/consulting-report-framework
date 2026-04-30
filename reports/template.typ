@@ -35,7 +35,7 @@
 
   // --- GLOBAL TYPOGRAPHY ---
   set text(font: "Helvetica Neue", size: 10.5pt, fill: dark-text)
-  set par(justify: true, leading: 0.75em, spacing: 0.85em)
+  set par(justify: true, leading: 0.75em, spacing: 1.2em)
   set heading(numbering: none)
   set list(indent: 0.8em, body-indent: 0.5em, spacing: 0.65em)
   set enum(indent: 0.8em, body-indent: 0.5em, spacing: 0.65em)

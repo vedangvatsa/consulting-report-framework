@@ -122,6 +122,12 @@ B2B indirect procurement offers the largest near-term opportunity. Unlike consum
   )
 ]
 
+The penetration rate disparity across segments reflects agent readiness, not market size. B2B indirect procurement (office supplies, MRO, travel) is 25-40% addressable because purchasing is rule-based with pre-approved vendor lists. B2C retail starts lower at 15-25% because consumer preferences are harder to codify. Direct procurement (raw materials, custom components) remains the hardest segment at 5-15% due to relationship-driven negotiations and quality requirements.
+
+#callout[
+  *Key Insight:* The \$16.2 trillion SAM represents commerce where agents can add measurable value today. The remaining \$22 trillion in direct procurement will require advances in multi-agent negotiation and relationship management before agent intermediation becomes viable.
+]
+
 #section-divider("03", "Competitive Landscape", "Platform positioning, protocol competition, and strategic differentiation")
 
 *Four platform giants are racing to own the agentic shopping interface, while a parallel infrastructure battle over protocols will determine the industry standard.*
@@ -252,6 +258,14 @@ The value shift is most acute for merchants that rely on brand recognition and S
   *Key Insight:* When agents mediate purchases, merchant brand identity becomes invisible. Agents optimize for price, delivery speed, and review scores rather than brand preference.
 ]
 
+Merchants can defend their position through three strategies. First, they can invest in data quality to become the preferred agent-facing supplier. Second, they can build direct agent integrations that bypass platform intermediaries. Third, they can focus on categories where brand trust remains critical, such as luxury goods, health products, and financial services. Companies that treat agent optimization as a core competency, rather than an afterthought, will maintain pricing power in the new value chain.
+
+#block(breakable: false, above: 0.8em, below: 0.8em)[
+  #image("images/digital-payment.jpg", width: 100%)
+  #v(0.1em)
+  #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. Digital payment infrastructure is the critical bottleneck for agent-mediated commerce.]
+]
+
 #section-divider("06", "Growth Drivers and Risks", "Forces accelerating adoption and headwinds that could slow the trajectory")
 
 #block(breakable: false, above: 0.8em, below: 0.8em)[
@@ -302,6 +316,12 @@ The adoption trajectory for agentic commerce follows a pattern familiar from mob
     [Transparency], [Required], [Voluntary], [Expected],
     [Timeline], [2027-2028], [2028+], [2027],
   )
+]
+
+The regulatory divergence creates both risk and opportunity. Companies operating globally face the cost of compliance across three distinct frameworks. However, regulatory arbitrage is possible. Firms that achieve EU compliance (the strictest standard) will be well-positioned for all three markets. Early investment in transparency and audit infrastructure will reduce compliance costs as regulations mature.
+
+#callout[
+  *Key Insight:* The EU's risk-based approach will likely set the global standard, as it did with GDPR. Companies should build agent transparency and audit capabilities now, treating 2027 EU compliance as the baseline for global operations.
 ]
 
 #section-divider("08", "Five-Year Outlook", "Scenario analysis with probability-weighted projections through 2030")
