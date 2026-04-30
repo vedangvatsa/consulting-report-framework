@@ -48,7 +48,10 @@
     set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: navy)
     block(sticky: true, above: 1em, below: 0.4em, it.body)
   }
+
+  // --- GLOBAL TABLE STYLING ---
   show table: set text(size: 8.5pt)
+  set table(inset: (x: 8pt, y: 6pt))
 
   // --- COVER PAGE ---
   page(margin: (x: 1.2in, y: 0in), footer: none)[
