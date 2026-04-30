@@ -61,28 +61,30 @@
   // --- GLOBAL TABLE STYLING ---
   show table: set text(size: 9pt)
   set table(inset: (x: 10pt, y: 7pt))
+  show table: set par(justify: false)
 
-  // --- COVER PAGE ---
+  // --- COVER PAGE (Modern MGI style — full-page) ---
   page(margin: (x: 0in, y: 0in), footer: none)[
-    // Full-bleed blue header bar
-    #rect(width: 100%, height: 38%, fill: navy)[
-      #pad(x: 1.2in, top: 1.8in)[
-        #text(font: "Georgia", size: 36pt, weight: "bold", fill: white)[#title]
+    #rect(width: 100%, height: 100%, fill: navy)[
+      #pad(x: 1.4in)[
+        #v(2.2in)
+        #line(length: 60pt, stroke: 2.5pt + mckinsey-blue)
+        #v(0.5em)
+        #text(font: "Georgia", size: 38pt, weight: "bold", fill: white)[#title]
+        #v(0.8em)
+        #text(font: "Helvetica Neue", size: 14pt, fill: rgb("#FFFFFFBB"))[#subtitle]
+        #v(1fr)
+        #line(length: 100%, stroke: 0.5pt + rgb("#FFFFFF22"))
         #v(0.6em)
-        #text(font: "Helvetica Neue", size: 14pt, fill: rgb("#FFFFFFCC"))[#subtitle]
-      ]
-    ]
-    #pad(x: 1.2in, top: 1.5in)[
-      #text(size: 11pt, fill: steel)[#author]
-      #v(0.3em)
-      #text(size: 11pt, fill: steel)[#date]
-      #v(3em)
-      #line(length: 40%, stroke: 0.5pt + silver)
-      #v(0.8em)
-      #text(size: 7.5pt, fill: silver, style: "italic")[
-        This document has been prepared for the exclusive use of internal strategy teams.\
-        It contains proprietary and confidential information. The author accepts no liability\
-        for decisions made in reliance on this report.
+        #grid(columns: (1fr, 1fr),
+          text(size: 10pt, fill: rgb("#FFFFFFAA"))[#author],
+          align(right)[#text(size: 10pt, fill: rgb("#FFFFFFAA"))[#date]]
+        )
+        #v(0.5em)
+        #text(size: 7pt, fill: rgb("#FFFFFF55"), style: "italic")[
+          Confidential. Prepared for internal strategy teams. The author accepts no liability for decisions made in reliance on this report.
+        ]
+        #v(0.8in)
       ]
     ]
   ]
@@ -159,9 +161,9 @@
     #text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
     #h(6pt)
     #text(size: 9.5pt, fill: dark-text)[#title]
-    #v(0.4em)
+    #v(0.3em)
     #image(path, width: width)
-    #v(0.2em)
+    #v(0.3em)
     #text(size: 7pt, style: "italic", fill: silver)[Source: #src]
   ]
 }
@@ -181,9 +183,9 @@
     } else {
       text(size: 9.5pt, weight: "bold", fill: dark-blue)[#title]
     }
-    #v(0.4em)
+    #v(0.3em)
     #body
-    #v(0.2em)
+    #v(0.3em)
     #text(size: 7pt, style: "italic", fill: silver)[Source: #src]
   ]
 }

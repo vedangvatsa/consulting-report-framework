@@ -208,7 +208,7 @@ save(fig, 'penetration_timeline.png')
 # ============================================================
 # CHART 7: Value Chain Shift — Before vs After (Stacked Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 2.8))
+fig, ax = plt.subplots(figsize=(7, 3))
 
 categories = ['Traditional\nCommerce', 'Agentic\nCommerce\n(2030)']
 merchant = [55, 20]
@@ -224,7 +224,7 @@ bars4 = ax.barh(categories, consumer, left=[m+p+a for m,p,a in zip(merchant, pla
 # Title handled by Typst
 ax.set_xlabel('Share of Value Captured (%)')
 ax.set_xlim(0, 105)
-ax.legend(loc='lower right', frameon=False, fontsize=7, ncol=4)
+ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), frameon=False, fontsize=7, ncol=4)
 ax.invert_yaxis()
 
 save(fig, 'value_chain_shift.png')
