@@ -229,13 +229,16 @@ Every report imports `template.typ` which provides:
 | Component | Function | Key Rule |
 |---|---|---|
 | `report()` | Document wrapper with cover page | Pass title, subtitle, author, date |
-| `section-divider()` | Full-page navy divider | Forces page break, takes number/title/subtitle |
+| `section-divider()` | Full-page navy divider | Uses `pagebreak(weak: true)` to avoid blank pages |
 | `kpi-grid()` / `kpi-card()` | KPI dashboard | 3-4 cards per grid, white bg, navy bottom border |
 | `chart-exhibit()` | Chart with title + source | `breakable: false`, title in Typst not matplotlib |
 | `table-exhibit()` | Table with title + source | `breakable: false`, keeps table intact on page |
 | `callout()` | Key insight box | Navy left border, gray background, max 4-5 per report |
 | `highlight-stat()` | Large featured statistic | Navy left border, gray background |
 | `timeline-item()` | Implementation roadmap step | Navy marker box + description |
+| `sidebar-layout()` | Main content + side callout | McKinsey-style 70/30 split, narrative + key stat |
+| `two-col()` | Two-column comparison layout | Equal columns with 24pt gutter |
+| `pull-quote()` | Executive quote or key finding | Georgia italic, centered, optional attribution |
 
 ### 7.3 Critical Typst Rules (HARD-LEARNED)
 
@@ -251,6 +254,11 @@ These rules come from production debugging. Violating them produces broken outpu
 - Do NOT set `set block(breakable: false)` globally. This causes huge empty gaps at page bottoms because entire blocks jump to the next page.
 - Only specific components should be unbreakable: exhibits, KPI grids, callouts, timeline items.
 - Regular paragraphs and lists must remain breakable for natural text flow.
+- Use `pagebreak(weak: true)` in section dividers to avoid creating blank pages.
+
+**Sticky Headings:**
+- All heading levels use `block(sticky: true)`. This prevents orphaned headings at the bottom of a page.
+- If a heading would appear at the very bottom of a page with no following content, Typst automatically moves it to the next page.
 
 **Spacing:**
 - Use a consistent spacing unit of `0.8em` for all vertical gaps.
