@@ -20,6 +20,9 @@
   set par(justify: true, leading: 0.7em)
   set heading(numbering: none)
 
+  // Prevent all blocks, figures, tables from splitting across pages
+  set block(breakable: false)
+
   show heading.where(level: 1): it => {
     set text(font: "Georgia", size: 22pt, weight: "bold", fill: navy)
     block(above: 0.5em, below: 0.4em, it.body)
@@ -91,26 +94,52 @@
 
 #let kpi-grid(..cards) = {
   let items = cards.pos()
-  grid(columns: items.len(), column-gutter: 12pt, ..items)
+  block(breakable: false)[
+    #grid(columns: items.len(), column-gutter: 12pt, ..items)
+  ]
 }
 
 // --- COMPONENT: Callout Box ---
 #let callout(body) = {
-  rect(width: 100%, stroke: (left: 3pt + navy, rest: none),
-    radius: 0pt, inset: (left: 16pt, rest: 12pt), fill: rgb("#F7F8FA"))[
-    #set text(size: 9.5pt)
-    #body
+  block(breakable: false)[
+    #rect(width: 100%, stroke: (left: 3pt + navy, rest: none),
+      radius: 0pt, inset: (left: 16pt, rest: 12pt), fill: rgb("#F7F8FA"))[
+      #set text(size: 9.5pt)
+      #body
+    ]
   ]
 }
 
-// --- COMPONENT: Exhibit Title ---
+// --- COMPONENT: Chart Exhibit (keeps title + chart + source together) ---
+#let chart-exhibit(number, title, path, src, width: 85%) = {
+  block(breakable: false, above: 1em, below: 1em)[
+    #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+    #v(0.3em)
+    #image(path, width: width)
+    #v(0.2em)
+    #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
+  ]
+}
+
+// --- COMPONENT: Table Exhibit (keeps title + table + source together) ---
+#let table-exhibit(number, title, src, body) = {
+  block(breakable: false, above: 1em, below: 1em)[
+    #text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+    #v(0.3em)
+    #body
+    #v(0.2em)
+    #text(size: 7.5pt, style: "italic", fill: steel)[Source: #src]
+  ]
+}
+
+// --- COMPONENT: Exhibit Title (standalone, for backward compat) ---
 #let exhibit(number, title) = {
   v(0.8em)
   text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
   v(0.3em)
 }
 
-// --- COMPONENT: Source Line ---
+// --- COMPONENT: Source Line (standalone, for backward compat) ---
 #let source(txt) = {
   v(0.2em)
   text(size: 7.5pt, style: "italic", fill: steel)[Source: #txt]
@@ -119,26 +148,29 @@
 
 // --- COMPONENT: Highlight Stat ---
 #let highlight-stat(value, label) = {
-  rect(width: 100%, radius: 0pt, inset: 16pt,
-    fill: rgb("#F7F8FA"),
-    stroke: (left: 3pt + navy, rest: none))[
-    #text(size: 28pt, weight: "bold", fill: navy)[#value]
-    #v(0.1em)
-    #text(size: 9pt, fill: steel)[#label]
+  block(breakable: false)[
+    #rect(width: 100%, radius: 0pt, inset: 16pt,
+      fill: rgb("#F7F8FA"),
+      stroke: (left: 3pt + navy, rest: none))[
+      #text(size: 28pt, weight: "bold", fill: navy)[#value]
+      #v(0.1em)
+      #text(size: 9pt, fill: steel)[#label]
+    ]
   ]
 }
 
 // --- COMPONENT: Timeline ---
 #let timeline-item(marker, title, desc) = {
-  grid(columns: (70pt, 1fr), column-gutter: 12pt,
-    rect(radius: 3pt, fill: brand, inset: 8pt)[
-      #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
-    ],
-    [
-      #text(size: 10pt, weight: "bold", fill: navy)[#title]
-      #v(0.15em)
-      #text(size: 9pt, fill: steel)[#desc]
-    ]
-  )
-  v(0.6em)
+  block(breakable: false, above: 0.3em, below: 0.3em)[
+    #grid(columns: (70pt, 1fr), column-gutter: 12pt,
+      rect(radius: 0pt, fill: brand, inset: 8pt)[
+        #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
+      ],
+      [
+        #text(size: 10pt, weight: "bold", fill: navy)[#title]
+        #v(0.15em)
+        #text(size: 9pt, fill: steel)[#desc]
+      ]
+    )
+  ]
 }
