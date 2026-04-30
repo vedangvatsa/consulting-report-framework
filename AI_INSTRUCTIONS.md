@@ -123,12 +123,13 @@ Every report must include the following notice on the cover page:
 > *This document has been prepared for the exclusive use of [Client/Internal]. It contains proprietary and confidential information. No part of this report may be reproduced, distributed, or communicated to any third party without express prior written consent. The findings are based on information available at the time of preparation. The author accepts no liability for decisions made in reliance on this report.*
 
 ### 4.3 Page Layout and White Space
-- Generous margins (1in top/bottom, 1.2in left/right)
-- Body text justified
-- Exhibits should occupy 90% of page width for maximum visual impact
-- Consistent 0.8em spacing between all components (no ad-hoc spacing values)
+- Page margins: 1in top/bottom, 1in left/right
+- Body text justified, table text left-aligned (never justify table cells)
+- Exhibits should occupy 90-92% of page width for maximum visual impact
+- Consistent 0.8em spacing between ALL block-level components (no exceptions)
 - Section dividers used every 3-5 pages for visual rhythm
-- No orphan lines (minimum 3 lines before page break)
+- No orphan headings (use `block(sticky: true)` on all heading levels)
+- No half-empty pages. If a page is less than 70% filled, add prose or move content up
 
 ### 4.4 Typography Hierarchy
 The CSS enforces a strict visual hierarchy. In markdown, this maps to:
@@ -268,13 +269,26 @@ These rules come from production debugging. Violating them produces broken outpu
 - Inconsistent spacing (mixing 0.3em, 0.5em, 1em) looks unprofessional.
 
 **Typography:**
-- Body: Helvetica Neue, 10pt
-- H1 (report title): Georgia, 22pt, bold
-- H2 (section headers): Helvetica Neue, 14pt, bold, with underline rule
+- Body: Helvetica Neue, 10.5pt, color `#2D2D2D`
+- H1 (report title): Georgia, 22pt, bold, color `#003A70`
+- H2 (section headers): Helvetica Neue, 13pt, bold, with underline rule (0.75pt silver)
 - H3 (subsections): Helvetica Neue, 11pt, bold
-- Tables: 8.5pt
-- Source lines: 7.5pt, italic
-- All text color: `#333333` (body), `#16213E` (headings)
+- Tables: 9pt, left-aligned (never justified)
+- Source lines: 7pt, italic, silver
+- All heading color: `#003A70` (dark blue)
+- Heading spacing: 1.2em above, 0.5em below (all levels identical)
+
+**Table Alignment:**
+- ALWAYS set `show table: set par(justify: false)` globally
+- Justified table text causes ugly word-spreading (e.g., "User  interface,  context  memory")
+- Table cell inset: 10pt horizontal, 7pt vertical
+- Column widths must be wide enough to prevent text hyphenation. Test with the longest cell content
+
+**KPI Card Text:**
+- ALWAYS disable hyphenation inside KPI cards: `set text(hyphenate: false)`
+- ALWAYS disable justification inside KPI cards: `set par(justify: false)`
+- Keep KPI labels under 15 characters. "E-Commerce 2025" not "Global E-Commerce 2025"
+- Without these rules, labels break as "E-COM-MERCE" or "MEDI-ATED"
 
 ### 7.4 Design Anti-Patterns (BANNED)
 
@@ -284,12 +298,15 @@ These produce "AI slop" output. Never use them:
 |---|---|
 | Emojis anywhere in the document | Text labels in tables |
 | Rounded corners on cards/boxes | Sharp corners (radius: 0pt) |
-| Green-tinted backgrounds (#F0FFF4) | Neutral gray (#F7F8FA) |
+| Green-tinted backgrounds (#F0FFF4) | Neutral gray (#F5F5F5) |
 | Gradient fills | Flat solid fills |
-| Colored accent borders (green, teal) | Navy-only borders |
+| Colored accent borders (green, teal) | McKinsey Blue borders only |
 | Icon grids with emoji circles | Clean two-column tables |
-| Multiple accent colors | Navy (#16213E) as the only accent |
+| Multiple accent colors | McKinsey Blue (#005EB8) as the only accent |
 | Decorative elements, shadows, glows | Clean lines and white space |
+| Em-dashes (`---`) in Typst prose | Commas, periods, or parentheses |
+| Justified text in table cells | Left-aligned table text |
+| Half-empty pages with no content | Fill with prose or reorganize |
 
 The aesthetic must be austere, restrained, and authoritative. Think McKinsey, not Canva.
 
@@ -319,12 +336,19 @@ label_offsets = {
 }
 ```
 
-**Color protocol:**
-- Neutral gray (`#B0B0B0`) for all non-highlighted data
-- Brand primary (`#0F3460`) for the key insight element
-- Accent (`#1A936F`) for secondary highlights
-- Red (`#C0392B`) for negative/risk data only
-- Never use more than 4 colors in one chart
+**Color protocol (McKinsey Blue palette):**
+- Primary brand blue (`#005EB8`) for key data and highlights
+- Highlight blue (`#0091DA`) for secondary emphasis
+- Dark blue (`#003A70`) for headings and axis labels
+- Neutral silver (`#A2AAAD`) for all non-highlighted data
+- Light gray (`#D9D9D9`) for background/context series
+- Red (`#D63B2F`) for negative/risk data only
+- Never use green as an accent color. Never use more than 4 colors in one chart
+
+**Legend positioning:**
+- Place legends OUTSIDE the chart data area. Use `bbox_to_anchor` to position below the chart
+- Example: `ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=4)`
+- Legends placed inside chart areas WILL overlap with bars and labels
 
 **Chart types (MECE):**
 - Market sizing over time: Area chart
@@ -397,12 +421,33 @@ label_offsets = {
 - Maximum 4-5 per report
 
 ### 9.7 Cover Page
-- Brand color bar at top (6pt height)
-- Title in Georgia, 32pt, centered
-- Subtitle in 13pt steel gray
-- Author and date in 11pt
-- Confidentiality notice in 7.5pt muted text
-- Generous white space (2+ inches padding top)
+- Full-page navy (`#16213E`) background, no white space
+- Blue accent stripe (60pt line, 2.5pt, McKinsey Blue `#005EB8`) above title
+- Title in Georgia, 38pt, white
+- Subtitle in Helvetica Neue, 14pt, semi-transparent white
+- Author and date in a bottom grid (left-aligned author, right-aligned date)
+- Confidentiality notice in 7pt, very low opacity white
+- Author/date section separated by a subtle divider line
+
+### 9.8 Content Density and Visual Variety
+- **No chart-only reports.** Every report must include a mix of charts, tables, images, prose, KPIs, and callouts
+- **Add contextual photography.** Use high-quality stock photos from Unsplash to break up data-heavy sections. Place at least 2-3 full-width images throughout the report
+- **Image captions.** Every image must have a 7pt italic caption with attribution ("Photo: Unsplash")
+- **Substantial prose.** Each major section must contain 2-3 analytical paragraphs between exhibits. Do not present exhibits back-to-back without analysis
+- **The 70% rule.** No page should be less than 70% filled with content. If a page has too much empty space, either add prose or restructure content flow
+
+### 9.9 Spacing Standardization (ABSOLUTE RULE)
+Every spacing value in the template must follow this exact specification. No exceptions:
+
+| Element | `above` | `below` | Internal gaps |
+|---|---|---|---|
+| All block components (exhibits, callouts, KPIs, stats, timeline) | 0.8em | 0.8em | 0.3em between sub-elements |
+| H1 headings | 1.2em | 0.6em | N/A |
+| H2/H3 headings | 1.2em | 0.5em | N/A |
+| Paragraph spacing (global) | N/A | N/A | 0.85em |
+| List/enum spacing | N/A | N/A | 0.65em |
+
+Mixing different spacing values (e.g., 0.6em on timeline but 1.0em on exhibits) destroys visual symmetry. The reader perceives uneven gaps as sloppiness.
 
 ---
 
