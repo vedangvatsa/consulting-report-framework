@@ -28,7 +28,7 @@ Whenever you are asked to write or assist in writing a consulting report in this
 *   **OPEN, PROBABILISTIC LANGUAGE:** When describing future trends, predictions, or market sizing, always use "open" words (e.g., *can, may, could, is likely to, is expected to, appears to, we estimate*) instead of "closed" definitive words (e.g., *will, should, must, shall*). This ensures the analysis remains semantically accurate regardless of how the future unfolds.
 *   **USE SYMBOLS FOR DATA:** Always use the `%` symbol instead of writing out "percent." Always use `$` or appropriate currency symbols with numbers. Use `~` for approximations (e.g., ~$4.2B).
 *   **ROUND NUMBERS SENSIBLY:** Executives do not need two decimal places. Round to meaningful precision: $4.2B not $4,217,342,891. Use "~" to signal approximation. Exception: when precision matters for the argument (e.g., margins, growth rates), show one decimal place.
-*   **CHART GENERATION:** Do not use AI image generators to create charts, as they hallucinate text and numbers. You MUST write a Python script (using matplotlib or seaborn) to generate charts based on accurate data, save them as `.png` files (300 DPI, transparent background) in the report directory, and embed them in the markdown. Use the consulting style configuration from `assets/chart_style.py`.
+*   **CHART GENERATION:** Do not use AI image generators to create charts, as they hallucinate text and numbers. You MUST write a Python script (using matplotlib or seaborn) to generate charts based on accurate data, save them as `.png` files (200 DPI, white background) in the report directory. Use the consulting style configuration from `assets/chart_style.py`. **Charts must NOT contain their own titles** -- titles are handled by the Typst `chart-exhibit` component.
 *   **USE EXHIBITS:** Label all data displays as "Exhibit" (not "Table" or "Figure"). Number them sequentially (Exhibit 1, Exhibit 2, etc.). Every exhibit must have:
     1. An **action title** (a complete sentence stating the insight, not a descriptive label)
     2. Clear axis labels and units
@@ -123,11 +123,11 @@ Every report must include the following notice on the cover page:
 > *This document has been prepared for the exclusive use of [Client/Internal]. It contains proprietary and confidential information. No part of this report may be reproduced, distributed, or communicated to any third party without express prior written consent. The findings are based on information available at the time of preparation. The author accepts no liability for decisions made in reliance on this report.*
 
 ### 4.3 Page Layout and White Space
-- Generous margins (1in top/bottom, 1.25in left/right for single-column)
-- Body text left-aligned or justified (no ragged right in body)
-- Exhibits should occupy 50-80% of page width for maximum visual impact
-- Minimum 1.5em spacing between sections
-- Section dividers (horizontal rules) used consistently between major sections
+- Generous margins (1in top/bottom, 1.2in left/right)
+- Body text justified
+- Exhibits should occupy 90% of page width for maximum visual impact
+- Consistent 0.8em spacing between all components (no ad-hoc spacing values)
+- Section dividers used every 3-5 pages for visual rhythm
 - No orphan lines (minimum 3 lines before page break)
 
 ### 4.4 Typography Hierarchy
@@ -208,239 +208,247 @@ Before starting a new report, ask the user what type of report they want to writ
 
 ---
 
-## 7. VISUAL DESIGN STANDARDS (CRITICAL)
+## 7. TYPST RENDERING PIPELINE (MANDATORY)
 
-This section is the most important in the entire document. A report without rich visual design is a FAILURE. Text-only reports with occasional tables are unacceptable. Every report must be visually rich, with charts, graphs, infographics, colored sections, KPI dashboards, and professional design elements throughout.
+Reports are rendered using **Typst** (not HTML/CSS/Pandoc/Chrome). Typst is a modern typesetting engine that produces native, high-fidelity PDFs with proper typography, colors, and page layouts.
 
-### 7.1 The "No Wall of Text" Rule (MANDATORY)
+### 7.1 Pipeline Overview
 
-**No page in the report may contain more than 60% text.** Every page must contain at least one of the following visual elements:
-- A chart or graph (generated via Python, not AI image tools)
-- A table with professional styling
-- A KPI dashboard with hero numbers
-- A callout box with a key insight
-- An icon grid or visual framework (2x2 matrix, process flow, etc.)
-- A colored section divider or header block
+```
+Python (generate charts) → Typst (compose report) → PDF
+```
 
-If a page is all text, you MUST restructure it by adding a visual element, splitting the content, or using layout components (sidebars, callout boxes, colored panels).
+1. Write chart generation script using matplotlib/seaborn
+2. Write report in Typst format (`.typ`) importing `template.typ`
+3. Compile with `typst compile report.typ output.pdf`
 
-### 7.2 Minimum Visual Density Requirements
+### 7.2 Template Architecture
 
-For a 20-page report, the following minimums apply. Scale proportionally for other lengths.
+Every report imports `template.typ` which provides:
 
-| Element | Minimum Count | Purpose |
+| Component | Function | Key Rule |
 |---|---|---|
-| Python-generated charts (bar, line, waterfall, scatter) | 6 | Data visualization |
-| Tables with professional styling | 5 | Comparative data |
-| KPI hero number panels (`kpi-grid`) | 2 | At-a-glance statistics |
-| Callout/insight boxes (blockquotes) | 4 | Key takeaways |
-| Colored section divider pages | 3 | Visual rhythm and section breaks |
-| 2x2 matrices or positioning maps | 1 | Strategic frameworks |
-| Process flow diagrams or timelines | 1 | Implementation sequences |
+| `report()` | Document wrapper with cover page | Pass title, subtitle, author, date |
+| `section-divider()` | Full-page navy divider | Forces page break, takes number/title/subtitle |
+| `kpi-grid()` / `kpi-card()` | KPI dashboard | 3-4 cards per grid, white bg, navy bottom border |
+| `chart-exhibit()` | Chart with title + source | `breakable: false`, title in Typst not matplotlib |
+| `table-exhibit()` | Table with title + source | `breakable: false`, keeps table intact on page |
+| `callout()` | Key insight box | Navy left border, gray background, max 4-5 per report |
+| `highlight-stat()` | Large featured statistic | Navy left border, gray background |
+| `timeline-item()` | Implementation roadmap step | Navy marker box + description |
 
-**Total visual elements for a 20-page report: minimum 22.**
+### 7.3 Critical Typst Rules (HARD-LEARNED)
 
-### 7.3 Python Chart Generation (MANDATORY)
+These rules come from production debugging. Violating them produces broken output.
 
-Every data-heavy section MUST include at least one Python-generated chart. The workflow is:
+**Dollar Signs:**
+- In raw Typst markup text: use `\$` to escape (e.g., `\$6.4 trillion`)
+- Inside quoted strings (function arguments): use bare `$` (e.g., `kpi-card("$6.4T", ...)`)
+- NEVER double-escape. `\\$` will render a literal backslash.
 
-1. Write a Python script in the report directory (e.g., `reports/charts/generate_charts.py`)
-2. Use matplotlib + seaborn with the style config from `assets/chart_style.py`
-3. Export charts as PNG at 300 DPI with transparent background
-4. Embed in the markdown using `![Exhibit title](charts/chart_name.png)`
+**Page Breaks:**
+- `chart-exhibit()` and `table-exhibit()` are `breakable: false`. This prevents charts/tables from splitting across pages.
+- Do NOT set `set block(breakable: false)` globally. This causes huge empty gaps at page bottoms because entire blocks jump to the next page.
+- Only specific components should be unbreakable: exhibits, KPI grids, callouts, timeline items.
+- Regular paragraphs and lists must remain breakable for natural text flow.
 
-**Chart types to use for each data type:**
-- **Market sizing over time:** Area chart or stacked bar chart
-- **Market share / competitive comparison:** Horizontal bar chart (sorted by size)
-- **Growth rates / YoY comparison:** Grouped column chart
-- **Financial bridge / impact decomposition:** Waterfall chart
-- **Trend over time:** Line chart with direct labeling
-- **Strategic positioning:** Scatter plot or 2x2 quadrant
-- **Scenario comparison:** Grouped bar chart with color coding (green/gray/red)
-- **Distribution:** Histogram or box plot
+**Spacing:**
+- Use a consistent spacing unit of `0.8em` for all vertical gaps.
+- Set `par(spacing: 0.8em)` globally.
+- Set `list(spacing: 0.6em)` and `enum(spacing: 0.6em)` globally.
+- Do NOT use ad-hoc `#v()` values scattered through the report. All spacing should come from the template's component definitions.
+- Inconsistent spacing (mixing 0.3em, 0.5em, 1em) looks unprofessional.
 
-**NEVER use pie charts.** They are impossible to compare accurately. Use horizontal bar charts instead.
+**Typography:**
+- Body: Helvetica Neue, 10pt
+- H1 (report title): Georgia, 22pt, bold
+- H2 (section headers): Helvetica Neue, 14pt, bold, with underline rule
+- H3 (subsections): Helvetica Neue, 11pt, bold
+- Tables: 8.5pt
+- Source lines: 7.5pt, italic
+- All text color: `#333333` (body), `#16213E` (headings)
 
-**Chart styling rules (enforced via `assets/chart_style.py`):**
-- White background, no gridlines (or very faint horizontal gray lines only)
-- No top or right spines. Only left and bottom spines in light gray.
-- Title left-aligned, bold, positioned as the "action title" above the chart
-- Source line in 8pt italic below the chart
-- Use neutral gray (#B0B0B0) for all data series except the one being highlighted
-- Use the brand primary color for the highlighted/key data series
-- Direct label values on bars/lines instead of using a legend
-- Annotate the "so what" directly on the chart with an arrow or text callout
-- Export at exactly the width specified in the CSS (matches page content width)
+### 7.4 Design Anti-Patterns (BANNED)
 
-### 7.4 Colored Section Dividers (MANDATORY)
+These produce "AI slop" output. Never use them:
 
-Major sections (every 3-5 pages) must use a full-width colored section divider. These create visual rhythm and prevent the "wall of text" feeling. Use the `section-divider` CSS class:
+| Banned | Use Instead |
+|---|---|
+| Emojis anywhere in the document | Text labels in tables |
+| Rounded corners on cards/boxes | Sharp corners (radius: 0pt) |
+| Green-tinted backgrounds (#F0FFF4) | Neutral gray (#F7F8FA) |
+| Gradient fills | Flat solid fills |
+| Colored accent borders (green, teal) | Navy-only borders |
+| Icon grids with emoji circles | Clean two-column tables |
+| Multiple accent colors | Navy (#16213E) as the only accent |
+| Decorative elements, shadows, glows | Clean lines and white space |
 
-```html
-<div class="section-divider">
-  <span class="section-number">02</span>
-  <h2>Market Sizing</h2>
-  <p class="section-subtitle">TAM, SAM, SOM, and growth trajectory analysis</p>
-</div>
-```
-
-This produces a full-width dark-background panel with white text. Use for sections 1, 2, 3, etc. at the start of each major section.
-
-### 7.5 KPI Hero Number Dashboards (MANDATORY)
-
-The Executive Summary and "At a Glance" sections MUST use KPI hero number panels. Use the `kpi-grid` CSS class:
-
-```html
-<div class="kpi-grid">
-  <div class="kpi-box">
-    <span class="kpi-value">$6.4T</span>
-    <span class="kpi-label">Global E-Commerce (2025)</span>
-    <span class="kpi-delta">+8.2% YoY</span>
-  </div>
-  <div class="kpi-box">
-    <span class="kpi-value">35.7%</span>
-    <span class="kpi-label">Agentic Commerce CAGR</span>
-    <span class="kpi-delta">2026-2033</span>
-  </div>
-</div>
-```
-
-Rules for KPI panels:
-- Use exactly 3-5 KPI boxes per grid (never more than 5)
-- Each box contains one headline number (large, bold), one label (small caps), and one contextual delta
-- Numbers must be rounded for visual impact ($6.4T not $6,420,000,000,000)
-- Use the delta line to show growth rate, time period, or comparison
-
-### 7.6 Callout / Key Insight Boxes
-
-Use blockquotes for key strategic insights. These must be visually distinctive (colored left border, subtle background). Use sparingly (max 4-5 per report) for maximum impact:
-
-```markdown
-> **Key Insight:** The payment authorization layer is to agentic commerce what mobile-responsive design was to mobile commerce in 2010. The companies that solve delegated payment trust first will capture outsized value.
-```
-
-### 7.7 2x2 Matrices and Strategic Frameworks
-
-Every report with competitive analysis MUST include at least one 2x2 matrix or positioning map. Generate these via Python (not tables). The 2x2 matrix should:
-- Use two clearly labeled axes
-- Position competitors/options as labeled dots or boxes
-- Use color to distinguish categories (e.g., incumbents vs. challengers)
-- Include a title that states the insight
-
-### 7.8 Process Flows, Timelines, and Roadmaps
-
-Implementation sections MUST include a visual timeline or process flow. Use HTML with CSS styling:
-
-```html
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-marker">Q1-Q2</div>
-    <div class="timeline-content">
-      <strong>Phase 1: Foundation</strong>
-      <p>Deploy API infrastructure and catalog upgrades</p>
-    </div>
-  </div>
-  <!-- more items -->
-</div>
-```
-
-### 7.9 Icon Grids for Feature/Capability Comparisons
-
-When comparing features across competitors or listing capabilities, use icon grids instead of plain bullet lists:
-
-```html
-<div class="icon-grid">
-  <div class="icon-item">
-    <div class="icon-circle">🔍</div>
-    <strong>Discovery</strong>
-    <p>AI-powered product search and comparison</p>
-  </div>
-  <!-- more items -->
-</div>
-```
-
-Note: While emojis are banned in prose text, they may be used ONLY inside icon-circle elements as visual symbols in infographic layouts.
-
-### 7.10 Table Design Rules
-
-Tables must use the professional CSS styling (dark header row, alternating row colors, no vertical borders). Additional rules:
-- Use bold for totals rows
-- Right-align numeric columns
-- Left-align text columns
-- Use consistent number formatting (all $M or all $B, not mixed)
-- Tables with more than 7 rows should use alternating row shading
-- Include a source line below every table
-
-### 7.11 Cover Page Design
-
-The cover page MUST be visually striking, not just centered text. Include:
-- A large, bold report title
-- A subtitle describing the scope
-- Author and date information
-- A colored accent band or border
-- The confidentiality notice in small, muted text
-- Generous white space (at least 2.5 inches of padding at top)
-
-### 7.12 Page Balance and Visual Rhythm
-
-Follow these rules for visual flow through the report:
-- **Alternate density:** Follow a text-heavy page with a chart-heavy page
-- **Section breaks:** Use colored dividers between major sections
-- **Chart placement:** Place charts immediately after the paragraph that references them, not pages later
-- **One exhibit per concept:** Do not combine multiple insights into one overloaded chart. Split into separate, focused exhibits.
-- **Breathing room:** Leave generous white space around charts and between sections. Cramped pages are unprofessional.
+The aesthetic must be austere, restrained, and authoritative. Think McKinsey, not Canva.
 
 ---
 
-## 8. Quality Checklist
+## 8. CHART GENERATION STANDARDS
+
+### 8.1 Chart Generation Workflow
+
+1. Write a Python script (e.g., `generate_charts.py`) using matplotlib + seaborn
+2. Use the style config from `assets/chart_style.py`
+3. Export as PNG at **200 DPI**, **white background**, **pad_inches=0.15**
+4. Embed in Typst using `chart-exhibit()` component
+
+### 8.2 Critical Chart Rules
+
+**NO TITLES IN CHARTS.** The Typst `chart-exhibit()` component provides the exhibit title. If you also put `ax.set_title()` in matplotlib, the title appears twice. Remove all `ax.set_title()` calls.
+
+**Chart sizing:** Use `figsize=(7, 3)` as the default. Maximum height is 3.5 for most charts, 4 for scatter/matrix plots. Oversized charts cause page-break problems.
+
+**Label overlap prevention:** For scatter plots and 2x2 matrices, use per-item label offsets instead of a single global offset. Example:
+```python
+label_offsets = {
+    'Company A': (25, 0, 'left'),    # label goes right
+    'Company B': (0, -28, 'center'), # label goes below
+    'Company C': (-25, -5, 'right'), # label goes left
+}
+```
+
+**Color protocol:**
+- Neutral gray (`#B0B0B0`) for all non-highlighted data
+- Brand primary (`#0F3460`) for the key insight element
+- Accent (`#1A936F`) for secondary highlights
+- Red (`#C0392B`) for negative/risk data only
+- Never use more than 4 colors in one chart
+
+**Chart types (MECE):**
+- Market sizing over time: Area chart
+- Competitive comparison: Horizontal bar chart
+- Scenario analysis: Grouped bar chart
+- Trend over time: Line chart with direct labels
+- Strategic positioning: Scatter plot / 2x2 matrix
+- Value chain / composition: Stacked horizontal bar
+- Consumer behavior: Vertical bar with color coding
+- **NEVER use pie charts**
+
+### 8.3 Chart Styling Checklist
+- [ ] No chart title (handled by Typst)
+- [ ] White background, no gridlines (or very faint)
+- [ ] No top or right spines
+- [ ] figsize height <= 3.5 (4 max for matrices)
+- [ ] Direct labeling on bars/lines (avoid legends when possible)
+- [ ] Neutral gray for context data, brand color for insight
+- [ ] "So what" annotation directly on chart
+- [ ] 200 DPI, pad_inches=0.15
+
+---
+
+## 9. VISUAL DESIGN STANDARDS
+
+### 9.1 The "No Wall of Text" Rule
+**No page may contain more than 60% text.** Every page must contain at least one visual element: chart, table, KPI grid, callout, or section divider.
+
+### 9.2 Minimum Visual Density (20-page report)
+
+| Element | Min Count |
+|---|---|
+| Python-generated charts | 6 |
+| Professional tables | 5 |
+| KPI hero number panels | 2 |
+| Callout/insight boxes | 4 |
+| Section divider pages | 3 |
+| 2x2 matrix or positioning map | 1 |
+| Timeline or process flow | 1 |
+| **Total visual elements** | **22** |
+
+### 9.3 Table Design
+- Dark navy header row with white text
+- Alternating row fill: `#F7F8FA` and white
+- No vertical borders, no stroke
+- Bold for totals rows
+- Consistent number formatting
+- Source line below every table
+
+### 9.4 KPI Cards
+- White background, sharp corners (0 radius)
+- Navy bottom border accent (2pt)
+- Light border on other sides (0.5pt `#E2E8F0`)
+- Large number in navy, small-caps label in steel gray
+- Delta/context in small steel gray text (NOT colored)
+- 3-4 cards per grid
+
+### 9.5 Section Dividers
+- Full-page navy background
+- Ghost section number (48pt, very low opacity `#FFFFFF18`)
+- Section title in Georgia, 26pt, white
+- Subtitle in 11pt, semi-transparent white
+- Forces page break before and after
+
+### 9.6 Callout Boxes
+- Navy left border (3pt)
+- Neutral gray background (`#F7F8FA`)
+- No rounded corners
+- No colored backgrounds (no green, no blue tints)
+- Maximum 4-5 per report
+
+### 9.7 Cover Page
+- Brand color bar at top (6pt height)
+- Title in Georgia, 32pt, centered
+- Subtitle in 13pt steel gray
+- Author and date in 11pt
+- Confidentiality notice in 7.5pt muted text
+- Generous white space (2+ inches padding top)
+
+---
+
+## 10. Quality Checklist
 
 Before finalizing any report, verify every item:
 
 ### Structure
-- [ ] Cover page includes title, subtitle, author, date, and confidentiality notice
-- [ ] Cover page is visually striking with colored accents (not plain text)
-- [ ] Executive summary can stand alone as a 1-page brief for a CEO
-- [ ] Every H2/H3 section starts with a bold governing thought
-- [ ] Reading only the governing thoughts tells the complete story (horizontal logic test)
-- [ ] All body sections are numbered (1, 2, 3... and 1.1, 1.2...)
-- [ ] The pyramid principle is followed (answer first, then evidence)
-- [ ] All frameworks and categorizations are MECE
+- [ ] Cover page with title, subtitle, author, date, confidentiality notice
+- [ ] Executive summary stands alone as a 1-page CEO brief
+- [ ] Every section starts with a bold governing thought
+- [ ] Horizontal logic test passes (governing thoughts tell the full story)
+- [ ] Pyramid principle followed (answer first, then evidence)
+- [ ] All frameworks are MECE
 
-### Visual Design (CRITICAL)
-- [ ] No page contains more than 60% text (the "no wall of text" rule)
-- [ ] Minimum visual element counts are met (see Section 7.2)
-- [ ] At least 6 Python-generated charts are included
-- [ ] At least 2 KPI hero number dashboards are included
-- [ ] At least 3 colored section dividers are used
-- [ ] At least 1 strategic framework visualization (2x2 matrix, process flow) is included
-- [ ] Charts and tables are placed immediately after the referencing paragraph
-- [ ] Visual rhythm alternates between text-heavy and chart-heavy pages
+### Visual Design
+- [ ] No page contains more than 60% text
+- [ ] Minimum visual element counts met (Section 9.2)
+- [ ] Zero emojis in the entire document
+- [ ] Zero rounded corners, gradients, or colored tints
+- [ ] Navy is the only accent color used for borders and highlights
+- [ ] Consistent 0.8em spacing throughout
 
-### Data and Exhibits
-- [ ] All data uses the most recent available figures (no stale data without explicit disclosure)
-- [ ] All exhibits are numbered sequentially (Exhibit 1, 2, 3...)
-- [ ] Every exhibit has an action title (insight sentence, not a description)
-- [ ] Every exhibit has a source line with organization, title, and year
-- [ ] All data is verifiable with cited sources
-- [ ] Charts generated via Python scripts using `assets/chart_style.py`, not AI image generators
-- [ ] Charts start at zero for bar/column types
-- [ ] Charts use direct labeling instead of legends where possible
+### Charts
+- [ ] All charts generated via Python (not AI image tools)
+- [ ] No chart contains its own title (Typst handles titles)
+- [ ] Chart heights <= 3.5 (no oversized charts)
+- [ ] No label overlap on scatter/matrix plots
+- [ ] Neutral gray for context, brand color for insight
+- [ ] Direct labeling, minimal legends
 
-### Recommendations
-- [ ] Every recommendation specifies who, what, when, and expected quantified impact
-- [ ] Recommendations are prioritized (impact vs. feasibility matrix included)
-- [ ] Risks are identified with likelihood, impact, and specific mitigations
+### Exhibits
+- [ ] Numbered sequentially (Exhibit 1, 2, 3...)
+- [ ] Every exhibit has an action title (insight sentence)
+- [ ] Every exhibit has a source line
+- [ ] All exhibits wrapped in `chart-exhibit()` or `table-exhibit()`
+- [ ] No exhibit splits across pages
 
-### Writing Quality
-- [ ] No AI slop words, em-dashes, colons in prose, semicolons, or emojis anywhere
-- [ ] Active voice throughout
-- [ ] No sentence exceeds 25 words
-- [ ] Probabilistic language used for all forward-looking statements
+### Data
+- [ ] Most recent available data used
+- [ ] All data verifiable with cited sources
+- [ ] Probabilistic language for forward-looking statements
 - [ ] Numbers use symbols (%, $) and are rounded sensibly
 
-### Output
-- [ ] PDF renders cleanly with no browser artifacts
-- [ ] `--no-pdf-header-footer` flag used in Chrome PDF generation
-- [ ] Page numbers visible on all pages except the cover page
-- [ ] White space is generous and consistent throughout
-- [ ] Colors render correctly (print-color-adjust: exact is set)
+### Writing
+- [ ] No AI slop words
+- [ ] No em-dashes, colons in prose, semicolons
+- [ ] Active voice throughout
+- [ ] No sentence exceeds 25 words
+
+### Typst Output
+- [ ] Compiles without errors (`typst compile report.typ`)
+- [ ] No `\$` backslashes visible in rendered text
+- [ ] No content splitting across pages
+- [ ] No excessive empty white space at page bottoms
+- [ ] Page numbers on all pages except cover
+- [ ] Consistent spacing and typography throughout
