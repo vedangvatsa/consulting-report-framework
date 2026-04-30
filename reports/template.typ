@@ -47,7 +47,7 @@
   }
   show heading.where(level: 2): it => {
     set text(font: "Helvetica Neue", size: 13pt, weight: "bold", fill: dark-blue)
-    block(sticky: true, above: 1.4em, below: 0.5em)[
+    block(sticky: true, above: 1.2em, below: 0.5em)[
       #it.body
       #v(0.25em)
       #line(length: 100%, stroke: 0.75pt + silver)
@@ -55,7 +55,7 @@
   }
   show heading.where(level: 3): it => {
     set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: dark-blue)
-    block(sticky: true, above: 1em, below: 0.4em, it.body)
+    block(sticky: true, above: 1.2em, below: 0.5em, it.body)
   }
 
   // --- GLOBAL TABLE STYLING ---
@@ -153,7 +153,7 @@
 // Title comes from Typst, NOT from matplotlib.
 // ============================================================
 #let chart-exhibit(number, title, path, src, width: 92%) = {
-  block(breakable: false, above: 1em, below: 1em)[
+  block(breakable: false, above: 0.8em, below: 0.8em)[
     #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
     #v(0.3em)
     #text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
@@ -171,7 +171,7 @@
 // Blue rule above, title, table, source below.
 // ============================================================
 #let table-exhibit(number, title, src, body) = {
-  block(breakable: false, above: 1em, below: 1em)[
+  block(breakable: false, above: 0.8em, below: 0.8em)[
     #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
     #v(0.3em)
     #if number != none {
@@ -206,7 +206,7 @@
 // TIMELINE ITEM (implementation roadmap)
 // ============================================================
 #let timeline-item(marker, title, desc) = {
-  block(breakable: false, above: 0.6em, below: 0.6em)[
+  block(breakable: false, above: 0.8em, below: 0.8em)[
     #grid(columns: (80pt, 1fr), column-gutter: 16pt,
       rect(radius: 0pt, fill: mckinsey-blue, inset: (x: 10pt, y: 8pt))[
         #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
