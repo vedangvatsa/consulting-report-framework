@@ -12,22 +12,22 @@
 *Autonomous AI agents are poised to intermediate \$1.5--5 trillion in global commerce by 2030, creating the largest structural shift in digital trade since the shopping cart.*
 
 #kpi-grid(
-  kpi-card("$6.4T", "Global E-Commerce 2025", "+8.2% YoY"),
-  kpi-card("$1.5T", "Agent-Mediated TTV 2030", "Juniper Research"),
-  kpi-card("35.7%", "Tech Solutions CAGR", "2026-2033"),
-  kpi-card("90%", "B2B via Agents by 2028", "Gartner forecast"),
+  kpi-card("$6.4T", "E-Commerce 2025", "+8.2% YoY"),
+  kpi-card("$1.5T", "Agent TTV 2030", "Juniper Research"),
+  kpi-card("35.7%", "Tech CAGR", "2026-2033"),
+  kpi-card("90%", "B2B Agents 2028", "Gartner"),
 )
 
 #v(0.8em)
 
-*Situation.* Global e-commerce reached \$6.4 trillion in 2025. The transaction model where a human browses, selects, and checks out has remained unchanged for two decades.
+*Situation.* Global e-commerce reached \$6.4 trillion in 2025, growing 8.2% year-over-year. Yet the fundamental transaction model --- a human browsing, selecting, and checking out --- has remained structurally unchanged since Amazon launched 1-Click ordering in 1999. Every subsequent innovation (mobile payments, social commerce, buy-now-pay-later) optimized the existing flow rather than replacing it.
 
-*Complication.* Agentic systems capable of autonomous reasoning can now complete end-to-end purchase journeys. OpenAI, Google, Amazon, and Perplexity all launched agent-driven shopping in 2025-2026. New protocols (ACP, UCP, A2A, AP2) enable machine-to-machine transactions.
+*Complication.* Agentic AI systems capable of autonomous, multi-step reasoning can now complete end-to-end purchase journeys without human intervention. In the past 12 months, OpenAI launched shopping within ChatGPT, Google integrated agent commerce through Gemini and the Universal Commerce Protocol, Amazon deployed Rufus with audio summaries, and Perplexity introduced "Buy with Pro." Simultaneously, a parallel infrastructure race produced six interoperability protocols (MCP, ACP, UCP, A2A, AP2, x402) designed to enable machine-to-machine transactions at scale.
 
-*Resolution.* Companies must act within 12-24 months. Merchants need machine-readable catalogs and API-first architectures. Platforms must adopt open commerce protocols. Investors should target the infrastructure layer.
+*Resolution.* The window for strategic positioning is 12-24 months. Merchants must invest in machine-readable catalogs and API-first checkout architectures or risk becoming invisible to agent-mediated discovery. Platforms must adopt open commerce protocols to avoid fragmentation. Investors should target the infrastructure layer --- payment orchestration, identity verification, and agent middleware --- where risk-adjusted returns are highest before protocol winners are established by 2028.
 
 #callout[
-  *Key Insight:* 2026 is the breakout year for agentic shopping. Consumer trust remains the primary barrier, with most consumers uncomfortable delegating full purchasing authority to AI agents.
+  *Key Insight:* 2026 is the breakout year for agentic shopping. Consumer trust remains the primary barrier, with 78% of consumers uncomfortable delegating full purchasing authority to AI agents. However, B2B procurement, where trust thresholds are lower and efficiency gains are immediate, will lead adoption with Gartner projecting 90% of B2B buying will be agent-intermediated by 2028.
 ]
 
 #section-divider("01", "Market Definition", "Defining agentic commerce and establishing the analytical framework")

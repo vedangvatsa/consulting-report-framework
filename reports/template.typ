@@ -118,12 +118,14 @@
 #let kpi-card(value, label, delta) = {
   rect(width: 100%, radius: 0pt,
     stroke: (bottom: 2.5pt + mckinsey-blue, rest: 0.5pt + rgb("#E0E0E0")),
-    inset: 16pt, fill: white)[
+    inset: 14pt, fill: white)[
+    #set par(justify: false)
+    #set text(hyphenate: false)
     #align(center)[
       #text(size: 26pt, weight: "bold", fill: dark-blue)[#value]
-      #v(0.25em)
-      #text(size: 7.5pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
-      #v(0.15em)
+      #v(0.2em)
+      #text(size: 7pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
+      #v(0.1em)
       #text(size: 7pt, fill: silver)[#delta]
     ]
   ]
