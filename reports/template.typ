@@ -142,7 +142,7 @@
 // CALLOUT BOX (blue left-border, light bg)
 // ============================================================
 #let callout(body) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: true, above: 0.8em, below: 0.8em)[
     #rect(width: 100%, stroke: (left: 3pt + mckinsey-blue, rest: none),
       radius: 0pt, inset: (left: 18pt, rest: 14pt), fill: light-bg)[
       #set text(size: 9.5pt)
@@ -175,7 +175,7 @@
 // Blue rule above, title, table, source below.
 // ============================================================
 #let table-exhibit(number, title, src, body) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: true, above: 0.8em, below: 0.8em)[
     #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
     #v(0.3em)
     #if number != none {
@@ -196,7 +196,7 @@
 // HIGHLIGHT STAT (large featured number)
 // ============================================================
 #let highlight-stat(value, label) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: true, above: 0.8em, below: 0.8em)[
     #rect(width: 100%, radius: 0pt, inset: 18pt,
       fill: light-bg, stroke: (left: 3pt + mckinsey-blue, rest: none))[
       #text(size: 28pt, weight: "bold", fill: dark-blue)[#value]
