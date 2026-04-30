@@ -1,0 +1,144 @@
+// McKinsey-Style Consulting Report Template
+#let navy = rgb("#16213E")
+#let accent = rgb("#1A936F")
+#let steel = rgb("#4A5568")
+#let light-bg = rgb("#F7F8FA")
+#let brand = rgb("#0F3460")
+#let red-neg = rgb("#C0392B")
+
+#let report(title: "", subtitle: "", author: "", date: "", body) = {
+  set document(title: title, author: author)
+  set page(paper: "us-letter", margin: (x: 1.2in, y: 1in),
+    footer: context {
+      if counter(page).get().first() > 1 {
+        set text(8pt, fill: steel)
+        h(1fr) + str(counter(page).get().first()) + h(1fr)
+      }
+    }
+  )
+  set text(font: "Helvetica Neue", size: 10pt, fill: rgb("#333"))
+  set par(justify: true, leading: 0.7em)
+  set heading(numbering: none)
+
+  show heading.where(level: 1): it => {
+    set text(font: "Georgia", size: 22pt, weight: "bold", fill: navy)
+    block(above: 0.5em, below: 0.4em, it.body)
+  }
+  show heading.where(level: 2): it => {
+    set text(font: "Helvetica Neue", size: 14pt, weight: "bold", fill: navy)
+    block(above: 1.5em, below: 0.6em, it.body)
+    line(length: 100%, stroke: 0.5pt + rgb("#DDD"))
+  }
+  show heading.where(level: 3): it => {
+    set text(font: "Helvetica Neue", size: 11pt, weight: "bold", fill: navy)
+    block(above: 1.2em, below: 0.4em, it.body)
+  }
+  show table: set text(size: 8.5pt)
+
+  // --- COVER PAGE ---
+  page(margin: (x: 1.2in, y: 0in), footer: none)[
+    #v(0.8in)
+    #rect(width: 100%, height: 6pt, fill: brand)
+    #v(2in)
+    #align(center)[
+      #text(font: "Georgia", size: 32pt, weight: "bold", fill: navy)[#title]
+      #v(0.5em)
+      #text(size: 13pt, fill: steel)[#subtitle]
+      #v(2em)
+      #text(size: 11pt, fill: steel)[#author #h(1em) | #h(1em) #date]
+      #v(3em)
+      #rect(width: 60%, height: 0.5pt, fill: rgb("#DDD"))
+      #v(1em)
+      #text(size: 7.5pt, fill: rgb("#AAA"), style: "italic")[
+        This document has been prepared for the exclusive use of internal strategy teams.\
+        It contains proprietary and confidential information. The author accepts no liability\
+        for decisions made in reliance on this report.
+      ]
+    ]
+  ]
+
+  body
+}
+
+// --- COMPONENT: Section Divider ---
+#let section-divider(number, title, subtitle) = {
+  pagebreak()
+  page(margin: (x: 0in, y: 0in), footer: none)[
+    #rect(width: 100%, height: 100%, fill: navy)[
+      #pad(x: 1.5in, y: 2.5in)[
+        #text(size: 60pt, weight: "bold", fill: rgb("#FFFFFF22"))[#number]
+        #v(-0.3em)
+        #text(font: "Georgia", size: 26pt, weight: "bold", fill: white)[#title]
+        #v(0.5em)
+        #text(size: 11pt, fill: rgb("#FFFFFFAA"))[#subtitle]
+      ]
+    ]
+  ]
+}
+
+// --- COMPONENT: KPI Grid ---
+#let kpi-card(value, label, delta) = {
+  rect(width: 100%, radius: 4pt, stroke: 0.5pt + rgb("#E2E8F0"), inset: 14pt, fill: light-bg)[
+    #align(center)[
+      #text(size: 24pt, weight: "bold", fill: navy)[#value]
+      #v(0.2em)
+      #text(size: 8pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
+      #v(0.15em)
+      #text(size: 7.5pt, fill: accent)[#delta]
+    ]
+  ]
+}
+
+#let kpi-grid(..cards) = {
+  let items = cards.pos()
+  grid(columns: items.len(), column-gutter: 12pt, ..items)
+}
+
+// --- COMPONENT: Callout Box ---
+#let callout(body) = {
+  rect(width: 100%, stroke: (left: 3pt + accent, rest: 0.5pt + rgb("#E2E8F0")),
+    radius: (right: 4pt), inset: 14pt, fill: rgb("#F0FFF4"))[
+    #set text(size: 9.5pt)
+    #body
+  ]
+}
+
+// --- COMPONENT: Exhibit Title ---
+#let exhibit(number, title) = {
+  v(0.8em)
+  text(size: 9.5pt, weight: "bold", fill: navy)[Exhibit #number. #title]
+  v(0.3em)
+}
+
+// --- COMPONENT: Source Line ---
+#let source(txt) = {
+  v(0.2em)
+  text(size: 7.5pt, style: "italic", fill: steel)[Source: #txt]
+  v(0.8em)
+}
+
+// --- COMPONENT: Highlight Stat ---
+#let highlight-stat(value, label) = {
+  rect(width: 100%, radius: 4pt, inset: 16pt,
+    fill: gradient.linear(rgb("#F5F5F0"), rgb("#EDF2F7")),
+    stroke: (left: 4pt + accent, rest: none))[
+    #text(size: 28pt, weight: "bold", fill: navy)[#value]
+    #v(0.1em)
+    #text(size: 9pt, fill: steel)[#label]
+  ]
+}
+
+// --- COMPONENT: Timeline ---
+#let timeline-item(marker, title, desc) = {
+  grid(columns: (70pt, 1fr), column-gutter: 12pt,
+    rect(radius: 3pt, fill: brand, inset: 8pt)[
+      #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
+    ],
+    [
+      #text(size: 10pt, weight: "bold", fill: navy)[#title]
+      #v(0.15em)
+      #text(size: 9pt, fill: steel)[#desc]
+    ]
+  )
+  v(0.6em)
+}

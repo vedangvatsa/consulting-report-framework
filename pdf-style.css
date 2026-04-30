@@ -435,9 +435,10 @@ h2#sources ~ p,
 .section-divider {
   background-color: #16213E;
   color: #FFFFFF;
-  padding: 2.5em 2em;
-  margin: 2em -1.25in;
-  width: calc(100% + 2.5in);
+  padding: 2.5em 2.5em;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
   page-break-before: always;
   break-before: page;
   page-break-after: avoid;
