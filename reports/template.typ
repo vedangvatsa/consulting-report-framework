@@ -66,7 +66,7 @@
   page(margin: (x: 0in, y: 0in), footer: none)[
     #rect(width: 100%, height: 100%, fill: navy)[
       #pad(x: 1.5in, y: 2.5in)[
-        #text(size: 60pt, weight: "bold", fill: rgb("#FFFFFF22"))[#number]
+        #text(size: 48pt, weight: "bold", fill: rgb("#FFFFFF18"))[#number]
         #v(-0.3em)
         #text(font: "Georgia", size: 26pt, weight: "bold", fill: white)[#title]
         #v(0.5em)
@@ -78,13 +78,13 @@
 
 // --- COMPONENT: KPI Grid ---
 #let kpi-card(value, label, delta) = {
-  rect(width: 100%, radius: 4pt, stroke: 0.5pt + rgb("#E2E8F0"), inset: 14pt, fill: light-bg)[
+  rect(width: 100%, radius: 0pt, stroke: (bottom: 2pt + brand, rest: 0.5pt + rgb("#E2E8F0")), inset: 14pt, fill: white)[
     #align(center)[
       #text(size: 24pt, weight: "bold", fill: navy)[#value]
       #v(0.2em)
-      #text(size: 8pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
+      #text(size: 7.5pt, weight: "bold", fill: steel, tracking: 0.5pt)[#upper(label)]
       #v(0.15em)
-      #text(size: 7.5pt, fill: accent)[#delta]
+      #text(size: 7pt, fill: steel)[#delta]
     ]
   ]
 }
@@ -96,8 +96,8 @@
 
 // --- COMPONENT: Callout Box ---
 #let callout(body) = {
-  rect(width: 100%, stroke: (left: 3pt + accent, rest: 0.5pt + rgb("#E2E8F0")),
-    radius: (right: 4pt), inset: 14pt, fill: rgb("#F0FFF4"))[
+  rect(width: 100%, stroke: (left: 3pt + navy, rest: none),
+    radius: 0pt, inset: (left: 16pt, rest: 12pt), fill: rgb("#F7F8FA"))[
     #set text(size: 9.5pt)
     #body
   ]
@@ -119,9 +119,9 @@
 
 // --- COMPONENT: Highlight Stat ---
 #let highlight-stat(value, label) = {
-  rect(width: 100%, radius: 4pt, inset: 16pt,
-    fill: gradient.linear(rgb("#F5F5F0"), rgb("#EDF2F7")),
-    stroke: (left: 4pt + accent, rest: none))[
+  rect(width: 100%, radius: 0pt, inset: 16pt,
+    fill: rgb("#F7F8FA"),
+    stroke: (left: 3pt + navy, rest: none))[
     #text(size: 28pt, weight: "bold", fill: navy)[#value]
     #v(0.1em)
     #text(size: 9pt, fill: steel)[#label]

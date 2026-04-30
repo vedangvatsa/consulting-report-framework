@@ -40,51 +40,22 @@
 
 *Agentic commerce represents a structural break from two decades of static e-commerce, transferring discovery, evaluation, negotiation, and transaction execution to autonomous AI systems.*
 
-#v(0.5em)
+#v(0.3em)
 
-#grid(columns: (1fr, 1fr, 1fr), column-gutter: 10pt, row-gutter: 10pt,
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[🤖] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Autonomy] #v(0.1em)
-      #text(size: 8pt, fill: steel)[Acts independently after high-level directive]
-    ]
-  ],
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[🧠] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Multi-Step Reasoning] #v(0.1em)
-      #text(size: 8pt, fill: steel)[Decomposes tasks, evaluates trade-offs]
-    ]
-  ],
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[🌐] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Cross-Platform] #v(0.1em)
-      #text(size: 8pt, fill: steel)[Operates across merchant boundaries]
-    ]
-  ],
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[💳] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Transaction Completion] #v(0.1em)
-      #text(size: 8pt, fill: steel)[Checkout, payment, delivery confirmation]
-    ]
-  ],
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[🔗] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Protocol-Native] #v(0.1em)
-      #text(size: 8pt, fill: steel)[MCP, ACP, UCP for M2M commerce]
-    ]
-  ],
-  rect(radius: 4pt, fill: light-bg, inset: 12pt)[
-    #align(center)[
-      #text(size: 20pt)[📊] #v(0.2em)
-      #text(size: 9pt, weight: "bold", fill: navy)[Data-Driven] #v(0.1em)
-      #text(size: 8pt, fill: steel)[Optimizes on price, speed, reviews]
-    ]
-  ],
+#table(
+  columns: (1.2fr, 3fr),
+  stroke: none,
+  fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+  table.header(
+    text(fill: white, weight: "bold")[Capability],
+    text(fill: white, weight: "bold")[Description],
+  ),
+  [*Autonomy*], [Agent acts independently after receiving a high-level directive from the user],
+  [*Multi-step reasoning*], [Decomposes complex purchase tasks, queries multiple sources, evaluates trade-offs],
+  [*Cross-platform operation*], [Operates across merchant boundaries, comparing prices and availability in real time],
+  [*Transaction completion*], [Completes checkout, manages payment authorization, confirms delivery],
+  [*Protocol-native*], [Uses standardized protocols (MCP, ACP, UCP) for machine-to-machine commerce],
+  [*Data-driven optimization*], [Optimizes on objective metrics such as price, delivery speed, reviews, and specifications],
 )
 
 #v(0.5em)
