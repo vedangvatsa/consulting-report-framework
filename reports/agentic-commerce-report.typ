@@ -145,7 +145,7 @@
 #table-exhibit(8, "Six protocols compete to define the agentic commerce stack",
   "Anthropic (2025), Google (2026), OpenAI (2026), Stripe (2026)")[
   #table(
-    columns: (0.8fr, 1.2fr, 1fr, 2.5fr),
+    columns: (1fr, 1.2fr, 1fr, 2.5fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
@@ -174,7 +174,7 @@
 #table-exhibit(9, "The agentic commerce stack operates across four distinct layers",
   "Author analysis based on protocol documentation, 2026")[
   #table(
-    columns: (0.5fr, 1.5fr, 1.2fr, 1.5fr),
+    columns: (1.2fr, 1.5fr, 1.2fr, 1.5fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
@@ -322,7 +322,7 @@
 #table-exhibit(17, "Infrastructure investment offers the highest risk-adjusted returns",
   "Author analysis")[
   #table(
-    columns: (1.8fr, 0.6fr, 0.6fr, 0.8fr, 1.2fr),
+    columns: (2fr, 0.7fr, 0.7fr, 0.8fr, 1.5fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(

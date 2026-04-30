@@ -207,14 +207,14 @@
 // TIMELINE ITEM (implementation roadmap)
 // ============================================================
 #let timeline-item(marker, title, desc) = {
-  block(breakable: false, above: 0.3em, below: 0.3em)[
-    #grid(columns: (70pt, 1fr), column-gutter: 12pt,
-      rect(radius: 0pt, fill: brand, inset: 8pt)[
+  block(breakable: false, above: 0.6em, below: 0.6em)[
+    #grid(columns: (80pt, 1fr), column-gutter: 16pt,
+      rect(radius: 0pt, fill: brand, inset: (x: 10pt, y: 8pt))[
         #align(center)[#text(size: 9pt, weight: "bold", fill: white)[#marker]]
       ],
       [
         #text(size: 10pt, weight: "bold", fill: navy)[#title]
-        #v(0.15em)
+        #v(0.2em)
         #text(size: 9pt, fill: steel)[#desc]
       ]
     )
