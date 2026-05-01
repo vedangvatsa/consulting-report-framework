@@ -9,19 +9,19 @@ import numpy as np
 import os
 
 # ============================================================
-# STYLE CONFIG — Black & White Monochrome Palette
+# STYLE CONFIG — McKinsey Blue Palette
 # ============================================================
-BRAND_PRIMARY = "#1A1A1A"     # Near-black
-ACCENT = "#555555"            # Medium gray
-NEUTRAL_GRAY = "#999999"      # Silver gray
+BRAND_PRIMARY = "#005EB8"     # McKinsey Blue
+ACCENT = "#0091DA"            # Highlight blue
+NEUTRAL_GRAY = "#A2AAAD"      # Silver gray
 LIGHT_GRAY = "#D9D9D9"
-POSITIVE_GREEN = "#333333"
-NEGATIVE_RED = "#666666"
-TEXT_COLOR = "#1A1A1A"
-HEADING_COLOR = "#1A1A1A"     # Near-black
+POSITIVE_GREEN = "#1A936F"
+NEGATIVE_RED = "#D63B2F"
+TEXT_COLOR = "#2D2D2D"
+HEADING_COLOR = "#003A70"     # Dark blue
 BG_WHITE = "#FFFFFF"
 
-PALETTE = [BRAND_PRIMARY, ACCENT, "#333333", "#777777", "#999999", "#D9D9D9"]
+PALETTE = [BRAND_PRIMARY, ACCENT, "#003A70", "#5E6B7A", "#A2AAAD", "#D9D9D9"]
 
 def apply_style():
     sns.set_theme(style="white", font="sans-serif")
