@@ -94,21 +94,21 @@
 }
 
 // ============================================================
-// SECTION DIVIDER (inline navy banner, no pagebreak)
+// SECTION DIVIDER (full-page navy, matching cover page style)
 // ============================================================
 #let section-divider(number, title, subtitle) = {
   pagebreak(weak: true)
-  block(breakable: false, above: 0em, below: 1.2em)[
-    #rect(width: 100%, fill: navy, radius: 0pt,
-      inset: (x: 28pt, y: 22pt))[
-      #grid(columns: (auto, 1fr), column-gutter: 16pt,
-        text(size: 32pt, weight: "bold", fill: rgb("#FFFFFF30"))[#number],
-        [
-          #text(font: "Georgia", size: 16pt, weight: "bold", fill: white)[#title]
-          #v(0.3em)
-          #text(size: 9pt, fill: rgb("#FFFFFFAA"))[#subtitle]
-        ]
-      )
+  page(margin: (x: 0in, y: 0in), footer: none)[
+    #rect(width: 100%, height: 100%, fill: navy)[
+      #pad(x: 1.4in)[
+        #v(1fr)
+        #text(size: 72pt, weight: "bold", fill: rgb("#FFFFFF18"))[#number]
+        #v(0.3em)
+        #text(font: "Georgia", size: 30pt, weight: "bold", fill: white)[#title]
+        #v(0.6em)
+        #text(size: 12pt, fill: rgb("#FFFFFFAA"))[#subtitle]
+        #v(1fr)
+      ]
     ]
   ]
 }
