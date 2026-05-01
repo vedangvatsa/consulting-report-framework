@@ -7,17 +7,17 @@
 // - Generous whitespace, strict grid, exhibit discipline
 // ============================================================
 
-// --- COLOR SYSTEM (McKinsey Blue palette) ---
-#let mckinsey-blue = rgb("#005EB8")      // Primary brand blue
-#let dark-blue = rgb("#003A70")          // Deep headings
-#let navy = rgb("#16213E")               // Darkest (cover, dividers)
-#let steel = rgb("#5E6B7A")              // Body-secondary, captions
-#let silver = rgb("#A2AAAD")             // Chart axes, light borders
-#let light-bg = rgb("#F5F5F5")           // Exhibit backgrounds
+// --- COLOR SYSTEM (Black & White monochrome palette) ---
+#let mckinsey-blue = rgb("#FFFFFF")        // Accent → white
+#let dark-blue = rgb("#1A1A1A")            // Deep headings → near-black
+#let navy = rgb("#0A0A0A")                 // Darkest (cover, dividers) → black
+#let steel = rgb("#666666")                // Body-secondary, captions
+#let silver = rgb("#999999")               // Chart axes, light borders
+#let light-bg = rgb("#F5F5F5")             // Exhibit backgrounds
 #let white = rgb("#FFFFFF")
-#let highlight-blue = rgb("#0091DA")     // Accent for key data points
-#let red-neg = rgb("#D63B2F")            // Negative/risk only
-#let dark-text = rgb("#2D2D2D")          // Body text
+#let highlight-blue = rgb("#CCCCCC")       // Accent for key data points → light gray
+#let red-neg = rgb("#666666")              // Risk → dark gray
+#let dark-text = rgb("#1A1A1A")            // Body text → near-black
 
 // ============================================================
 // DOCUMENT WRAPPER
@@ -72,7 +72,7 @@
     ]
     // Semi-transparent overlay for text readability
     #place(top + left)[
-      #rect(width: 100%, height: 100%, fill: rgb("#16213E99"))
+      #rect(width: 100%, height: 100%, fill: rgb("#0A0A0A99"))
     ]
     #pad(x: 1.4in)[
       #v(2.2in)
@@ -111,7 +111,7 @@
     ]
     // Semi-transparent navy overlay for text readability
     #place(top + left)[
-      #rect(width: 100%, height: 100%, fill: rgb("#16213Ecc"))
+      #rect(width: 100%, height: 100%, fill: rgb("#0A0A0Acc"))
     ]
     // Decorative large ghost number (background watermark)
     #place(center + horizon, dy: -60pt)[
