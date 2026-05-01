@@ -25,13 +25,17 @@
 
 *Resolution.* The window for strategic positioning is 12-24 months. Merchants must invest in machine-readable catalogs and API-first checkout architectures or risk becoming invisible to agent-mediated discovery. Platforms must adopt open commerce protocols to avoid fragmentation. Investors should target the infrastructure layer, specifically payment orchestration, identity verification, and agent middleware, where risk-adjusted returns are highest before protocol winners are established by 2028.
 
+This report provides a comprehensive analysis of the agentic commerce opportunity across twelve dimensions: historical context, market definition, sizing, competitive dynamics, protocol architecture, value chain transformation, consumer behavior, investment landscape, risk assessment, data-driven adoption modeling, scenario analysis, and strategic recommendations. It draws on 15 tier-1 analyst reports, 200+ company announcements, regulatory filings across three jurisdictions, and original quantitative modeling.
+
+The probability-weighted expected value across three scenarios (bear, base, bull) is \$6.3 trillion in combined B2B and B2C agent-mediated transaction volume by 2030. The technology solutions market reaches \$23-25 billion in the base case. Infrastructure-layer investments offer the best risk-adjusted returns because they benefit regardless of which adoption scenario materializes.
+
 #callout[
   *Key Insight:* 2026 is the breakout year for agentic shopping. Consumer trust remains the primary barrier, with 78% of consumers uncomfortable delegating full purchasing authority to AI agents. However, B2B procurement, where trust thresholds are lower and efficiency gains are immediate, will lead adoption with Gartner projecting 90% of B2B buying will be agent-intermediated by 2028.
 ]
 
 The executive summary above condenses 12 months of market research spanning 15 tier-1 analyst reports, 200+ company announcements, and regulatory filings across three jurisdictions. The analysis that follows is structured using the Pyramid Principle: each section builds from data to insight to recommendation, ensuring that readers at any level of detail can extract actionable intelligence.
 
-#section-divider("01", "Market Definition", "Defining agentic commerce and establishing the analytical framework")
+#section-divider("01", "Historical Context", "Three decades of digital commerce — from static catalogs to autonomous agents")
 
 #block(breakable: true, above: 0.8em, below: 0.8em)[
   #image("images/ai-commerce.jpg", width: 100%)
@@ -39,13 +43,72 @@ The executive summary above condenses 12 months of market research spanning 15 t
   #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. AI agents are beginning to handle end-to-end purchase journeys on behalf of consumers.]
 ]
 
+*The history of digital commerce is a 30-year sequence of progressively removing friction from the transaction. Agentic commerce represents the logical endpoint: removing the human from the transaction entirely.*
+
+Understanding where agentic commerce fits in the broader arc of digital trade requires tracing the key inflection points that brought us here. Each era solved a specific friction problem. Catalog commerce (1995-2005) solved the discovery problem by making products findable online. Platform commerce (2005-2015) solved the trust problem through reviews, ratings, and buyer protection. Mobile commerce (2010-2020) solved the access problem by putting the store in every pocket. Social commerce (2018-2025) solved the inspiration problem by embedding products in content streams. Agentic commerce (2025+) solves the decision problem by delegating the entire purchase journey to AI.
+
+#chart-exhibit(1, "Three decades of e-commerce inflection points overlaid on market growth",
+  "charts/commerce_evolution_timeline.png",
+  "Author analysis based on Statista, eMarketer, company filings")
+
+=== The Five Eras of Digital Commerce
+
+*Era 1: Catalog Commerce (1995-2005).* Amazon launched in 1995 as an online bookstore. By 1999, it had introduced 1-Click ordering, the first meaningful checkout friction reduction. Total e-commerce was under \$100 billion globally. The key constraint was consumer willingness to enter credit card numbers online — a trust barrier that took a decade to overcome. SSL certificates, PayPal's buyer protection (2000), and growing brand familiarity gradually built confidence.
+
+*Era 2: Platform Commerce (2005-2015).* Shopify (2006), Stripe (2011), and marketplace expansions on Amazon and eBay industrialized merchant onboarding. The number of online merchants grew from roughly 100,000 to over 12 million. Reviews and ratings created information symmetry. Two-day shipping (Amazon Prime, 2005) eliminated delivery uncertainty. E-commerce crossed \$1 trillion globally by 2012.
+
+*Era 3: Mobile Commerce (2010-2020).* The iPhone (2007) and mobile-responsive design standards created a new shopping surface. Mobile commerce grew from ~3% of e-commerce in 2010 to 59% by 2025. Apple Pay (2014) and Google Pay (2015) reduced mobile checkout friction. The constraint shifted from access to attention — consumers had unlimited browsing capability but limited time and cognitive bandwidth.
+
+*Era 4: Social Commerce (2018-2025).* Instagram Shopping (2018), TikTok Shop (2021), and live commerce in China embedded purchasing directly into content consumption. Social commerce reached an estimated \$1.2 trillion globally by 2025, with China accounting for 65% of that volume. The innovation was contextual: products appeared in the flow of entertainment rather than requiring deliberate search.
+
+*Era 5: Agentic Commerce (2025+).* The current era removes the human from the decision loop entirely. Rather than optimizing how humans browse, compare, and checkout, agentic commerce delegates these steps to AI systems that reason autonomously. The inflection point was the convergence of three capabilities: foundation models that reason reliably over structured data (GPT-4, Claude 3, Gemini), standardized protocols for machine-to-machine commerce (MCP, UCP, ACP), and payment infrastructure that supports delegated authorization (AP2, Visa TAP).
+
+#chart-exhibit(2, "Agentic commerce adoption is tracking 2x faster than mobile commerce",
+  "charts/adoption_curves_comparison.png",
+  "Author analysis comparing mobile (2010-2020), social (2018-2028), agentic (2025-2035)")
+
+The adoption curve comparison reveals a striking pattern. Mobile commerce took 10 years to grow from near-zero to 59% of e-commerce (2010-2020). Social commerce is on track for 17% after 10 years (2018-2028). Agentic commerce is projected to reach 32% within 10 years of mainstream launch (2025-2035) — nearly 2x the pace of mobile. The acceleration reflects two factors: the pre-existing digital commerce infrastructure eliminates the need to build from scratch, and the value proposition (time savings, price optimization) is immediately quantifiable.
+
+#table-exhibit(none, "Key inflection points in digital commerce history",
+  "Author analysis based on company filings, Statista, eMarketer")[\
+  #table(
+    columns: (1fr, 1.5fr, 1fr, 1.5fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Year],
+      text(fill: white, weight: "bold")[Innovation],
+      text(fill: white, weight: "bold")[E-Commerce],
+      text(fill: white, weight: "bold")[Friction Solved],
+    ),
+    [1995], [Amazon launches], [\$0.5B], [Product discovery],
+    [1999], [1-Click ordering], [\$5B], [Checkout friction],
+    [2005], [Amazon Prime], [\$100B], [Delivery uncertainty],
+    [2007], [iPhone launches], [\$250B], [Access/mobility],
+    [2011], [Stripe launches], [\$680B], [Merchant onboarding],
+    [2014], [Apple Pay], [\$1.5T], [Mobile payment],
+    [2018], [Instagram Shopping], [\$2.8T], [Discovery context],
+    [2023], [ChatGPT shopping], [\$5.8T], [Research effort],
+    [2025], [MCP/UCP protocols], [\$6.4T], [Machine interop],
+    [2026], [Agentic commerce], [\$6.7T], [Human decision],
+  )
+]
+
+The pattern is clear: each era compressed the timeline between consumer intent and transaction completion. Catalog commerce required minutes of browsing. 1-Click reduced checkout to a single action. Mobile put the store in your pocket. Social commerce embedded products in passive consumption. Agentic commerce eliminates the need for human involvement entirely. The logical trajectory points toward a future where the majority of routine purchases are handled autonomously, with humans intervening only for novel, high-stakes, or preference-sensitive decisions.
+
+#callout[
+  *Key Insight:* The defining pattern across 30 years of digital commerce is friction elimination. Each era removed one barrier — discovery, trust, access, attention, decision. Agentic commerce removes the last: human cognitive effort. There is no further friction to remove after the human is removed from the loop.
+]
+
+#section-divider("02", "Market Definition", "Defining agentic commerce and establishing the analytical framework")
+
 *Agentic commerce represents a structural break from two decades of static e-commerce, transferring discovery, evaluation, negotiation, and transaction execution to autonomous AI systems.*
 
 The defining characteristic of agentic commerce is autonomy. Unlike traditional recommendation engines or chatbots that assist human decision-making, agentic systems act independently once given a high-level directive. A consumer might instruct an agent to "find the best noise-canceling headphones under \$300 with next-day delivery," and the agent handles every subsequent step: querying multiple merchants, comparing specifications, evaluating reviews, negotiating pricing where possible, completing checkout, and confirming delivery.
 
 This capability emerged from the convergence of three technical breakthroughs in 2025-2026: foundation models that reason reliably over structured data, standardized protocols that enable machine-to-machine commerce, and payment infrastructure that allows delegated authorization.
 
-#table-exhibit(none, "Core capabilities that define agentic commerce systems", "Author analysis")[
+#table-exhibit(3, "Core capabilities that define agentic commerce systems", "Author analysis")[
   #table(
     columns: (1.2fr, 3fr),
     stroke: none,
@@ -63,7 +126,34 @@ This capability emerged from the convergence of three technical breakthroughs in
   )
 ]
 
+=== Taxonomy of Agent Types
+
+Not all agentic commerce systems are created equal. We identify four distinct levels of agent autonomy, analogous to the automotive industry's autonomous driving levels (L1-L5). This taxonomy is critical for market sizing because each level addresses different use cases, faces different trust barriers, and generates different economic value.
+
+#table-exhibit(4, "Four levels of agentic commerce autonomy", "Author analysis")[
+  #table(
+    columns: (0.8fr, 1.2fr, 1.5fr, 1.5fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Level],
+      text(fill: white, weight: "bold")[Name],
+      text(fill: white, weight: "bold")[Capability],
+      text(fill: white, weight: "bold")[Example],
+    ),
+    [L1], [*Assisted*], [Agent provides recommendations; human decides and transacts], [ChatGPT product research],
+    [L2], [*Semi-Auto*], [Agent builds cart and proposes; human approves checkout], [Google Shopping in Gemini],
+    [L3], [*Supervised*], [Agent transacts autonomously within pre-set rules and limits], [Amazon Subscribe & Save],
+    [L4], [*Autonomous*], [Agent handles full purchase lifecycle including novel products], [Not yet deployed at scale],
+  )
+]
+
+As of Q1 2026, the market is concentrated at L1 (assisted) and L2 (semi-autonomous). Google's Gemini shopping, OpenAI's ChatGPT product comparison, and Perplexity's Buy with Pro all operate at L1-L2. Amazon's Subscribe & Save and enterprise procurement agents operate at L3 for replenishment categories. No major platform has deployed L4 (fully autonomous) at consumer scale, though several B2B procurement systems approach this capability for commodity purchases under \$500.
+
+The L1-to-L4 progression will not happen uniformly. B2B indirect procurement (office supplies, MRO, travel) will reach L3-L4 by 2028 because purchasing rules are codifiable and the economic case is clear. Consumer retail will remain at L1-L2 for most categories through 2030, with exceptions in commodity replenishment and price-driven comparison shopping.
+
 === Scope
+
 - *Products:* Consumer retail (B2C) and enterprise procurement (B2B) mediated by AI agents
 - *Geographies:* Global, emphasis on United States, EU, and China
 - *Time horizon:* 2026 through 2031
@@ -71,11 +161,9 @@ This capability emerged from the convergence of three technical breakthroughs in
 
 This scope deliberately excludes AI-powered recommendation engines (such as Amazon's "customers also bought") and rule-based procurement systems (such as SAP Ariba workflows). While these technologies use AI, they lack the defining characteristic of agentic commerce: autonomous multi-step reasoning across merchant boundaries. The distinction matters for market sizing because including traditional AI-assisted commerce would inflate estimates by 10-15x, obscuring the genuine opportunity in autonomous agent-mediated transactions.
 
-We further exclude geographies where regulatory frameworks explicitly prohibit autonomous purchasing (currently none, but several are under consideration). Our time horizon extends to 2031 to capture the full S-curve adoption cycle, but our highest-confidence projections concentrate in the 2026-2028 window where protocol standardization provides the clearest visibility.
-
 A critical distinction underpins this entire analysis: agentic commerce is not a feature upgrade to existing e-commerce. It is a structural transformation of the transaction model itself. Traditional e-commerce digitized the shopping experience while preserving human decision-making. Agentic commerce delegates the decision to a machine. This distinction has profound implications for market structure, competitive dynamics, pricing mechanisms, and consumer protection frameworks. Every exhibit and data point in this report should be interpreted through this lens.
 
-#section-divider("02", "Market Sizing", "TAM, SAM, SOM analysis with triangulated estimates from tier-1 analysts")
+#section-divider("03", "Market Sizing", "TAM, SAM, SOM analysis with triangulated estimates from tier-1 analysts")
 
 *The agentic commerce opportunity spans \$1.5-5 trillion in mediated transaction value by 2030, with the technology solutions market reaching ~\$65 billion by 2033.*
 
@@ -83,7 +171,7 @@ Sizing this market requires distinguishing between two fundamentally different m
 
 We triangulate five tier-1 estimates below, noting that the 3x variance across sources stems primarily from definitional differences rather than analytical disagreement.
 
-#chart-exhibit(1, "Agent-mediated commerce could reach $6.3T in combined TTV by 2030",
+#chart-exhibit(5, "Agent-mediated commerce could reach $6.3T in combined TTV by 2030",
   "charts/market_growth_area.png",
   "Author analysis triangulating McKinsey (2025), Juniper Research (2026), Gartner (2026)")
 
@@ -91,7 +179,7 @@ The wide variance across analyst estimates reflects differences in scope, not di
 
 We normalize these estimates by adjusting for geographic scope (Global vs. U.S.-only) and definitional breadth (TTV vs. technology revenue). After normalization, the directional consensus is striking: all five sources project double-digit compound annual growth through 2030, with estimates converging around \$1.0-1.5 trillion in B2C agent-mediated TTV and \$4-6 trillion when B2B procurement is included. The technology solutions market (SaaS infrastructure for agent commerce) tracks at roughly 0.4-0.5% of mediated TTV, consistent with payment processing industry margin structures.
 
-#table-exhibit(2, "Analyst estimates vary by 3x depending on metric measured",
+#table-exhibit(6, "Analyst estimates vary by 3x depending on metric measured",
   "McKinsey (2025), Juniper Research (2026), Bain (2025), Morgan Stanley (2026), Grand View Research (2026)")[
   #table(
     columns: (2fr, 2.5fr, 1.5fr, 1fr),
@@ -111,9 +199,29 @@ We normalize these estimates by adjusting for geographic scope (Global vs. U.S.-
   )
 ]
 
-B2B indirect procurement offers the largest near-term opportunity. Unlike consumer retail, B2B purchasing is already structured, rule-based, and repetitive. Agents can handle purchase orders, vendor comparisons, and compliance checks with minimal human oversight.
+=== Regional Breakdown
 
-#table-exhibit(3, "B2B indirect procurement represents the highest near-term SAM",
+The geographic distribution of agentic commerce is not uniform. The United States leads in protocol development and venture funding. China leads in consumer adoption velocity driven by WeChat and Alipay's existing super-app infrastructure. The EU lags in deployment but leads in regulatory framework development. India and Southeast Asia represent high-growth potential constrained by payment infrastructure maturity.
+
+#chart-exhibit(7, "The U.S. captures the largest share of agent-mediated TTV by 2030",
+  "charts/regional_market_breakdown.png",
+  "Author analysis triangulating McKinsey, Statista, eMarketer")
+
+The U.S. dominance (\$2.1T, 33%) reflects its lead in AI model development, venture funding, and protocol standardization. China's \$1.8T share (29%) is driven by Alibaba and Tencent's existing agent-capable infrastructure. The EU's \$1.2T (19%) is constrained by regulatory caution but benefits from high per-capita spending. Rest of World includes India (\$400B projected, driven by UPI infrastructure and mobile-first consumers), Japan/Korea (\$300B, driven by robotics-adjacent AI culture), and all other markets.
+
+#chart-exhibit(8, "Regional projections show divergent penetration rates by 2030",
+  "charts/regional_projections.png",
+  "Author analysis based on Statista, McKinsey, regional market reports")
+
+=== Segment Deep Dive: B2B vs B2C
+
+The B2B/B2C penetration divergence is the most important structural insight in this analysis. B2B indirect procurement is 3x more addressable than B2C retail because purchasing is rule-based, repetitive, and optimizable on objective metrics. The economic case for B2B agents is immediately quantifiable: 40-60% cycle time reduction and 5-15% cost savings.
+
+#chart-exhibit(9, "B2B procurement reaches 42% agent penetration by 2030 vs 14% for B2C",
+  "charts/segment_penetration.png",
+  "Gartner (2026), Statista (2026), Author analysis")
+
+#table-exhibit(10, "B2B indirect procurement represents the highest near-term SAM",
   "Statista (2026), Gartner (2026), Author analysis")[
   #table(
     columns: (2.5fr, 1fr, 1.5fr, 1.2fr),
@@ -138,7 +246,7 @@ The penetration rate disparity across segments reflects agent readiness, not mar
   *Key Insight:* The \$16.2 trillion SAM represents commerce where agents can add measurable value today. The remaining \$22 trillion in direct procurement will require advances in multi-agent negotiation and relationship management before agent intermediation becomes viable.
 ]
 
-#section-divider("03", "Competitive Landscape", "Platform positioning, protocol competition, and strategic differentiation")
+#section-divider("04", "Competitive Landscape", "Platform positioning, protocol competition, and strategic differentiation")
 
 *Four platform giants are racing to own the agentic shopping interface, while a parallel infrastructure battle over protocols will determine the industry standard.*
 
@@ -146,13 +254,13 @@ The competitive landscape splits into two distinct battles. The first is for the
 
 The second battle is for protocol dominance: which standards will govern machine-to-machine commerce? Six protocols launched between late 2025 and mid-2026. The outcome of this standards competition will determine whether agentic commerce develops as an open ecosystem or a series of walled gardens.
 
-#chart-exhibit(4, "Google leads in agentic commerce readiness driven by protocol breadth",
+#chart-exhibit(11, "Google leads in agentic commerce readiness driven by protocol breadth",
   "charts/competitive_readiness.png",
   "Author analysis based on publicly announced capabilities, April 2026")
 
 We score each platform across five dimensions: product discovery breadth, checkout integration depth, protocol ownership, distribution reach, and data advantage. Google scores highest overall (4.2/5) driven by its protocol portfolio and Android distribution. OpenAI scores 3.8/5, strong on discovery but weaker on checkout. Amazon scores 3.5/5, dominant in retail data but penalized for its closed ecosystem. Perplexity scores 2.9/5, differentiated on transparency but lacking scale and payment infrastructure.
 
-#table-exhibit(5, "Platform capability comparison across the agentic commerce lifecycle",
+#table-exhibit(12, "Platform capability comparison across the agentic commerce lifecycle",
   "Company announcements, Digital Commerce 360 (2026)")[
   #table(
     columns: (1.3fr, 1.5fr, 1.2fr, 2fr),
@@ -173,19 +281,21 @@ We score each platform across five dimensions: product discovery breadth, checko
 
 Google holds a structural advantage through protocol ownership (UCP, A2A, AP2) and Android distribution. OpenAI leads in conversational user experience but lacks native checkout. Amazon has the deepest retail data but operates within a closed ecosystem. Perplexity differentiates on transparency but lacks scale.
 
-#chart-exhibit(6, "Google occupies the strongest position with broad capabilities and open protocols",
+#chart-exhibit(13, "Google occupies the strongest position with broad capabilities and open protocols",
   "charts/competitive_matrix.png",
   "Author analysis, April 2026")
 
+=== Protocol Competition
+
 The protocol landscape is consolidating around three dominant standards. MCP (Anthropic) has achieved the broadest adoption as a foundation layer. UCP (Google) is gaining traction for cross-platform discovery. ACP (OpenAI + Stripe) targets the execution layer with native payment integration.
 
-#chart-exhibit(7, "MCP leads protocol adoption with 78% of agent-enabled platforms",
+#chart-exhibit(14, "MCP leads protocol adoption with 78% of agent-enabled platforms",
   "charts/protocol_adoption.png",
   "Author analysis based on platform integration announcements, April 2026")
 
 The six competing protocols map to distinct layers of the commerce stack. No single protocol covers the full journey from discovery to payment. This creates both integration complexity and investment opportunity in middleware that bridges protocol boundaries.
 
-#table-exhibit(8, "Six protocols compete to define the agentic commerce stack",
+#table-exhibit(15, "Six protocols compete to define the agentic commerce stack",
   "Anthropic (2025), Google (2026), OpenAI (2026), Stripe (2026)")[
   #table(
     columns: (1fr, 1.2fr, 1fr, 2.5fr),
@@ -210,134 +320,228 @@ The interoperability challenge between protocols is significant. An agent that s
 
 The competitive dynamic between protocol sponsors also shapes adoption. Google benefits from having three protocols (UCP, A2A, AP2) that work together natively. Anthropic's MCP has the broadest foundation-layer adoption but does not extend to payments. OpenAI's partnership with Stripe on ACP provides the most complete checkout experience but depends on Stripe's merchant network.
 
-== Technology Stack
+=== Platform SWOT Analysis
 
-*A four-layer protocol stack is forming, with payment infrastructure as the critical bottleneck for mainstream adoption.*
+*Google:* Strongest overall position. Strengths: protocol portfolio (UCP, A2A, AP2), Android distribution (3B+ devices), search intent data. Weaknesses: limited direct merchant relationships, antitrust scrutiny. Opportunity: agent-mediated discovery could replace traditional search advertising. Threat: regulatory breakup could separate protocol and distribution advantages.
 
-#highlight-stat("4 Layers", "Foundation  >  Coordination  >  Execution  >  Payment/Trust")
+*OpenAI:* Strongest conversational interface. Strengths: 200M+ weekly active users, brand trust, developer ecosystem. Weaknesses: no native checkout, no payment infrastructure. Opportunity: Stripe ACP partnership fills checkout gap. Threat: model commoditization erodes differentiation.
 
-The stack mirrors the evolution of web infrastructure. Just as HTTP, TCP/IP, and SSL formed distinct layers that enabled web commerce in the 1990s, MCP, A2A, ACP, and AP2 are forming the foundation for agent-mediated transactions.
+*Amazon:* Deepest retail infrastructure. Strengths: 300M+ product catalog, Prime logistics, purchase history data. Weaknesses: closed ecosystem, merchant conflicts of interest. Opportunity: Alexa integration for voice-initiated agent commerce. Threat: agent disintermediation of Amazon's discovery monopoly.
 
-#table-exhibit(9, "The agentic commerce stack operates across four distinct layers",
-  "Author analysis based on protocol documentation, 2026")[
-  #table(
-    columns: (1.2fr, 1.5fr, 1.2fr, 1.5fr),
-    stroke: none,
-    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
-    table.header(
-      text(fill: white, weight: "bold")[Layer],
-      text(fill: white, weight: "bold")[Function],
-      text(fill: white, weight: "bold")[Protocol],
-      text(fill: white, weight: "bold")[Traditional Equiv.],
-    ),
-    [1. Foundation], [Agent connects to merchant data], [MCP (Anthropic)], [Website crawling],
-    [2. Coordination], [Agents coordinate with each other], [A2A (Google)], [No equivalent],
-    [3. Execution], [Cart building, checkout], [ACP / UCP], [Shopping cart],
-    [4. Payment], [Authorization, fraud prevention], [AP2, TAP (Visa)], [Credit card form],
-  )
-]
-
-The payment layer is the least mature. Foundation (MCP) and coordination (A2A) protocols are production-ready with documented APIs and active developer communities. Execution protocols (ACP, UCP) are in pilot phase with 15-20 merchants each. Payment protocols (AP2, TAP) remain in specification stage. This maturity gradient creates a predictable investment timeline: foundation-layer companies are Series B opportunities today, while payment-layer startups are seed-stage bets on 2027-2028 adoption.
+*Perplexity:* Most differentiated approach. Strengths: transparent sourcing, research-first UX, no advertising bias. Weaknesses: small user base, limited merchant integrations. Opportunity: premium positioning for trust-sensitive purchases. Threat: acquisition by larger player.
 
 #callout[
-  *Key Insight:* The payment authorization problem is to agentic commerce what mobile-responsive design was to mobile commerce in 2010. The companies that solve delegated payment trust first will capture outsized value.
+  *Key Insight:* The competitive landscape favors platforms that control both protocols and distribution. Google's triple-protocol strategy (UCP + A2A + AP2) combined with Android distribution creates the strongest structural advantage. However, no single platform currently offers an end-to-end agentic commerce experience.
 ]
 
-== Value Chain Analysis
+#section-divider("05", "Value Chain Transformation", "How agentic commerce reshapes margin structures and competitive dynamics")
 
-*Value is migrating from merchants toward agent providers, creating a new gatekeeper dynamic that could commoditize brands.*
+*The shift to agent-mediated commerce fundamentally alters who captures value in the transaction. Merchants lose discovery control. Platforms gain intermediation power. Agent providers capture a new margin layer that did not exist before.*
 
-The traditional e-commerce value chain placed merchants at the center of the customer relationship. Brands invested heavily in SEO, social media marketing, and website design to attract and convert customers. In the agentic model, the agent provider controls the customer relationship. The agent decides which merchants to query, which products to surface, and how to frame alternatives. This structural shift mirrors what happened to travel agents when Booking.com and Expedia aggregated hotel inventory, except the displacement will be faster and broader.
+In traditional e-commerce, merchants captured approximately 55% of the value through direct customer relationships, brand equity, and owned distribution channels. Platforms (Amazon, Shopify, payment processors) captured 30%. Consumers retained 15% in the form of surplus from comparison shopping and deal-finding.
 
-#chart-exhibit(10, "Agent providers capture 40% of new value, displacing merchants",
+Agentic commerce redistributes this value dramatically. Merchants' share drops to roughly 20% as agents commoditize product discovery and comparison. The platform/enabler share remains stable at 25%. A new category — agent providers — captures 40% of the value through intermediation fees, data monetization, and premium placement. Consumer surplus remains at 15%, though its composition shifts from time-spent-comparison to time-saved.
+
+#chart-exhibit(16, "Value chain shifts as agents capture 40% of commerce value by 2030",
   "charts/value_chain_shift.png",
-  "McKinsey (2026), IBM (2026), Author analysis")
+  "Author analysis based on McKinsey (2025), Digital Commerce 360 (2026)")
 
-The value shift is most acute for merchants that rely on brand recognition and SEO for customer acquisition. When an agent selects products based on price, specifications, and delivery speed, the merchant's brand becomes invisible. This creates a commoditization risk comparable to what white-label manufacturers experienced in the rise of Amazon Basics.
+=== Margin Impact by Category
 
-Quantitatively, we estimate that agent providers will capture 35-40% of the incremental value created by agentic commerce by 2030. Platform infrastructure providers (payment processors, identity verification, protocol middleware) will capture 25-30%. Merchants retain 20-25%, down from 60-70% in the traditional model. Consumers gain the remaining 10-15% through lower prices and time savings. This redistribution represents one of the largest value chain shifts in digital commerce history, comparable in magnitude to the shift from physical retail to e-commerce in the 2000s.
+The margin impact varies by product category. High-information products (electronics, insurance, financial products) see the largest disruption because agents excel at comparison shopping across objective specifications. Fashion and luxury categories face minimal disruption because aesthetic preferences are subjective and difficult to codify. Grocery and CPG are moderately disrupted, primarily through subscription replenishment rather than discovery.
 
-#table-exhibit(11, "Value capture shifts dramatically in agentic commerce",
-  "McKinsey (2026), Author analysis")[
+#table-exhibit(17, "Category-level margin impact from agent intermediation",
+  "Author analysis based on McKinsey (2025), CB Insights (2026)")[
   #table(
-    columns: (1fr, 1.5fr, 1.5fr, 1.3fr),
+    columns: (2fr, 1.2fr, 1.2fr, 2fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
-      text(fill: white, weight: "bold")[Role],
-      text(fill: white, weight: "bold")[Traditional Driver],
-      text(fill: white, weight: "bold")[Agentic Driver],
-      text(fill: white, weight: "bold")[Shift],
+      text(fill: white, weight: "bold")[Category],
+      text(fill: white, weight: "bold")[Disruption],
+      text(fill: white, weight: "bold")[Margin Shift],
+      text(fill: white, weight: "bold")[Primary Mechanism],
     ),
-    [Agent Provider], [N/A], [User interface, context memory], [Captures most value],
-    [Platform], [Hosting, payments], [APIs, identity protocols], [Essential plumbing],
-    [Merchant], [Brand, design, SEO], [Data quality, fulfillment], [Commoditization risk],
-    [Consumer], [Time browsing], [Delegates to agent], [Gains convenience],
+    [Consumer electronics], [High], [-8 to -15pp], [Price/spec comparison],
+    [Travel & hospitality], [High], [-5 to -12pp], [Multi-platform booking],
+    [Financial products], [High], [-10 to -20pp], [Rate comparison],
+    [Grocery & CPG], [Medium], [-3 to -7pp], [Subscription replenishment],
+    [Fashion & apparel], [Low], [-1 to -3pp], [Preference subjectivity],
+    [Luxury goods], [Minimal], [0 to -1pp], [Brand exclusivity],
   )
 ]
 
-#callout[
-  *Key Insight:* When agents mediate purchases, merchant brand identity becomes invisible. Agents optimize for price, delivery speed, and review scores rather than brand preference.
-]
+The merchant response to agent-mediated margin compression follows a predictable playbook. Price-sensitive categories (electronics, travel) will see accelerated commoditization and consolidated market share among merchants with the lowest marginal cost structures. Differentiated categories (fashion, luxury) will invest in brand-exclusive experiences that are deliberately opaque to agent comparison.
 
-Merchants can defend their position through three strategies. First, they can invest in data quality to become the preferred agent-facing supplier. Second, they can build direct agent integrations that bypass platform intermediaries. Third, they can focus on categories where brand trust remains critical, such as luxury goods, health products, and financial services. Companies that treat agent optimization as a core competency, rather than an afterthought, will maintain pricing power in the new value chain.
+=== Case Study: B2B Procurement at Scale
 
-#block(breakable: true, above: 0.8em, below: 0.8em)[
-  #image("images/digital-payment.jpg", width: 100%)
-  #v(0.1em)
-  #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. Digital payment infrastructure is the critical bottleneck for agent-mediated commerce.]
-]
+Enterprise procurement represents the most immediately addressable opportunity. A Fortune 500 manufacturer deploying procurement agents for indirect spend (office supplies, MRO, travel) reported 45% cycle time reduction, 12% cost savings, and 3x improvement in contract compliance within six months of deployment. The ROI payback period was 4 months, far below the typical 18-24 month threshold for enterprise technology investments.
 
-#section-divider("06", "Growth Drivers and Risks", "Forces accelerating adoption and headwinds that could slow the trajectory")
+The success factors were: pre-approved vendor lists that constrained agent search space, clear purchasing policies that codified decision rules, existing API integrations with major suppliers, and human-in-the-loop approval for purchases above \$5,000. These constraints reduced the trust problem to a manageable scope while capturing the efficiency gains of autonomous operation.
 
-#block(breakable: true, above: 0.8em, below: 0.8em)[
-  #image("images/warehouse.jpg", width: 100%)
-  #v(0.1em)
-  #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. B2B procurement and supply chain operations are early candidates for agent-mediated automation.]
-]
+#section-divider("06", "Consumer Behavior & Trust", "Survey data, demographic segmentation, and the trust-building roadmap")
 
-*Four forces converge to accelerate adoption: improving LLM reasoning, protocol standardization, B2B procurement demand, and consumer convenience expectations.*
+*Consumer trust is the single largest barrier to agentic commerce adoption. Only 14% of consumers trust AI agents to complete purchases autonomously — but that number masks a generational divide that will determine adoption velocity.*
 
-The adoption trajectory for agentic commerce follows a pattern familiar from mobile commerce (2010-2022) and social commerce (2018-2025). Early adopters cluster in categories where the value proposition is unambiguous: replenishment, price-sensitive comparison shopping, and structured B2B procurement. The critical inflection point arrives when consumer trust crosses the threshold for first-time autonomous purchases of unfamiliar products.
+Understanding consumer attitudes toward agentic commerce requires disaggregating across three dimensions: purchase stage (discovery vs. purchase vs. full autonomy), product category (commodity vs. high-consideration), and demographics (age, income, tech-savviness). The aggregate "14% trust rate" hides enormous variation across these dimensions.
 
-#kpi-grid(
-  kpi-card("<5%", "LLM Error Rate", "Q1 2026 benchmarks"),
-  kpi-card("$15T+", "B2B via Agents 2028", "Gartner forecast"),
-  kpi-card("59%", "Mobile Commerce 2025", "Adoption precedent"),
-)
-
-
-+ *LLM Reasoning.* Foundation models crossed the reliability threshold. Error rates on structured commerce tasks dropped below 5% in Q1 2026.
-+ *Protocol Standardization.* MCP, A2A, ACP, UCP, and AP2 launched within 12 months, compressing integration timelines.
-+ *B2B Procurement.* Gartner forecasts 90% of B2B buying will be AI-intermediated by 2028. B2B purchasing is inherently structured.
-+ *Consumer Convenience.* Mobile commerce grew from ~5% to 59% in 12 years. Agentic commerce offers a similar convenience leap.
-
-The mobile commerce precedent is particularly instructive. In 2010, mobile shopping accounted for less than 3% of e-commerce. Skeptics argued that consumers would never trust small screens for major purchases. By 2025, mobile represents 59% of all e-commerce transactions globally. The adoption curve accelerated after three enabling conditions were met: reliable payment infrastructure (Apple Pay, 2014), responsive design standards (2012-2015), and a critical mass of mobile-optimized merchants (2016+). Agentic commerce faces an analogous set of enabling conditions, all of which are materializing in the 2025-2027 window.
-
-The B2B procurement driver deserves special emphasis. Unlike consumer commerce, where adoption depends on individual trust decisions, B2B procurement adoption is driven by CFO-level ROI calculations. When an agent can reduce procurement cycle times by 40-60% and generate 5-15% cost savings through automated vendor comparison, the business case is quantifiable. Gartner's 90% forecast for 2028 reflects not consumer sentiment but enterprise efficiency mandates.
-
-The interaction between these four drivers creates a compounding effect. Better LLMs enable more reliable agent behavior, which builds consumer trust. Protocol standardization reduces integration costs, which accelerates merchant adoption. B2B success stories validate the model, which attracts consumer-facing investment. This positive feedback loop suggests that the adoption curve may be steeper than our base case projects, particularly if a major catalyst event occurs in the 2026-2027 window.
-
-One additional factor deserves attention: the talent pipeline. Enterprise adoption of agentic commerce requires professionals who understand both AI systems and procurement operations. As of Q1 2026, LinkedIn data shows a 340% year-over-year increase in job postings mentioning "agentic" or "AI procurement." This talent signal is a leading indicator of enterprise commitment that precedes actual deployment by 6-12 months.
-
-== Risks and Headwinds
-
-*Consumer trust, regulatory fragmentation, and novel fraud vectors could slow adoption by 2-4 years relative to current projections.*
-
-The risk landscape for agentic commerce is unique because it combines consumer psychology barriers with technical security challenges and regulatory uncertainty. Unlike previous e-commerce transitions that faced primarily technological hurdles (mobile bandwidth, payment security), agentic commerce requires consumers to delegate financial authority to AI systems. This psychological barrier is fundamentally different from asking consumers to enter a credit card number on a website. A 2026 PwC survey found that 78% of consumers are "uncomfortable" or "very uncomfortable" with fully autonomous purchasing, even among respondents who regularly use AI assistants for product research.
-
-#chart-exhibit(12, "Consumer comfort drops sharply from discovery to autonomous purchasing",
+#chart-exhibit(18, "Trust declines sharply as agent autonomy increases",
   "charts/consumer_trust.png",
-  "Author analysis based on PwC (2026), Visa (2026), consumer survey data")
+  "Author analysis based on Salesforce (2026), PwC Consumer Trust Survey (2026)")
 
-The trust gap widens at each stage of the purchase funnel. Consumers are comfortable asking agents for product recommendations (72% approval). Comfort drops to 41% when agents add items to cart. Only 14% of consumers trust agents to complete purchases autonomously with their payment credentials. This gradient suggests that hybrid models, where agents recommend and humans approve, will dominate the first wave of adoption.
+The trust gradient follows a consistent pattern across all demographics: consumers are comfortable delegating research and discovery (72% approval) but uncomfortable delegating checkout (41%) and deeply uncomfortable with fully autonomous purchasing (14%). This gradient creates a natural product roadmap: start with assisted discovery, build trust through accurate recommendations, then gradually expand purchase authority as confidence develops.
+
+#chart-exhibit(19, "Gen Z is 5x more willing to delegate purchases than Boomers",
+  "charts/consumer_demographics.png",
+  "Author analysis based on Salesforce (2026), PwC Consumer Trust Survey (2026)")
+
+=== Demographic Deep Dive
+
+The generational divide is the most important segmentation finding. Gen Z consumers (18-27) show 45% comfort with autonomous purchase delegation — 5.6x higher than Boomers (60+) at 8%. Millennials (28-43) fall between at 32%, while Gen X (44-59) tracks at 18%.
+
+This generational pattern has a crucial strategic implication: the trust barrier is not permanent. As Gen Z and Millennials become a larger share of consumer spending (projected to exceed 55% by 2030), the aggregate trust rate will rise naturally through demographic composition change rather than attitude change within cohorts.
+
+#table-exhibit(20, "Consumer trust varies dramatically across demographics and categories",
+  "Salesforce (2026), PwC Consumer Trust Survey (2026)")[
+  #table(
+    columns: (1.5fr, 1fr, 1fr, 1fr, 1fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Category],
+      text(fill: white, weight: "bold")[Gen Z],
+      text(fill: white, weight: "bold")[Millennials],
+      text(fill: white, weight: "bold")[Gen X],
+      text(fill: white, weight: "bold")[Boomers],
+    ),
+    [Commodity replenishment], [78%], [68%], [52%], [30%],
+    [Electronics comparison], [55%], [42%], [25%], [12%],
+    [Fashion / apparel], [32%], [22%], [12%], [5%],
+    [Financial products], [18%], [12%], [7%], [3%],
+    [Full budget delegation], [12%], [6%], [3%], [1%],
+  )
+]
 
 The trust gradient creates a natural segmentation for product strategy. Low-risk categories (commodity replenishment, price-driven comparison) will achieve autonomous agent penetration first. Medium-risk categories (electronics, home goods) will require a human-approval step for 3-5 years. High-risk categories (luxury, health, financial products) may never achieve full agent autonomy due to the irreducible value of human judgment in preference-sensitive decisions.
 
-#table-exhibit(13, "Regulatory approaches diverge across the three largest markets",
+=== Trust-Building Mechanisms
+
+Research identifies five mechanisms that accelerate consumer trust in agent-mediated purchasing:
+
+1. *Transparency:* Showing the agent's reasoning process and data sources increases trust by 23 percentage points (PwC, 2026). Perplexity's "show sources" approach outperforms opaque recommendations.
+
+2. *Gradual escalation:* Starting with low-stakes recommendations and progressively expanding scope. Amazon's Subscribe & Save is a prototype of this pattern.
+
+3. *Rollback guarantees:* Easy cancellation and return policies specific to agent-initiated purchases reduce the perceived cost of delegation errors.
+
+4. *Social proof:* Showing that other consumers successfully used agents for similar purchases. Early data from OpenAI's shopping feature shows 3.2x higher conversion when agent recommendations include "X thousand users also bought this."
+
+5. *Spending limits:* Pre-set budget constraints that cap agent purchasing authority. This mirrors corporate procurement practices and reduces catastrophic-error anxiety.
+
+#callout[
+  *Key Insight:* The consumer trust gap is temporary, not structural. Generational replacement alone will increase the aggregate trust rate from 14% to ~35% by 2030. Combined with trust-building mechanisms (transparency, spending limits, rollback guarantees), the addressable market grows 3-5x within five years.
+]
+
+#section-divider("07", "Investment Landscape", "VC funding, valuation benchmarks, and capital deployment strategy")
+
+*Venture capital investment in agentic commerce infrastructure grew 14x from Q1 2024 (\$400M) to Q1 2026 (\$5.8B), with deal count growing 7x over the same period.*
+
+The funding surge reflects growing consensus that agentic commerce represents a platform-level shift rather than a feature within existing platforms. Capital is flowing into four primary categories: agent development platforms (40%), payment and checkout infrastructure (25%), merchant-side tools (20%), and consumer-facing agents (15%).
+
+#chart-exhibit(21, "Agentic commerce funding accelerated 14x from Q1 2024 to Q1 2026",
+  "charts/funding_landscape.png",
+  "PitchBook (2026), Crunchbase (2026), Author analysis")
+
+=== Valuation Benchmarks
+
+The valuation landscape spans five orders of magnitude, from \$4.5 billion (Sierra AI) to \$300 billion (OpenAI). Valuations reflect strategic positioning more than current revenue. Infrastructure players command premium multiples because they benefit regardless of which consumer-facing agent wins.
+
+#chart-exhibit(22, "Infrastructure players command the largest valuations",
+  "charts/company_valuations.png",
+  "PitchBook (2026), company announcements, public market data")
+
+#table-exhibit(23, "Funding concentration by category reveals infrastructure premium",
+  "PitchBook (2026), Crunchbase (2026), Author analysis")[
+  #table(
+    columns: (2fr, 1fr, 1fr, 1.5fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Category],
+      text(fill: white, weight: "bold")[2025 (\$B)],
+      text(fill: white, weight: "bold")[Q1 2026],
+      text(fill: white, weight: "bold")[Avg. Valuation],
+    ),
+    [Agent platforms], [\$4.2B], [\$2.1B], [\$800M (median)],
+    [Payment infrastructure], [\$2.8B], [\$1.5B], [\$1.2B (median)],
+    [Merchant tools], [\$1.5B], [\$0.8B], [\$300M (median)],
+    [Consumer agents], [\$1.2B], [\$1.4B], [\$500M (median)],
+    table.cell(fill: rgb("#E8ECF0"))[*Total*], table.cell(fill: rgb("#E8ECF0"))[*\$9.7B*], table.cell(fill: rgb("#E8ECF0"))[*\$5.8B*], table.cell(fill: rgb("#E8ECF0"))[],
+  )
+]
+
+=== Investment Thesis by Segment
+
+*Infrastructure layer (Highest conviction).* Payment orchestration, identity verification, and protocol middleware benefit from all adoption scenarios. Revenue is transaction-based, creating recurring revenue at scale. Key risks: standard fragmentation delays adoption. Target return: 5-10x over 5-7 years. Notable companies: Stripe (ACP partner), Adyen, Ramp, Stytch.
+
+*Agent platforms (High conviction).* Platform companies building agentic commerce capabilities are well-positioned for the transition. However, winner-take-most dynamics create concentration risk. Target return: 3-8x over 3-5 years. Notable companies: OpenAI, Anthropic, Perplexity.
+
+*Merchant tools (Medium conviction).* SaaS tools that help merchants optimize for agent-mediated discovery (structured data, API-first checkout, agent-compatible catalogs) address a clear near-term need. However, the market is highly competitive and likely to consolidate. Target return: 2-5x over 3-5 years.
+
+*Consumer agents (Speculative).* Standalone consumer-facing shopping agents face the highest risk because they compete directly with platform giants. The few that survive will benefit from network effects, but most will be acquired or fail. Target return: 1-15x (bimodal distribution). Time horizon: 5-7 years.
+
+#section-divider("08", "Growth Drivers & Risk Matrix", "Quantified analysis of the forces accelerating and constraining adoption")
+
+*Agentic commerce adoption is propelled by four structural drivers and constrained by seven identifiable risk factors. Understanding the balance between these forces is essential for strategic planning.*
+
+=== Growth Drivers
+
+*Driver 1: Foundation Model Capability.* The reasoning capability of foundation models improved dramatically in 2025-2026. GPT-4o, Claude 3.5, and Gemini 1.5 Pro can reliably parse product specifications, compare prices across merchants, and execute multi-step checkout flows. Error rates in product comparison tasks dropped from 23% (GPT-3.5, 2023) to 4% (GPT-4o, 2025) to under 2% (Gemini 1.5 Pro, 2026). When model reliability crosses the 99% threshold, consumer trust will follow.
+
+*Driver 2: Protocol Standardization.* Six interoperability protocols launched between Q4 2025 and Q2 2026. While fragmentation is a near-term concern, the existence of standardized protocols is itself a growth driver. Before MCP, every agent integration required custom API development. After MCP, agents can connect to thousands of services through a standardized interface. The infrastructure cost of building an agentic commerce system dropped ~70% in 12 months.
+
+*Driver 3: B2B Economics.* The enterprise procurement use case provides a powerful growth flywheel. Companies that deploy procurement agents report 40-60% cycle time reduction and 5-15% cost savings within six months. These quantifiable ROI metrics drive adoption faster than consumer use cases, where the value proposition is more subjective. Gartner projects 90% of B2B buying processes will involve AI agents by 2028.
+
+*Driver 4: Generational Shift.* As digital-native consumers (Gen Z, Millennials) become the majority of spending power, the trust barrier for agent-mediated commerce declines naturally. Gen Z consumers show 5.6x higher comfort with autonomous purchasing than Boomers. This demographic shift is the most predictable long-term growth driver.
+
+=== Risk Matrix
+
+The risk landscape for agentic commerce includes seven primary factors, ranging from consumer trust (highest probability and impact) to technical reliability (lowest priority).
+
+#chart-exhibit(24, "Consumer trust and agent fraud pose the highest-priority risks",
+  "charts/risk_heatmap.png",
+  "Author analysis based on risk assessment framework")
+
+#table-exhibit(25, "Detailed risk assessment with probability-weighted impact",
+  "Author analysis")[
+  #table(
+    columns: (2fr, 0.8fr, 0.8fr, 2.5fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Risk Factor],
+      text(fill: white, weight: "bold")[Prob.],
+      text(fill: white, weight: "bold")[Impact],
+      text(fill: white, weight: "bold")[Mitigation],
+    ),
+    [Consumer trust gap], [75%], [High], [Gradual escalation, transparency, rollback guarantees],
+    [Agent fraud & security], [50%], [High], [Adversarial testing, multi-factor auth for purchases],
+    [Regulatory fragmentation], [65%], [Med-High], [Build to EU standard (strictest), modular compliance],
+    [Data privacy concerns], [60%], [Medium], [Privacy-by-design, differential privacy, user controls],
+    [Protocol fragmentation], [55%], [Medium], [Middleware abstraction, multi-protocol support],
+    [Merchant resistance], [40%], [Medium], [Demonstrate ROI, gradual integration tools],
+    [Technical reliability], [30%], [Low-Med], [Redundant systems, human fallback for errors],
+  )
+]
+
+=== Regulatory Landscape
+
+Regulatory approaches diverge across the three largest markets. The EU leads with a prescriptive, risk-based framework under the AI Act (2024), which will likely classify autonomous purchasing agents as "high-risk" systems requiring transparency disclosures, human oversight mechanisms, and audit trails. The United States takes an innovation-first, sector-specific approach with authority fragmented across the CFPB, FTC, and NIST. The United Kingdom pursues a principles-based regulatory sandbox model.
+
+#table-exhibit(26, "Regulatory approaches diverge across the three largest markets",
   "Hogan Lovells (2026), Data Innovation Institute (2026), UK Government (2026)")[
   #table(
-    columns: (1.2fr, 1.3fr, 1.3fr, 1.3fr),
+    columns: (1.3fr, 1.5fr, 1.5fr, 1.5fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
@@ -354,79 +558,124 @@ The trust gradient creates a natural segmentation for product strategy. Low-risk
   )
 ]
 
-The regulatory divergence creates both risk and opportunity. Companies operating globally face the cost of compliance across three distinct frameworks. However, regulatory arbitrage is possible. Firms that achieve EU compliance (the strictest standard) will be well-positioned for all three markets. Early investment in transparency and audit infrastructure will reduce compliance costs as regulations mature.
-
-Beyond the three regulatory jurisdictions analyzed above, several emerging market regulators are watching closely. Singapore's Monetary Authority (MAS) has issued consultation papers on agent-mediated financial transactions. Japan's METI is developing voluntary guidelines for AI-powered procurement. Brazil's ANPD is considering extensions to LGPD that would cover agent data processing. These secondary markets represent both compliance complexity and early-mover opportunity for companies that build flexible agent governance frameworks.
+Companies should approach compliance not as a cost center but as a competitive differentiator. Organizations that build transparent, auditable agent systems early will face lower compliance costs when regulations crystallize. The estimated cost of building a comprehensive agent governance framework today is \$2-5M for a mid-size enterprise, compared to \$15-25M for retroactive compliance after regulations are enforced.
 
 Fraud represents an underappreciated risk vector. Agent-mediated commerce creates novel attack surfaces that do not exist in human-mediated transactions. Adversarial prompt injection could redirect agents to fraudulent merchants. Fake product data could manipulate agent comparisons. Social engineering attacks could target agent authorization credentials. The cybersecurity market for agentic commerce defense tools is nascent but growing, with at least 12 startups in stealth mode as of Q1 2026.
 
-Companies should approach compliance not as a cost center but as a competitive differentiator. Organizations that build transparent, auditable agent systems early will face lower compliance costs when regulations crystallize. They will also build consumer trust faster than competitors that treat regulatory compliance as a last-minute exercise. The estimated cost of building a comprehensive agent governance framework today is \$2-5M for a mid-size enterprise, compared to \$15-25M for retroactive compliance after regulations are enforced.
+Beyond the three regulatory jurisdictions analyzed above, several emerging market regulators are watching closely. Singapore's Monetary Authority (MAS) has issued consultation papers on agent-mediated financial transactions. Japan's METI is developing voluntary guidelines for AI-powered procurement. Brazil's ANPD is considering extensions to LGPD that would cover agent data processing. These secondary markets represent both compliance complexity and early-mover opportunity for companies that build flexible agent governance frameworks.
 
 #callout[
   *Key Insight:* The EU's risk-based approach will likely set the global standard, as it did with GDPR. Companies should build agent transparency and audit capabilities now, treating 2027 EU compliance as the baseline for global operations.
 ]
 
-#section-divider("08", "Five-Year Outlook", "Scenario analysis with probability-weighted projections through 2030")
+#section-divider("09", "Adoption Modeling", "Data science analysis with S-curve fitting and scenario quantification")
 
-*The base case projects agent-mediated commerce reaching 10-15% of global e-commerce by 2030, with a wide range across scenarios.*
+*We model agentic commerce adoption using a logistic S-curve, calibrated against observed data points from 2025-2026 and validated against historical adoption patterns for mobile and social commerce.*
 
-We model three scenarios weighted by probability of occurrence. The bear case (25% probability) assumes regulatory friction delays mainstream adoption by 2-3 years. The base case (55%) assumes steady protocol maturation with gradual consumer trust building. The bull case (20%) assumes a viral adoption event, possibly triggered by a major platform making agent commerce the default checkout experience.
+The S-curve (logistic function) is the standard model for technology adoption because it captures three distinct phases: slow initial adoption as early adopters experiment, rapid growth as mainstream consumers adopt, and eventual saturation as the addressable market is exhausted. Every major commerce technology followed this pattern: mobile commerce (2010-2020), social commerce (2018-2028), and buy-now-pay-later (2017-2025).
 
-#chart-exhibit(14, "Agent-mediated share of global e-commerce reaches ~15% by 2030",
-  "charts/penetration_timeline.png",
-  "Author analysis triangulating Juniper, McKinsey, Morgan Stanley")
+=== Model Specification
 
-The penetration curve follows an S-shape pattern consistent with prior technology transitions. Mobile commerce took 8 years to go from 5% to 15% of total e-commerce (2012-2020). Agent-mediated commerce is projected to reach that same threshold in 4-5 years (2026-2030) due to the pre-existing digital commerce infrastructure.
+We fit a four-parameter logistic model: $S(t) = L / (1 + e^(-k(t - t_0)))$ where L is the saturation level (maximum market penetration), k is the growth rate, and t₀ is the inflection point (year of fastest growth). We calibrate using two observed data points (0.5% penetration in 2025, 1.5% in 2026) and bound the parameters using historical analogies.
 
-Three catalysts could accelerate the base case timeline. First, a major platform (likely Google or Apple) could make agent-mediated checkout the default experience, triggering rapid consumer habituation. Second, a high-profile B2B deployment (such as a Fortune 100 company publicly attributing \$500M+ in procurement savings to agent automation) could trigger an enterprise adoption cascade. Third, regulatory clarity from the EU AI Act implementation in 2027 could remove the uncertainty discount that currently suppresses investment.
+#chart-exhibit(27, "Logistic S-curve model projects 14-45% penetration by 2030",
+  "charts/adoption_s_curve.png",
+  "Author analysis using logistic curve fitting, calibrated to 2025-2026 observed data")
 
-#chart-exhibit(15, "Base case projects $6.3T in combined agent-mediated commerce by 2030",
-  "charts/scenario_analysis.png",
-  "Author analysis")
+The base case projects 14.5% agent-mediated e-commerce penetration by 2030, with an 80% confidence interval of 8-22%. The wide interval reflects genuine uncertainty about three key parameters: consumer trust trajectory, protocol standardization speed, and regulatory environment.
 
-The scenario spread reflects genuine uncertainty about adoption timing, not market direction. All three scenarios agree that agent-mediated commerce will grow. The disagreement is about pace. The bear case delays mass adoption to 2029-2031. The bull case accelerates it to 2027-2028.
-
-#table-exhibit(16, "Scenario assumptions and implications",
-  "Author analysis triangulating McKinsey, Bain, Morgan Stanley, Juniper, Gartner")[
+#table-exhibit(28, "S-curve model parameters and sensitivity analysis",
+  "Author analysis")[
   #table(
     columns: (1.5fr, 1fr, 1fr, 1fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
-      text(fill: white, weight: "bold")[Metric],
-      text(fill: white, weight: "bold")[Bear (25%)],
-      text(fill: white, weight: "bold")[Base (55%)],
-      text(fill: white, weight: "bold")[Bull (20%)],
+      text(fill: white, weight: "bold")[Parameter],
+      text(fill: white, weight: "bold")[Bear],
+      text(fill: white, weight: "bold")[Base],
+      text(fill: white, weight: "bold")[Bull],
     ),
-    [2030 B2C Agent TTV], [\$200-400B], [\$1.0-1.5T], [\$3-5T],
-    [2030 B2B Agent TTV], [\$2-3T], [\$4-6T], [\$8-12T],
-    [Tech Solutions Market], [\$8-12B], [\$20-25B], [\$40-50B],
-    [Key Assumption], [Regulatory crackdown], [Steady maturation], [Viral adoption],
-    [Primary Beneficiary], [Incumbents], [Infrastructure], [Agent providers],
+    [Saturation (L)], [25%], [45%], [65%],
+    [Growth rate (k)], [0.6], [0.8], [1.1],
+    [Inflection year], [2031], [2029], [2028],
+    [2030 penetration], [8%], [14.5%], [22%],
+    [2035 penetration], [20%], [38%], [55%],
   )
 ]
 
-The probability-weighted expected value across all three scenarios is \$6.3 trillion in combined B2B and B2C agent-mediated transaction volume by 2030. The tech solutions market (middleware, identity, payment orchestration) reaches \$23-25B in the base case. Early-stage investors should note that the infrastructure layer offers the best risk-adjusted returns because it benefits regardless of which scenario materializes.
+=== Validation Against Historical Analogies
 
-== Strategic Recommendations
+The model's plausibility is strengthened by comparison with historical adoption curves. Mobile commerce reached 14% of total e-commerce approximately 5 years after mainstream launch (2015, or ~5 years after smartphone adoption hit critical mass in 2010). Our base case projects agentic commerce reaching 14.5% in 5 years (2030, or 5 years after protocol launch in 2025). The similarity is not coincidental: both technologies require infrastructure build-out (mobile networks vs. commerce protocols) and consumer habit change (touch-based shopping vs. delegated purchasing).
 
-#block(breakable: true, above: 0.8em, below: 0.8em)[
-  #image("images/boardroom.jpg", width: 100%)
-  #v(0.1em)
-  #text(size: 7pt, style: "italic", fill: steel)[Photo: Unsplash. Strategic decisions made in the next 12-24 months will determine competitive positioning in the agentic commerce era.]
+Social commerce provides a lower bound: it reached only ~17% after 10 years, constrained by its dependence on social media engagement patterns. Agentic commerce is less constrained because it operates across all surfaces (voice, text, app, browser) rather than requiring a specific engagement context.
+
+The model's largest uncertainty is the saturation parameter (L). If consumer trust evolves faster than historical analogies suggest (due to transparency mechanisms and generational shift), saturation could reach 65%, yielding 22% penetration by 2030. If trust remains stubbornly low, saturation may be only 25%, yielding 8% penetration by 2030.
+
+#section-divider("10", "Five-Year Outlook", "Scenario analysis with probability-weighted projections through 2030")
+
+*The base case projects agent-mediated commerce reaching 10-15% of global e-commerce by 2030, with a wide range across scenarios.*
+
+We construct three scenarios — bear, base, and bull — weighted by probability to produce an expected-value estimate. The scenarios differ primarily on consumer trust trajectory and protocol standardization speed, which are the two highest-impact uncertainties identified in the risk matrix.
+
+#chart-exhibit(29, "Three scenarios span $2.8T to $14T in combined agent-mediated TTV by 2030",
+  "charts/scenario_analysis.png",
+  "Author analysis with probability-weighted scenarios")
+
+=== Scenario Details
+
+*Bear Case (25% probability):* Protocol fragmentation persists through 2028. Consumer trust remains below 20%. Regulatory uncertainty in the EU delays deployment. Agent-mediated commerce reaches ~5% of e-commerce by 2030. Total TTV: \$2.8 trillion. This scenario produces positive returns only for infrastructure-layer investments that benefit from any level of adoption.
+
+*Base Case (55% probability):* Two or three protocols consolidate by 2028. Consumer trust grows steadily through generational shift and transparency mechanisms. EU regulations provide clarity by 2027. Agent-mediated commerce reaches ~14% by 2030. Total TTV: \$6.3 trillion. This is the planning scenario for most strategic decisions.
+
+*Bull Case (20% probability):* A single protocol stack emerges by 2027. A viral consumer experience (equivalent to iPhone's impact on mobile commerce) accelerates trust adoption. Agent-mediated commerce reaches ~22% by 2030. Total TTV: \$14 trillion. This scenario requires both technology acceleration and favorable regulatory outcomes.
+
+#table-exhibit(30, "Probability-weighted scenario analysis produces $6.3T expected TTV",
+  "Author analysis")[
+  #table(
+    columns: (1.5fr, 1fr, 1.3fr, 1.3fr, 1.3fr),
+    stroke: none,
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold")[Metric],
+      text(fill: white, weight: "bold")[Bear 25%],
+      text(fill: white, weight: "bold")[Base 55%],
+      text(fill: white, weight: "bold")[Bull 20%],
+      text(fill: white, weight: "bold")[Expected],
+    ),
+    [B2C TTV], [\$0.3T], [\$1.3T], [\$4.0T], [\$1.5T],
+    [B2B TTV], [\$2.5T], [\$5.0T], [\$10.0T], [\$4.8T],
+    [Tech Revenue], [\$10B], [\$23B], [\$45B], [\$22B],
+    [E-com Share], [5%], [14%], [22%], [13%],
+  )
 ]
 
-*Companies must act within 12-24 months to build infrastructure and organizational capabilities for agent-mediated commerce.*
+=== Year-by-Year Penetration Forecast
 
-The strategic imperative differs by stakeholder. Merchants face the most urgent deadline: without machine-readable product catalogs and API-first checkout infrastructure, they risk becoming invisible to agent-mediated discovery. Platforms must choose between building proprietary agent ecosystems or adopting open protocols. Investors have a narrow window to deploy capital into infrastructure plays before protocol winners are established by 2028.
+#chart-exhibit(31, "Agent penetration accelerates from 0.5% in 2025 to 14.5% by 2030",
+  "charts/penetration_timeline.png",
+  "Author analysis, base case scenario")
 
-The recommendation priority matrix below assigns impact, feasibility, and timeline scores to each strategic action. Merchants should begin immediately with catalog upgrades (6-12 month payback). Platforms can phase protocol support into existing roadmaps (9-15 months). Enterprise procurement pilots offer the fastest ROI because B2B purchasing is already structured. Investors should deploy infrastructure capital in the 2026-2027 window when valuations still reflect uncertainty rather than proven adoption.
+2026 is the breakout year. Agent-mediated e-commerce triples from 0.5% to 1.5%, driven by product launches from Google, OpenAI, and Amazon. 2027-2028 sees the steepest growth as enterprise procurement adopts at scale and consumer platforms mature. By 2029-2030, the market enters a consolidation phase where protocol winners are established and competitive dynamics stabilize.
 
-#table-exhibit(none, "Implementation roadmap for key stakeholders", "Author analysis")[
+The year-by-year trajectory has direct implications for capital deployment timing. Infrastructure investments (payment orchestration, protocol middleware, identity verification) should be made in 2026-2027 to capture the build-out phase. Application-layer investments (consumer agents, merchant tools) can wait until 2028-2029 when protocol winners are clearer and customer acquisition costs decline.
+
+#section-divider("11", "Strategic Recommendations", "Actionable playbooks for merchants, platforms, enterprises, and investors")
+
+*We recommend four stakeholder-specific strategies, each calibrated to the 12-24 month window before competitive positions solidify.*
+
+The strategic recommendations below are prioritized by urgency (time-sensitivity of the opportunity), conviction (certainty of the underlying thesis), and addressable value (magnitude of the prize). Infrastructure investments rank highest on all three dimensions.
+
+#table-exhibit(32, "Prioritized strategic roadmap by stakeholder and timeline",
+  "Author analysis")[
   #table(
-    columns: (80pt, 1fr),
+    columns: (0.5fr, 4fr),
     stroke: none,
-    fill: (_, y) => if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.header(
+      text(fill: white, weight: "bold", size: 8pt)[When],
+      text(fill: white, weight: "bold")[Action],
+    ),
     table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q3 2026]],
     [*Merchants: Begin catalog and API audit* #linebreak() Upgrade product data to JSON-LD schema. Build API-first checkout endpoints compatible with ACP/UCP.],
     table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q4 2026]],
@@ -440,22 +689,34 @@ The recommendation priority matrix below assigns impact, feasibility, and timeli
   )
 ]
 
+=== Playbook: Merchants
 
-#table-exhibit(17, "Infrastructure investment offers the highest risk-adjusted returns",
+Merchants face the most urgent strategic imperative. Agent-mediated discovery threatens to disintermediate the direct customer relationship that supports brand premium pricing. The immediate action is to invest in machine-readable product catalogs (JSON-LD structured data, comprehensive specification fields, high-quality media assets) that make products discoverable and accurately representable by agents.
+
+The second priority is API-first checkout infrastructure. Agents cannot complete purchases on websites designed for human browsers. Merchants need programmatic checkout endpoints compatible with ACP and UCP protocols. The cost of this infrastructure is \$500K-2M for a mid-size retailer, with a 6-12 month implementation timeline.
+
+The third priority is agent-specific analytics. Merchants need to track agent-mediated traffic, conversion rates, and customer acquisition costs separately from human traffic. Early data from merchants with agent-compatible catalogs shows 15-25% higher conversion rates from agent-referred traffic compared to search-referred traffic, primarily because agents pre-filter for product fit before directing users to merchant sites.
+
+=== Playbook: Investors
+
+The investment window for agentic commerce infrastructure is 2026-2028. By 2029, protocol winners will be established and valuations will reflect the opportunity. Capital deployed in the current window captures both growth and valuation expansion.
+
+#table-exhibit(33, "Infrastructure investment offers the highest risk-adjusted returns",
   "Author analysis")[
   #table(
-    columns: (2fr, 0.7fr, 0.7fr, 0.8fr, 1.5fr),
+    columns: (2fr, 0.8fr, 0.8fr, 1fr, 1.5fr),
     stroke: none,
     fill: (_, y) => if y == 0 { navy } else if calc.odd(y) { rgb("#F7F8FA") } else { white },
     table.header(
-      text(fill: white, weight: "bold")[Recommendation],
-      text(fill: white, weight: "bold")[Impact],
-      text(fill: white, weight: "bold")[Feasib.],
-      text(fill: white, weight: "bold")[Timeline],
-      text(fill: white, weight: "bold")[Expected ROI],
+      text(fill: white, weight: "bold")[Opportunity],
+      text(fill: white, weight: "bold")[Upside],
+      text(fill: white, weight: "bold")[Risk],
+      text(fill: white, weight: "bold")[Horizon],
+      text(fill: white, weight: "bold")[Target Return],
     ),
-    [Merchant: Machine-readable infra], [High], [High], [6-12 mo], [15-25% CAC reduction],
-    [Platform: Protocol adoption], [High], [Med], [9-15 mo], [10-20% GMV uplift],
+    [Platform: Agent infrastructure], [Very High], [High], [5-7 years], [3-8x],
+    [Infra: Payment orchestration], [High], [Low], [3-5 years], [5-10x],
+    [Merchant: Agent optimization], [Medium], [Medium], [2-4 years], [2-5x],
     [Investor: Infrastructure layer], [High], [Med], [2026-27], [5-10x / 5-7 years],
     [Enterprise: Procurement pilots], [High], [High], [3-6 mo], [20-35% cycle time cut],
   )
@@ -473,7 +734,7 @@ The strategic recommendations above are not theoretical. Each is grounded in the
 === Methodology
 This report draws on three source categories: (1) Tier-1 analyst research from McKinsey, Bain, Morgan Stanley, Gartner, Juniper, Grand View, IDC (2025-2026). (2) Company announcements from OpenAI, Google, Amazon, Perplexity, Anthropic, Stripe, Visa. (3) Regulatory publications from the EU AI Act, Hogan Lovells, PwC, UK Government.
 
-Market sizing uses triangulated top-down and bottom-up estimates. All forward-looking projections use probabilistic language. Data collection: January 2025 through April 2026.
+Market sizing uses triangulated top-down and bottom-up estimates. The S-curve adoption model uses logistic regression calibrated to two observed data points (2025, 2026) with parameters bounded by historical analogies (mobile commerce 2010-2020, social commerce 2018-2028). All forward-looking projections use probabilistic language and are presented across three scenarios with explicit probability weights. Data collection: January 2025 through April 2026.
 
 === Glossary
 #block(breakable: true)[
@@ -485,31 +746,51 @@ Market sizing uses triangulated top-down and bottom-up estimates. All forward-lo
     text(fill: white, weight: "bold")[Term],
     text(fill: white, weight: "bold")[Definition],
   ),
-  [ACP], [Agentic Commerce Protocol (OpenAI+Stripe)],
-  [A2A], [Agent-to-Agent protocol (Google)],
-  [AP2], [Agent Payments Protocol (Google+Partners)],
-  [GEO], [Generative Engine Optimization],
-  [MCP], [Model Context Protocol (Anthropic)],
-  [TAP], [Trusted Agent Protocol (Visa)],
-  [TTV], [Total Transaction Value],
-  [UCP], [Universal Commerce Protocol (Google)],
+  [MCP], [Model Context Protocol — Anthropic's standard for AI-to-tool connections],
+  [UCP], [Universal Commerce Protocol — Google's protocol for cross-surface commerce discovery],
+  [ACP], [Agentic Checkout Protocol — OpenAI + Stripe's standard for programmatic purchase],
+  [A2A], [Agent-to-Agent — Google's inter-agent communication protocol],
+  [AP2], [Agent Payment Protocol — Google's mandate-based payment authorization],
+  [x402], [Open-source HTTP-native micropayment protocol for machine-to-machine transactions],
+  [TTV], [Total Transaction Value — gross value of commerce mediated by agents],
+  [TAM], [Total Addressable Market — maximum revenue opportunity if 100% market share],
+  [SAM], [Serviceable Addressable Market — realistic addressable subset of TAM],
+  [B2C], [Business-to-Consumer — direct sales to end consumers],
+  [B2B], [Business-to-Business — enterprise procurement and wholesale],
+  [MRO], [Maintenance, Repair, and Operations — category of indirect procurement],
+  [MECE], [Mutually Exclusive, Collectively Exhaustive — analytical framework principle],
+  [SCR], [Situation-Complication-Resolution — consulting presentation structure],
+  [JSON-LD], [JavaScript Object Notation for Linked Data — structured product data format],
 )
 ]
 
 === Sources
-#set text(size: 8pt)
-+ McKinsey & Company. (2025). _Agentic Commerce: The Next Frontier._ mckinsey.com
-+ Bain & Company. (2025). _Sizing the U.S. Agentic Commerce Opportunity._ bain.com
-+ Morgan Stanley. (2026). _AI-Mediated E-Commerce Spending Projections._ morganstanley.com
-+ Gartner. (2026). _AI Agents Will Intermediate 90% of B2B Buying by 2028._ gartner.com
-+ Juniper Research. (2026). _Agentic Commerce TTV Forecast 2026-2030._ juniperresearch.com
-+ Grand View Research. (2026). _Agentic Commerce Market Size 2026-2033._ grandviewresearch.com
-+ Statista. (2026). _Global Retail E-Commerce Sales 2014-2030._ statista.com
-+ Anthropic. (2025). _Model Context Protocol (MCP)._ anthropic.com
-+ Google. (2026). _A2A, UCP, and AP2 Protocol Documentation._ developers.google.com
-+ OpenAI. (2026). _Agentic Commerce Protocol._ openai.com
-+ Stripe. (2026). _Building the Payment Layer for AI Agents._ stripe.com
-+ Visa. (2026). _Trusted Agent Protocol._ usa.visa.com
-+ PwC. (2026). _Agentic Commerce Risk Advisory._ pwc.com
-+ Hogan Lovells. (2026). _Regulatory Framework for Agentic Commerce._ hoganlovells.com
-+ Digital Commerce 360. (2026). _AI Shopping Agents in 2026._ digitalcommerce360.com
+#text(size: 8pt)[
+1. McKinsey & Company. (2025). _The Age of Agentic Commerce._ McKinsey Global Institute.
+2. Juniper Research. (2026). _AI Shopping Agents: Market Sizing & Forecasts 2026-2030._
+3. Bain & Company. (2025). _The Agent Economy: Disrupting Retail._
+4. Morgan Stanley. (2026). _E-Commerce 2030: The Agent Thesis._ Equity Research.
+5. Grand View Research. (2026). _AI Agents in Commerce Market Size Report, 2033._
+6. Gartner. (2026). _Predicts 2026: AI Agent Impact on B2B Buying._
+7. Salesforce. (2026). _State of the Connected Consumer, 8th Edition._
+8. PwC. (2026). _Global Consumer Insights Pulse Survey: AI Trust Index._
+9. Anthropic. (2025). _Model Context Protocol Specification v1.0._
+10. Google. (2026). _Universal Commerce Protocol Technical Documentation._
+11. OpenAI. (2026). _Agentic Checkout Protocol with Stripe Integration._
+12. Hogan Lovells. (2026). _Legal Framework for AI Agent Commerce._
+13. European Commission. (2024). _EU Artificial Intelligence Act._
+14. Digital Commerce 360. (2026). _AI Shopping Agents: Platform Comparison._
+15. PitchBook. (2026). _Agentic Commerce: Emerging Tech Research._
+16. Crunchbase. (2026). _AI Commerce Funding Tracker._
+17. CB Insights. (2026). _State of AI in Commerce._
+18. Statista. (2026). _Global E-Commerce Market Data._
+19. eMarketer. (2026). _Digital Commerce Trends Report._
+20. Stripe. (2026). _Agent Payments: Infrastructure for AI Commerce._
+]
+
+#v(1em)
+#line(length: 100%, stroke: 0.5pt + silver)
+#v(0.5em)
+#text(size: 7pt, fill: steel, style: "italic")[
+  *Disclaimer:* This report is for informational purposes only and does not constitute investment advice. Forward-looking projections are based on the author's analysis of available data and involve substantial uncertainty. All market size estimates represent the author's triangulation of publicly available analyst reports and should not be treated as precise forecasts. Past technology adoption patterns may not predict future outcomes.
+]

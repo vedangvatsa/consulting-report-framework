@@ -1,108 +1,155 @@
 # Consulting Report Framework
 
-A production-grade system for generating boardroom-ready consulting reports with McKinsey-level design fidelity.
-
-## Architecture
-
-```
-consulting-report-framework/
-├── AI_INSTRUCTIONS.md        # Comprehensive rules for AI-assisted report generation
-├── assets/
-│   └── chart_style.py        # McKinsey Blue palette + matplotlib defaults
-├── scripts/
-│   ├── build.sh              # Full pipeline: charts → QA → fact-check → PDF
-│   ├── qa_check.py           # Automated quality assurance (slop words, emdashes, etc.)
-│   └── fact_check.py         # Extract claims + sources for verification
-├── reports/
-│   ├── template.typ          # Typst template with all components
-│   ├── charts/               # Generated chart PNGs + generate_charts.py
-│   ├── images/               # Unsplash stock photos
-│   └── *.typ                 # Report source files
-└── templates/                # Markdown report structure templates
-```
+A production-ready, McKinsey-style consulting report generation system built on [Typst](https://typst.app). Generate 50-page boardroom-ready reports on any topic by providing just a topic name.
 
 ## Quick Start
 
 ```bash
-# 1. Build a report (charts + QA + compile)
-chmod +x scripts/build.sh
-./scripts/build.sh reports/agentic-commerce-report.typ
+# 1. Clone the repo
+git clone https://github.com/vedangvatsa/consulting-report-framework.git
+cd consulting-report-framework
 
-# 2. Run QA check only
-python3 scripts/qa_check.py reports/agentic-commerce-report.typ
+# 2. Generate charts
+cd reports && python3 generate_charts.py
 
-# 3. Run fact-check audit only
-python3 scripts/fact_check.py reports/agentic-commerce-report.typ
+# 3. Compile the report
+typst compile report.typ output.pdf
+```
 
-# 4. Compile only
-cd reports && typst compile agentic-commerce-report.typ
+## How to Create a New Report
+
+### Step 1: Define Your Topic
+Replace the content in `report.typ` while keeping the template import:
+
+```typst
+#import "template.typ": *
+
+#show: report.with(
+  title: "Your Report Title",
+  subtitle: "Subtitle describing scope",
+  author: "Your Name",
+  date: "Month Year",
+)
+```
+
+### Step 2: Use the Component Library
+
+The template provides these components:
+
+| Component | Usage | Purpose |
+|-----------|-------|---------|
+| `#section-divider("01", "Title", "Subtitle")` | Full-page navy divider | Major section breaks |
+| `#table-exhibit(N, "Title", "Source")[...]` | Data table with caption | Structured data display |
+| `#chart-exhibit(N, "Title", "path.png", "Source")` | Chart with caption | Visual data |
+| `#callout[...]` | Blue-bordered insight box | Key takeaways |
+| `#kpi-grid(kpi-card(...), ...)` | KPI dashboard | Executive summary stats |
+| `#highlight-stat("Value", "Label", "Trend")` | Single stat callout | Emphasis numbers |
+
+### Step 3: Follow the Report Structure
+
+Every report should follow this 12-section structure:
+
+```
+01. Historical Context     — How did we get here?
+02. Market Definition      — What exactly are we analyzing?
+03. Market Sizing          — TAM, SAM, SOM with triangulated estimates
+04. Competitive Landscape  — Who are the key players?
+05. Value Chain Analysis   — How does value flow?
+06. Consumer/User Analysis — What do users want?
+07. Investment Landscape   — Where is capital flowing?
+08. Risk Assessment        — What could go wrong?
+09. Data Science Modeling  — What do the models say?
+10. Scenario Analysis      — Bear, base, bull cases
+11. Strategic Recommendations — What should stakeholders do?
+12. Appendix               — Methodology, glossary, sources
+```
+
+### Step 4: Generate Charts
+
+Update `generate_charts.py` with your data. Follow the existing pattern:
+
+```python
+# Use the style system
+from generate_charts import apply_style, BRAND_PRIMARY, ACCENT, PALETTE
+apply_style()
+
+# Create chart
+fig, ax = plt.subplots(figsize=(7, 3.2))
+# ... your chart code ...
+save(fig, 'your_chart.png')
+```
+
+### Step 5: Compile
+
+```bash
+typst compile report.typ output.pdf
 ```
 
 ## Design System
 
-### McKinsey Blue Palette
+### Color Palette (McKinsey Blue)
 | Token | Hex | Usage |
-|---|---|---|
-| Brand Primary | `#005EB8` | Chart highlights, KPI borders, exhibit rules |
-| Highlight Blue | `#0091DA` | Secondary chart series |
-| Dark Blue | `#003A70` | Headings, axis labels |
-| Navy | `#16213E` | Cover page, section dividers |
-| Silver | `#A2AAAD` | Non-highlighted data, source text |
-| Light Gray | `#D9D9D9` | Context data, row fills |
+|-------|-----|-------|
+| `mckinsey-blue` | `#005EB8` | Primary accent, headers |
+| `dark-blue` | `#003A70` | Deep headings |
+| `navy` | `#16213E` | Cover, dividers, table headers |
+| `steel` | `#5E6B7A` | Captions, secondary text |
+| `silver` | `#A2AAAD` | Borders, axes |
 
 ### Typography
-| Element | Font | Size |
-|---|---|---|
-| Report title | Georgia | 38pt |
-| H1 section | Georgia | 22pt |
-| H2 subsection | Helvetica Neue | 13pt |
-| H3 subsection | Helvetica Neue | 11pt |
-| Body text | Helvetica Neue | 10.5pt |
-| Tables | Helvetica Neue | 9pt |
-| Source lines | Helvetica Neue | 7pt |
+- **Headlines**: Georgia (serif), 16-38pt
+- **Body**: Helvetica Neue (sans-serif), 10.5pt
+- **Captions**: 8pt, steel color
 
-### Components
-| Component | Function |
-|---|---|
-| `report()` | Document wrapper with full-page navy cover |
-| `section-divider()` | Navy divider with section number and title |
-| `kpi-grid()` / `kpi-card()` | KPI dashboard (3-4 cards) |
-| `chart-exhibit()` | Chart with blue rule, title, and source |
-| `table-exhibit()` | Table with blue rule, title, and source |
-| `callout()` | Key insight box with navy left border |
-| `highlight-stat()` | Large featured statistic |
-| `timeline-item()` | Implementation roadmap step |
+### Layout Rules
+1. Every H2 heading gets `pagebreak(weak: true)`
+2. Section dividers are full-page navy backgrounds
+3. All exhibits use `breakable: false` (atomic blocks)
+4. Tables use alternating row fills (`#F7F8FA` / white)
+5. Fill page gaps with analytical prose before section breaks
 
-## Quality Pipeline
+## File Structure
 
-### QA Check (`scripts/qa_check.py`)
-Automated scanning for:
-- AI slop words (60+ banned terms)
-- Em-dashes and en-dashes
-- Colons and semicolons in prose
-- Hedging language without data
-- Passive voice constructs
-- Sentences exceeding 25 words
-- Missing exhibit source citations
-- Emoji characters
+```
+consulting-report-framework/
+├── README.md
+├── reports/
+│   ├── template.typ          # Reusable template (DO NOT MODIFY)
+│   ├── report.typ            # Current report content
+│   ├── generate_charts.py    # Chart generation script
+│   ├── images/
+│   │   ├── cover-bg.png      # Cover page background
+│   │   └── section-bg.png    # Section divider background
+│   └── charts/               # Generated chart PNGs
+└── assets/                   # Shared assets and backups
+```
 
-### Fact-Check Audit (`scripts/fact_check.py`)
-Extracts:
-- All quantitative claims (dollar amounts, percentages, growth rates)
-- All source citations with line numbers
-- Exhibit inventory with source attribution status
+## Writing Guidelines
 
-Outputs CSV files for systematic verification.
+### Pyramid Principle
+- Lead with the answer, then support with data
+- Every section starts with a bold, italicized thesis statement
+- Use SCR (Situation-Complication-Resolution) for executive summaries
 
-## Rules
+### Data Discipline
+- Every claim needs a source citation
+- Use triangulated estimates (3+ sources minimum)
+- Present ranges, not point estimates
+- Include confidence levels for projections
 
-All rules are codified in `AI_INSTRUCTIONS.md`. Key constraints:
+### Anti-Patterns (Avoid These)
+- ❌ Vague language ("significant growth", "many companies")
+- ❌ Unsourced claims
+- ❌ Point estimates without ranges
+- ❌ Generic recommendations ("companies should innovate")
+- ❌ Empty pages or large whitespace gaps
 
-- No AI slop words, no emdashes, no colons in prose, no semicolons
-- Every exhibit must have an action title and source citation
-- Charts generated via Python only (not AI image tools)
-- All data must be verifiable with tier-1 sources
-- Probabilistic language for forward-looking statements
-- Consistent 0.8em spacing on all block components
-- Tables left-aligned (never justified)
-- KPI labels under 15 characters with hyphenation disabled
+## Dependencies
+
+- [Typst](https://typst.app) (latest)
+- Python 3.10+ with: `matplotlib`, `seaborn`, `numpy`, `scipy`
+- Fonts: Georgia, Helvetica Neue (system fonts on macOS)
+
+## License
+
+Private repository. All rights reserved.
