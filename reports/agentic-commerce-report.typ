@@ -140,6 +140,8 @@ The second battle is for protocol dominance: which standards will govern machine
   "charts/competitive_readiness.png",
   "Author analysis based on publicly announced capabilities, April 2026")
 
+We score each platform across five dimensions: product discovery breadth, checkout integration depth, protocol ownership, distribution reach, and data advantage. Google scores highest overall (4.2/5) driven by its protocol portfolio and Android distribution. OpenAI scores 3.8/5, strong on discovery but weaker on checkout. Amazon scores 3.5/5, dominant in retail data but penalized for its closed ecosystem. Perplexity scores 2.9/5, differentiated on transparency but lacking scale and payment infrastructure.
+
 #table-exhibit(5, "Platform capability comparison across the agentic commerce lifecycle",
   "Company announcements, Digital Commerce 360 (2026)")[
   #table(
@@ -221,6 +223,8 @@ The stack mirrors the evolution of web infrastructure. Just as HTTP, TCP/IP, and
   )
 ]
 
+The payment layer is the least mature. Foundation (MCP) and coordination (A2A) protocols are production-ready with documented APIs and active developer communities. Execution protocols (ACP, UCP) are in pilot phase with 15-20 merchants each. Payment protocols (AP2, TAP) remain in specification stage. This maturity gradient creates a predictable investment timeline: foundation-layer companies are Series B opportunities today, while payment-layer startups are seed-stage bets on 2027-2028 adoption.
+
 #callout[
   *Key Insight:* The payment authorization problem is to agentic commerce what mobile-responsive design was to mobile commerce in 2010. The companies that solve delegated payment trust first will capture outsized value.
 ]
@@ -228,6 +232,8 @@ The stack mirrors the evolution of web infrastructure. Just as HTTP, TCP/IP, and
 == Value Chain Analysis
 
 *Value is migrating from merchants toward agent providers, creating a new gatekeeper dynamic that could commoditize brands.*
+
+The traditional e-commerce value chain placed merchants at the center of the customer relationship. Brands invested heavily in SEO, social media marketing, and website design to attract and convert customers. In the agentic model, the agent provider controls the customer relationship. The agent decides which merchants to query, which products to surface, and how to frame alternatives. This structural shift mirrors what happened to travel agents when Booking.com and Expedia aggregated hotel inventory, except the displacement will be faster and broader.
 
 #chart-exhibit(10, "Agent providers capture 40% of new value, displacing merchants",
   "charts/value_chain_shift.png",
@@ -293,6 +299,8 @@ The adoption trajectory for agentic commerce follows a pattern familiar from mob
 == Risks and Headwinds
 
 *Consumer trust, regulatory fragmentation, and novel fraud vectors could slow adoption by 2-4 years relative to current projections.*
+
+The risk landscape for agentic commerce is unique because it combines consumer psychology barriers with technical security challenges and regulatory uncertainty. Unlike previous e-commerce transitions that faced primarily technological hurdles (mobile bandwidth, payment security), agentic commerce requires consumers to delegate financial authority to AI systems. This psychological barrier is fundamentally different from asking consumers to enter a credit card number on a website. A 2026 PwC survey found that 78% of consumers are "uncomfortable" or "very uncomfortable" with fully autonomous purchasing, even among respondents who regularly use AI assistants for product research.
 
 #chart-exhibit(12, "Consumer comfort drops sharply from discovery to autonomous purchasing",
   "charts/consumer_trust.png",
