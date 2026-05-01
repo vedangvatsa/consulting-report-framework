@@ -97,7 +97,8 @@
 // SECTION DIVIDER (inline navy banner, no pagebreak)
 // ============================================================
 #let section-divider(number, title, subtitle) = {
-  block(breakable: false, above: 1.5em, below: 1.2em)[
+  pagebreak(weak: true)
+  block(breakable: false, above: 0em, below: 1.2em)[
     #rect(width: 100%, fill: navy, radius: 0pt,
       inset: (x: 28pt, y: 22pt))[
       #grid(columns: (auto, 1fr), column-gutter: 16pt,
