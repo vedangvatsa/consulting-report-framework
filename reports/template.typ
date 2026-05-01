@@ -209,7 +209,7 @@
 // TIMELINE ITEM (implementation roadmap)
 // ============================================================
 #let timeline-item(marker, title, desc) = {
-  block(breakable: true, above: 0.4em, below: 0.4em)[
+  block(breakable: true, above: 0.2em, below: 0.2em)[
     #grid(columns: (90pt, 1fr), column-gutter: 20pt,
       align: (center + horizon, left + top),
       rect(radius: 0pt, fill: mckinsey-blue, width: 90pt, height: 32pt,
