@@ -378,16 +378,23 @@ The probability-weighted expected value across all three scenarios is \$6.3 tril
 
 The strategic imperative differs by stakeholder. Merchants face the most urgent deadline: without machine-readable product catalogs and API-first checkout infrastructure, they risk becoming invisible to agent-mediated discovery. Platforms must choose between building proprietary agent ecosystems or adopting open protocols. Investors have a narrow window to deploy capital into infrastructure plays before protocol winners are established by 2028.
 
-#timeline-item("Q3 2026", "Merchants: Begin catalog and API audit",
-  "Upgrade product data to JSON-LD schema. Build API-first checkout endpoints compatible with ACP/UCP.")
-#timeline-item("Q4 2026", "Platforms: Ship protocol support",
-  "Native support for ACP + UCP. Agent-facing APIs alongside human-facing storefronts.")
-#timeline-item("Q1 2027", "Enterprise: Launch procurement agent pilots",
-  "Deploy specialized agent clusters for indirect procurement. Human-in-the-loop above $5,000.")
-#timeline-item("Q2 2027", "Investors: Deploy infrastructure capital",
-  "Target payment orchestration, identity verification, agent middleware at Seed-Series B stage.")
-#timeline-item("2028", "Scale and optimize",
-  "Measure agent-mediated traffic, conversion, and CAC. Winners established, valuations reflect it.")
+#table-exhibit(none, "Implementation roadmap for key stakeholders", "Author analysis")[
+  #table(
+    columns: (80pt, 1fr),
+    stroke: none,
+    fill: (_, y) => if calc.odd(y) { rgb("#F7F8FA") } else { white },
+    table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q3 2026]],
+    [*Merchants: Begin catalog and API audit* #linebreak() Upgrade product data to JSON-LD schema. Build API-first checkout endpoints compatible with ACP/UCP.],
+    table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q4 2026]],
+    [*Platforms: Ship protocol support* #linebreak() Native support for ACP + UCP. Agent-facing APIs alongside human-facing storefronts.],
+    table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q1 2027]],
+    [*Enterprise: Launch procurement agent pilots* #linebreak() Deploy specialized agent clusters for indirect procurement. Human-in-the-loop above \$5,000.],
+    table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[Q2 2027]],
+    [*Investors: Deploy infrastructure capital* #linebreak() Target payment orchestration, identity verification, agent middleware at Seed-Series B stage.],
+    table.cell(fill: mckinsey-blue)[#text(fill: white, weight: "bold", size: 8pt)[2028]],
+    [*Scale and optimize* #linebreak() Measure agent-mediated traffic, conversion, and CAC. Winners established, valuations reflect it.],
+  )
+]
 
 
 #table-exhibit(17, "Infrastructure investment offers the highest risk-adjusted returns",

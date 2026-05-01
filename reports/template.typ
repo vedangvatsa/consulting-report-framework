@@ -47,7 +47,8 @@
   }
   show heading.where(level: 2): it => {
     set text(font: "Helvetica Neue", size: 13pt, weight: "bold", fill: dark-blue)
-    block(sticky: true, above: 1.2em, below: 0.5em)[
+    pagebreak(weak: true)
+    block(sticky: true, above: 0em, below: 0.5em)[
       #it.body
       #v(0.25em)
       #line(length: 100%, stroke: 0.75pt + silver)
