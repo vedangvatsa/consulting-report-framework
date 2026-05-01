@@ -64,29 +64,35 @@
   set table(inset: (x: 10pt, y: 7pt))
   show table: set par(justify: false)
 
-  // --- COVER PAGE (Modern MGI style — full-page) ---
+  // --- COVER PAGE (Modern MGI style — full-page with design bg) ---
   page(margin: (x: 0in, y: 0in), footer: none)[
-    #rect(width: 100%, height: 100%, fill: navy)[
-      #pad(x: 1.4in)[
-        #v(2.2in)
-        #line(length: 60pt, stroke: 2.5pt + mckinsey-blue)
-        #v(0.5em)
-        #text(font: "Georgia", size: 38pt, weight: "bold", fill: white)[#title]
-        #v(0.8em)
-        #text(font: "Helvetica Neue", size: 14pt, fill: rgb("#FFFFFFBB"))[#subtitle]
-        #v(1fr)
-        #line(length: 100%, stroke: 0.5pt + rgb("#FFFFFF22"))
-        #v(0.6em)
-        #grid(columns: (1fr, 1fr),
-          text(size: 10pt, fill: rgb("#FFFFFFAA"))[#author],
-          align(right)[#text(size: 10pt, fill: rgb("#FFFFFFAA"))[#date]]
-        )
-        #v(0.5em)
-        #text(size: 7pt, fill: rgb("#FFFFFF55"), style: "italic")[
-          Confidential. Prepared for internal strategy teams. The author accepts no liability for decisions made in reliance on this report.
-        ]
-        #v(0.8in)
+    // Background image
+    #place(top + left)[
+      #image("images/cover-bg.png", width: 100%, height: 100%, fit: "cover")
+    ]
+    // Semi-transparent overlay for text readability
+    #place(top + left)[
+      #rect(width: 100%, height: 100%, fill: rgb("#16213E99"))
+    ]
+    #pad(x: 1.4in)[
+      #v(2.2in)
+      #line(length: 60pt, stroke: 2.5pt + mckinsey-blue)
+      #v(0.5em)
+      #text(font: "Georgia", size: 38pt, weight: "bold", fill: white)[#title]
+      #v(0.8em)
+      #text(font: "Helvetica Neue", size: 14pt, fill: rgb("#FFFFFFBB"))[#subtitle]
+      #v(1fr)
+      #line(length: 100%, stroke: 0.5pt + rgb("#FFFFFF22"))
+      #v(0.6em)
+      #grid(columns: (1fr, 1fr),
+        text(size: 10pt, fill: rgb("#FFFFFFAA"))[#author],
+        align(right)[#text(size: 10pt, fill: rgb("#FFFFFFAA"))[#date]]
+      )
+      #v(0.5em)
+      #text(size: 7pt, fill: rgb("#FFFFFF55"), style: "italic")[
+        Confidential. Prepared for internal strategy teams. The author accepts no liability for decisions made in reliance on this report.
       ]
+      #v(0.8in)
     ]
   ]
 
