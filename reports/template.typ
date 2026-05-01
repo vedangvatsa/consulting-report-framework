@@ -99,29 +99,32 @@
 #let section-divider(number, title, subtitle) = {
   pagebreak(weak: true)
   page(margin: (x: 0in, y: 0in), footer: none)[
-    #rect(width: 100%, height: 100%, fill: navy)[
-      // Decorative large ghost number (background watermark)
-      #place(center + horizon, dy: -60pt)[
-        #text(size: 200pt, weight: "bold", fill: rgb("#FFFFFF08"))[#number]
-      ]
-      // Centered content block
-      #align(center + horizon)[
-        #block[
-          // Top accent line
-          #line(length: 60pt, stroke: 2.5pt + mckinsey-blue)
-          #v(1.2em)
-          // Section number pill
-          #text(size: 11pt, weight: "bold", fill: rgb("#FFFFFF55"), tracking: 2pt)[SECTION #number]
-          #v(1em)
-          // Title
-          #text(font: "Georgia", size: 32pt, weight: "bold", fill: white)[#title]
-          #v(0.8em)
-          // Thin separator
-          #line(length: 40pt, stroke: 0.75pt + rgb("#FFFFFF33"))
-          #v(0.8em)
-          // Subtitle
-          #text(size: 11pt, fill: rgb("#FFFFFFAA"))[#subtitle]
-        ]
+    // Background image with geometric pattern
+    #place(top + left)[
+      #image("images/section-bg.png", width: 100%, height: 100%, fit: "cover")
+    ]
+    // Semi-transparent navy overlay for text readability
+    #place(top + left)[
+      #rect(width: 100%, height: 100%, fill: rgb("#16213Ecc"))
+    ]
+    // Decorative large ghost number (background watermark)
+    #place(center + horizon, dy: -60pt)[
+      #text(size: 200pt, weight: "bold", fill: rgb("#FFFFFF08"))[#number]
+    ]
+    // Centered content block
+    #align(center + horizon)[
+      #block[
+        // Top accent line
+        #line(length: 60pt, stroke: 2.5pt + mckinsey-blue)
+        #v(1.2em)
+        // Title
+        #text(font: "Georgia", size: 32pt, weight: "bold", fill: white)[#title]
+        #v(0.8em)
+        // Thin separator
+        #line(length: 40pt, stroke: 0.75pt + rgb("#FFFFFF33"))
+        #v(0.8em)
+        // Subtitle
+        #text(size: 11pt, fill: rgb("#FFFFFFAA"))[#subtitle]
       ]
     ]
   ]
