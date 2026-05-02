@@ -47,8 +47,7 @@
   }
   show heading.where(level: 2): it => {
     set text(font: "Helvetica Neue", size: 13pt, weight: "bold", fill: dark-blue)
-    pagebreak(weak: true)
-    block(sticky: true, above: 0em, below: 0.5em)[
+    block(sticky: true, above: 1.2em, below: 0.5em)[
       #it.body
       #v(0.25em)
       #line(length: 100%, stroke: 0.75pt + silver)
@@ -181,12 +180,16 @@
 // Title comes from Typst, NOT from matplotlib.
 // ============================================================
 #let chart-exhibit(number, title, path, src, width: 92%) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: true, above: 0.8em, below: 0.8em)[
     #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
     #v(0.3em)
-    #text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
-    #h(6pt)
-    #text(size: 9.5pt, fill: dark-text)[#title]
+    #if number != none {
+      text(size: 9.5pt, weight: "bold", fill: dark-blue)[Exhibit #number]
+      h(6pt)
+      text(size: 9.5pt, fill: dark-text)[#title]
+    } else {
+      text(size: 9.5pt, weight: "bold", fill: dark-blue)[#title]
+    }
     #v(0.3em)
     #image(path, width: width)
     #v(0.3em)
@@ -199,7 +202,7 @@
 // Blue rule above, title, table, source below.
 // ============================================================
 #let table-exhibit(number, title, src, body) = {
-  block(breakable: false, above: 0.8em, below: 0.8em)[
+  block(breakable: true, above: 0.8em, below: 0.8em)[
     #line(length: 100%, stroke: 1.5pt + mckinsey-blue)
     #v(0.3em)
     #if number != none {

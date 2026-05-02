@@ -387,7 +387,7 @@ deals = [12, 15, 18, 24, 32, 41, 55, 68, 89]
 
 bars = ax.bar(quarters, funding, color=[NEUTRAL_GRAY]*4 + [ACCENT]*4 + [BRAND_PRIMARY], width=0.6)
 ax.set_ylabel('Funding ($B)')
-ax.set_ylim(0, 7)
+ax.set_ylim(0, 7.5)
 
 ax2 = ax.twinx()
 ax2.plot(quarters, deals, color=HEADING_COLOR, linewidth=2, marker='D', markersize=5, label='Deal Count')
