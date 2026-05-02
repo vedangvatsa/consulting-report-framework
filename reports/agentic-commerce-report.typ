@@ -285,6 +285,14 @@ Google holds a structural advantage through protocol ownership (UCP, A2A, AP2) a
   "charts/competitive_matrix.png",
   "Author analysis, April 2026")
 
+=== Market Map
+
+The agentic commerce ecosystem spans four layers: consumer-facing agents (Google, OpenAI, Amazon, Perplexity), agent infrastructure and protocols (MCP, UCP, ACP, A2A), payment and checkout (Stripe, Adyen, Visa, Ramp), and merchant enablement (Shopify, Salesforce, Algolia). The most defensible positions sit in the infrastructure and payment layers, where switching costs are highest and network effects compound.
+
+#chart-exhibit(none, "Agentic commerce ecosystem spans four horizontal layers",
+  "charts/market_map.png",
+  "Author analysis, April 2026")
+
 === Protocol Competition
 
 The protocol landscape is consolidating around three dominant standards. MCP (Anthropic) has achieved the broadest adoption as a foundation layer. UCP (Google) is gaining traction for cross-platform discovery. ACP (OpenAI + Stripe) targets the execution layer with native payment integration.

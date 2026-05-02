@@ -448,30 +448,42 @@ save(fig, 'consumer_demographics.png')
 # ============================================================
 # CHART 16: Risk Heatmap (Bubble Chart)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 4))
+fig, ax = plt.subplots(figsize=(7, 4.5))
 risks = {
-    'Consumer\nTrust Gap': (75, 85, 800, BRAND_PRIMARY),
-    'Regulatory\nFragmentation': (65, 70, 600, ACCENT),
-    'Protocol\nFragmentation': (55, 55, 500, '#5E6B7A'),
-    'Agent Fraud\n& Security': (50, 80, 650, BRAND_PRIMARY),
-    'Merchant\nResistance': (40, 45, 400, NEUTRAL_GRAY),
-    'Technical\nReliability': (30, 35, 350, NEUTRAL_GRAY),
-    'Data Privacy\nConcerns': (60, 65, 550, ACCENT),
+    'Consumer Trust Gap': (78, 85, 600, BRAND_PRIMARY),
+    'Agent Fraud & Security': (48, 80, 500, BRAND_PRIMARY),
+    'Regulatory Fragmentation': (65, 70, 450, ACCENT),
+    'Data Privacy Concerns': (58, 60, 400, ACCENT),
+    'Protocol Fragmentation': (52, 48, 380, '#5E6B7A'),
+    'Merchant Resistance': (38, 42, 300, NEUTRAL_GRAY),
+    'Technical Reliability': (25, 32, 280, NEUTRAL_GRAY),
+}
+
+# Custom label offsets: (dx, dy, ha)
+label_offsets = {
+    'Consumer Trust Gap': (0, 18, 'center'),
+    'Agent Fraud & Security': (0, 18, 'center'),
+    'Regulatory Fragmentation': (0, 18, 'center'),
+    'Data Privacy Concerns': (0, -22, 'center'),
+    'Protocol Fragmentation': (0, -22, 'center'),
+    'Merchant Resistance': (0, -22, 'center'),
+    'Technical Reliability': (0, 18, 'center'),
 }
 
 for name, (prob, impact, size, color) in risks.items():
     ax.scatter(prob, impact, s=size, c=color, alpha=0.7, edgecolors='white', linewidth=1.5, zorder=5)
-    ax.annotate(name, xy=(prob, impact), xytext=(0, -20), textcoords='offset points',
-                ha='center', fontsize=7, fontweight='bold', color=TEXT_COLOR)
+    dx, dy, ha = label_offsets[name]
+    ax.annotate(name, xy=(prob, impact), xytext=(dx, dy), textcoords='offset points',
+                ha=ha, fontsize=7, fontweight='bold', color=TEXT_COLOR)
 
 ax.set_xlabel('Probability of Materialization (%)')
 ax.set_ylabel('Potential Impact on Adoption (%)')
-ax.set_xlim(15, 90)
+ax.set_xlim(15, 92)
 ax.set_ylim(20, 100)
-ax.axhline(y=60, color=LIGHT_GRAY, linestyle='--', linewidth=0.8)
+ax.axhline(y=55, color=LIGHT_GRAY, linestyle='--', linewidth=0.8)
 ax.axvline(x=50, color=LIGHT_GRAY, linestyle='--', linewidth=0.8)
-ax.text(70, 95, 'HIGH PRIORITY', fontsize=8, color=BRAND_PRIMARY, ha='center', fontweight='bold', alpha=0.5)
-ax.text(30, 30, 'MONITOR', fontsize=8, color=NEUTRAL_GRAY, ha='center', fontweight='bold', alpha=0.5)
+ax.text(72, 96, 'HIGH PRIORITY', fontsize=8, color=BRAND_PRIMARY, ha='center', fontweight='bold', alpha=0.5)
+ax.text(32, 26, 'MONITOR', fontsize=8, color=NEUTRAL_GRAY, ha='center', fontweight='bold', alpha=0.5)
 save(fig, 'risk_heatmap.png')
 
 # ============================================================
@@ -519,16 +531,84 @@ bars = ax.bar(x, ttv_2030, color=[BRAND_PRIMARY, ACCENT, '#5E6B7A', NEUTRAL_GRAY
 ax.set_ylabel('Agent-Mediated TTV ($T)')
 ax.set_xticks(x)
 ax.set_xticklabels(regions)
-ax.set_ylim(0, 2.8)
+ax.set_ylim(0, 3.0)
 
 ax2 = ax.twinx()
 ax2.plot(x, penetration, color=HEADING_COLOR, linewidth=2, marker='D', markersize=6, label='Penetration %')
 ax2.set_ylabel('Agent Penetration (%)', color=HEADING_COLOR)
-ax2.set_ylim(0, 25)
+ax2.set_ylim(0, 28)
 
 for bar, val in zip(bars, ttv_2030):
-    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.05, f'${val}T',
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.08, f'${val}T',
             ha='center', fontsize=8, fontweight='bold', color=TEXT_COLOR)
 save(fig, 'regional_projections.png')
+
+# ============================================================
+# CHART 19: Market Map — Agentic Commerce Ecosystem
+# ============================================================
+fig, ax = plt.subplots(figsize=(7.5, 5))
+ax.set_xlim(0, 100)
+ax.set_ylim(0, 100)
+ax.axis('off')
+
+# Layer boxes
+layers = [
+    (2, 78, 96, 18, 'Consumer-Facing Agents', BRAND_PRIMARY),
+    (2, 56, 96, 18, 'Agent Infrastructure & Protocols', ACCENT),
+    (2, 34, 96, 18, 'Payment & Checkout', '#5E6B7A'),
+    (2, 12, 96, 18, 'Merchant Enablement', NEUTRAL_GRAY),
+]
+
+for x, y, w, h, label, color in layers:
+    rect = plt.Rectangle((x, y), w, h, facecolor=color, alpha=0.12, edgecolor=color, linewidth=1.5, zorder=1)
+    ax.add_patch(rect)
+    ax.text(x + 2, y + h - 3, label, fontsize=9, fontweight='bold', color=color, va='top', zorder=3)
+
+# Companies in each layer
+companies_map = {
+    # Consumer Agents layer (y=78-96)
+    'Google Gemini': (15, 86, BRAND_PRIMARY),
+    'ChatGPT': (35, 86, BRAND_PRIMARY),
+    'Amazon Rufus': (55, 86, BRAND_PRIMARY),
+    'Perplexity': (75, 86, BRAND_PRIMARY),
+    'Sierra AI': (15, 81, BRAND_PRIMARY),
+    'Rabbit r1': (35, 81, BRAND_PRIMARY),
+
+    # Infrastructure layer (y=56-74)
+    'MCP (Anthropic)': (15, 64, ACCENT),
+    'UCP (Google)': (35, 64, ACCENT),
+    'ACP (OpenAI)': (55, 64, ACCENT),
+    'A2A (Google)': (75, 64, ACCENT),
+    'AP2 (Google)': (15, 59, ACCENT),
+    'x402 (Open)': (35, 59, ACCENT),
+    'LangChain': (55, 59, ACCENT),
+    'CrewAI': (75, 59, ACCENT),
+
+    # Payment layer (y=34-52)
+    'Stripe': (15, 42, '#5E6B7A'),
+    'Adyen': (35, 42, '#5E6B7A'),
+    'Visa TAP': (55, 42, '#5E6B7A'),
+    'Ramp': (75, 42, '#5E6B7A'),
+    'PayPal': (15, 37, '#5E6B7A'),
+    'Square': (35, 37, '#5E6B7A'),
+    'Stytch': (55, 37, '#5E6B7A'),
+
+    # Merchant layer (y=12-30)
+    'Shopify': (15, 20, NEUTRAL_GRAY),
+    'BigCommerce': (35, 20, NEUTRAL_GRAY),
+    'Salesforce': (55, 20, NEUTRAL_GRAY),
+    'Algolia': (75, 20, NEUTRAL_GRAY),
+    'Constructor': (15, 15, NEUTRAL_GRAY),
+    'Nosto': (35, 15, NEUTRAL_GRAY),
+    'Schema App': (55, 15, NEUTRAL_GRAY),
+}
+
+for name, (x, y, color) in companies_map.items():
+    bbox = dict(boxstyle='round,pad=0.3', facecolor='white', edgecolor=color, linewidth=0.8, alpha=0.95)
+    ax.text(x, y, name, fontsize=6.5, fontweight='bold', color=TEXT_COLOR,
+            ha='center', va='center', bbox=bbox, zorder=4)
+
+ax.set_title('')
+save(fig, 'market_map.png')
 
 print("\n✅ All 18 charts generated successfully.")
