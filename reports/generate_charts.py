@@ -52,15 +52,16 @@ apply_style()
 OUT = "/Users/vedang/Documents/agentic-commerce/charts"
 
 def save(fig, name):
+    fig.tight_layout(pad=1.2)
     fig.savefig(os.path.join(OUT, name), dpi=200, bbox_inches='tight',
-                transparent=False, facecolor='white', pad_inches=0.15)
+                transparent=False, facecolor='white', pad_inches=0.2)
     plt.close(fig)
     print(f"  ✓ {name}")
 
 # ============================================================
 # CHART 1: Market Sizing — Agent-Mediated TTV Growth (Area Chart)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 years = [2025, 2026, 2027, 2028, 2029, 2030]
 b2c = [12, 105, 295, 590, 925, 1290]
 b2b = [20, 180, 520, 1100, 2200, 5000]
@@ -85,7 +86,7 @@ save(fig, 'market_growth_area.png')
 # ============================================================
 # CHART 2: Competitive Landscape — Platform Comparison (Horizontal Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 2.8))
+fig, ax = plt.subplots(figsize=(7, 3.2))
 platforms = ['Google\n(Gemini + UCP)', 'OpenAI\n(ChatGPT)', 'Amazon\n(Rufus)', 'Perplexity\n(Buy with Pro)']
 scores = [92, 85, 78, 65]
 colors = [BRAND_PRIMARY, NEUTRAL_GRAY, NEUTRAL_GRAY, NEUTRAL_GRAY]
@@ -105,7 +106,7 @@ save(fig, 'competitive_readiness.png')
 # ============================================================
 # CHART 3: Market Share of Commerce Protocols (Horizontal Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 2.8))
+fig, ax = plt.subplots(figsize=(7, 3.5))
 protocols = ['MCP (Anthropic)', 'UCP (Google)', 'ACP (OpenAI+Stripe)', 'A2A (Google)', 'AP2 (Google)', 'x402 (Open Source)']
 adoption = [78, 52, 45, 38, 25, 12]
 p_colors = [BRAND_PRIMARY if a == max(adoption) else NEUTRAL_GRAY for a in adoption]
@@ -125,15 +126,15 @@ save(fig, 'protocol_adoption.png')
 # ============================================================
 # CHART 4: Consumer Trust Gradient (Grouped Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3))
-categories = ['Product\nResearch', 'Price\nTracking', 'Replenishment', 'First-Time\nPurchase', 'High-Value\n($500+)', 'Full Auto\nBudget']
+fig, ax = plt.subplots(figsize=(7, 3.8))
+categories = ['Product\nResearch', 'Price\nTracking', 'Replen-\nishment', 'First-Time\nPurchase', 'High-Value\n($500+)', 'Full Auto\nBudget']
 comfort = [75, 70, 48, 33, 15, 7]
 colors = [ACCENT if c >= 50 else (NEUTRAL_GRAY if c >= 20 else NEGATIVE_RED) for c in comfort]
 
-bars = ax.bar(categories, comfort, color=colors, width=0.6)
+bars = ax.bar(categories, comfort, color=colors, width=0.55)
 # Title handled by Typst
 ax.set_ylabel('Consumer Comfort Level (%)')
-ax.set_ylim(0, 100)
+ax.set_ylim(0, 95)
 
 for bar, val in zip(bars, comfort):
     ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 2, f'{val}%',
@@ -141,14 +142,14 @@ for bar, val in zip(bars, comfort):
 
 # Add threshold line
 ax.axhline(y=50, color=BRAND_PRIMARY, linestyle='--', alpha=0.5, linewidth=1)
-ax.text(5.5, 52, 'Mainstream\nAdoption\nThreshold', fontsize=7, color=BRAND_PRIMARY, ha='right', va='bottom')
+ax.text(5.7, 53, 'Adoption\nThreshold', fontsize=6.5, color=BRAND_PRIMARY, ha='right', va='bottom')
 
 save(fig, 'consumer_trust.png')
 
 # ============================================================
 # CHART 5: Scenario Analysis — 2030 TTV Comparison (Grouped Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 segments = ['B2C Retail', 'B2B Procurement', 'Tech Solutions']
 bear = [0.3, 2.5, 0.010]
 base = [1.3, 5.0, 0.023]
@@ -161,7 +162,6 @@ b1 = ax.bar(x - w, bear, w, color=NEGATIVE_RED, alpha=0.7, label='Bear (25%)')
 b2 = ax.bar(x, base, w, color=BRAND_PRIMARY, label='Base (55%)')
 b3 = ax.bar(x + w, bull, w, color=ACCENT, label='Bull (20%)')
 
-# Title handled by Typst
 ax.set_ylabel('2030 TTV ($T)')
 ax.set_xticks(x)
 ax.set_xticklabels(segments)
@@ -170,17 +170,18 @@ ax.legend(loc='upper right', frameon=False, fontsize=8)
 for bars in [b1, b2, b3]:
     for bar in bars:
         h = bar.get_height()
-        label = f'${h:.1f}T' if h >= 0.1 else f'${h*1000:.0f}B'
-        ax.text(bar.get_x() + bar.get_width()/2, h + 0.15, label,
-                ha='center', fontsize=7, fontweight='bold', color=TEXT_COLOR)
+        if h >= 0.5:  # only label bars tall enough
+            label = f'${h:.1f}T' if h >= 0.1 else f'${h*1000:.0f}B'
+            ax.text(bar.get_x() + bar.get_width()/2, h + 0.25, label,
+                    ha='center', fontsize=6, fontweight='bold', color=TEXT_COLOR)
 
-ax.set_ylim(0, 12)
+ax.set_ylim(0, 13)
 save(fig, 'scenario_analysis.png')
 
 # ============================================================
 # CHART 6: Year-by-Year Agent Penetration (Line Chart)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 years = [2025, 2026, 2027, 2028, 2029, 2030]
 penetration = [0.5, 1.5, 4, 7.5, 11, 14.5]
 
@@ -208,7 +209,7 @@ save(fig, 'penetration_timeline.png')
 # ============================================================
 # CHART 7: Value Chain Shift — Before vs After (Stacked Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3))
+fig, ax = plt.subplots(figsize=(7, 3.5))
 
 categories = ['Traditional\nCommerce', 'Agentic\nCommerce\n(2030)']
 merchant = [55, 20]
@@ -232,7 +233,7 @@ save(fig, 'value_chain_shift.png')
 # ============================================================
 # CHART 8: 2x2 Competitive Positioning Matrix
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 4))
+fig, ax = plt.subplots(figsize=(7, 4.5))
 
 # Axes: X = Ecosystem Openness, Y = Commerce Capability Breadth
 companies = {
@@ -277,7 +278,7 @@ save(fig, 'competitive_matrix.png')
 # ============================================================
 # CHART 9: Commerce Evolution Timeline (Horizontal Timeline)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.5))
+fig, ax = plt.subplots(figsize=(7, 4.0))
 events = {
     1995: ('Amazon\nlaunches', 0),
     1999: ('1-Click\nordering', 12),
@@ -314,7 +315,7 @@ save(fig, 'commerce_evolution_timeline.png')
 # ============================================================
 # CHART 10: Adoption Curves — Mobile vs Social vs Agent (Line)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 years_norm = list(range(0, 11))  # Years from launch
 mobile = [0.5, 1.2, 3, 5.5, 9, 14, 20, 28, 37, 47, 59]
 social = [0.1, 0.3, 0.8, 2, 4.5, 7.5, 10, 13, 15, 16, 17]
@@ -336,7 +337,7 @@ save(fig, 'adoption_curves_comparison.png')
 # ============================================================
 # CHART 11: Regional TAM Breakdown (Pie/Donut)
 # ============================================================
-fig, ax = plt.subplots(figsize=(5, 3.5))
+fig, ax = plt.subplots(figsize=(5.5, 4))
 regions = ['United States\n$2.1T', 'China\n$1.8T', 'EU\n$1.2T', 'Rest of\nWorld $1.2T']
 sizes = [33, 29, 19, 19]
 colors_r = [BRAND_PRIMARY, ACCENT, '#5E6B7A', LIGHT_GRAY]
@@ -354,7 +355,7 @@ save(fig, 'regional_market_breakdown.png')
 # ============================================================
 # CHART 12: B2B vs B2C Penetration by Year (Dual Line)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 years = [2025, 2026, 2027, 2028, 2029, 2030]
 b2b_pct = [0.3, 2, 8, 18, 30, 42]
 b2c_pct = [0.1, 0.5, 2, 5, 9, 14]
@@ -380,7 +381,7 @@ save(fig, 'segment_penetration.png')
 # ============================================================
 # CHART 13: VC Funding in Agentic Commerce (Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3))
+fig, ax = plt.subplots(figsize=(7, 3.5))
 quarters = ['Q1\n2024', 'Q2\n2024', 'Q3\n2024', 'Q4\n2024', 'Q1\n2025', 'Q2\n2025', 'Q3\n2025', 'Q4\n2025', 'Q1\n2026']
 funding = [0.4, 0.6, 0.8, 1.2, 1.8, 2.5, 3.2, 4.1, 5.8]
 deals = [12, 15, 18, 24, 32, 41, 55, 68, 89]
@@ -422,7 +423,7 @@ save(fig, 'company_valuations.png')
 # ============================================================
 # CHART 15: Consumer Trust by Demographics (Grouped Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 groups = ['Gen Z\n(18-27)', 'Millennials\n(28-43)', 'Gen X\n(44-59)', 'Boomers\n(60+)']
 trust_discovery = [82, 75, 58, 35]
 trust_purchase = [45, 32, 18, 8]
@@ -521,7 +522,7 @@ save(fig, 'adoption_s_curve.png')
 # ============================================================
 # CHART 18: Regional 2030 Projections (Grouped Bar)
 # ============================================================
-fig, ax = plt.subplots(figsize=(7, 3.2))
+fig, ax = plt.subplots(figsize=(7, 3.8))
 regions = ['United\nStates', 'China', 'EU', 'India', 'Japan/\nKorea', 'Rest of\nWorld']
 ttv_2030 = [2.1, 1.8, 1.2, 0.4, 0.3, 0.5]
 penetration = [18, 16, 12, 8, 14, 6]
