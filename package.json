@@ -1,0 +1,27 @@
+{
+  "name": "consulting-report-framework",
+  "version": "2.0.0",
+  "description": "Boardroom-ready consulting report framework: McKinsey BVOD landscape executive briefings & in-depth Typst dossiers.",
+  "type": "module",
+  "scripts": {
+    "build:bvod": "node bvod-engine/cli.mjs render reports/agentic-commerce-bvod/report.mjs --output reports/agentic-commerce-bvod/The_Business_Value_of_Agentic_Commerce.pdf --preview",
+    "new:bvod": "node bvod-engine/cli.mjs new",
+    "bvod": "node bvod-engine/cli.mjs",
+    "build:typst": "./scripts/build.sh",
+    "test": "node bvod-engine/cli.mjs test"
+  },
+  "keywords": [
+    "consulting",
+    "mckinsey",
+    "bvod",
+    "typst",
+    "pdf-generation",
+    "executive-reports",
+    "no-slop"
+  ],
+  "author": "Vedang Ratan Vatsa",
+  "license": "All rights reserved",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

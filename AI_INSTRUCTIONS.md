@@ -513,3 +513,40 @@ Before finalizing any report, verify every item:
 - [ ] No excessive empty white space at page bottoms
 - [ ] Page numbers on all pages except cover
 - [ ] Consistent spacing and typography throughout
+
+
+---
+
+## 11. Instructions for McKinsey BVOD Digital Landscape Reports
+
+When requested to create an executive digital briefing, a presentation deck, or a report modeled on McKinsey's *The Business Value of Design (BVOD)*:
+
+1. **Use the BVOD Engine (`bvod-engine/`)**:
+   - Run `npm run new:bvod "<Topic Name>"` or create `reports/<topic-slug>/report.mjs`.
+   - Use the modular components from `bvod-engine/components.mjs`.
+   - Compile via `node bvod-engine/cli.mjs render reports/<topic-slug>/report.mjs --preview`.
+
+2. **Mandatory Two-Tier Layout Architecture (Zero Empty Bottom Half)**:
+   - **Never leave the lower half of any spread empty.** The previous common failure mode was using `justify-content: space-between` across a 650px container with only 300px of content, creating a 300px white void.
+   - **Tier 1 (Top ~48% Height)**: Houses the governing headline (Newsreader Serif), narrative context paragraph, and the primary empirical exhibit (data table or bar chart).
+   - **Tier 2 (Bottom ~42% Height)**: Houses structured, full-width operational frameworks (3-card, 4-card, 5-card, or 2x4 pipeline grid) that answer the executive "So What?".
+   - **Bottom Strip (`.bottom-strip`)**: A full-width callout banner resting immediately above the footer rule, ensuring the page terminates with visual weight and authority.
+
+3. **Strict No-Slop UI Adherence (`no-slop-ui`)**:
+   - **Colors**: Charcoal Ink (`#111827`), Warm Paper (`#fafaf9`), McKinsey Cobalt Blue (`#0038FF`), Steel Gray (`#4b5563`). No rainbow gradient borders or gratuitous drop-shadows.
+   - **Typography**: Newsreader Serif for headlines, quotes, and 58px numerals. Inter Sans for body copy and data tables.
+   - **Illustrations**: Handcrafted SVG line drawings with cobalt accents (e.g. standing businesswoman with tablet). Never use AI-generated images or floating badges.
+   - **Parameter Consoles**: Clean monospace chips with verified metrics and green check subtitles.
+
+4. **10-Spread Progression**:
+   Follow the standard 10-spread narrative sequence:
+   - Spread 1: Cover Page
+   - Spread 2: Executive Summary (McKinsey Page 4 Style: Big blue serif quote + 3 findings + 4 stacked 58px numbers + standing businesswoman SVG)
+   - Spread 3: Section 01 - The Core Problem & Authority Tiers
+   - Spread 4: Section 02 - Architectural Taxonomy (4 Pillars) & Web Audit
+   - Spread 5: Section 03 - Empirical Benchmarks & Failure Cliffs
+   - Spread 6: Section 04 - Consumer Trust & Behavioral Thresholds
+   - Spread 7: Section 05 - Protocol Architecture & Threat Models
+   - Spread 8: Section 06 - Operational Pipeline & Statutory Law
+   - Spread 9: Section 07 - Executive Diagnostic & Readiness Scoring
+   - Spread 10: Section 08 - Strategic Roadmap & Outlier Moats

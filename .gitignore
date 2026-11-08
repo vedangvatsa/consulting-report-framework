@@ -17,3 +17,9 @@ Thumbs.db
 
 # Generated PDFs can be committed selectively
 # *.pdf
+
+# Node.js
+node_modules/
+package-lock.json
+*.log
+.system_generated/
