@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --charcoal: #111827;
+  --paper: #fafaf9;
+  --blue: #0038FF;
+  --blue-subtle: #eff6ff;
+  --steel: #4b5563;
+  --silver: #9ca3af;
+  --rule: #e5e7eb;
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  size: 297mm 210mm;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--charcoal);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Spread Container */
+.spread {
+  width: 297mm;
+  height: 210mm;
+  page-break-after: always;
+  box-sizing: border-box;
+  padding: 20mm 24mm 16mm 24mm;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Footer */
+.spread-header {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.spread-header .section-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.spread-header .doc-topic {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.spread-footer {
+  margin-top: auto;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  padding-top: 6px;
+}
+
+.spread-footer .footer-title {
+  font-size: 8px;
+  color: var(--steel);
+}
+
+.spread-footer .page-number {
+  font-size: 8px;
+  color: var(--steel);
+  font-weight: 500;
+}
+
+/* Main Body Layout */
+.spread-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+/* Two-Tier Architecture */
+.tier-top {
+  display: flex;
+  gap: 36px;
+  min-height: 270px;
+  flex: 0 0 auto;
+}
+
+.tier-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  border-top: 1.5px solid var(--rule);
+  padding-top: 10px;
+}
+
+.col-left {
+  flex: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.col-right {
+  flex: 0.85;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Typography Tokens */
+.spread-title {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--charcoal);
+  letter-spacing: -0.015em;
+}
+
+.spread-narrative {
+  font-size: 10px;
+  line-height: 1.55;
+  color: #374151;
+}
+
+.quote-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  line-height: 1.18;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.quote-intro {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+/* Exhibits & Tables */
+.exhibit-card {
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+.exhibit-header {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.exhibit-sub {
+  font-size: 9px;
+  color: var(--steel);
+  margin-top: -4px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.exhibit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9px;
+}
+
+.exhibit-table th {
+  text-align: left;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--steel);
+  border-bottom: 1.5px solid var(--charcoal);
+  padding: 4px 6px;
+}
+
+.exhibit-table td {
+  padding: 5.5px 6px;
+  border-bottom: 1px solid var(--rule);
+  color: #374151;
+  line-height: 1.35;
+}
+
+.exhibit-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Bar Chart */
+.bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 9.5px;
+}
+
+.bar-label {
+  width: 130px;
+  font-weight: 600;
+  text-align: right;
+  color: var(--charcoal);
+  font-size: 9px;
+}
+
+.bar-track {
+  flex: 1;
+  height: 18px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.bar-val {
+  width: 55px;
+  font-weight: 700;
+  font-size: 9.5px;
+  color: var(--charcoal);
+}
+
+/* Callout Box */
+.callout-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--blue);
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 9.5px;
+  line-height: 1.45;
+  color: #374151;
+}
+
+.callout-box strong {
+  color: var(--charcoal);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Bottom Full-Width Takeaway Strip */
+.bottom-strip {
+  background: #f9fafb;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 7px 12px;
+  font-size: 8.5px;
+  line-height: 1.4;
+  color: #374151;
+}
+
+.bottom-strip strong {
+  color: var(--charcoal);
+}
+
+/* Metric Numerals */
+.stat-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: 58px;
+  line-height: 0.95;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: -0.04em;
+}
+
+.stat-caption {
+  font-size: 9px;
+  color: #4b5563;
+  line-height: 1.35;
+  max-width: 280px;
+}
+
+/* Framework Cards */
+.framework-card {
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-top: 2.5px solid var(--blue);
+  border-radius: 3px;
+  padding: 9px 12px;
+}
+
+.framework-card.secondary {
+  border-top: 2.5px solid var(--charcoal);
+}
+
+.card-title {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+
+.framework-card.secondary .card-title {
+  color: var(--charcoal);
+}
+
+.card-desc {
+  font-size: 8.5px;
+  line-height: 1.42;
+  color: #4b5563;
+}
+
+/* Multi-Card Grids */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.grid-2x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 8px;
+}
+
+/* Console Parameter Chip */
+.console-chip {
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 6px 10px;
+}
+
+.console-chip .chip-label {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--steel);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.console-chip .chip-value {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.console-chip .chip-sub {
+  font-size: 7.5px;
+  color: #10b981;
+  font-weight: 600;
+  margin-top: 2px;
+}

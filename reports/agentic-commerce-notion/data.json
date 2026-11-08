@@ -1,0 +1,83 @@
+{
+  "title": "The Business Value of Agentic Commerce",
+  "vintage": "2026",
+  "authors": [
+    {
+      "name": "Vedang Ratan Vatsa",
+      "affiliation": "Founder, Hashtag Web3 | Lead Researcher, veda.ng",
+      "inquiries": "research@veda.ng"
+    }
+  ],
+  "metrics": {
+    "webCensus": {
+      "totalDomainsAudited": 100000,
+      "machineReadableCheckoutAvailable": "1.8%",
+      "machineReadableCheckoutDeficit": "98.2%",
+      "wafBotBlockingRate": "78.4%",
+      "wafOpenForAgents": "21.6%",
+      "cleanLlmsTxtManifests": "0.2%",
+      "headlessJsExecutionFailure": "62.1%"
+    },
+    "benchmarks": {
+      "ecomAgentBench": {
+        "tasks": 662,
+        "claudeOpus4_6": "57.1%",
+        "gpt5_4": "51.3%",
+        "gemini2_5Pro": "48.7%",
+        "gpt4o": "42.8%",
+        "webshopBaseline": "29.4%"
+      },
+      "toolLabSearchEconomics": {
+        "unconstrainedAccuracy": "57.1%",
+        "itemsEvaluatedUnconstrained": 14.2,
+        "tenDollarToolCallAccuracy": "38.4%",
+        "itemsEvaluatedTenDollar": 4.1,
+        "fiftyDollarToolCallAccuracy": "21.6%",
+        "itemsEvaluatedFiftyDollar": 1.8
+      },
+      "failureModes": {
+        "acesPrimacyBias": "41.2%",
+        "sponsoredAdDistortion": "34.0%",
+        "agentDojoIndirectPromptInjection": "27.4%"
+      }
+    },
+    "consumerTrust": {
+      "sampleSize": 7400,
+      "jurisdictions": 9,
+      "usedAiDiscovery": "73.0%",
+      "demandStrongAuth": "73.9%",
+      "uncomfortableSpendingAuthority": "55.0%",
+      "assignLiabilityToAiPlatform": "50.8%",
+      "fivePercentControlThresholdRestore": "82.0%",
+      "consecutiveFlawlessTransactionsForTrust": 18,
+      "singleErrorTrustDestruction": "89.0%"
+    },
+    "unitEconomics": {
+      "standardHumanTotalCost": "$12.70",
+      "autonomousErrorTotalCost": "$138.50–$188.50",
+      "breakEvenRatio": 32
+    },
+    "acriReadinessTiers": {
+      "tier1Native": {
+        "score": "> 80 ACRI",
+        "conversion": "3.2x higher",
+        "cacDelta": "-64% CAC"
+      },
+      "tier2Partial": {
+        "score": "50–79 ACRI",
+        "conversion": "1.1x baseline",
+        "cacDelta": "-12% CAC"
+      },
+      "tier3Blocked": {
+        "score": "< 50 ACRI",
+        "conversion": "0% (Bot blocked)",
+        "cacDelta": "No access"
+      }
+    }
+  },
+  "openAccess": {
+    "doi": "10.5281/zenodo.23661069",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "repository": "github.com/Hashtag-Web3/research-paper-framework"
+  }
+}

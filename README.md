@@ -1,119 +1,105 @@
 # Consulting Report Framework
 
-A production-ready consulting report generation system for boardrooms and executive leadership. Produces two distinct, publication-grade deliverables on any topic:
+A production-grade consulting report generation system for boardrooms and executive leadership. Produces publication-grade, decision-ready deliverables on **any given topic** in two distinct, anti-AI-slop design aesthetics:
 
-1. **McKinsey BVOD Executive Digital Briefing**: 10-spread A4 landscape digital report modeled directly on McKinsey & Company's landmark report **[The Business Value of Design (BVOD)](https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20design/our%20insights/the%20business%20value%20of%20design/mckinsey-bvod-art-digital-rgb.pdf)**. Enforces strict Two-Tier information density, high-contrast typography (Newsreader Serif + Inter Sans), custom Notion-style vector figures, and zero AI slop.
-2. **McKinsey In-Depth Consulting Dossier**: 30–50 page vertical comprehensive strategy study built on [Typst](https://typst.app) with structured exhibits, full-page section dividers, and Python-generated analytical charts.
+1. **McKinsey BVOD Executive Briefing**: 10-spread A4 landscape digital report modeled directly on McKinsey & Company's landmark report **[The Business Value of Design (BVOD)](https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20design/our%20insights/the%20business%20value%20of%20design/mckinsey-bvod-art-digital-rgb.pdf)**. Features high-contrast editorial typography (Newsreader Serif + Inter Sans), McKinsey Cobalt `#0038FF` accents, Two-Tier analytical density, and custom vector figures.
+2. **Notion Aesthetic Consulting Report**: 10-spread A4 landscape report featuring clean, unpretentious **Inter typography throughout**, warm ink (`#191919` / `#2f3437`), soft ivory fills (`#fbfbfa`), and handcrafted Notion-style minimalist vector line-art illustrations (analyst with clipboard, workstation console, package dilemma). Built strictly as a genuine consulting deliverable—**not** literal UI widgets or fake browser breadcrumbs.
+3. **McKinsey In-Depth Consulting Dossier**: 30–50 page vertical comprehensive strategy study built on [Typst](https://typst.app) with structured exhibits and Python-generated analytical charts.
 
 ---
 
-## Deliverable Comparison
+## Aesthetic & Architecture Comparison
 
-| Dimension | Engine 1: McKinsey BVOD Digital Report | Engine 2: McKinsey In-Depth Dossier |
-|:---|:---|:---|
-| **Primary Audience** | Board of Directors, CEOs, Exec Briefings | Strategy teams, Due Diligence, Technical Review |
-| **Geometry** | A4 Landscape (`297mm × 210mm`) | A4 Portrait (`210mm × 297mm`) |
-| **Length** | 10–12 Spreads | 30–50 Pages |
-| **Engine** | Node.js + Playwright + CSS Grid/Flexbox | Typst + Matplotlib |
-| **Typography** | Newsreader Serif (Headlines) + Inter (Body) | Georgia (Headlines) + Helvetica Neue (Body) |
-| **Information Density** | Two-Tier (Top Empirical Tier + Bottom Operational Tier) | Standard single-column running prose + exhibits |
-| **Visual Style** | Notion / Web3-Jobs line art with cobalt accents | Corporate consulting tables & navy section dividers |
+| Dimension | Style 1: McKinsey BVOD (`styles/mckinsey`) | Style 2: Notion Aesthetic (`styles/notion`) | Style 3: Typst Dossier |
+|:---|:---|:---|:---|
+| **Target Audience** | Board of Directors, CEOs, Exec Committees | Executive teams, Tech Leaders, Product Councils | Deep-dive strategy & due diligence |
+| **Geometry** | A4 Landscape (`297mm × 210mm`) | A4 Landscape (`297mm × 210mm`) | A4 Portrait (`210mm × 297mm`) |
+| **Typography** | Newsreader Serif (Headings) + Inter (Body) | Pure Inter 700 / 600 / 400 throughout | Georgia + Helvetica Neue |
+| **Color Palette** | McKinsey Cobalt (`#0038FF`) + Charcoal (`#111827`) | Warm Ink (`#191919`) + Soft White (`#fbfbfa`) + Blue (`#2383e2`) | Navy (`#002060`) + Cool Gray |
+| **Illustrations** | Handcrafted editorial vector silhouettes | Handcrafted Notion-style minimalist line art | Matplotlib & Typst diagrams |
+| **Layout Density** | Two-Tier (Zero empty lower canvas) | Two-Tier (Zero empty lower canvas) | Running prose + embedded figures |
+| **Build Command** | `npm run build:mckinsey` | `npm run build:notion` | `npm run build:typst` |
+| **Scaffold New** | `npm run new:mckinsey "Topic"` | `npm run new:notion "Topic"` | `./scripts/build.sh` |
 
 ---
 
 ## Quick Start
 
-### 1. McKinsey BVOD Digital Landscape Report (Recommended for Briefings)
+### 1. Build the Flagship Deliverables
+Both styles include complete, 10-spread, high-density reports on **The Business Value of Agentic Commerce**:
 
 ```bash
-# Clone the repository
-git clone https://github.com/vedangvatsa/consulting-report-framework.git
-cd consulting-report-framework
-
-# Install dependencies
+# Install dependencies (Playwright headless Chromium)
 npm install
 
-# Render the flagship report (The Business Value of Agentic Commerce)
-npm run build:bvod
+# 1. Compile McKinsey BVOD Report (10 spreads, A4 Landscape)
+npm run build:mckinsey
+# Output: reports/agentic-commerce-bvod/The_Business_Value_of_Agentic_Commerce.pdf
 
-# Scaffold a new BVOD report for ANY topic
-npm run new:bvod "Autonomous Supply Chain Operations"
+# 2. Compile Notion Aesthetic Report (10 spreads, A4 Landscape)
+npm run build:notion
+# Output: reports/agentic-commerce-notion/The_Business_Value_of_Agentic_Commerce_Notion.pdf
 
-# Render your newly created report to landscape PDF
-node bvod-engine/cli.mjs render reports/autonomous-supply-chain-operations/report.mjs --preview
+# Run full test suite across both engines
+npm test
 ```
 
-### 2. McKinsey In-Depth Consulting Dossier (Typst)
+### 2. Scaffold a New Report on Any Topic
+You can instantly scaffold a complete 10-spread consulting report on any topic in either style:
 
 ```bash
-# Generate charts
-cd reports && python3 generate_charts.py
+# Create a new McKinsey BVOD report:
+npm run new:mckinsey "Decentralized Physical Infrastructure Networks"
+# Scaffolds into: reports/decentralized-physical-infrastructure-networks/
 
-# Compile vertical report
-typst compile agentic-commerce-report.typ output.pdf
+# Create a new Notion style report:
+npm run new:notion "AI Agents in Enterprise Procurement"
+# Scaffolds into: reports/ai-agents-in-enterprise-procurement-notion/
+```
+
+To compile your newly created report:
+```bash
+# Render McKinsey report
+node bvod-engine/cli.mjs render reports/decentralized-physical-infrastructure-networks/report.mjs --preview
+
+# Render Notion report
+node styles/notion/notion-cli.mjs render reports/ai-agents-in-enterprise-procurement-notion/report.mjs --preview
 ```
 
 ---
 
-## Creating a McKinsey BVOD Report on Any Topic
+## Elimination of Empty Canvas & Anti-AI-Slop Architecture
 
-### Step 1: Scaffold with One Command
-```bash
-npm run new:bvod "Decentralized Physical Infrastructure Networks"
+Earlier automated design tools often left the lower 40–50% of landscape slides completely empty, resulting in unbalanced, lightweight-looking pages. This framework solves this systematically via a strict **Two-Tier Architecture**:
+
 ```
-This generates a complete project structure in `reports/decentralized-physical-infrastructure-networks/`:
-- `report.mjs` — Pre-wired 10-spread report using modular components.
-- `data.json` — Structured metrics and metadata file.
-
-### Step 2: Use the Two-Tier Component Library
-
-Every analytical spread uses a Two-Tier architecture to ensure the bottom half of the page is completely filled with structured frameworks:
-
-```javascript
-import * as bvod from '../../bvod-engine/components.mjs';
-
-bvod.renderTwoTierSpread({
-  sectionTag: "SECTION 01",
-  docTopic: "DELEGATION PARADOX",
-  headline: "When software acts as an agent, checkout clicks cease to serve as proxies for consent.",
-  narrative: "Executive narrative explaining the empirical findings...",
-  exhibitLeft: bvod.renderTableExhibit({ ... }),
-  exhibitRight: bvod.renderTableExhibit({ ... }),
-  tierBottom: bvod.renderFrameworkCards([
-    { title: "1. Token Siloing", desc: "Isolate credentials via short-lived virtual cards." },
-    { title: "2. Verifiable Intent", desc: "Hardware-signed constraints prevent unauthorized drift." },
-    { title: "3. Settlement Locks", desc: "Deterministic price freezes eliminate cart surprise." }
-  ], 3),
-  bottomTakeaway: {
-    title: "Strategic Takeaway",
-    text: "Autonomous operations cannot scale on raw transaction throughput."
-  },
-  pageNum: 3,
-  totalPages: 10,
-});
+┌────────────────────────────────────────────────────────────────────────┐
+│ TOP TIER: EMPIRICAL EVIDENCE & NARRATIVE (320px)                       │
+│ ┌──────────────────────────────────┐ ┌───────────────────────────────┐ │
+│ │ Bold Governing Serif/Sans Header │ │ Primary Data Exhibit /        │ │
+│ │ Substantive Analytical Prose (x2)│ │ Empirical Benchmark Table     │ │
+│ └──────────────────────────────────┘ └───────────────────────────────┘ │
+├────────────────────────────────────────────────────────────────────────┤
+│ BOTTOM TIER: OPERATIONAL FRAMEWORKS & ACTIONABLE DETAIL (280px)        │
+│ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐ ┌──────────────┐ │
+│ │ Pillar Card 1 │ │ Pillar Card 2 │ │ Pillar Card 3 │ │ Pillar Card 4│ │
+│ └───────────────┘ └───────────────┘ └───────────────┘ └──────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Secondary Industry Breakdown / Jurisdictional Matrix / Sprint Plan │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Bottom Takeaway Strip (Bold Takeaway + Executive Action)           │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────────────────────┘
 ```
 
-See the full [BVOD Design System Guide](docs/BVOD_DESIGN_SYSTEM.md) for detailed layout rules, component schemas, and color tokens.
-
----
-
-## Design System & No-Slop Standards
-
-### Strict No-Slop UI Rules
+### Strict Anti-AI-Slop Standards
 Adheres to `no-slop-ui` standards to guarantee publication quality:
-- ❌ **No Floating Glow Cards**: Flat 1px borders (`#e5e7eb`) with solid top accents (`#0038FF`).
-- ❌ **No Empty Lower Canvas**: Top tier houses empirical evidence; bottom tier houses operational frameworks.
+- ❌ **No Floating Glow Cards or Rainbow Pills**: Flat 1px borders (`#e5e7eb` / `#dfdfde`) with subtle 3px solid top accents.
+- ❌ **No Empty Lower Half**: Two-tier composition guarantees that every spread is balanced and fully utilized from header rule to footer.
 - ❌ **No AI Slop Badges**: High-signal monospace parameter chips with verified values only.
-- ❌ **No Synthetic Imagery**: Handcrafted SVG vector figures (Notion line art with cobalt blue accents).
-
-### Color Tokens
-| Token | Hex | Role |
-|:---|:---|:---|
-| `--charcoal` | `#111827` | Headings, primary ink |
-| `--paper` | `#fafaf9` | Warm paper background |
-| `--blue` | `#0038FF` | Primary McKinsey Cobalt accent, stats, key takeaways |
-| `--steel` | `#4b5563` | Subtitles, captions, table headers |
-| `--rule` | `--e5e7eb` | Structural dividing rules & card borders |
+- ❌ **No Fake UI Chrome**: In Notion style, we capture the font hierarchy and line-art illustration warmth without putting fake browser tabs, fake toggle arrows, or fake breadcrumbs.
+- ❌ **No Fabricated Data**: Grounded in real empirical datasets (100,000 domain web census, 15 benchmarks, 7,400 survey respondents).
 
 ---
 
@@ -121,32 +107,51 @@ Adheres to `no-slop-ui` standards to guarantee publication quality:
 
 ```
 consulting-report-framework/
-├── package.json                   # Node.js build scripts & dependencies
-├── bvod-engine/                   # McKinsey BVOD Landscape Report Engine
-│   ├── cli.mjs                    # CLI dispatcher (render, new, preview, test)
-│   ├── engine.mjs                 # Playwright A4 landscape rendering pipeline
-│   ├── components.mjs             # Modular spread & exhibit generators
-│   └── design-system.css          # Core CSS variables, typography & layout grid
-├── docs/
-│   └── BVOD_DESIGN_SYSTEM.md      # Comprehensive design system guide
-├── templates/
-│   ├── bvod/                      # Landscape BVOD starter templates
-│   │   └── executive-briefing-template.mjs
-│   ├── due_diligence.md           # Vertical Typst report templates
-│   ├── industry_outlook.md
-│   ├── market_analysis.md
-│   └── strategic_assessment.md
-├── reports/
-│   ├── agentic-commerce-bvod/     # Flagship 10-spread BVOD report
+├── package.json                          # Node.js scripts & Playwright dependency
+│
+├── styles/                               # Report Style Engines
+│   ├── mckinsey/                         # McKinsey BVOD Style
+│   │   ├── cli.mjs                       # CLI runner
+│   │   ├── engine.mjs                    # Playwright A4 Landscape engine
+│   │   ├── components.mjs                # Two-tier spread & exhibit generators
+│   │   ├── design-system.css             # Newsreader + Inter, Cobalt accents
+│   │   └── README.md
+│   │
+│   └── notion/                           # Notion Aesthetic Style
+│       ├── notion-cli.mjs                # CLI runner
+│       ├── notion-engine.mjs             # Playwright A4 Landscape engine
+│       ├── notion-components.mjs         # Handcrafted Notion line-art & components
+│       ├── notion-design-system.css      # Pure Inter typography, warm minimal
+│       └── README.md
+│
+├── bvod-engine/                          # Core BVOD engine implementation
+│   ├── cli.mjs
+│   ├── engine.mjs
+│   ├── components.mjs
+│   └── design-system.css
+│
+├── templates/                            # Topic Scaffolding Starters
+│   ├── bvod/
+│   │   └── executive-briefing-template.mjs # 10-spread McKinsey starter
+│   └── notion/
+│       └── executive-presentation-template.mjs # 10-spread Notion starter
+│
+├── reports/                              # Completed Deliverables & Dossiers
+│   ├── agentic-commerce-bvod/            # Flagship McKinsey BVOD 10-Spread Deliverable
 │   │   ├── report.mjs
-│   │   ├── data.json
-│   │   └── The_Business_Value_of_Agentic_Commerce.pdf
-│   ├── agentic-commerce-report.typ # Vertical 50-page Typst report
-│   └── template.typ               # Typst template
-└── scripts/
-    ├── build.sh                   # Typst build pipeline
-    ├── qa_check.py                # Report quality assurance
-    └── fact_check.py              # Data citation verification
+│   │   ├── The_Business_Value_of_Agentic_Commerce.pdf (1.09 MB)
+│   │   └── previews/                     # Verified 150 DPI PNG page proofs (1-10)
+│   │
+│   ├── agentic-commerce-notion/          # Flagship Notion Style 10-Spread Deliverable
+│   │   ├── report.mjs
+│   │   ├── The_Business_Value_of_Agentic_Commerce_Notion.pdf (1.05 MB)
+│   │   └── previews/                     # Verified 150 DPI PNG page proofs (1-10)
+│   │
+│   ├── agentic-commerce-report.typ       # In-Depth 50-Page Typst Dossier
+│   └── generate_charts.py
+│
+└── docs/
+    └── BVOD_DESIGN_SYSTEM.md             # In-depth architectural documentation
 ```
 
 ---

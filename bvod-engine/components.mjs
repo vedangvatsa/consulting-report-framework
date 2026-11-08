@@ -179,7 +179,7 @@ export function renderTwoTierSpread({
         <div class="tier-top">
           <div class="col-left">
             <h2 class="spread-title">${headline}</h2>
-            <p class="spread-narrative">${escapeHtml(narrative)}</p>
+            <div class="spread-narrative">${narrative}</div>
             ${exhibitLeft || ''}
           </div>
           

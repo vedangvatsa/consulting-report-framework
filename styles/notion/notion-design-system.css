@@ -1,0 +1,422 @@
+/* Notion Aesthetic Consulting Report Design System */
+/* Clean Inter typography, warm minimal palette, authentic line-art illustrations, zero AI slop */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #2f3437;
+  --ink-heading: #191919;
+  --ink-secondary: #787774;
+  --paper: #ffffff;
+  --paper-card: #fbfbfa;
+  --paper-subtle: #f7f6f3;
+  --border: #dfdfde;
+  --border-subtle: #ececeb;
+  --blue: #2383e2;
+  --blue-subtle: #ebf5fe;
+  --amber: #d9730d;
+  --green: #448361;
+  --purple: #9065b0;
+  --red: #eb5757;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  size: 297mm 210mm;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Spread Container */
+.spread {
+  width: 297mm;
+  height: 210mm;
+  page-break-after: always;
+  box-sizing: border-box;
+  padding: 14mm 20mm 12mm 20mm;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Footer */
+.spread-header {
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.spread-header .section-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.spread-header .doc-topic {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.spread-footer {
+  margin-top: auto;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 5px;
+}
+
+.spread-footer .footer-title {
+  font-size: 8px;
+  color: var(--ink-secondary);
+}
+
+.spread-footer .page-number {
+  font-size: 8px;
+  color: var(--ink-secondary);
+  font-weight: 500;
+}
+
+/* Main Body Layout */
+.spread-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Two-Tier Layout Architecture */
+.tier-top {
+  display: flex;
+  gap: 28px;
+  min-height: 290px;
+  flex: 0 0 auto;
+}
+
+.tier-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  border-top: 1.5px solid var(--border);
+  padding-top: 8px;
+}
+
+.col-left {
+  flex: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.col-right {
+  flex: 0.85;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Typography Tokens (Notion Clean Inter Hierarchy) */
+.spread-title {
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ink-heading);
+  letter-spacing: -0.02em;
+}
+
+.spread-narrative {
+  font-size: 9.8px;
+  line-height: 1.52;
+  color: var(--ink);
+}
+
+.spread-narrative p {
+  margin-bottom: 6px;
+}
+
+.spread-narrative p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-quote {
+  font-size: 24px;
+  line-height: 1.28;
+  font-weight: 700;
+  color: var(--ink-heading);
+  letter-spacing: -0.02em;
+}
+
+.quote-attribution {
+  font-size: 9px;
+  color: var(--ink-secondary);
+  margin-top: 4px;
+}
+
+/* Exhibits & Tables */
+.exhibit-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.exhibit-header {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--ink-heading);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.exhibit-sub {
+  font-size: 8.5px;
+  color: var(--ink-secondary);
+  margin-top: -2px;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.notion-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8.8px;
+}
+
+.notion-table th {
+  text-align: left;
+  font-size: 8.2px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  border-bottom: 1.5px solid var(--ink-heading);
+  padding: 3.5px 5px;
+  background: transparent;
+}
+
+.notion-table td {
+  padding: 4px 5px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--ink);
+  line-height: 1.32;
+}
+
+.notion-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Notion-Style Clean Flat Bar Chart */
+.bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+}
+
+.bar-label {
+  width: 130px;
+  font-weight: 500;
+  text-align: right;
+  color: var(--ink);
+  font-size: 8.5px;
+}
+
+.bar-track {
+  flex: 1;
+  height: 16px;
+  background: var(--paper-subtle);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.bar-val {
+  width: 48px;
+  font-weight: 600;
+  font-size: 9px;
+  color: var(--ink-heading);
+}
+
+/* Notion-Style Callout Box */
+.notion-callout {
+  background: var(--paper-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 9px;
+  line-height: 1.45;
+  color: var(--ink);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.notion-callout strong {
+  color: var(--ink-heading);
+}
+
+/* Full-Width Bottom Strategic Strip */
+.bottom-strip {
+  background: var(--paper-card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 8.5px;
+  line-height: 1.38;
+  color: var(--ink);
+}
+
+.bottom-strip strong {
+  color: var(--ink-heading);
+}
+
+/* Metric Numerals */
+.stat-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-num {
+  font-size: 46px;
+  line-height: 0.95;
+  font-weight: 800;
+  color: var(--ink-heading);
+  letter-spacing: -0.03em;
+}
+
+.stat-caption {
+  font-size: 8.8px;
+  color: var(--ink-secondary);
+  line-height: 1.32;
+  max-width: 250px;
+}
+
+/* Notion-Style Framework Cards */
+.framework-card {
+  background: var(--paper-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.framework-card.highlight {
+  border-left: 3px solid var(--blue);
+}
+
+.card-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--ink-heading);
+}
+
+.card-desc {
+  font-size: 8.2px;
+  line-height: 1.4;
+  color: var(--ink-secondary);
+}
+
+/* Multi-Card Grids */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 7px;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.grid-2x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 6px;
+}
+
+/* Console Parameter Chip */
+.console-chip {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 5px 8px;
+}
+
+.console-chip .chip-label {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.console-chip .chip-value {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ink-heading);
+}
+
+.console-chip .chip-sub {
+  font-size: 7px;
+  color: var(--green);
+  font-weight: 600;
+  margin-top: 1px;
+}

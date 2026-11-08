@@ -4,11 +4,14 @@
   "description": "Boardroom-ready consulting report framework: McKinsey BVOD landscape executive briefings & in-depth Typst dossiers.",
   "type": "module",
   "scripts": {
-    "build:bvod": "node bvod-engine/cli.mjs render reports/agentic-commerce-bvod/report.mjs --output reports/agentic-commerce-bvod/The_Business_Value_of_Agentic_Commerce.pdf --preview",
-    "new:bvod": "node bvod-engine/cli.mjs new",
-    "bvod": "node bvod-engine/cli.mjs",
+    "build:mckinsey": "node bvod-engine/cli.mjs render reports/agentic-commerce-bvod/report.mjs --output reports/agentic-commerce-bvod/The_Business_Value_of_Agentic_Commerce.pdf --preview",
+    "build:notion": "node reports/agentic-commerce-notion/report.mjs",
+    "build:bvod": "npm run build:mckinsey",
+    "new:mckinsey": "node bvod-engine/cli.mjs new",
+    "new:notion": "node styles/notion/notion-cli.mjs new",
+    "new:bvod": "npm run new:mckinsey",
     "build:typst": "./scripts/build.sh",
-    "test": "node bvod-engine/cli.mjs test"
+    "test": "node bvod-engine/cli.mjs test && node styles/notion/notion-cli.mjs test"
   },
   "keywords": [
     "consulting",

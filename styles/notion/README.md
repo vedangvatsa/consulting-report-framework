@@ -1,0 +1,48 @@
+# Notion Style Presentation Theme
+
+An unofficial homage to slides that read like authentic Notion pages.
+
+- **Geometry**: 16:9 Widescreen Slide (`1280px × 720px`)
+- **Typography**: `Inter` (Google Fonts) throughout
+  - Page titles: Inter 700 at 40 to 42px
+  - Section headings: Inter 700 at 28 to 30px
+  - Sub-headings: Inter 600 at 20px
+  - Body: Inter 400 at 15 to 16px (line-height 1.5, sentence case, left-aligned)
+- **Content Column**: ~720px wide
+- **Colors**:
+  - Ink: `#37352f`
+  - Secondary text: `#787774`
+  - Callout background: `#f1f1ef`
+  - Tag palette: gray `#e3e2e0`, brown `#eee0da`, orange `#fadec9`, yellow `#fdecc8`, green `#dbeddb`, blue `#d3e5ef`, purple `#e8deee`, pink `#f5e0e9`, red `#ffe2dd`
+- **Signature Page Head**:
+  - Flat cover band 150px tall (`#d3e5ef` with large flat circles in `#b9d4e6` and `#e8deee`, no gradients)
+  - 64 to 72px emoji page icon overlapping bottom edge
+  - Page title, one-line gray description
+  - Property rows: gray name with small line glyph on left, value on right (initials avatar, status pill, tag pills, date)
+- **Content Slides**:
+  - 40px breadcrumb bar at the top: page path in 13px ink, 'Edited 2h ago' right-aligned in `#787774`
+  - No page numbers or footers
+- **Components**:
+  - Database table view (1px `#e9e9e7` grid, property glyph headers, pill tags)
+  - Database board view (pale column backgrounds, status header + count, hairline shadow white cards)
+  - Callouts (emoji + `#f1f1ef` fill + 4px radius)
+  - Toggle lists (triangle ▶ / ▼ with indented nested bullets)
+  - To-dos (16px checkboxes, checked ones fill blue `#2383e2` with strikethrough text in `#a5a29c`)
+  - Column blocks (48px apart)
+  - Quote blocks (3px `#37352f` left bar + 28px text)
+  - Flat bar charts (`#2383e2`, `#448361`, `#d9730d`, `#9065b0`)
+  - Page mentions (`📄 page-link`)
+  - Inline code (`rgba(135,131,120,.15)` in `#eb5757`)
+- **Strictly Prohibited**:
+  - Notion logo or 'N' cube
+  - Claiming affiliation with Notion Labs, Inc.
+  - Dark mode
+  - Gradient covers
+  - Heavy or blurred drop shadows
+  - Rounded cards above 6px radius
+  - Centered body text
+  - Stock photos or decorative illustrations
+  - Saturated tag fills
+  - More than three tag colors per slide
+  - All-caps labels
+  - Slide numbers
