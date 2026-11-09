@@ -420,3 +420,147 @@ body {
   font-weight: 600;
   margin-top: 1px;
 }
+
+/* ─── Editorial Report Layout (Publication Grade) ─── */
+.report-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: stretch;
+  min-height: 0;
+}
+
+.report-main-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.report-headline {
+  font-size: 21px;
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-heading);
+  margin-bottom: 5px;
+}
+
+.report-lead-prose {
+  font-size: 10.2px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--ink-heading);
+  margin-bottom: 7px;
+}
+
+p.report-p {
+  font-size: 9.3px;
+  line-height: 1.52;
+  color: var(--ink);
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 7px;
+}
+
+p.report-p strong {
+  color: var(--ink-heading);
+  font-weight: 700;
+}
+
+.report-exhibit-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid var(--border);
+  padding-left: 18px;
+}
+
+.exhibit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exhibit-tag {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.exhibit-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-heading);
+  line-height: 1.25;
+  margin-bottom: 1px;
+}
+
+.exhibit-subtitle {
+  font-size: 8.2px;
+  color: var(--ink-secondary);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.exhibit-analysis-box {
+  background: var(--paper-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 7px 9px;
+  font-size: 8.3px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin-top: 6px;
+}
+
+.exhibit-analysis-box strong {
+  color: var(--ink-heading);
+  font-weight: 700;
+}
+
+.exhibit-source-note {
+  font-size: 7.5px;
+  color: var(--ink-secondary);
+  line-height: 1.35;
+  margin-top: 4px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 3px;
+}
+
+table.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8.5px;
+  margin: 3px 0;
+}
+
+table.report-table th {
+  text-align: left;
+  padding: 4px 6px;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--ink-heading);
+  background: var(--paper-card);
+  border-bottom: 1.5px solid var(--ink-heading);
+  border-top: 1px solid var(--border);
+}
+
+table.report-table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+table.report-table tr:last-child td {
+  border-bottom: 1.5px solid var(--ink-heading);
+}
+
+table.report-table td strong {
+  font-weight: 700;
+  color: var(--ink-heading);
+}
