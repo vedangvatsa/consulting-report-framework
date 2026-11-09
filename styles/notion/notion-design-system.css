@@ -425,8 +425,8 @@ body {
 .report-body {
   flex: 1;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 22px;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 20px;
   align-items: stretch;
   min-height: 0;
 }

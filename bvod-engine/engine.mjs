@@ -112,15 +112,22 @@ export async function renderReportToPdf({
   });
   const page = await context.newPage();
 
-  await page.setContent(completeHtml, { waitUntil: 'networkidle' });
+  await page.setContent(completeHtml, { waitUntil: 'domcontentloaded', timeout: 10000 });
 
-  // Ensure web fonts are completely loaded before printing
-  await page.evaluate(async () => {
-    await document.fonts.ready;
-  });
+  // Ensure fonts settle without blocking offline builds
+  try {
+    await page.evaluate(async () => {
+      await Promise.race([
+        document.fonts.ready,
+        new Promise(resolve => setTimeout(resolve, 1500)),
+      ]);
+    });
+  } catch (e) {
+    // Fallback if fonts check fails
+  }
 
   // Short delay to ensure layout settling and font rendering
-  await page.waitForTimeout(600);
+  await page.waitForTimeout(300);
 
   // Print exact A4 landscape PDF
   await page.pdf({
