@@ -362,170 +362,113 @@ const htmlContent = `<!doctype html>
     }
 
     /* ─── Cover Specific Styles ─── */
-    .cover-spread {
+    .spread.cover-spread {
+      padding: 20mm 22mm 14mm 22mm;
       justify-content: space-between;
+      background: var(--paper);
     }
     .cover-top {
-      font-size: 8.8px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--blue);
-      margin-bottom: 10px;
     }
     .cover-title {
       font-family: 'Newsreader', Georgia, serif;
-      font-size: 38px;
-      line-height: 1.1;
+      font-size: 52px;
+      line-height: 1.08;
       font-weight: 600;
+      letter-spacing: -0.035em;
       color: var(--ink);
-      letter-spacing: -0.025em;
-      margin-bottom: 8px;
+      margin: 18px 0 14px 0;
     }
     .cover-desc {
-      font-size: 11.5px;
-      line-height: 1.45;
-      color: var(--ink-secondary);
-      max-width: 620px;
-      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 600px;
     }
     .cover-bottom {
       border-top: 1px solid var(--rule);
-      padding-top: 8px;
+      padding-top: 12px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
     .cover-author {
-      font-size: 11px;
+      font-size: 12.5px;
       font-weight: 700;
       color: var(--ink);
     }
     .cover-meta {
-      font-size: 8.5px;
+      font-size: 9.5px;
       color: var(--muted);
-      line-height: 1.4;
+      line-height: 1.48;
     }
   </style>
 </head>
 <body>
 
-  <!-- ═════════════════════════════════════════════════════════════════════
-       SPREAD 1: COVER (Full Density Executive Abstract & Provenance)
-       ═════════════════════════════════════════════════════════════════════ -->
+    <!-- ═════════════════════════════════════════════════════════════════════
+       SPREAD 1: COVER
+       ═════════════════════════════════════════════ -->
   <div class="spread cover-spread">
-    <div>
-      <div class="cover-top">
-        Empirical Research Report &nbsp;|&nbsp; Hashtag Web3 & veda.ng &nbsp;|&nbsp; Strategic Briefing
-      </div>
+    <div class="cover-top">
+      Empirical Research Report &nbsp;|&nbsp; Hashtag Web3 & veda.ng &nbsp;|&nbsp; Strategic Briefing
+    </div>
 
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-        <div style="flex: 1.35;">
-          <h1 class="cover-title">The Business Value of<br>Agentic Commerce</h1>
-          <p class="cover-desc">
-            Taxonomy, empirical verification architecture, and market readiness across 100,000 domains and leading frontier foundation models.
-          </p>
-          <div style="display: flex; gap: 20px;">
-            <div style="border-left: 2.5px solid var(--blue); padding-left: 10px;">
-              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--blue);">100,000 Domains</div>
-              <div style="font-size: 8px; color: var(--muted);">Full-scale commercial web census</div>
-            </div>
-            <div style="border-left: 2.5px solid var(--ink); padding-left: 10px;">
-              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--ink);">15 Benchmarks</div>
-              <div style="font-size: 8px; color: var(--muted);">Multi-turn purchasing evaluations</div>
-            </div>
-            <div style="border-left: 2.5px solid var(--blue); padding-left: 10px;">
-              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--blue);">7,400 Buyers</div>
-              <div style="font-size: 8px; color: var(--muted);">9 global consumer jurisdictions</div>
-            </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+      <div style="flex: 1.2;">
+        <h1 class="cover-title">The Business Value of<br>Agentic Commerce</h1>
+        <p class="cover-desc">
+          Taxonomy, verification architecture, and market readiness across 100,000 domains and leading frontier foundation models.
+        </p>
+        <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 580px;">
+          <div style="border-left: 2.5px solid var(--blue); padding-left: 14px;">
+            <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">100,000 Domains</div>
+            <div style="font-size: 10px; color: var(--muted); margin-top: 4px;">Full-scale commercial web census</div>
+          </div>
+          <div style="border-left: 2.5px solid var(--ink); padding-left: 14px;">
+            <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink);">15 Benchmarks</div>
+            <div style="font-size: 10px; color: var(--muted); margin-top: 4px;">Multi-turn purchasing evaluations</div>
+          </div>
+          <div style="border-left: 2.5px solid var(--blue); padding-left: 14px;">
+            <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">7,400 Buyers</div>
+            <div style="font-size: 10px; color: var(--muted); margin-top: 4px;">9 global consumer jurisdictions</div>
           </div>
         </div>
-
-        <!-- Architectural Diagram SVG -->
-        <div style="flex: 0.65; display: flex; justify-content: flex-end; align-items: center;">
-          <svg width="280" height="150" viewBox="0 0 280 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="10" width="250" height="130" rx="4" fill="#fafaf9" stroke="#111827" stroke-width="1.5"/>
-            <line x1="15" y1="36" x2="265" y2="36" stroke="#e5e7eb" stroke-width="1.2"/>
-            <circle cx="30" cy="23" r="3.5" fill="#0038FF"/>
-            <circle cx="42" cy="23" r="3.5" fill="#d1d5db"/>
-            <circle cx="54" cy="23" r="3.5" fill="#d1d5db"/>
-            <rect x="70" y="18" width="110" height="10" rx="2" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-            <rect x="30" y="52" width="90" height="9" rx="1.5" fill="#111827"/>
-            <rect x="30" y="68" width="120" height="5" rx="1" fill="#9ca3af"/>
-            <rect x="30" y="78" width="105" height="5" rx="1" fill="#e5e7eb"/>
-            <rect x="30" y="88" width="115" height="5" rx="1" fill="#e5e7eb"/>
-            <rect x="30" y="98" width="85" height="5" rx="1" fill="#e5e7eb"/>
-            <rect x="175" y="52" width="75" height="65" rx="3" fill="#eff4ff" stroke="#0038FF" stroke-width="1.5"/>
-            <path d="M195 85 L204 94 L222 74" stroke="#0038FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="185" y="102" width="55" height="5" rx="1" fill="#93c5fd"/>
-          </svg>
-        </div>
       </div>
 
-      <!-- Executive Abstract & Scope Statement Panel -->
-      <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; margin-bottom: 8px;">
-        <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 3px;">
-          Executive Research Abstract & Scope Statement
-        </div>
-        <p style="font-size: 8.8px; line-height: 1.46; color: var(--ink); margin-bottom: 4px;">
-          As autonomous foundation models evolve from passive conversational retrieval to goal-directed commercial execution, software agents are increasingly tasked with searching catalogs, configuring carts, and executing checkout transactions. However, commercial e-commerce infrastructure remains fundamentally engineered for human visual interaction, relying on pixel-based DOM layouts, visual advertising flags, and click-wrap terms of service. This architectural mismatch creates severe operational failure modes: machine buyers suffer from a 43% multi-turn capability gap, encounter aggressive WAF bot walls across 78.4% of commercial domains, and trigger catastrophic reverse logistics costs when implicit physical constraints are violated.
-        </p>
-        <p style="font-size: 8.8px; line-height: 1.46; color: var(--ink);">
-          This report presents the findings of the largest empirical audit of agentic commerce infrastructure conducted to date. Integrating an automated census of 100,000 commercial retail endpoints, 15 benchmark evaluations across frontier models (Claude Opus 4.6, GPT-5.4, Gemini 2.5 Pro), and cross-market survey data from 7,400 consumers across 9 legal jurisdictions, we formulate the <strong>Agentic Commerce Readiness Index (ACRI)</strong>. We demonstrate that enterprise value capture depends not on raw transaction speed, but on establishing verifiable intent, token siloing, and programmatic reversal webhooks.
-        </p>
-      </div>
-
-      <!-- Data Provenance & Methodology Grid -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px;">
-        <div style="background: #ffffff; border: 1px solid var(--rule); border-radius: 3px; padding: 7px 10px;">
-          <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-bottom: 2px;">1. Web Census Methodology</div>
-          <div style="font-size: 7.8px; line-height: 1.4; color: var(--muted);">Headless Chromium crawlers evaluating robots.txt, OpenAPI manifests, JSON-LD schemas, and bot firewall behavior across 100,000 top retail domains.</div>
-        </div>
-        <div style="background: #ffffff; border: 1px solid var(--rule); border-radius: 3px; padding: 7px 10px;">
-          <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-bottom: 2px;">2. Multi-Turn Benchmarking</div>
-          <div style="font-size: 7.8px; line-height: 1.4; color: var(--muted);">Rigorous evaluation across 662 complex purchasing tasks in EComAgentBench, testing tool-call overhead, context drift, memory retention, and prompt injections.</div>
-        </div>
-        <div style="background: #ffffff; border: 1px solid var(--rule); border-radius: 3px; padding: 7px 10px;">
-          <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-bottom: 2px;">3. Consumer Trust Matrix</div>
-          <div style="font-size: 7.8px; line-height: 1.4; color: var(--muted);">Empirical survey across US, UK, Germany, France, Japan, and Singapore assessing delegation comfort, liability attribution, and Dietvorst algorithmic aversion.</div>
-        </div>
-      </div>
-
-      <!-- Diagnostic Metric Pills -->
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-bottom: 7px;">
-        <div style="background: #ffffff; border-left: 2px solid var(--blue); border-top: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 5px 8px;">
-          <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--muted);">Infrastructure Deficit</div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink);">98.2% Missing</div>
-          <div style="font-size: 7.5px; color: var(--muted);">retailers lack agent checkout APIs.</div>
-        </div>
-        <div style="background: #ffffff; border-left: 2px solid var(--ink); border-top: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 5px 8px;">
-          <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--muted);">Model Accuracy Cliff</div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink);">57.1% Ceiling</div>
-          <div style="font-size: 7.5px; color: var(--muted);">on multi-turn purchasing tasks.</div>
-        </div>
-        <div style="background: #ffffff; border-left: 2px solid #ef4444; border-top: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 5px 8px;">
-          <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--muted);">Consumer Spending Hesitancy</div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink);">55.0% Refusal</div>
-          <div style="font-size: 7.5px; color: var(--muted);">to delegate checkout authority.</div>
-        </div>
-        <div style="background: #ffffff; border-left: 2px solid #16a34a; border-top: 1px solid var(--rule); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 5px 8px;">
-          <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--muted);">Trust Recovery Lever</div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink);">82.0% Trust Restore</div>
-          <div style="font-size: 7.5px; color: var(--muted);">via 5% editable parameter recovery.</div>
-        </div>
-      </div>
-
-      <!-- Target Executive Audience -->
-      <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 5px 10px;">
-        <span style="font-size: 7.8px; font-weight: 700; color: var(--ink);">Target Executive Audience & Readership: </span>
-        <span style="font-size: 7.8px; color: var(--muted);">Prepared for Chief Digital Officers (CDOs), Chief Technology Officers (CTOs), Heads of E-Commerce Engineering, Payment Infrastructure Architects, and General Counsel navigating autonomous foundation model transactions.</span>
+      <!-- Cover illustration -->
+      <div style="flex: 0.8; display: flex; justify-content: flex-end;">
+        <svg width="340" height="280" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="30" width="265" height="205" rx="6" fill="#fafaf9" stroke="#111827" stroke-width="2"/>
+          <line x1="40" y1="68" x2="305" y2="68" stroke="#e5e7eb" stroke-width="1.5"/>
+          <circle cx="64" cy="50" r="4.5" fill="#0038FF"/>
+          <circle cx="78" cy="50" r="4.5" fill="#d1d5db"/>
+          <circle cx="92" cy="50" r="4.5" fill="#d1d5db"/>
+          <rect x="115" y="44" width="140" height="12" rx="3" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+          <rect x="68" y="90" width="110" height="12" rx="2" fill="#111827"/>
+          <rect x="68" y="112" width="140" height="7" rx="2" fill="#9ca3af"/>
+          <rect x="68" y="126" width="125" height="7" rx="2" fill="#e5e7eb"/>
+          <rect x="68" y="140" width="135" height="7" rx="2" fill="#e5e7eb"/>
+          <rect x="68" y="154" width="105" height="7" rx="2" fill="#e5e7eb"/>
+          <rect x="220" y="90" width="70" height="75" rx="4" fill="#eff4ff" stroke="#0038FF" stroke-width="2"/>
+          <path d="M245 125 L254 134 L272 114" stroke="#0038FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="230" y="148" width="50" height="6" rx="2" fill="#93c5fd"/>
+          <path d="M15 255 C15 205 40 180 75 180 L102 255 Z" fill="#e5e7eb" stroke="#111827" stroke-width="2"/>
+          <ellipse cx="52" cy="155" rx="15" ry="17" fill="#fafaf9" stroke="#111827" stroke-width="2"/>
+          <path d="M40 150 C40 135 52 128 65 130 C75 132 75 144 71 154" fill="#111827"/>
+          <path d="M60 195 L95 170 L128 185" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </div>
     </div>
 
     <div class="cover-bottom">
       <div>
         <div class="cover-author">Vedang Ratan Vatsa</div>
-        <div class="cover-meta">Founder, Hashtag Web3 &nbsp;|&nbsp; Lead Researcher, veda.ng &nbsp;|&nbsp; Inquiries: research@veda.ng</div>
+        <div class="cover-meta">Founder, Hashtag Web3 &nbsp;|&nbsp; Lead Researcher, veda.ng</div>
       </div>
       <div class="cover-meta" style="text-align: right;">
         Open-Access Empirical Research Report &nbsp;|&nbsp; DOI: 10.5281/zenodo.23661069<br>

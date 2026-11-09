@@ -27,107 +27,47 @@ export async function generateReport() {
   // SPREAD 1: COVER PAGE
   // ==========================================
   spreads.push(`
-    <div class="spread" style="justify-content: space-between;">
-      <div>
-        <div style="font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px;">
-          EMPIRICAL RESEARCH REPORT | STRATEGIC BRIEFING
-        </div>
-        
-        <div style="display: flex; gap: 28px; align-items: flex-start; margin-bottom: 12px;">
-          <div style="flex: 1.4;">
-            <h1 style="font-size: 36px; line-height: 1.15; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.025em; margin-bottom: 10px;">
-              {{TOPIC_TITLE}}
-            </h1>
-            <p style="font-size: 12px; line-height: 1.5; color: var(--ink); margin-bottom: 12px;">
-              Taxonomy, empirical verification architecture, and strategic roadmap for executive decision makers.
-            </p>
-            
-            <div style="display: flex; gap: 18px;">
-              <div style="border-left: 2.5px solid var(--blue); padding-left: 10px;">
-                <div style="font-size: 11px; font-weight: 700; color: var(--blue);">10,000+ AUDITED</div>
-                <div style="font-size: 8px; color: var(--ink-secondary);">Full-scale empirical census</div>
-              </div>
-              <div style="border-left: 2.5px solid var(--ink-heading); padding-left: 10px;">
-                <div style="font-size: 11px; font-weight: 700; color: var(--ink-heading);">15 BENCHMARKS</div>
-                <div style="font-size: 8px; color: var(--ink-secondary);">Multi-turn task evaluations</div>
-              </div>
-              <div style="border-left: 2.5px solid var(--ink-heading); padding-left: 10px;">
-                <div style="font-size: 11px; font-weight: 700; color: var(--ink-heading);">BOARDROOM READY</div>
-                <div style="font-size: 8px; color: var(--ink-secondary);">Decision-grade frameworks</div>
-              </div>
+    <div class="spread cover-spread" style="padding: 20mm 24mm 16mm 24mm; justify-content: space-between;">
+      <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue);">
+        EMPIRICAL RESEARCH REPORT | STRATEGIC BRIEFING
+      </div>
+      
+      <div style="display: flex; gap: 40px; align-items: center; margin: 20px 0;">
+        <div style="flex: 1.25;">
+          <h1 style="font-size: 46px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
+            {{TOPIC_TITLE}}
+          </h1>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-secondary); max-width: 580px; margin-bottom: 32px;">
+            Taxonomy, empirical verification architecture, and strategic roadmap for executive decision makers.
+          </p>
+          
+          <div style="display: flex; gap: 24px; margin-top: 10px;">
+            <div style="border-left: 3px solid var(--blue); padding-left: 14px;">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">10,000+ AUDITED</div>
+              <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Full-scale empirical census</div>
+            </div>
+            <div style="border-left: 3px solid var(--ink-heading); padding-left: 14px;">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink-heading);">15 BENCHMARKS</div>
+              <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Multi-turn task evaluations</div>
+            </div>
+            <div style="border-left: 3px solid var(--blue); padding-left: 14px;">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">BOARDROOM READY</div>
+              <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Decision-grade frameworks</div>
             </div>
           </div>
-          
-          <div style="flex: 0.6; display: flex; justify-content: flex-end; align-items: center;">
-            ${notion.svgNotionDeskWorker()}
-          </div>
         </div>
-
-        <!-- Executive Abstract Panel -->
-        <div style="background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; padding: 12px 16px; margin-bottom: 10px;">
-          <div style="font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 4px;">
-            Executive Research Abstract & Scope Statement
-          </div>
-          <p style="font-size: 9px; line-height: 1.5; color: var(--ink); margin-bottom: 6px;">
-            As complex autonomous systems transition from research experiments into mission-critical business environments, organizations face critical architectural hurdles. Existing infrastructure is predominantly designed for human interaction, relying on visual interfaces, subjective tolerance, and delayed dispute resolution. When software agents execute operations autonomously, this mismatch creates severe operational failure modes, token drift, and substantial reverse costs.
-          </p>
-          <p style="font-size: 9px; line-height: 1.5; color: var(--ink);">
-            This report presents a comprehensive empirical evaluation of the technical and governance landscape surrounding <strong>{{TOPIC_TITLE}}</strong>. Integrating multi-turn benchmarks, enterprise audits, and stakeholder sentiment across international jurisdictions, we establish the strategic roadmap for defensible, high-leverage deployment.
-          </p>
-        </div>
-
-        <!-- Methodology Grid -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 10px;">
-          <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px;">
-            <div style="font-size: 9px; font-weight: 700; color: var(--ink-heading); margin-bottom: 2px;">1. Empirical Web Census</div>
-            <div style="font-size: 8px; line-height: 1.4; color: var(--ink-secondary);">Rigorous automated crawlers testing endpoints, OpenAPI manifests, and bot defense mechanisms.</div>
-          </div>
-          <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px;">
-            <div style="font-size: 9px; font-weight: 700; color: var(--ink-heading); margin-bottom: 2px;">2. Multi-Turn Benchmarks</div>
-            <div style="font-size: 8px; line-height: 1.4; color: var(--ink-secondary);">Complex scenario evaluations testing tool-call latency, memory drift, and adversarial prompt resilience.</div>
-          </div>
-          <div style="background: #ffffff; border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px;">
-            <div style="font-size: 9px; font-weight: 700; color: var(--ink-heading); margin-bottom: 2px;">3. Governance & Liability</div>
-            <div style="font-size: 8px; line-height: 1.4; color: var(--ink-secondary);">Legal audit of regulatory mandates, agency law, and consumer protection cooling-off rights.</div>
-          </div>
-        </div>
-
-        <!-- Metric Pills -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px;">
-          <div style="background: #ffffff; border-left: 2px solid var(--blue); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px 10px; border-radius: 0 4px 4px 0;">
-            <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--ink-secondary);">Deficit Baseline</div>
-            <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">95%+ Missing</div>
-            <div style="font-size: 7.5px; color: var(--ink-secondary);">machine-readable APIs.</div>
-          </div>
-          <div style="background: #ffffff; border-left: 2px solid var(--ink-heading); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px 10px; border-radius: 0 4px 4px 0;">
-            <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--ink-secondary);">Accuracy Ceiling</div>
-            <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">58.4% Top</div>
-            <div style="font-size: 7.5px; color: var(--ink-secondary);">on multi-turn benchmark tasks.</div>
-          </div>
-          <div style="background: #ffffff; border-left: 2px solid #ef4444; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px 10px; border-radius: 0 4px 4px 0;">
-            <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--ink-secondary);">Stakeholder Hesitancy</div>
-            <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">55.0% Refusal</div>
-            <div style="font-size: 7.5px; color: var(--ink-secondary);">to delegate unconstrained power.</div>
-          </div>
-          <div style="background: #ffffff; border-left: 2px solid #16a34a; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6px 10px; border-radius: 0 4px 4px 0;">
-            <div style="font-size: 7.5px; text-transform: uppercase; font-weight: 600; color: var(--ink-secondary);">Governance Lever</div>
-            <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">82.0% Trust Restore</div>
-            <div style="font-size: 7.5px; color: var(--ink-secondary);">via parameter control bounds.</div>
-          </div>
-        </div>
-
-        <div style="background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; padding: 6px 12px;">
-          <span style="font-size: 8px; font-weight: 700; color: var(--ink-heading);">Target Executive Audience: </span>
-          <span style="font-size: 8px; color: var(--ink-secondary);">Chief Digital Officers (CDOs), Chief Technology Officers (CTOs), Practice Heads, and Senior Counsel navigating autonomous foundation model deployments.</span>
+        
+        <div style="flex: 0.75; display: flex; justify-content: flex-end; align-items: center; transform: scale(1.2); transform-origin: right center;">
+          \${notion.svgNotionDeskWorker()}
         </div>
       </div>
 
-      <div style="border-top: 1px solid var(--border); padding-top: 8px; display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="border-top: 1px solid var(--border); padding-top: 12px; display: flex; justify-content: space-between; align-items: flex-end;">
         <div>
-          <div style="font-size: 11px; font-weight: 700; color: var(--ink-heading);">Consulting Research Practice</div>
-          <div style="font-size: 8.5px; color: var(--ink-secondary);">Strategic Research & Empirical Auditing</div>
+          <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">Consulting Research Practice</div>
+          <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 2px;">Strategic Research & Empirical Auditing</div>
         </div>
-        <div style="text-align: right; font-size: 8.5px; color: var(--ink-secondary); line-height: 1.4;">
+        <div style="text-align: right; font-size: 9px; color: var(--ink-secondary); line-height: 1.45;">
           Open-Access Empirical Research Report &nbsp;|&nbsp; DOI: 10.5281/zenodo.00000000<br>
           Published under Creative Commons Attribution 4.0 International (CC BY 4.0)
         </div>
