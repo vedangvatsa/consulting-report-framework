@@ -12,6 +12,7 @@
  * - Zero presentation carditis, zero empty space, zero line collisions.
  */
 
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderReportToPdf } from '../../bvod-engine/engine.mjs';
@@ -24,6 +25,11 @@ export async function generateReport() {
   const TOTAL_PAGES = 10;
   const FOOTER_TITLE = "The State of Agentic Commerce";
   const spreads = [];
+
+  const coverIllustrationPath = path.resolve(__dirname, '../../assets/illustrations/agentic-commerce-cover.jpg');
+  const coverIllustrationBase64 = fs.existsSync(coverIllustrationPath)
+    ? fs.readFileSync(coverIllustrationPath).toString('base64')
+    : '';
 
   // ==========================================
   // SPREAD 1: COVER PAGE
@@ -55,8 +61,8 @@ export async function generateReport() {
           </div>
         </div>
         
-        <div style="flex: 0.75; display: flex; justify-content: flex-end; align-items: center; transform: scale(1.2); transform-origin: right center;">
-          ${notion.svgNotionDeskWorker()}
+        <div style="flex: 0.95; display: flex; justify-content: flex-end; align-items: center;">
+          <img src="data:image/jpeg;base64,${coverIllustrationBase64}" style="max-width: 440px; width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply;" alt="Agentic Commerce Architecture" />
         </div>
       </div>
 

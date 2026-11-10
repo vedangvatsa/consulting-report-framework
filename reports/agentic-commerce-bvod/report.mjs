@@ -1,10 +1,16 @@
 import fs from 'node:fs/promises';
+import fsSync from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderReportToPdf } from '../../bvod-engine/engine.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const coverIllustrationPath = path.resolve(__dirname, '../../assets/illustrations/agentic-commerce-cover.jpg');
+const coverIllustrationBase64 = fsSync.existsSync(coverIllustrationPath)
+  ? fsSync.readFileSync(coverIllustrationPath).toString('base64')
+  : '';
 
 const htmlContent = `<!doctype html>
 <html lang="en">
@@ -457,27 +463,8 @@ const htmlContent = `<!doctype html>
       </div>
 
       <!-- Cover illustration -->
-      <div style="flex: 0.8; display: flex; justify-content: flex-end;">
-        <svg width="340" height="280" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="40" y="30" width="265" height="205" rx="6" fill="#fafaf9" stroke="#111827" stroke-width="2"/>
-          <line x1="40" y1="68" x2="305" y2="68" stroke="#e5e7eb" stroke-width="1.5"/>
-          <circle cx="64" cy="50" r="4.5" fill="#0038FF"/>
-          <circle cx="78" cy="50" r="4.5" fill="#d1d5db"/>
-          <circle cx="92" cy="50" r="4.5" fill="#d1d5db"/>
-          <rect x="115" y="44" width="140" height="12" rx="3" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-          <rect x="68" y="90" width="110" height="12" rx="2" fill="#111827"/>
-          <rect x="68" y="112" width="140" height="7" rx="2" fill="#9ca3af"/>
-          <rect x="68" y="126" width="125" height="7" rx="2" fill="#e5e7eb"/>
-          <rect x="68" y="140" width="135" height="7" rx="2" fill="#e5e7eb"/>
-          <rect x="68" y="154" width="105" height="7" rx="2" fill="#e5e7eb"/>
-          <rect x="220" y="90" width="70" height="75" rx="4" fill="#eff4ff" stroke="#0038FF" stroke-width="2"/>
-          <path d="M245 125 L254 134 L272 114" stroke="#0038FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="230" y="148" width="50" height="6" rx="2" fill="#93c5fd"/>
-          <path d="M15 255 C15 205 40 180 75 180 L102 255 Z" fill="#e5e7eb" stroke="#111827" stroke-width="2"/>
-          <ellipse cx="52" cy="155" rx="15" ry="17" fill="#fafaf9" stroke="#111827" stroke-width="2"/>
-          <path d="M40 150 C40 135 52 128 65 130 C75 132 75 144 71 154" fill="#111827"/>
-          <path d="M60 195 L95 170 L128 185" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+      <div style="flex: 0.95; display: flex; justify-content: flex-end; align-items: center;">
+        <img src="data:image/jpeg;base64,${coverIllustrationBase64}" style="max-width: 440px; width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply;" alt="Agentic Commerce Architecture" />
       </div>
     </div>
 
