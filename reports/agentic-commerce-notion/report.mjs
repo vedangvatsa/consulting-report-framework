@@ -1,5 +1,5 @@
 /**
- * The State of Agentic Commerce: Notion Style Edition
+ * The State of Agentic Commerce
  * 
  * Publication-Grade Global Industry Research Report:
  * - Pure Inter Google Fonts typography (bold 700 headings, warm ink #191919)
@@ -20,19 +20,15 @@ const __dirname = path.dirname(__filename);
 
 export async function generateReport() {
   const TOTAL_PAGES = 10;
-  const FOOTER_TITLE = "The State of Agentic Commerce: Notion Style Edition";
+  const FOOTER_TITLE = "The State of Agentic Commerce";
   const spreads = [];
 
   // ==========================================
   // SPREAD 1: COVER PAGE
   // ==========================================
   spreads.push(`
-    <div class="spread cover-spread" style="padding: 20mm 24mm 16mm 24mm; justify-content: space-between;">
-      <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue);">
-        GLOBAL INDUSTRY RESEARCH REPORT | EXECUTIVE BRIEFING | DIGITAL COMMERCE & FINTECH
-      </div>
-      
-      <div style="display: flex; gap: 40px; align-items: center; margin: 20px 0;">
+    <div class="spread cover-spread" style="padding: 24mm 24mm 16mm 24mm; justify-content: space-between;">
+      <div style="display: flex; gap: 40px; align-items: center; margin: auto 0;">
         <div style="flex: 1.25;">
           <h1 style="font-size: 46px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
             The State of<br>Agentic Commerce
@@ -66,10 +62,6 @@ export async function generateReport() {
         <div>
           <div style="font-size: 12px; font-weight: 700; color: var(--ink-heading);">Vedang Ratan Vatsa</div>
           <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 2px;">Founder, Hashtag Web3 &nbsp;|&nbsp; Lead Researcher, veda.ng</div>
-        </div>
-        <div style="text-align: right; font-size: 9px; color: var(--ink-secondary); line-height: 1.45;">
-          Open-Access Industry Research Report &nbsp;|&nbsp; DOI: 10.5281/zenodo.23661069<br>
-          Published under Creative Commons Attribution 4.0 International (CC BY 4.0)
         </div>
       </div>
     </div>

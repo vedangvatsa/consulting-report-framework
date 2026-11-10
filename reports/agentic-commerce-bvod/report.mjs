@@ -10,7 +10,7 @@ const htmlContent = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The State of Agentic Commerce: Global Industry Research Report</title>
+  <title>The State of Agentic Commerce</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -295,11 +295,7 @@ const htmlContent = `<!doctype html>
        SPREAD 1: COVER
        ═════════════════════════════════════════════ -->
   <div class="spread cover-spread">
-    <div class="cover-top">
-      Global Industry Research Report &nbsp;|&nbsp; Executive Briefing &nbsp;|&nbsp; Digital Commerce & Fintech
-    </div>
-
-    <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: auto 0;">
       <div style="flex: 1.2;">
         <h1 class="cover-title">The State of<br>Agentic Commerce</h1>
         <p class="cover-desc">
@@ -350,10 +346,6 @@ const htmlContent = `<!doctype html>
       <div>
         <div class="cover-author">Vedang Ratan Vatsa</div>
         <div class="cover-meta">Founder, Hashtag Web3 &nbsp;|&nbsp; Lead Researcher, veda.ng</div>
-      </div>
-      <div class="cover-meta" style="text-align: right;">
-        Open-Access Industry Research Report &nbsp;|&nbsp; DOI: 10.5281/zenodo.23661069<br>
-        Published under Creative Commons Attribution 4.0 International (CC BY 4.0)
       </div>
     </div>
   </div>
@@ -483,7 +475,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 2 of 10</span>
     </div>
   </div>
@@ -612,7 +604,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 3 of 10</span>
     </div>
   </div>
@@ -734,7 +726,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 4 of 10</span>
     </div>
   </div>
@@ -856,7 +848,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 5 of 10</span>
     </div>
   </div>
@@ -993,7 +985,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 6 of 10</span>
     </div>
   </div>
@@ -1110,7 +1102,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 7 of 10</span>
     </div>
   </div>
@@ -1232,7 +1224,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 8 of 10</span>
     </div>
   </div>
@@ -1347,7 +1339,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 9 of 10</span>
     </div>
   </div>
@@ -1469,7 +1461,7 @@ const htmlContent = `<!doctype html>
     </div>
 
     <div class="spread-footer">
-      <span>The State of Agentic Commerce: Global Industry Research Report</span>
+      <span>The State of Agentic Commerce</span>
       <span>Page 10 of 10</span>
     </div>
   </div>
