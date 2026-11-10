@@ -508,7 +508,7 @@ const htmlContent = `<!doctype html>
         </div>
 
         <p class="report-p">
-          <strong>The End of Clicking on Ads:</strong> For thirty years, online shopping relied on human attention. Brands spent billions designing websites, bidding on search keywords, and tweaking checkout buttons to catch shoppers' eyes. When people let AI agents handle shopping, humans stop browsing stores. As fintech analyst Simon Taylor wrote, "Payments are the new ads." When computers choose what to buy, traditional search and display ads stop working. Instead, brands must make their products easy for AI bots to find and buy automatically.
+          <strong>The End of Clicking on Ads:</strong> For thirty years, online shopping relied on human attention. Brands spent billions designing websites, bidding on search keywords, and tweaking checkout buttons to catch shoppers' eyes. When people let AI agents handle shopping, humans stop browsing stores. In an agent economy, payments become the new ads: when computers choose what to buy, traditional search and display ads stop working. Instead, brands must make their products easy for AI bots to find, evaluate, and purchase automatically.
         </p>
 
         <p class="report-p">
@@ -1012,7 +1012,7 @@ const htmlContent = `<!doctype html>
           </div>
 
           <div class="exhibit-source-note">
-            Source: Visa Research ("Autonomous Payments and Identity Framework"), Simon Taylor (Fintech Brainfood), and Stripe Developer Documentation (2025-2026).
+            Source: Visa Research ("Autonomous Payments and Identity Framework"), Stripe Technical Documentation, and Payment Network Disclosures (2025-2026).
           </div>
         </div>
       </div>
