@@ -37,9 +37,7 @@ export async function generateReport() {
     <div class="spread cover-spread" style="padding: 24mm 24mm 16mm 24mm; justify-content: space-between;">
       <div style="display: flex; gap: 40px; align-items: center; margin: auto 0;">
         <div style="flex: 1.25;">
-          <div style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 12px;">
-            INSTITUTIONAL INDUSTRY REPORT &bull; 2026
-          </div>
+
           <h1 style="font-size: 44px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
             The Business Value of<br/>Agentic Commerce
           </h1>
@@ -73,10 +71,7 @@ export async function generateReport() {
           <div style="font-size: 10.5px; font-weight: 700; color: var(--ink-heading);">Vedang Ratan Vatsa</div>
           <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Founder, Hashtag Web3</div>
         </div>
-        <div style="font-size: 8.8px; color: var(--ink-secondary); text-align: right;">
-          <div>November 2026 &bull; Industry Research Briefing</div>
-          <div style="font-size: 7.5px; color: var(--ink-muted); margin-top: 2px;">Peer-Reviewed Industry Synthesis</div>
-        </div>
+
       </div>
     </div>
   `);
