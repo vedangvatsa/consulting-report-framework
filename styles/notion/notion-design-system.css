@@ -460,10 +460,9 @@ body {
 
 p.report-p {
   font-size: 8.8px;
-  line-height: 1.42;
+  line-height: 1.44;
   color: var(--ink);
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
   margin-bottom: 5px;
 }
 
