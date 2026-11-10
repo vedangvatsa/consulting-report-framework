@@ -581,9 +581,7 @@ const htmlContent = `<!doctype html>
               <text x="413" y="128" font-size="7.2" font-weight="800" fill="#0038ff" text-anchor="middle" font-family="Inter, sans-serif">2030E</text>
               <text x="413" y="137" font-size="6.3" font-weight="700" fill="#0038ff" text-anchor="middle" font-family="Inter, sans-serif">14.8% E-Com</text>
 
-              <!-- Inflection Indicator Line -->
-              <line x1="277" y1="28" x2="277" y2="65" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="2 2" />
-              <circle cx="277" cy="71" r="2.5" fill="#dc2626" />
+
             </svg>
           </div>
 

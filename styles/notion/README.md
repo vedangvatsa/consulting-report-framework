@@ -1,48 +1,38 @@
-# Notion Style Presentation Theme
+# Notion Style Executive Research Report & Presentation Theme
 
-An unofficial homage to slides that read like authentic Notion pages.
+A publication-grade consulting report framework modeled on Notion's ultra-minimalist design system and Stripe Press editorial elegance (matching the aesthetics of `hashtagweb3.com` and `web3-jobs`).
 
-- **Geometry**: 16:9 Widescreen Slide (`1280px × 720px`)
-- **Typography**: `Inter` (Google Fonts) throughout
-  - Page titles: Inter 700 at 40 to 42px
-  - Section headings: Inter 700 at 28 to 30px
-  - Sub-headings: Inter 600 at 20px
-  - Body: Inter 400 at 15 to 16px (line-height 1.5, sentence case, left-aligned)
-- **Content Column**: ~720px wide
-- **Colors**:
-  - Ink: `#37352f`
-  - Secondary text: `#787774`
-  - Callout background: `#f1f1ef`
-  - Tag palette: gray `#e3e2e0`, brown `#eee0da`, orange `#fadec9`, yellow `#fdecc8`, green `#dbeddb`, blue `#d3e5ef`, purple `#e8deee`, pink `#f5e0e9`, red `#ffe2dd`
-- **Signature Page Head**:
-  - Flat cover band 150px tall (`#d3e5ef` with large flat circles in `#b9d4e6` and `#e8deee`, no gradients)
-  - 64 to 72px emoji page icon overlapping bottom edge
-  - Page title, one-line gray description
-  - Property rows: gray name with small line glyph on left, value on right (initials avatar, status pill, tag pills, date)
-- **Content Slides**:
-  - 40px breadcrumb bar at the top: page path in 13px ink, 'Edited 2h ago' right-aligned in `#787774`
-  - No page numbers or footers
-- **Components**:
-  - Database table view (1px `#e9e9e7` grid, property glyph headers, pill tags)
-  - Database board view (pale column backgrounds, status header + count, hairline shadow white cards)
-  - Callouts (emoji + `#f1f1ef` fill + 4px radius)
-  - Toggle lists (triangle ▶ / ▼ with indented nested bullets)
-  - To-dos (16px checkboxes, checked ones fill blue `#2383e2` with strikethrough text in `#a5a29c`)
-  - Column blocks (48px apart)
-  - Quote blocks (3px `#37352f` left bar + 28px text)
-  - Flat bar charts (`#2383e2`, `#448361`, `#d9730d`, `#9065b0`)
-  - Page mentions (`📄 page-link`)
-  - Inline code (`rgba(135,131,120,.15)` in `#eb5757`)
-- **Strictly Prohibited**:
-  - Notion logo or 'N' cube
-  - Claiming affiliation with Notion Labs, Inc.
-  - Dark mode
-  - Gradient covers
-  - Heavy or blurred drop shadows
-  - Rounded cards above 6px radius
-  - Centered body text
-  - Stock photos or decorative illustrations
-  - Saturated tag fills
-  - More than three tag colors per slide
-  - All-caps labels
-  - Slide numbers
+## Design Architecture
+
+- **Geometry**: A4 Landscape Executive Report (`297mm × 210mm`) & 16:9 Widescreen Slide (`1280px × 720px`)
+- **Typography**: `Inter` (Google Fonts) throughout:
+  - Cover title: Inter 800 at 46px (line-height 1.12, letter-spacing -0.03em)
+  - Section headlines: Inter 700 at 22px to 24px (line-height 1.22, letter-spacing -0.02em)
+  - Lead prose: Inter 600 at 10.8px to 11.5px (line-height 1.5)
+  - Body paragraphs: Inter 400 at 9.8px to 10.5px (line-height 1.55, left-aligned)
+  - Exhibit headings: Inter 700 at 14px; analysis text at 8px to 9px
+- **Strict Monochrome Palette (Zero Blue Rule)**:
+  - Background: Pure stark white (`#ffffff`)
+  - Primary Headings & Ink: `#09090b`
+  - Charcoal Darks: `#18181b`, `#27272a`
+  - Zinc Midtones: `#3f3f46`, `#52525b`, `#71717a`
+  - Border & Dividers: `#e4e4e7`, `#d4d4d8`
+  - Paper Subtle Fill: `#f4f4f5`
+  - **Zero Blue/Color Rule**: No blue, purple, cyan, or color gradients anywhere in layout, badges, charts, or borders.
+
+## Layout Principles
+
+1. **Zero Empty Space**:
+   - Both the left editorial column and right exhibit column run continuously from the top header to an elegant ~18mm margin above the footer rule (~540px vertical baseline).
+   - Unified 2-column editorial grid (`.report-body` with `grid-template-columns: 1.04fr 0.96fr; gap: 24px; align-items: stretch;`).
+2. **Visual Illustrations & Diagrams Throughout**:
+   - Cover features a large-format Stripe Press style editorial illustration (`agentic-commerce-cover.jpg`).
+   - Spread 3 features an architectural protocol schematic illustration (`agentic-tech-architecture.jpg`).
+   - Every spread features clean, precision SVG architectural diagrams and visual matrices.
+3. **Chart Precision & Collision Prevention**:
+   - Bar labels placed cleanly above bars with dedicated clearance. Never overlap indicators or lines on data labels.
+4. **Simple English**:
+   - Clear, high-school reading level. No AI buzzwords or consulting jargon. Real-world brand examples (Amazon, Nike, Walmart, Apple, Stripe, Visa, Shopify).
+5. **Left-Aligned Text**:
+   - Always use `text-align: left;` to guarantee crisp Chromium PDF glyph rendering.
+

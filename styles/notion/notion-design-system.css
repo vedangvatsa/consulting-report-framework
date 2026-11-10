@@ -47,7 +47,7 @@ body {
   height: 210mm;
   page-break-after: always;
   box-sizing: border-box;
-  padding: 10mm 18mm 8mm 18mm;
+  padding: 12mm 20mm 10mm 20mm;
   position: relative;
   overflow: hidden;
   background: #ffffff;
@@ -58,18 +58,18 @@ body {
 
 /* Header & Footer */
 .spread-header {
-  height: 18px;
+  height: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 4px;
-  margin-bottom: 8px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
   flex-shrink: 0;
 }
 
 .spread-header .section-tag {
-  font-size: 8.5px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -77,7 +77,7 @@ body {
 }
 
 .spread-header .doc-topic {
-  font-size: 8px;
+  font-size: 8.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -86,22 +86,22 @@ body {
 
 .spread-footer {
   margin-top: auto;
-  height: 16px;
+  height: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--border);
-  padding-top: 5px;
+  padding-top: 6px;
   flex-shrink: 0;
 }
 
 .spread-footer .footer-title {
-  font-size: 8px;
+  font-size: 8.5px;
   color: var(--ink-secondary);
 }
 
 .spread-footer .page-number {
-  font-size: 8px;
+  font-size: 8.5px;
   color: var(--ink-secondary);
   font-weight: 500;
 }
@@ -112,7 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Two-Tier Layout Architecture */
@@ -148,7 +148,7 @@ body {
 
 /* Typography Tokens (Notion Clean Inter Hierarchy) */
 .spread-title {
-  font-size: 21px;
+  font-size: 23px;
   line-height: 1.25;
   font-weight: 700;
   color: var(--ink-heading);
@@ -156,13 +156,13 @@ body {
 }
 
 .spread-narrative {
-  font-size: 9.8px;
-  line-height: 1.52;
+  font-size: 10px;
+  line-height: 1.54;
   color: var(--ink);
 }
 
 .spread-narrative p {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .spread-narrative p:last-child {
@@ -178,7 +178,7 @@ body {
 }
 
 .quote-attribution {
-  font-size: 9px;
+  font-size: 9.5px;
   color: var(--ink-secondary);
   margin-top: 4px;
 }
@@ -188,12 +188,12 @@ body {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 8px 12px;
+  padding: 10px 14px;
   box-sizing: border-box;
 }
 
 .exhibit-header {
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--ink-heading);
   margin-bottom: 4px;
@@ -201,34 +201,34 @@ body {
 }
 
 .exhibit-sub {
-  font-size: 8.5px;
+  font-size: 9px;
   color: var(--ink-secondary);
   margin-top: -2px;
-  margin-bottom: 6px;
-  line-height: 1.35;
+  margin-bottom: 8px;
+  line-height: 1.38;
 }
 
 .notion-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 8.8px;
+  font-size: 9.2px;
 }
 
 .notion-table th {
   text-align: left;
-  font-size: 8.2px;
+  font-size: 8.8px;
   font-weight: 600;
   color: var(--ink-secondary);
   border-bottom: 1.5px solid var(--ink-heading);
-  padding: 3.5px 5px;
+  padding: 5px 8px;
   background: transparent;
 }
 
 .notion-table td {
-  padding: 4px 5px;
+  padding: 5px 8px;
   border-bottom: 1px solid var(--border-subtle);
   color: var(--ink);
-  line-height: 1.32;
+  line-height: 1.36;
 }
 
 .notion-table tr:last-child td {
@@ -457,10 +457,10 @@ body {
   flex: 1 1 auto;
   display: grid;
   grid-template-columns: 1.04fr 0.96fr;
-  gap: 20px;
+  gap: 24px;
   align-items: stretch;
   min-height: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   overflow: hidden;
 }
 
@@ -473,28 +473,28 @@ body {
 }
 
 .report-headline {
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.22;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--ink-heading);
-  margin-bottom: 4px;
-}
-
-.report-lead-prose {
-  font-size: 9.8px;
-  line-height: 1.42;
-  font-weight: 600;
   color: var(--ink-heading);
   margin-bottom: 6px;
 }
 
+.report-lead-prose {
+  font-size: 10.8px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--ink-heading);
+  margin-bottom: 10px;
+}
+
 p.report-p {
-  font-size: 8.8px;
-  line-height: 1.44;
+  font-size: 9.8px;
+  line-height: 1.55;
   color: var(--ink);
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 p.report-p strong {
@@ -506,21 +506,21 @@ p.report-p strong {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 6px;
+  gap: 8px;
   border-left: 1px solid var(--border);
-  padding-left: 18px;
+  padding-left: 20px;
   overflow: hidden;
 }
 
 .exhibit-container {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   flex: 1;
 }
 
 .exhibit-tag {
-  font-size: 8px;
+  font-size: 8.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -528,29 +528,29 @@ p.report-p strong {
 }
 
 .exhibit-title {
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--ink-heading);
   line-height: 1.25;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .exhibit-subtitle {
-  font-size: 8.2px;
+  font-size: 8.8px;
   color: var(--ink-secondary);
-  line-height: 1.35;
-  margin-bottom: 4px;
+  line-height: 1.38;
+  margin-bottom: 6px;
 }
 
 .exhibit-analysis-box {
   background: var(--paper-subtle);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 6px 9px;
-  font-size: 8.2px;
-  line-height: 1.4;
+  padding: 8px 12px;
+  font-size: 8.8px;
+  line-height: 1.48;
   color: var(--ink);
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .exhibit-analysis-box strong {
@@ -559,12 +559,12 @@ p.report-p strong {
 }
 
 .exhibit-source-note {
-  font-size: 7.2px;
+  font-size: 7.5px;
   color: var(--ink-secondary);
   line-height: 1.35;
-  margin-top: 4px;
+  margin-top: 6px;
   border-top: 1px solid var(--border-subtle);
-  padding-top: 3px;
+  padding-top: 4px;
 }
 
 /* ─── Publication Charts & Diagrams (Notion Edition) ─── */

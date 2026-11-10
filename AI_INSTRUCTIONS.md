@@ -550,3 +550,47 @@ When requested to create an executive digital briefing, a presentation deck, or 
    - Spread 8: Section 06 - Operational Pipeline & Statutory Law
    - Spread 9: Section 07 - Executive Diagnostic & Readiness Scoring
    - Spread 10: Section 08 - Strategic Roadmap & Outlier Moats
+
+---
+
+## 12. Instructions for Notion Style Monochrome Executive Reports & Publication-Grade Visual Layouts
+
+When requested to create an executive dossier or research report in the **Notion Aesthetic**:
+
+1. **The Notion Monochrome Design System**:
+   - **Palette**: Pure stark white background (`#ffffff`), deepest ink (`#09090b`), charcoal darks (`#18181b`, `#27272a`), cool zinc mid-tones (`#3f3f46`, `#52525b`, `#71717a`, `#a1a1aa`, `#d4d4d8`, `#e4e4e7`, `#f4f4f5`).
+   - **Strict Zero Blue Rule**: In the Notion edition, **NEVER** use blue, purple, cyan, or color gradients. Strictly white, black, and gray (matching the minimalist design of `hashtagweb3.com` in the `web3-jobs` project).
+   - **Typography**: Inter (Google Fonts) with clean weight hierarchy: 800 for cover title, 700 for headlines, 600 for sub-headers and lead prose, 400 for running text.
+
+2. **Zero Empty Space & Symmetrical Page Architecture**:
+   - **The Vertical Space Reality**: An A4 landscape canvas is 297mm × 210mm (~794px tall at 96 DPI). Usable height between header and footer is ~640px. Microscopic font sizes (`8.8px`) and 2-sentence paragraphs leave 40%–60% of the page blank.
+   - **Scale Typography to Fit**: Set body text to `9.8px`–`10.5px` with line-height `1.52`–`1.56` and paragraph bottom margin `8px`–`10px`. Headlines `22px`–`24px`. Lead prose `10.8px`–`11.5px`.
+   - **Unified 2-Column Grid (`.report-body`)**: Use `grid-template-columns: 1.04fr 0.96fr; gap: 24px; align-items: stretch;`. Avoid artificial tiered splits (`report-tier-bottom`) with tiny cards that leave cavernous voids.
+   - **Symmetrical Vertical Balance**: Both columns must terminate at the exact same vertical baseline:
+     - Left column: Headline + lead prose + 3 substantive paragraphs + visual diagram / illustration + executive takeaway box.
+     - Right column: Exhibit title + primary visual exhibit (chart, matrix, table) + 3 analytical callout boxes (each with bold title and 3 bullet points) + formal source note.
+     - Content must reach ~540px, leaving an elegant ~18mm margin above the footer rule across all spreads.
+
+3. **Editorial Illustrations & Architectural Diagrams Throughout the Report**:
+   - **Never rely on a single illustration on the cover**: Executive reports should feature visual intelligence on every spread.
+   - **Stripe Press / Notion Line-Art Style**: Use crisp, minimalist vector line art, delicate stippling, architectural blueprint cross-hatching, pure black ink, and a stark white background (`#ffffff`). Zero cartoonish clip art, zero floating 3D icons, zero dark gradients.
+   - **Core Visual Assets**:
+     - Cover: Hero editorial illustration (`agentic-commerce-cover.jpg`).
+     - Architecture (Spread 3): Technical protocol loop schematic (`agentic-tech-architecture.jpg`).
+     - Analytical Spreads (Spreads 4–10): Crisp SVG architectural diagrams (Protocol Handshake flow, Delegated Token Passkey flow, Diagnostic Failure Modes breakdown, Dual-Path Firewall screening, Scraping vs. Direct API comparison, 4-Way Power Struggle matrix, Autonomous Enterprise Procurement Loop).
+
+4. **Chart Precision & Zero Text Collisions**:
+   - In SVG bar/column charts, **never place indicator lines, dots, or callouts directly on top of numerical value labels**.
+   - Keep value labels placed cleanly 5–6px above the bar top. Inflection badges belong in the exhibit header bar or with dedicated vertical clearance.
+   - Use high-contrast monochrome shades for data series (`#09090b` for primary, `#27272a`, `#3f3f46`, `#71717a`, `#a1a1aa`, `#d4d4d8`).
+
+5. **Plain English & Simple Words Mandate**:
+   - Write at a clear, high-school reading level that any CEO, CFO, or general business leader can immediately understand in 30 seconds.
+   - **Zero AI Jargon**: No "delve", "paradigm shift", "tapestry", "multifaceted", "seamless", "beacon", "pivotal", "navigate".
+   - **Concrete Real-World Examples**: Ground concepts in recognizable enterprise brands (Amazon, Walmart, Nike, Apple, Stripe, Visa, Shopify).
+   - **No Instruction Echoing**: Never mention author references, prompt instructions, or meta-commentary inside report prose.
+
+6. **Left-Aligned Typography for Chromium PDF Generation**:
+   - Always use `text-align: left;` on body paragraphs, callout boxes, and table cells.
+   - **Never use `text-align: justify;`** in Chromium headless print media, as it causes `Bad bounding box in Type 3 glyph` PDF rendering warnings and character overlap.
+
