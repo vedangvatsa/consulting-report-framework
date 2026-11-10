@@ -1,12 +1,13 @@
 /**
- * The State of Agentic Commerce
+ * The State of Agentic Commerce (Notion Style Edition)
  * 
  * Publication-Grade Global Industry Research Report:
- * - Pure Inter Google Fonts typography (bold 700 headings, warm ink #191919)
- * - Authentic Notion-style clean minimalist layout
+ * - Pure Inter Google Fonts typography (bold 700 headings, deep ink #09090b)
+ * - Ultra-minimalist Monochrome Palette: Pure White, Black, and Grayscale (matching hashtagweb3.com & web3-jobs)
+ * - Zero blue color anywhere in layout, badges, charts, or borders
  * - Multi-column editorial report format with comprehensive research prose
- * - Visual publication exhibits: SVG column charts, 7-layer architecture stack,
- *   protocol matrices, horizontal bar ranking charts, security threat charts,
+ * - Visual publication exhibits: Grayscale SVG column charts, 7-layer architecture stack,
+ *   protocol matrices, horizontal bar ranking charts, threat charts,
  *   tripartite liability matrices, Gartner maturity chevrons, and roadmap timeline
  * - Zero presentation carditis, zero empty space, zero line collisions.
  */
@@ -39,16 +40,16 @@ export async function generateReport() {
           </p>
           
           <div style="display: flex; gap: 24px; margin-top: 10px;">
-            <div style="border-left: 3px solid var(--blue); padding-left: 14px;">
-              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">$1.5T 2030 GMV</div>
+            <div style="border-left: 3px solid var(--ink-heading); padding-left: 14px;">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink-heading);">$1.5T 2030 GMV</div>
               <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Global agent-mediated volume</div>
             </div>
             <div style="border-left: 3px solid var(--ink-heading); padding-left: 14px;">
               <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink-heading);">7-LAYER STACK</div>
               <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Full ecosystem architecture taxonomy</div>
             </div>
-            <div style="border-left: 3px solid var(--blue); padding-left: 14px;">
-              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--blue);">57.2% CEILING</div>
+            <div style="border-left: 3px solid var(--ink-heading); padding-left: 14px;">
+              <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; color: var(--ink-heading);">57.2% CEILING</div>
               <div style="font-size: 9.5px; color: var(--ink-secondary); margin-top: 3px;">Visa benchmark accuracy pass rate</div>
             </div>
           </div>
@@ -98,7 +99,7 @@ export async function generateReport() {
             <strong>Enterprise Value Capture Realignment:</strong> Traditional marketplaces that rely on sponsored product ads and take-rate margins face fee compression. Margin capture is concentrating in two areas: the user-facing AI platforms that own customer intent, and the cryptographic payment rails that settle transactions programmatically.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Strategic Imperative for Retail Leadership:</strong>
             Organizations treating agentic commerce as an incremental extension of mobile apps risk disintermediation. Retailers must decouple visual storefronts from machine-readable semantic endpoints to ensure algorithmic discoverability before autonomous buyers account for 15% of global transaction volume.
           </div>
@@ -110,79 +111,79 @@ export async function generateReport() {
             <div class="exhibit-title">Global Agentic Commerce GMV & Infrastructure Forecast (2025-2030)</div>
             <div class="exhibit-subtitle">Estimated market size, transaction volumes, and architectural drivers through the 2028 inflection point.</div>
 
-            <!-- Visual SVG Column Growth Chart -->
+            <!-- Monochrome SVG Column Growth Chart -->
             <div class="chart-container" style="padding: 7px 10px 5px 10px; margin: 3px 0;">
               <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
-                <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">Global Agent GMV Volume ($ Billions)</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">2028: Enterprise Protocol Inflection</span>
+                <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-heading);">Global Agent GMV Volume ($ Billions)</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: #18181b; background: #e4e4e7; padding: 1px 5px; border-radius: 2px;">2028: Enterprise Protocol Inflection</span>
               </div>
               
               <svg viewBox="0 0 460 142" style="width: 100%; height: auto; display: block;">
                 <!-- Dotted Grid lines -->
-                <line x1="38" y1="18" x2="450" y2="18" stroke="#e5e7eb" stroke-dasharray="2 2" stroke-width="1" />
-                <text x="32" y="21" font-size="7.2" fill="#9ca3af" text-anchor="end" font-family="Inter, sans-serif">$1,500B</text>
+                <line x1="38" y1="18" x2="450" y2="18" stroke="#e4e4e7" stroke-dasharray="2 2" stroke-width="1" />
+                <text x="32" y="21" font-size="7.2" fill="#a1a1aa" text-anchor="end" font-family="Inter, sans-serif">$1,500B</text>
 
-                <line x1="38" y1="52" x2="450" y2="52" stroke="#e5e7eb" stroke-dasharray="2 2" stroke-width="1" />
-                <text x="32" y="55" font-size="7.2" fill="#9ca3af" text-anchor="end" font-family="Inter, sans-serif">$1,000B</text>
+                <line x1="38" y1="52" x2="450" y2="52" stroke="#e4e4e7" stroke-dasharray="2 2" stroke-width="1" />
+                <text x="32" y="55" font-size="7.2" fill="#a1a1aa" text-anchor="end" font-family="Inter, sans-serif">$1,000B</text>
 
-                <line x1="38" y1="86" x2="450" y2="86" stroke="#e5e7eb" stroke-dasharray="2 2" stroke-width="1" />
-                <text x="32" y="89" font-size="7.2" fill="#9ca3af" text-anchor="end" font-family="Inter, sans-serif">$500B</text>
+                <line x1="38" y1="86" x2="450" y2="86" stroke="#e4e4e7" stroke-dasharray="2 2" stroke-width="1" />
+                <text x="32" y="89" font-size="7.2" fill="#a1a1aa" text-anchor="end" font-family="Inter, sans-serif">$500B</text>
 
-                <line x1="38" y1="116" x2="450" y2="116" stroke="#d1d5db" stroke-width="1" />
-                <text x="32" y="119" font-size="7.2" fill="#9ca3af" text-anchor="end" font-family="Inter, sans-serif">$0</text>
+                <line x1="38" y1="116" x2="450" y2="116" stroke="#d4d4d8" stroke-width="1" />
+                <text x="32" y="119" font-size="7.2" fill="#a1a1aa" text-anchor="end" font-family="Inter, sans-serif">$0</text>
 
-                <!-- Bars -->
+                <!-- Grayscale Bars -->
                 <!-- 2025: $12.4B -->
-                <rect x="54" y="114" width="38" height="2" rx="1" fill="#94a3b8" />
-                <text x="73" y="110" font-size="7.2" font-weight="700" fill="#475569" text-anchor="middle" font-family="Inter, sans-serif">$12B</text>
-                <text x="73" y="128" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle" font-family="Inter, sans-serif">2025</text>
-                <text x="73" y="137" font-size="6.3" fill="#64748b" text-anchor="middle" font-family="Inter, sans-serif">0.2% E-Com</text>
+                <rect x="54" y="114" width="38" height="2" rx="1" fill="#d4d4d8" />
+                <text x="73" y="110" font-size="7.2" font-weight="700" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">$12B</text>
+                <text x="73" y="128" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">2025</text>
+                <text x="73" y="137" font-size="6.3" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">0.2% E-Com</text>
 
                 <!-- 2026E: $41.2B -->
-                <rect x="122" y="112" width="38" height="4" rx="1" fill="#94a3b8" />
-                <text x="141" y="108" font-size="7.2" font-weight="700" fill="#475569" text-anchor="middle" font-family="Inter, sans-serif">$41B</text>
-                <text x="141" y="128" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle" font-family="Inter, sans-serif">2026E</text>
-                <text x="141" y="137" font-size="6.3" fill="#64748b" text-anchor="middle" font-family="Inter, sans-serif">0.7% E-Com</text>
+                <rect x="122" y="112" width="38" height="4" rx="1" fill="#a1a1aa" />
+                <text x="141" y="108" font-size="7.2" font-weight="700" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">$41B</text>
+                <text x="141" y="128" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">2026E</text>
+                <text x="141" y="137" font-size="6.3" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">0.7% E-Com</text>
 
                 <!-- 2027E: $165.0B -->
-                <rect x="190" y="102" width="38" height="14" rx="1" fill="#60a5fa" />
-                <text x="209" y="97" font-size="7.2" font-weight="700" fill="#1d4ed8" text-anchor="middle" font-family="Inter, sans-serif">$165B</text>
-                <text x="209" y="128" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle" font-family="Inter, sans-serif">2027E</text>
-                <text x="209" y="137" font-size="6.3" fill="#64748b" text-anchor="middle" font-family="Inter, sans-serif">2.4% E-Com</text>
+                <rect x="190" y="102" width="38" height="14" rx="1" fill="#71717a" />
+                <text x="209" y="97" font-size="7.2" font-weight="700" fill="#27272a" text-anchor="middle" font-family="Inter, sans-serif">$165B</text>
+                <text x="209" y="128" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">2027E</text>
+                <text x="209" y="137" font-size="6.3" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">2.4% E-Com</text>
 
                 <!-- 2028E: $480.0B (Inflection!) -->
-                <rect x="258" y="76" width="38" height="40" rx="2" fill="#2563eb" />
-                <text x="277" y="70" font-size="7.5" font-weight="800" fill="#1d4ed8" text-anchor="middle" font-family="Inter, sans-serif">$480B</text>
-                <text x="277" y="128" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle" font-family="Inter, sans-serif">2028E</text>
-                <text x="277" y="137" font-size="6.3" font-weight="700" fill="#2563eb" text-anchor="middle" font-family="Inter, sans-serif">6.1% E-Com</text>
+                <rect x="258" y="76" width="38" height="40" rx="2" fill="#3f3f46" />
+                <text x="277" y="70" font-size="7.5" font-weight="800" fill="#09090b" text-anchor="middle" font-family="Inter, sans-serif">$480B</text>
+                <text x="277" y="128" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">2028E</text>
+                <text x="277" y="137" font-size="6.3" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">6.1% E-Com</text>
 
                 <!-- 2029E: $920.0B -->
-                <rect x="326" y="42" width="38" height="74" rx="2" fill="#1d4ed8" />
-                <text x="345" y="36" font-size="7.5" font-weight="800" fill="#1e3a8a" text-anchor="middle" font-family="Inter, sans-serif">$920B</text>
-                <text x="345" y="128" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle" font-family="Inter, sans-serif">2029E</text>
-                <text x="345" y="137" font-size="6.3" fill="#64748b" text-anchor="middle" font-family="Inter, sans-serif">10.3% E-Com</text>
+                <rect x="326" y="42" width="38" height="74" rx="2" fill="#27272a" />
+                <text x="345" y="36" font-size="7.5" font-weight="800" fill="#09090b" text-anchor="middle" font-family="Inter, sans-serif">$920B</text>
+                <text x="345" y="128" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle" font-family="Inter, sans-serif">2029E</text>
+                <text x="345" y="137" font-size="6.3" fill="#71717a" text-anchor="middle" font-family="Inter, sans-serif">10.3% E-Com</text>
 
                 <!-- 2030E: $1,450.0B -->
-                <rect x="394" y="12" width="38" height="104" rx="2" fill="#0038ff" />
-                <text x="413" y="7" font-size="8" font-weight="800" fill="#0038ff" text-anchor="middle" font-family="Inter, sans-serif">$1,450B</text>
-                <text x="413" y="128" font-size="7.2" font-weight="800" fill="#0038ff" text-anchor="middle" font-family="Inter, sans-serif">2030E</text>
-                <text x="413" y="137" font-size="6.3" font-weight="700" fill="#0038ff" text-anchor="middle" font-family="Inter, sans-serif">14.8% E-Com</text>
+                <rect x="394" y="12" width="38" height="104" rx="2" fill="#09090b" />
+                <text x="413" y="7" font-size="8" font-weight="800" fill="#09090b" text-anchor="middle" font-family="Inter, sans-serif">$1,450B</text>
+                <text x="413" y="128" font-size="7.2" font-weight="800" fill="#09090b" text-anchor="middle" font-family="Inter, sans-serif">2030E</text>
+                <text x="413" y="137" font-size="6.3" font-weight="700" fill="#09090b" text-anchor="middle" font-family="Inter, sans-serif">14.8% E-Com</text>
 
                 <!-- Inflection Indicator Line -->
-                <line x1="277" y1="28" x2="277" y2="65" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="2 2" />
-                <circle cx="277" cy="71" r="2.5" fill="#dc2626" />
+                <line x1="277" y1="28" x2="277" y2="65" stroke="#71717a" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="277" cy="71" r="2.5" fill="#18181b" />
               </svg>
             </div>
 
-            <!-- Catalyst Strip -->
+            <!-- Monochrome Catalyst Strip -->
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 3px;">
               <div style="background: var(--paper-subtle); border: 1px solid var(--border); border-radius: 3px; padding: 4px 5px;">
                 <div style="font-size: 7px; font-weight: 800; color: var(--ink-secondary); text-transform: uppercase;">2025-2026: Incubation</div>
                 <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Headless DOM scraping & virtual cards (Lithic, Stripe).</div>
               </div>
-              <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 3px; padding: 4px 5px;">
-                <div style="font-size: 7px; font-weight: 800; color: var(--blue); text-transform: uppercase;">2028: Inflection</div>
-                <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Standardized protocols (UCP, TAP) & merchant APIs deploy.</div>
+              <div style="background: #18181b; border: 1px solid #18181b; border-radius: 3px; padding: 4px 5px;">
+                <div style="font-size: 7px; font-weight: 800; color: #ffffff; text-transform: uppercase;">2028: Inflection</div>
+                <div style="font-size: 7.2px; color: #e4e4e7; margin-top: 1px; line-height: 1.3;">Standardized protocols (UCP, TAP) & merchant APIs deploy.</div>
               </div>
               <div style="background: var(--paper-subtle); border: 1px solid var(--border); border-radius: 3px; padding: 4px 5px;">
                 <div style="font-size: 7px; font-weight: 800; color: var(--ink-secondary); text-transform: uppercase;">2030: Scale</div>
@@ -241,7 +242,7 @@ export async function generateReport() {
             <strong>Enterprise Integration Latency & Orchestration Overhead:</strong> Compounding latency across the agentic execution loop poses severe operational challenges for real-time commerce. When an autonomous agent navigates a transaction across frontier LLM reasoning (500 to 2,500ms), catalog MCP querying (20 to 100ms), inventory availability webhooks, and payment validation (100 to 400ms), end-to-end transaction latency routinely exceeds 5 to 10 seconds. In high-velocity checkout environments where inventory reserves expire rapidly, protocol serialization efficiency and deterministic RPC endpoints become decisive competitive determinants.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Architectural Imperative for Platform Engineers:</strong>
             Relying on headless browser DOM wrappers to interact with legacy storefronts introduces an estimated 18% to 24% failure rate through layout shifts and bot blocks. Long-term platform viability requires native Agent Gateways exposing structured JSON-LD feeds and cryptographic payment verification.
           </div>
@@ -253,46 +254,46 @@ export async function generateReport() {
             <div class="exhibit-title">The 7-Layer Agentic Commerce Market Map & Ecosystem Players</div>
             <div class="exhibit-subtitle">Functional taxonomy, operational latency, and leading commercial participants across the value chain.</div>
 
-            <!-- Visual 7-Layer Stack Architecture Component -->
+            <!-- Monochrome 7-Layer Stack Architecture Component -->
             <div class="stack-list">
-              <div class="stack-layer-card" style="border-left: 3px solid #0038ff;">
+              <div class="stack-layer-card" style="border-left: 3px solid #09090b;">
                 <span class="stack-layer-badge">L1</span>
                 <span class="stack-layer-title">AI Frontends & User Intent</span>
                 <span class="stack-layer-latency">500-2500ms</span>
                 <span class="stack-layer-players">OpenAI, Google, Claude, Perplexity</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #2563eb;">
+              <div class="stack-layer-card" style="border-left: 3px solid #18181b;">
                 <span class="stack-layer-badge">L2</span>
                 <span class="stack-layer-title">Agent Orchestration Frameworks</span>
                 <span class="stack-layer-latency">200-800ms</span>
                 <span class="stack-layer-players">LangGraph, CrewAI, AutoGPT, LlamaIndex</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #3b82f6;">
+              <div class="stack-layer-card" style="border-left: 3px solid #27272a;">
                 <span class="stack-layer-badge">L3</span>
                 <span class="stack-layer-title">Protocols & Discovery Standards</span>
                 <span class="stack-layer-latency">50-200ms</span>
                 <span class="stack-layer-players">Google UCP, Stripe ACP, Visa TAP, MCP</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #60a5fa;">
+              <div class="stack-layer-card" style="border-left: 3px solid #3f3f46;">
                 <span class="stack-layer-badge">L4</span>
                 <span class="stack-layer-title">Semantic Merchant Endpoints & PIM</span>
                 <span class="stack-layer-latency">20-100ms</span>
                 <span class="stack-layer-players">Shopify, commercetools, Salesforce</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #f59e0b;">
-                <span class="stack-layer-badge" style="background: #d97706;">L5</span>
+              <div class="stack-layer-card" style="border-left: 3px solid #52525b;">
+                <span class="stack-layer-badge" style="background: #3f3f46;">L5</span>
                 <span class="stack-layer-title">Headless Execution & Checkout</span>
-                <span class="stack-layer-latency" style="color: #d97706; background: #fef3c7; border-color: #fde68a;">1000-4000ms</span>
+                <span class="stack-layer-latency">1000-4000ms</span>
                 <span class="stack-layer-players">Rye, Induced AI, CartAI, AutoCheckout</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #10b981;">
-                <span class="stack-layer-badge" style="background: #059669;">L6</span>
+              <div class="stack-layer-card" style="border-left: 3px solid #71717a;">
+                <span class="stack-layer-badge" style="background: #27272a;">L6</span>
                 <span class="stack-layer-title">Payment Rails & Card Issuance</span>
                 <span class="stack-layer-latency">100-400ms</span>
                 <span class="stack-layer-players">Visa TAP, Mastercard, Stripe, Lithic</span>
               </div>
-              <div class="stack-layer-card" style="border-left: 3px solid #6b7280;">
-                <span class="stack-layer-badge" style="background: #4b5563;">L7</span>
+              <div class="stack-layer-card" style="border-left: 3px solid #a1a1aa;">
+                <span class="stack-layer-badge" style="background: #18181b;">L7</span>
                 <span class="stack-layer-title">Identity, Hardware & Attestation</span>
                 <span class="stack-layer-latency">10-50ms</span>
                 <span class="stack-layer-players">FIDO2 / WebAuthn, Apple Secure Enclave</span>
@@ -354,7 +355,7 @@ export async function generateReport() {
             <strong>Interoperability Dilemma & Merchant Lock-in:</strong> Retailers face a high-stakes architectural fork. Adopting proprietary protocols like ACP accelerates immediate distribution across ChatGPT users but surrenders customer data and routing autonomy. Conversely, deploying open standards like UCP and MCP preserves merchant independence but requires significant internal engineering to construct real-time semantic API gateways.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Technical Recommendation for Enterprise Architects:</strong>
             Organizations should avoid proprietary single-platform protocol lock-in. Implement a protocol-agnostic abstraction layer exposing Anthropic MCP for semantic inventory discovery while routing settlement via standardized OAuth2/Passkey tokens.
           </div>
@@ -382,35 +383,35 @@ export async function generateReport() {
                   <td>Google, Shopify, Walmart</td>
                   <td>Open federated catalog discovery & cart routing.</td>
                   <td>OAuth 2.0 / Passkey</td>
-                  <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Open Spec</span></td>
+                  <td><span style="font-size: 7.2px; background: #f4f4f5; color: #18181b; border: 1px solid #e4e4e7; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Open Spec</span></td>
                 </tr>
                 <tr>
                   <td><strong>ACP</strong></td>
                   <td>OpenAI, Stripe</td>
                   <td>Low-latency agent-to-merchant instant checkout.</td>
                   <td>Stripe Link / Token</td>
-                  <td><span style="font-size: 7.2px; background: #fef3c7; color: #b45309; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Proprietary</span></td>
+                  <td><span style="font-size: 7.2px; background: #f4f4f5; color: #52525b; border: 1px solid #e4e4e7; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Proprietary</span></td>
                 </tr>
                 <tr>
                   <td><strong>AP2</strong></td>
                   <td>Coinbase, Base</td>
                   <td>Decentralized micropayments & smart escrow.</td>
                   <td>EIP-712 / Secp256k1</td>
-                  <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Draft</span></td>
+                  <td><span style="font-size: 7.2px; background: #ffffff; color: #71717a; border: 1px solid #e4e4e7; padding: 1px 4px; border-radius: 2px; font-weight: 600;">Draft</span></td>
                 </tr>
                 <tr>
                   <td><strong>Visa TAP</strong></td>
                   <td>Visa, Global Banks</td>
                   <td>Delegated identity, spending limits & card tokens.</td>
                   <td>Cryptographic Passkey</td>
-                  <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Enterprise</span></td>
+                  <td><span style="font-size: 7.2px; background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Enterprise</span></td>
                 </tr>
                 <tr>
                   <td><strong>MCP</strong></td>
                   <td>Anthropic, Open-source</td>
                   <td>Universal tool calling & contextual enterprise data.</td>
                   <td>JSON-RPC / mTLS</td>
-                  <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Production</span></td>
+                  <td><span style="font-size: 7.2px; background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Production</span></td>
                 </tr>
               </tbody>
             </table>
@@ -468,7 +469,7 @@ export async function generateReport() {
             <strong>Margin Compression in Traditional Payment Processing:</strong> The transition to agentic commerce is poised to restructure payment acquiring economics. When transactions transition from consumer credit cards (bearing 2.2% to 3.5% interchange fees funded by rewards programs) to pre-authorized cryptographic agent tokens and B2B corporate rails, interchange take-rates will compress toward lower wholesale cost floors. Acquirers that differentiate through cryptographic validation APIs and automated risk scoring will capture premium SaaS margins, while simple interchange pass-through providers will suffer fee erosion.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Strategic Financial Rail Mandate:</strong> Fintech leadership must recognize that programmatic virtual cards are a transitional bridge with a 2 to 3 year operational window. Institutions must begin active pilot integrations with Visa TAP and Mastercard Agentic Rails to secure direct settlement access before virtual card margins collapse.
           </div>
         </div>
@@ -479,9 +480,9 @@ export async function generateReport() {
             <div class="exhibit-title">Evolution of Agentic Payment Rails & Settlement Mechanics</div>
             <div class="exhibit-subtitle">Comparison of legacy card-not-present proxies, virtual issuance, and native cryptographic token rails.</div>
 
-            <!-- Visual Bar Chart: Authorization Decline Rates Across Payment Rails -->
+            <!-- Grayscale Bar Chart: Authorization Decline Rates Across Payment Rails -->
             <div class="chart-container" style="padding: 7px 10px; margin: 3px 0;">
-              <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 5px;">
+              <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-heading); margin-bottom: 5px;">
                 Authorization Failure & Decline Rates Across Payment Rails
               </div>
 
@@ -490,10 +491,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>1. Card-Not-Present (Web Scraper / DOM)</span>
-                    <span style="color: #dc2626; font-weight: 700;">28.6% Decline</span>
+                    <span style="color: #09090b; font-weight: 700;">28.6% Decline</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 95%; background: #ef4444;">28.6% (Bot blockers & DOM shifts)</div>
+                    <div class="bar-chart-fill" style="width: 95%; background: #09090b;">28.6% (Bot blockers & DOM shifts)</div>
                   </div>
                 </div>
 
@@ -501,10 +502,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>2. Stored Credential (Server API Proxy)</span>
-                    <span style="color: #ea580c; font-weight: 700;">14.2% Decline</span>
+                    <span style="color: #27272a; font-weight: 700;">14.2% Decline</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 47%; background: #f97316;">14.2% (Risk scoring flags)</div>
+                    <div class="bar-chart-fill" style="width: 47%; background: #3f3f46;">14.2% (Risk scoring flags)</div>
                   </div>
                 </div>
 
@@ -512,10 +513,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>3. Programmatic Virtual Cards (JIT Issued)</span>
-                    <span style="color: #d97706; font-weight: 700;">4.1% Decline</span>
+                    <span style="color: #3f3f46; font-weight: 700;">4.1% Decline</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 14%; background: #f59e0b;">4.1%</div>
+                    <div class="bar-chart-fill" style="width: 14%; background: #52525b;">4.1%</div>
                   </div>
                 </div>
 
@@ -523,10 +524,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>4. Delegated Scheme Tokens (Visa TAP / Mastercard Agent)</span>
-                    <span style="color: #16a34a; font-weight: 700;">1.8% Decline</span>
+                    <span style="color: #52525b; font-weight: 700;">1.8% Decline</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 6%; background: #22c55e;">1.8%</div>
+                    <div class="bar-chart-fill" style="width: 6%; background: #71717a;">1.8%</div>
                   </div>
                 </div>
 
@@ -534,10 +535,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>5. Native Cryptographic Settlement (AP2 / USDC)</span>
-                    <span style="color: #0038ff; font-weight: 700;">0.3% Decline</span>
+                    <span style="color: #18181b; font-weight: 700;">0.3% Decline</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 2.5%; min-width: 22px; background: #0038ff;">0.3%</div>
+                    <div class="bar-chart-fill" style="width: 2.5%; min-width: 22px; background: #a1a1aa; color: #18181b;">0.3%</div>
                   </div>
                 </div>
               </div>
@@ -604,7 +605,7 @@ export async function generateReport() {
             <strong>Specialized Fine-Tuning vs Raw Generalist Reasoning:</strong> Benchmark telemetry reveals that raw parameter scale alone does not solve commercial failure modes. Generalized frontier models frequently fail when interpreting domain-specific commerce taxonomy (such as electrical voltage ratings, fabric blend durability, or installation clearances). Autonomous shopping platforms that deploy domain-fine-tuned agentic orchestrators paired with deterministic schema validators outperform raw 400B+ parameter generalist models, cutting catastrophic constraint errors by over 50% while reducing inference token costs.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Engineering Remediation Mandate:</strong> Agent developers cannot rely on probabilistic LLM generation for final transaction execution. Systems must implement deterministic validation layers that cross-reference extracted product specifications against user constraints using structured SQL/JSON schemas prior to dispatching payment authorizations.
           </div>
         </div>
@@ -615,11 +616,11 @@ export async function generateReport() {
             <div class="exhibit-title">Frontier Model Performance on Commercial Shopping Benchmarks</div>
             <div class="exhibit-subtitle">Evaluation of 22 models across multi-turn constraint episodes, dimensional compliance, and search depth.</div>
 
-            <!-- Visual Horizontal Bar Ranking Chart with 57.2% Industry Baseline -->
+            <!-- Monochrome Horizontal Bar Ranking Chart with 57.2% Industry Baseline -->
             <div class="chart-container" style="padding: 7px 10px; margin: 3px 0; position: relative;">
               <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
-                <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">Visa Benchmark: Shopping Success Rate</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">Industry Average: 57.2%</span>
+                <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-heading);">Visa Benchmark: Shopping Success Rate</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: #18181b; background: #e4e4e7; padding: 1px 5px; border-radius: 2px;">Industry Average: 57.2%</span>
               </div>
 
               <div class="bar-chart-list">
@@ -627,10 +628,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#1 Gemini 4 Argon / Muse Wonder</span>
-                    <span style="color: #0038ff; font-weight: 700;">82.0%</span>
+                    <span style="color: #09090b; font-weight: 700;">82.0%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 82%; background: #0038ff;">82.0% (Constraint: 79.4%)</div>
+                    <div class="bar-chart-fill" style="width: 82%; background: #09090b;">82.0% (Constraint: 79.4%)</div>
                   </div>
                 </div>
 
@@ -638,10 +639,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#2 Claude 3.5 Sonnet</span>
-                    <span style="color: #1d4ed8; font-weight: 700;">78.4%</span>
+                    <span style="color: #18181b; font-weight: 700;">78.4%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 78.4%; background: #2563eb;">78.4% (Constraint: 76.2%)</div>
+                    <div class="bar-chart-fill" style="width: 78.4%; background: #18181b;">78.4% (Constraint: 76.2%)</div>
                   </div>
                 </div>
 
@@ -649,10 +650,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#3 GPT-4o</span>
-                    <span style="color: #2563eb; font-weight: 700;">74.6%</span>
+                    <span style="color: #27272a; font-weight: 700;">74.6%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 74.6%; background: #3b82f6;">74.6% (Constraint: 71.8%)</div>
+                    <div class="bar-chart-fill" style="width: 74.6%; background: #27272a;">74.6% (Constraint: 71.8%)</div>
                   </div>
                 </div>
 
@@ -660,10 +661,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#4 DeepSeek V3</span>
-                    <span style="color: #475569; font-weight: 700;">66.2%</span>
+                    <span style="color: #3f3f46; font-weight: 700;">66.2%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 66.2%; background: #64748b;">66.2%</div>
+                    <div class="bar-chart-fill" style="width: 66.2%; background: #52525b;">66.2%</div>
                   </div>
                 </div>
 
@@ -671,26 +672,26 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#5 Llama 3.3 70B</span>
-                    <span style="color: #475569; font-weight: 700;">58.0%</span>
+                    <span style="color: #52525b; font-weight: 700;">58.0%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 58%; background: #94a3b8;">58.0%</div>
+                    <div class="bar-chart-fill" style="width: 58%; background: #71717a;">58.0%</div>
                   </div>
                 </div>
 
                 <!-- Reference Line: 57.2% Industry Baseline -->
-                <div style="border-top: 1.5px dashed #dc2626; margin: 2px 0 3px 0; position: relative;">
-                  <span style="position: absolute; right: 0; top: -7px; font-size: 6.8px; font-weight: 700; color: #dc2626; background: #fff; padding: 0 4px;">Baseline Threshold: 57.2%</span>
+                <div style="border-top: 1.5px dashed #71717a; margin: 2px 0 3px 0; position: relative;">
+                  <span style="position: absolute; right: 0; top: -7px; font-size: 6.8px; font-weight: 700; color: #18181b; background: #fff; padding: 0 4px;">Baseline Threshold: 57.2%</span>
                 </div>
 
                 <!-- Model 6 -->
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#6 Mistral Large 2</span>
-                    <span style="color: #64748b; font-weight: 600;">52.4%</span>
+                    <span style="color: #71717a; font-weight: 600;">52.4%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 52.4%; background: #cbd5e1; color: #334155;">52.4%</div>
+                    <div class="bar-chart-fill" style="width: 52.4%; background: #a1a1aa; color: #18181b;">52.4%</div>
                   </div>
                 </div>
 
@@ -698,10 +699,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#7 Qwen 2.5 72B</span>
-                    <span style="color: #64748b; font-weight: 600;">49.1%</span>
+                    <span style="color: #71717a; font-weight: 600;">49.1%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 49.1%; background: #e2e8f0; color: #334155;">49.1%</div>
+                    <div class="bar-chart-fill" style="width: 49.1%; background: #d4d4d8; color: #18181b;">49.1%</div>
                   </div>
                 </div>
 
@@ -709,10 +710,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>#8 Heuristic Rule-Engine Baseline</span>
-                    <span style="color: #94a3b8; font-weight: 600;">29.4%</span>
+                    <span style="color: #71717a; font-weight: 600;">29.4%</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 29.4%; background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1;">29.4%</div>
+                    <div class="bar-chart-fill" style="width: 29.4%; background: #f4f4f5; color: #71717a; border: 1px solid #e4e4e7;">29.4%</div>
                   </div>
                 </div>
               </div>
@@ -773,7 +774,7 @@ export async function generateReport() {
             <strong>The Sybil Inventory Starvation Threat:</strong> Malicious competitors leverage coordinated swarms of lightweight agents to lock up finite inventory. By initiating millions of checkout sessions without completing payment, adversaries trigger temporary 15-minute stock holds, effectively rendering high-demand inventory invisible to genuine buyers during flash sales.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>CISO Security Mandate:</strong> E-commerce security teams must transition from binary bot blocking to cryptographically verified agent pass-through. Implement dual-LLM sandboxing for catalog ingestion, enforce 3-minute inventory cart hold timeouts, and require mutual TLS (mTLS) for all programmatic API endpoints.
           </div>
         </div>
@@ -784,9 +785,9 @@ export async function generateReport() {
             <div class="exhibit-title">Agentic Commerce Threat Matrix: Vectors & Architectural Defenses</div>
             <div class="exhibit-subtitle">Classification of critical threat surfaces, exploitation mechanisms, and institutional countermeasures.</div>
 
-            <!-- Visual Threat Vulnerability Bar Chart -->
+            <!-- Grayscale Threat Vulnerability Bar Chart -->
             <div class="chart-container" style="padding: 7px 10px; margin: 3px 0;">
-              <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 5px;">
+              <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-heading); margin-bottom: 5px;">
                 Cybersecurity Threat Surfaces: Attack Rates & Vulnerability Profiles
               </div>
 
@@ -795,10 +796,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>1. WAF False Positives (Legitimate Buying Agents Blocked)</span>
-                    <span style="color: #dc2626; font-weight: 700;">78.4% Occurrence</span>
+                    <span style="color: #09090b; font-weight: 700;">78.4% Occurrence</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 78.4%; background: #ef4444;">78.4% (Cloudflare/Akamai bot traps)</div>
+                    <div class="bar-chart-fill" style="width: 78.4%; background: #09090b;">78.4% (Cloudflare/Akamai bot traps)</div>
                   </div>
                 </div>
 
@@ -806,10 +807,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>2. Indirect Prompt Injection via Catalog Reviews & HTML</span>
-                    <span style="color: #ea580c; font-weight: 700;">27.4% Exploit Rate</span>
+                    <span style="color: #27272a; font-weight: 700;">27.4% Exploit Rate</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 27.4%; background: #f97316;">27.4% Vulnerability</div>
+                    <div class="bar-chart-fill" style="width: 27.4%; background: #27272a;">27.4% Vulnerability</div>
                   </div>
                 </div>
 
@@ -817,10 +818,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>3. Cart Hijacking & Parameter Tampering</span>
-                    <span style="color: #d97706; font-weight: 700;">19.8% Exploit Rate</span>
+                    <span style="color: #3f3f46; font-weight: 700;">19.8% Exploit Rate</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 19.8%; background: #f59e0b;">19.8%</div>
+                    <div class="bar-chart-fill" style="width: 19.8%; background: #52525b;">19.8%</div>
                   </div>
                 </div>
 
@@ -828,10 +829,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>4. SSRF & Internal Inventory Enumeration</span>
-                    <span style="color: #475569; font-weight: 700;">14.2% Attack Surface</span>
+                    <span style="color: #52525b; font-weight: 700;">14.2% Attack Surface</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 14.2%; background: #64748b;">14.2%</div>
+                    <div class="bar-chart-fill" style="width: 14.2%; background: #71717a;">14.2%</div>
                   </div>
                 </div>
 
@@ -839,10 +840,10 @@ export async function generateReport() {
                 <div class="bar-chart-item">
                   <div class="bar-chart-header">
                     <span>5. Sybil Inventory Starvation & Stock Holding</span>
-                    <span style="color: #475569; font-weight: 700;">11.5% Attack Surface</span>
+                    <span style="color: #71717a; font-weight: 700;">11.5% Attack Surface</span>
                   </div>
                   <div class="bar-chart-track">
-                    <div class="bar-chart-fill" style="width: 11.5%; background: #94a3b8;">11.5%</div>
+                    <div class="bar-chart-fill" style="width: 11.5%; background: #a1a1aa; color: #18181b;">11.5%</div>
                   </div>
                 </div>
               </div>
@@ -903,7 +904,7 @@ export async function generateReport() {
             <strong>European Divergence: The EU AI Act and PSD3:</strong> The European Union has adopted a far more prescriptive regulatory posture. The EU AI Act categorizes commercial autonomous decision systems with consumer financial impact under heightened transparency and risk-management obligations. Concurrently, the European Banking Authority's upcoming Payment Services Directive 3 (PSD3) is expected to establish strict statutory limits on delegated algorithmic spending, requiring Strong Customer Authentication (SCA) re-prompts whenever transaction parameters exceed predefined volatility bands.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>General Counsel Legal Directive:</strong> Enterprises operating agentic commerce systems must update Terms of Service to establish clear Agency Delegation Mandates. Define explicit dollar thresholds requiring affirmative human verification, maintain immutable audit logs of agent reasoning chains, and secure cyber-liability riders covering autonomous transaction errors.
           </div>
         </div>
@@ -1006,7 +1007,7 @@ export async function generateReport() {
             <strong>Stage 4: Self-Directing Machine Customers (2030+):</strong> In the terminal maturity stage, autonomous economic entities manage their own capital budgets, balance sheets, and procurement strategies. Enterprise software agents autonomously negotiate multi-vendor contracts, conduct dynamic supplier auctions, arbitrage cloud compute spots, and settle transactions via cryptographic micro-tokens. Here, human management sets macro corporate objectives, while machine customers execute continuous algorithmic trade.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>Chief Digital Officer Strategic Milestone:</strong>
             Enterprises cannot jump directly to Stage 3 or 4 without mastering Stage 2 data hygiene. Retailers must immediately decouple their Product Information Management (PIM) systems from legacy visual templates to expose machine-readable API catalogs before Stage 2 transaction volumes expand.
           </div>
@@ -1018,20 +1019,20 @@ export async function generateReport() {
             <div class="exhibit-title">Gartner Machine Customer Maturity Model & Architecture Stages</div>
             <div class="exhibit-subtitle">Evolution from human-assisted shopping to fully autonomous machine procurement networks.</div>
 
-            <!-- Visual 4-Stage Chevron / Horizontal Process Flow Diagram -->
+            <!-- Monochrome 4-Stage Chevron Grid -->
             <div class="process-grid">
               <!-- Stage 1 -->
               <div class="process-card">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7px; font-weight: 800; background: var(--border); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 1</span>
-                  <span style="font-size: 7.2px; font-weight: 700; color: #16a34a;">68% Adoption</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #e4e4e7; padding: 1px 4px; border-radius: 2px; color: #18181b;">STAGE 1</span>
+                  <span style="font-size: 7.2px; font-weight: 700; color: var(--ink-secondary);">68% Adoption</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); margin-top: 2px;">Bound Assist</div>
-                <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Low</div>
+                <div style="font-size: 7px; color: var(--ink-secondary); font-weight: 600;">Autonomy: Low</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
                   Conversational search; human reviews and executes manual checkout.
                 </div>
-                <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
+                <div style="font-size: 6.8px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
                   <strong>Stack:</strong> REST & Headless DOM
                 </div>
               </div>
@@ -1039,15 +1040,15 @@ export async function generateReport() {
               <!-- Stage 2 -->
               <div class="process-card active">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7px; font-weight: 800; background: var(--blue); padding: 1px 4px; border-radius: 2px; color: white;">STAGE 2</span>
-                  <span style="font-size: 7.2px; font-weight: 700; color: var(--blue);">24% Adoption</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #18181b; padding: 1px 4px; border-radius: 2px; color: white;">STAGE 2</span>
+                  <span style="font-size: 7.2px; font-weight: 800; color: #18181b;">24% Adoption</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); margin-top: 2px;">Governed Execute</div>
-                <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Moderate</div>
+                <div style="font-size: 7px; color: var(--ink-heading); font-weight: 600;">Autonomy: Moderate</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
                   Pre-approved budget; agent autonomously completes single transaction.
                 </div>
-                <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
+                <div style="font-size: 6.8px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
                   <strong>Stack:</strong> MCP, UCP & Virtual Cards
                 </div>
               </div>
@@ -1055,15 +1056,15 @@ export async function generateReport() {
               <!-- Stage 3 -->
               <div class="process-card">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7px; font-weight: 800; background: var(--border); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 3</span>
-                  <span style="font-size: 7.2px; font-weight: 700; color: #d97706;">7% Adoption</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #e4e4e7; padding: 1px 4px; border-radius: 2px; color: #18181b;">STAGE 3</span>
+                  <span style="font-size: 7.2px; font-weight: 700; color: var(--ink-secondary);">7% Adoption</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); margin-top: 2px;">Autonomous Replenish</div>
-                <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: High</div>
+                <div style="font-size: 7px; color: var(--ink-secondary); font-weight: 600;">Autonomy: High</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
                   IoT telemetry triggers re-orders within pre-approved spending envelopes.
                 </div>
-                <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
+                <div style="font-size: 6.8px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
                   <strong>Stack:</strong> IoT, Token Rails & Webhooks
                 </div>
               </div>
@@ -1071,15 +1072,15 @@ export async function generateReport() {
               <!-- Stage 4 -->
               <div class="process-card">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7px; font-weight: 800; background: var(--border); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 4</span>
-                  <span style="font-size: 7.2px; font-weight: 700; color: #dc2626;">1% Adoption</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #e4e4e7; padding: 1px 4px; border-radius: 2px; color: #18181b;">STAGE 4</span>
+                  <span style="font-size: 7.2px; font-weight: 700; color: var(--ink-secondary);">1% Adoption</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); margin-top: 2px;">Machine Customer</div>
-                <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Full</div>
+                <div style="font-size: 7px; color: var(--ink-secondary); font-weight: 600;">Autonomy: Full</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
                   Multi-agent negotiation, algorithmic arbitrage & zero-knowledge settlement.
                 </div>
-                <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
+                <div style="font-size: 6.8px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px; margin-top: 3px;">
                   <strong>Stack:</strong> Smart Contracts & ZK
                 </div>
               </div>
@@ -1134,7 +1135,7 @@ export async function generateReport() {
             <strong>Organizational Resourcing and Governance:</strong> Establishing an Agentic Commerce Taskforce is paramount. Cross-functional teams spanning engineering, product, legal, and payment operations must meet bi-weekly to monitor agent transaction decline rates, evaluate protocol developments, and ensure compliance with evolving FTC and EU algorithmic consumer protection regulations.
           </p>
 
-          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
+          <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
             <strong>The Executive Call to Action:</strong> The window for proactive architectural positioning is narrowing rapidly. By the time autonomous machine customers account for 10% of digital transactions in 2028, market power will be locked in. Retailers and financial institutions that deploy machine-readable infrastructure today will define the commercial terms of the agentic era.
           </div>
         </div>
@@ -1145,53 +1146,53 @@ export async function generateReport() {
             <div class="exhibit-title">24-Month Phased Implementation Roadmap for Brand Retailers & Platforms</div>
             <div class="exhibit-subtitle">Critical workstreams, milestones, executive owners, and quantitative KPIs across the 24-month horizon.</div>
 
-            <!-- Visual Phased Horizontal Roadmap Gantt / Milestone Diagram -->
+            <!-- Monochrome Phased Roadmap Timeline Diagram -->
             <div class="roadmap-list">
               <!-- Phase 1 -->
-              <div class="roadmap-phase" style="border-left: 3px solid #0038ff;">
+              <div class="roadmap-phase" style="border-left: 3px solid #18181b;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                  <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #0038ff; padding: 1.5px 5px; border-radius: 2px;">PHASE 1: MONTHS 0 TO 6</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #18181b; color: #ffffff; padding: 1.5px 5px; border-radius: 2px;">PHASE 1: MONTHS 0 TO 6</span>
                   <span style="font-size: 7px; font-weight: 700; color: var(--ink-secondary);">Owner: VP Digital Architecture</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading);">Foundation & Data Hygiene</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.35; margin-top: 2px;">
                   Deploy public Model Context Protocol (MCP) catalog server; whitelist verified agent mTLS headers; structure full catalog feeds into JSON-LD schemas; implement inventory availability webhooks.
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
                   <span>Key Deliverable: Public MCP Catalog Endpoint</span>
-                  <span style="font-weight: 700; color: #16a34a;">Target KPI: &lt;2% agent block rate</span>
+                  <span style="font-weight: 700; color: var(--ink-heading);">Target KPI: &lt;2% agent block rate</span>
                 </div>
               </div>
 
               <!-- Phase 2 -->
-              <div class="roadmap-phase" style="border-left: 3px solid #2563eb;">
+              <div class="roadmap-phase" style="border-left: 3px solid #52525b;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                  <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #2563eb; padding: 1.5px 5px; border-radius: 2px;">PHASE 2: MONTHS 6 TO 12</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #f4f4f5; color: #18181b; border: 1px solid #e4e4e7; padding: 1.5px 5px; border-radius: 2px;">PHASE 2: MONTHS 6 TO 12</span>
                   <span style="font-size: 7px; font-weight: 700; color: var(--ink-secondary);">Owner: Head of Payments & Checkout</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading);">Protocol Interoperability & Virtual Cards</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.35; margin-top: 2px;">
                   Implement Google UCP and Stripe ACP merchant endpoints; support Just-In-Time (JIT) virtual card settlement; integrate parametric spending limits; configure dual-LLM sandboxing for catalog defense.
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
                   <span>Key Deliverable: Native UCP/ACP Transaction Gateway</span>
-                  <span style="font-weight: 700; color: #2563eb;">Target KPI: &gt;95% virtual card auth rate</span>
+                  <span style="font-weight: 700; color: var(--ink-heading);">Target KPI: &gt;95% virtual card auth rate</span>
                 </div>
               </div>
 
               <!-- Phase 3 -->
-              <div class="roadmap-phase" style="border-left: 3px solid #1d4ed8;">
+              <div class="roadmap-phase" style="border-left: 3px solid #a1a1aa;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                  <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #1d4ed8; padding: 1.5px 5px; border-radius: 2px;">PHASE 3: MONTHS 12 TO 24</span>
+                  <span style="font-size: 7px; font-weight: 800; background: #f4f4f5; color: #18181b; border: 1px solid #e4e4e7; padding: 1.5px 5px; border-radius: 2px;">PHASE 3: MONTHS 12 TO 24</span>
                   <span style="font-size: 7px; font-weight: 700; color: var(--ink-secondary);">Owner: Chief Commercial Officer</span>
                 </div>
                 <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading);">Autonomous Settlement & Machine CRM</div>
                 <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.35; margin-top: 2px;">
                   Deploy zero-knowledge proof tokens (Visa TAP); enable machine customer account portals; implement algorithmic dynamic pricing and real-time volume negotiation for autonomous enterprise buyers.
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--ink-secondary); border-top: 1px solid var(--border-subtle); padding-top: 2px;">
                   <span>Key Deliverable: Dedicated Machine Customer Portal</span>
-                  <span style="font-weight: 700; color: #0038ff;">Target KPI: 15% GMV via autonomous buyers</span>
+                  <span style="font-weight: 700; color: var(--ink-heading);">Target KPI: 15% GMV via autonomous buyers</span>
                 </div>
               </div>
             </div>
@@ -1212,7 +1213,7 @@ export async function generateReport() {
   `);
 
   const outputPath = path.resolve(__dirname, 'The_Business_Value_of_Agentic_Commerce_Notion.pdf');
-  console.log('Compiling Notion Style Industry Report to PDF...');
+  console.log('Compiling Notion Style Industry Report to PDF (Monochrome White/Black/Grey)...');
 
   await renderReportToPdf({
     htmlSpreads: spreads,

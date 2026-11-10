@@ -4,20 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink: #2f3437;
-  --ink-heading: #191919;
-  --ink-secondary: #787774;
+  --ink: #27272a;
+  --ink-heading: #09090b;
+  --ink-secondary: #71717a;
   --paper: #ffffff;
-  --paper-card: #fbfbfa;
-  --paper-subtle: #f7f6f3;
-  --border: #dfdfde;
-  --border-subtle: #ececeb;
-  --blue: #2383e2;
-  --blue-subtle: #ebf5fe;
-  --amber: #d9730d;
-  --green: #448361;
-  --purple: #9065b0;
-  --red: #eb5757;
+  --paper-card: #fafaf9;
+  --paper-subtle: #f4f4f5;
+  --border: #e4e4e7;
+  --border-subtle: #f4f4f5;
+  --accent: #18181b;
+  --accent-subtle: #f4f4f5;
+  --amber: #3f3f46;
+  --green: #27272a;
+  --purple: #18181b;
+  --red: #09090b;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -72,7 +72,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--ink-heading);
 }
 
 .spread-header .doc-topic {
@@ -267,7 +267,7 @@ body {
 
 .bar-fill {
   height: 100%;
-  background: var(--blue);
+  background: var(--ink-heading);
   border-radius: 2px;
 }
 
@@ -282,7 +282,7 @@ body {
 .notion-callout {
   background: var(--paper-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--blue);
+  border-left: 3px solid var(--ink-heading);
   border-radius: 4px;
   padding: 7px 10px;
   font-size: 9px;
@@ -346,7 +346,7 @@ body {
 }
 
 .framework-card.highlight {
-  border-left: 3px solid var(--blue);
+  border-left: 3px solid var(--ink-heading);
 }
 
 .card-title {
@@ -494,7 +494,7 @@ p.report-p strong {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: var(--ink-secondary);
 }
 
 .exhibit-title {
@@ -577,7 +577,7 @@ p.report-p strong {
 }
 .bar-chart-fill {
   height: 100%;
-  background: var(--blue);
+  background: var(--ink-heading);
   border-radius: 1px;
   display: flex;
   align-items: center;
@@ -626,9 +626,9 @@ p.report-p strong {
   font-size: 7px;
   font-weight: 600;
   padding: 1px 4px;
-  background: var(--blue-subtle);
-  color: var(--blue);
-  border: 1px solid #c7d7fe;
+  background: var(--paper-subtle);
+  color: var(--ink);
+  border: 1px solid var(--border);
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -658,8 +658,8 @@ p.report-p strong {
   gap: 2px;
 }
 .process-card.active {
-  border-color: var(--blue);
-  background: #f0f7ff;
+  border-color: var(--ink-heading);
+  background: var(--paper-subtle);
 }
 
 /* 24-Month Roadmap Timeline */

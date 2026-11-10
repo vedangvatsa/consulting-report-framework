@@ -158,7 +158,7 @@ async function handleTest() {
       {
         title: '1. Typography Integrity',
         tag: 'Fonts',
-        tagColor: 'blue',
+        tagColor: 'gray',
         bullets: ['Pure Inter font hierarchy', 'No serif mixing in Notion theme', 'Warm ink #191919 contrast']
       },
       {
@@ -170,7 +170,7 @@ async function handleTest() {
       {
         title: '3. Full-Page Density',
         tag: 'Layout',
-        tagColor: 'blue',
+        tagColor: 'gray',
         bullets: ['Two-tier structural grid', 'Multi-card operational bottom', 'Zero lower-half empty space']
       }
     ], 3),
