@@ -496,7 +496,7 @@ const htmlContent = `<!doctype html>
   <div class="spread">
     <div class="spread-header">
       <span class="topic">Executive Summary</span>
-      <span>Macroeconomic Projections & Market Dynamics</span>
+      <span>How Fast Will AI Shopping Grow?</span>
     </div>
 
     <div class="report-body">
@@ -532,15 +532,15 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 1 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 1.1: Macro Growth Projections</div>
-          <div class="exhibit-title">Global Agentic Commerce GMV & Infrastructure Forecast (2025-2030)</div>
-          <div class="exhibit-subtitle">Estimated market size, transaction volumes, and architectural drivers through the 2028 inflection point.</div>
+          <div class="exhibit-tag">Exhibit 1.1: Market Forecast</div>
+          <div class="exhibit-title">Total Online Purchases Made by AI (2025-2030)</div>
+          <div class="exhibit-subtitle">Expected growth in global spending by AI bots over the next five years.</div>
 
           <!-- Visual SVG Column Growth Chart -->
           <div class="chart-container" style="padding: 7px 10px 5px 10px; margin: 3px 0;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
-              <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">Global Agent GMV Volume ($ Billions)</span>
-              <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">2028: Enterprise Protocol Inflection</span>
+              <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">Total AI Purchases ($ Billions)</span>
+              <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">2028: Fast Growth Begins</span>
             </div>
             
             <svg viewBox="0 0 460 142" style="width: 100%; height: auto; display: block;">
@@ -603,26 +603,26 @@ const htmlContent = `<!doctype html>
           <!-- Catalyst Strip -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 3px;">
             <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--muted); text-transform: uppercase;">2025-2026: Incubation</div>
-              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Headless DOM scraping & virtual cards (Lithic, Stripe).</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--muted); text-transform: uppercase;">2025-2026: Early Stage</div>
+              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Bots click website forms and pay with temporary cards.</div>
             </div>
             <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--blue); text-transform: uppercase;">2028: Inflection</div>
-              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Standardized protocols (UCP, TAP) & merchant APIs deploy.</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--blue); text-transform: uppercase;">2028: Fast Growth</div>
+              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Stores connect directly to AI shopping networks.</div>
             </div>
             <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--muted); text-transform: uppercase;">2030: Scale</div>
-              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Autonomous machine procurement & micro-settlement.</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--muted); text-transform: uppercase;">2030: Mainstream Scale</div>
+              <div style="font-size: 7.2px; color: var(--ink); margin-top: 1px; line-height: 1.3;">Computers handle business buying and instant payments.</div>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Projected GMV Penetration by Sector (2030E):</strong>
+            <strong>Where the Money Will Be Spent (2030):</strong>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 2px; font-size: 7.3px; line-height: 1.35; color: var(--ink-secondary);">
-              <div>- <strong>B2B MRO Supplies:</strong> $480 B (33%)</div>
-              <div>- <strong>Cloud & Digital APIs:</strong> $390 B (27%)</div>
-              <div>- <strong>Travel & Booking:</strong> $320 B (22%)</div>
-              <div>- <strong>Consumer Retail:</strong> $260 B (18%)</div>
+              <div>- <strong>Office & Factory Supplies:</strong> $480 B (33%)</div>
+              <div>- <strong>Software & Cloud Services:</strong> $390 B (27%)</div>
+              <div>- <strong>Flights, Hotels & Travel:</strong> $320 B (22%)</div>
+              <div>- <strong>Everyday Retail (Clothes, Tech):</strong> $260 B (18%)</div>
             </div>
           </div>
 
@@ -645,8 +645,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Ecosystem Architecture</span>
-      <span>The 7-Layer Agentic Commerce Stack & Market Map</span>
+      <span class="topic">Tech Architecture</span>
+      <span>How AI Shopping Works in 7 Steps</span>
     </div>
 
     <div class="report-body">
@@ -682,68 +682,68 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 2 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 2.1: Ecosystem Market Map</div>
-          <div class="exhibit-title">The 7-Layer Agentic Commerce Market Map & Ecosystem Players</div>
-          <div class="exhibit-subtitle">Functional taxonomy, operational latency, and leading commercial participants across the value chain.</div>
+          <div class="exhibit-tag">Exhibit 2.1: Tech Architecture</div>
+          <div class="exhibit-title">The 7-Layer Shopping Stack & Key Companies</div>
+          <div class="exhibit-subtitle">From the chatbot you ask to the bank that approves payment.</div>
 
           <!-- Visual 7-Layer Stack Architecture Component -->
           <div class="stack-list">
             <div class="stack-layer-card" style="border-left: 3px solid #0038ff;">
               <span class="stack-layer-badge">L1</span>
-              <span class="stack-layer-title">AI Frontends & User Intent</span>
+              <span class="stack-layer-title">Chatbots & Shopping Apps</span>
               <span class="stack-layer-latency">500-2500ms</span>
-              <span class="stack-layer-players">OpenAI, Google, Claude, Perplexity</span>
+              <span class="stack-layer-players">OpenAI, Google Gemini, Claude, Perplexity</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #2563eb;">
               <span class="stack-layer-badge">L2</span>
-              <span class="stack-layer-title">Agent Orchestration Frameworks</span>
+              <span class="stack-layer-title">AI Planning & Decision Engines</span>
               <span class="stack-layer-latency">200-800ms</span>
               <span class="stack-layer-players">LangGraph, CrewAI, AutoGPT, LlamaIndex</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #3b82f6;">
               <span class="stack-layer-badge">L3</span>
-              <span class="stack-layer-title">Protocols & Discovery Standards</span>
+              <span class="stack-layer-title">Common Shopping Protocols</span>
               <span class="stack-layer-latency">50-200ms</span>
               <span class="stack-layer-players">Google UCP, Stripe ACP, Visa TAP, MCP</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #60a5fa;">
               <span class="stack-layer-badge">L4</span>
-              <span class="stack-layer-title">Semantic Merchant Endpoints & PIM</span>
+              <span class="stack-layer-title">Store Catalogs & Live Inventory</span>
               <span class="stack-layer-latency">20-100ms</span>
               <span class="stack-layer-players">Shopify, commercetools, Salesforce</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #f59e0b;">
               <span class="stack-layer-badge" style="background: #d97706;">L5</span>
-              <span class="stack-layer-title">Headless Execution & Checkout</span>
+              <span class="stack-layer-title">Automated Checkout & Cart Tools</span>
               <span class="stack-layer-latency" style="color: #d97706; background: #fef3c7; border-color: #fde68a;">1000-4000ms</span>
               <span class="stack-layer-players">Rye, Induced AI, CartAI, AutoCheckout</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #10b981;">
               <span class="stack-layer-badge" style="background: #059669;">L6</span>
-              <span class="stack-layer-title">Payment Rails & Card Issuance</span>
+              <span class="stack-layer-title">Card Issuers & Payment Networks</span>
               <span class="stack-layer-latency">100-400ms</span>
-              <span class="stack-layer-players">Visa TAP, Mastercard, Stripe, Lithic</span>
+              <span class="stack-layer-players">Visa, Mastercard, Stripe, Lithic</span>
             </div>
             <div class="stack-layer-card" style="border-left: 3px solid #6b7280;">
               <span class="stack-layer-badge" style="background: #4b5563;">L7</span>
-              <span class="stack-layer-title">Identity, Hardware & Attestation</span>
+              <span class="stack-layer-title">Passkeys, Fingerprint & Fraud Defense</span>
               <span class="stack-layer-latency">10-50ms</span>
-              <span class="stack-layer-players">FIDO2 / WebAuthn, Apple Secure Enclave</span>
+              <span class="stack-layer-players">Apple Secure Enclave, FIDO2, WebAuthn</span>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Value Accrual & Margin Dynamics Across the 7 Layers:</strong>
+            <strong>Who Makes the Money in AI Shopping:</strong>
             <div style="margin-top: 2px; font-size: 7.2px; line-height: 1.35; color: var(--ink-secondary);">
-              - <strong>Layer 1 (AI Frontends):</strong> Captures consumer intent & subscription revenues; exercises routing power.<br>
-              - <strong>Layers 2 & 3 (Protocols & Rails):</strong> High-defensibility infrastructure commanding transaction interchange.<br>
-              - <strong>Layers 4 & 5 (Issuance & Exec):</strong> Transitional middleware facing margin compression as merchants deploy APIs.<br>
-              - <strong>Layers 6 & 7 (Payment & Trust):</strong> Mission-critical enterprise software commanding premium SaaS multiples.
+              - <strong>Layer 1 (Chatbots & Apps):</strong> They own the customer and decide which store to recommend.<br>
+              - <strong>Layers 2 & 3 (Rules & Networks):</strong> Take a small fee on every completed transaction.<br>
+              - <strong>Layers 4 & 5 (Checkout Tools):</strong> Temporary tools that make less money once stores connect directly.<br>
+              - <strong>Layers 6 & 7 (Store Catalogs & Security):</strong> Essential monthly software stores pay for to prevent fraud.
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Architectural Bottleneck:</strong> The industry currently relies on Layers 4 and 5 (Virtual Cards + Headless Scrapers) as a transitional bridge. However, this introduces 18% to 24% card decline rates and DOM breakage. Direct integration between Layer 2 Protocols and Layer 6 Payment Rails eliminates this friction.
+            <strong>The Big Challenge Today:</strong> Most store websites aren't built for AI yet, so bots have to click buttons and use temporary credit cards. This causes nearly 1 out of 5 orders to fail. Once stores connect directly to AI shopping rules, orders will go through smoothly.
           </div>
 
           <div class="exhibit-source-note">
@@ -765,8 +765,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Standards & Interoperability</span>
-      <span>Protocol Taxonomy: UCP vs ACP vs AP2 vs TAP vs MCP</span>
+      <span class="topic">Shopping Protocols</span>
+      <span>Comparing the 5 Main Protocols: UCP, ACP, AP2, TAP, MCP</span>
     </div>
 
     <div class="report-body">
@@ -803,16 +803,16 @@ const htmlContent = `<!doctype html>
       <div class="report-exhibit-col">
         <div class="exhibit-container">
           <div class="exhibit-tag">Exhibit 3.1: Protocol Comparison</div>
-          <div class="exhibit-title">Comparative Analysis of Agentic Commerce Protocols & Standards</div>
-          <div class="exhibit-subtitle">Architectural focus, authorization mechanisms, payload structures, and institutional backers.</div>
+          <div class="exhibit-title">Comparing the 5 Main AI Shopping Protocols</div>
+          <div class="exhibit-subtitle">How top tech companies let AI search store shelves and checkout.</div>
 
           <table class="report-table" style="table-layout: fixed;">
             <thead>
               <tr>
                 <th style="width: 14%;">Protocol</th>
-                <th style="width: 20%;">Primary Sponsor</th>
-                <th style="width: 27%;">Core Focus</th>
-                <th style="width: 21%;">Auth Mechanism</th>
+                <th style="width: 20%;">Primary Backer</th>
+                <th style="width: 27%;">What It Does</th>
+                <th style="width: 21%;">Payment Approval</th>
                 <th style="width: 18%;">Status</th>
               </tr>
             </thead>
@@ -820,51 +820,51 @@ const htmlContent = `<!doctype html>
               <tr>
                 <td><strong>UCP</strong></td>
                 <td>Google, Shopify, Walmart</td>
-                <td>Open federated catalog discovery & cart routing.</td>
-                <td>OAuth 2.0 / Passkey</td>
-                <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Open Spec</span></td>
+                <td>Open search and cart checkout across any store.</td>
+                <td>Phone Passkey / OAuth</td>
+                <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Open Standard</span></td>
               </tr>
               <tr>
                 <td><strong>ACP</strong></td>
                 <td>OpenAI, Stripe</td>
-                <td>Low-latency agent-to-merchant instant checkout.</td>
-                <td>Stripe Link / Token</td>
-                <td><span style="font-size: 7.2px; background: #fef3c7; color: #b45309; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Proprietary</span></td>
+                <td>Instant one-click checkout inside ChatGPT.</td>
+                <td>Saved Card Token</td>
+                <td><span style="font-size: 7.2px; background: #fef3c7; color: #b45309; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Private / Closed</span></td>
               </tr>
               <tr>
                 <td><strong>AP2</strong></td>
                 <td>Coinbase, Base</td>
-                <td>Decentralized micropayments & smart escrow.</td>
-                <td>EIP-712 / Secp256k1</td>
-                <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Draft</span></td>
+                <td>Tiny, instant payments using digital dollars.</td>
+                <td>Crypto Wallet Key</td>
+                <td><span style="font-size: 7.2px; background: #eff6ff; color: #1d4ed8; padding: 1px 4px; border-radius: 2px; font-weight: 700;">In Testing</span></td>
               </tr>
               <tr>
                 <td><strong>Visa TAP</strong></td>
                 <td>Visa, Global Banks</td>
-                <td>Delegated identity, spending limits & card tokens.</td>
-                <td>Cryptographic Passkey</td>
-                <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Enterprise</span></td>
+                <td>Sets spending limits on bank tokens.</td>
+                <td>Bank Digital Passkey</td>
+                <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Ready for Banks</span></td>
               </tr>
               <tr>
                 <td><strong>MCP</strong></td>
                 <td>Anthropic, Open-source</td>
-                <td>Universal tool calling & contextual enterprise data.</td>
-                <td>JSON-RPC / mTLS</td>
-                <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Production</span></td>
+                <td>Lets AI read live stock and store prices.</td>
+                <td>Direct Secure Link</td>
+                <td><span style="font-size: 7.2px; background: #dcfce7; color: #15803d; padding: 1px 4px; border-radius: 2px; font-weight: 700;">Live & In Use</span></td>
               </tr>
             </tbody>
           </table>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Architectural Divergence: Open Web vs Walled Gardens:</strong>
+            <strong>Open Systems vs. Closed Apps:</strong>
             <div style="font-size: 7.3px; line-height: 1.35; color: var(--ink-secondary); margin-top: 2px;">
-              - <strong>Open Ecosystem (UCP + MCP):</strong> Merchants maintain direct customer relationship, control catalog indexing, and retain pricing sovereignty.<br>
-              - <strong>Closed Ecosystem (ACP):</strong> AI platform aggregates consumer checkout; merchant is relegated to a passive supplier in an opaque auction.
+              - <strong>Open Tools (UCP + MCP):</strong> Stores keep direct relationships with buyers and control their own prices.<br>
+              - <strong>Closed Tools (ACP):</strong> The AI app handles the entire checkout, turning stores into background suppliers.
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Key Protocol Bottleneck:</strong> Lack of shared cross-platform identity standards. Without unified cryptographic proof of consumer delegation, merchants must authenticate each AI platform independently.
+            <strong>The Missing Link:</strong> There is no single universal login yet. Today, stores have to set up separate accounts and rules for OpenAI, Google, and Apple.
           </div>
 
           <div class="exhibit-source-note">
@@ -886,8 +886,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Financial Infrastructure</span>
-      <span>The Payment Rails Battle: Virtual Cards vs Native Agent Tokens</span>
+      <span class="topic">Payment Rails</span>
+      <span>How AI Bots Pay and Why Old Credit Cards Fail</span>
     </div>
 
     <div class="report-body">
@@ -923,44 +923,44 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 4 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 4.1: Financial Rails Evolution</div>
-          <div class="exhibit-title">Evolution of Agentic Payment Rails & Settlement Mechanics</div>
-          <div class="exhibit-subtitle">Comparison of legacy card-not-present proxies, virtual issuance, and native cryptographic token rails.</div>
+          <div class="exhibit-tag">Exhibit 4.1: Payment Methods</div>
+          <div class="exhibit-title">Why Regular Cards Fail and What Replaces Them</div>
+          <div class="exhibit-subtitle">Comparing order failure rates across 5 different ways AI pays online.</div>
 
           <!-- Visual Bar Chart: Authorization Decline Rates Across Payment Rails -->
           <div class="chart-container" style="padding: 7px 10px; margin: 3px 0;">
             <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 5px;">
-              Authorization Failure & Decline Rates Across Payment Rails
+              Order Failure Rates Across Different Payment Methods
             </div>
 
             <div class="bar-chart-list">
               <!-- Rail 1 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>1. Card-Not-Present (Web Scraper / DOM)</span>
-                  <span style="color: #dc2626; font-weight: 700;">28.6% Decline</span>
+                  <span>1. Automated Web Clicks (Bot fills out website form)</span>
+                  <span style="color: #dc2626; font-weight: 700;">28.6% Failed</span>
                 </div>
                 <div class="bar-chart-track">
-                  <div class="bar-chart-fill" style="width: 95%; background: #ef4444;">28.6% (Bot blockers & DOM shifts)</div>
+                  <div class="bar-chart-fill" style="width: 95%; background: #ef4444;">28.6% (Blocked by store firewalls & CAPTCHAs)</div>
                 </div>
               </div>
 
               <!-- Rail 2 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>2. Stored Credential (Server API Proxy)</span>
-                  <span style="color: #ea580c; font-weight: 700;">14.2% Decline</span>
+                  <span>2. Saved Credit Card on File</span>
+                  <span style="color: #ea580c; font-weight: 700;">14.2% Failed</span>
                 </div>
                 <div class="bar-chart-track">
-                  <div class="bar-chart-fill" style="width: 47%; background: #f97316;">14.2% (Risk scoring flags)</div>
+                  <div class="bar-chart-fill" style="width: 47%; background: #f97316;">14.2% (Flagged by store fraud filters)</div>
                 </div>
               </div>
 
               <!-- Rail 3 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>3. Programmatic Virtual Cards (JIT Issued)</span>
-                  <span style="color: #d97706; font-weight: 700;">4.1% Decline</span>
+                  <span>3. One-Time Virtual Credit Card</span>
+                  <span style="color: #d97706; font-weight: 700;">4.1% Failed</span>
                 </div>
                 <div class="bar-chart-track">
                   <div class="bar-chart-fill" style="width: 14%; background: #f59e0b;">4.1%</div>
@@ -970,8 +970,8 @@ const htmlContent = `<!doctype html>
               <!-- Rail 4 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>4. Delegated Scheme Tokens (Visa TAP / Mastercard Agent)</span>
-                  <span style="color: #16a34a; font-weight: 700;">1.8% Decline</span>
+                  <span>4. Bank Digital Passkey (Visa TAP)</span>
+                  <span style="color: #16a34a; font-weight: 700;">1.8% Failed</span>
                 </div>
                 <div class="bar-chart-track">
                   <div class="bar-chart-fill" style="width: 6%; background: #22c55e;">1.8%</div>
@@ -981,11 +981,11 @@ const htmlContent = `<!doctype html>
               <!-- Rail 5 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>5. Native Cryptographic Settlement (AP2 / USDC)</span>
-                  <span style="color: #0038ff; font-weight: 700;">0.3% Decline</span>
+                  <span>5. Instant Digital Dollars (USDC)</span>
+                  <span style="color: #0038ff; font-weight: 700;">0.3% Failed</span>
                 </div>
                 <div class="bar-chart-track">
-                  <div class="bar-chart-fill" style="width: 2.5%; min-width: 22px; background: #0038ff;">0.3%</div>
+                  <div class="bar-chart-fill" style="width: 2.5%; min-width: 28px; background: #0038ff; font-size: 6.8px; padding: 0;">0.3%</div>
                 </div>
               </div>
             </div>
@@ -994,21 +994,21 @@ const htmlContent = `<!doctype html>
           <!-- Comparative Economics Grid -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 3px;">
             <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Settlement Velocity</div>
-              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Cards take 2-3 days for ACH payout; stablecoins achieve sub-second finality.</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Payout Speed</div>
+              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Cards take 2-3 days to deposit. Digital dollars settle in under 2 seconds.</div>
             </div>
             <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Unit Economics</div>
-              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Interchange averages $0.30 + 2.9%; micro-tokens cost &lt;$0.005 per transaction.</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Transaction Fee</div>
+              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Cards cost ~3% plus 30 cents. Digital dollars cost less than a penny.</div>
             </div>
             <div style="background: var(--paper-warm); border: 1px solid var(--rule); border-radius: 3px; padding: 4px 5px;">
-              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Fraud Liability</div>
-              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Cards carry 60-day chargebacks; tokens enforce cryptographic proof.</div>
+              <div style="font-size: 7px; font-weight: 800; color: var(--ink); text-transform: uppercase;">Disputes & Fraud</div>
+              <div style="font-size: 7.2px; color: var(--muted); margin-top: 1px; line-height: 1.3;">Cards allow 60-day disputes. Digital tokens verify authorization instantly.</div>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Network Effects Shift:</strong> Once native agent tokens proliferate across Visa, Mastercard, and banking cores, legacy acquirers lose their primary moat. Network effects will shift decisively from payment processors to the AI platforms that control consumer distribution, intent capture, and the agent user experience.
+            <strong>The Power Shift in Payments:</strong> Today, banks and card companies control checkout. In the future, whichever AI app you talk to (like Apple, ChatGPT, or Google) will decide how to pay, giving tech giants enormous power over traditional payment processors.
           </div>
 
           <div class="exhibit-source-note">
@@ -1030,8 +1030,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Model Evaluation</span>
-      <span>Frontier Reasoning & The Visa Agentic Commerce Benchmark</span>
+      <span class="topic">AI Accuracy</span>
+      <span>Testing 22 Leading AI Models on Real Shopping</span>
     </div>
 
     <div class="report-body">
@@ -1067,15 +1067,15 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 5 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 5.1: Frontier Model Benchmarks</div>
-          <div class="exhibit-title">Frontier Model Performance on Commercial Shopping Benchmarks</div>
-          <div class="exhibit-subtitle">Evaluation of 22 models across multi-turn constraint episodes, dimensional compliance, and search depth.</div>
+          <div class="exhibit-tag">Exhibit 5.1: Model Test Results</div>
+          <div class="exhibit-title">How Accurately 22 AI Models Complete Real Shopping Tasks</div>
+          <div class="exhibit-subtitle">Results from testing top AI models on complex orders with sizes, colors, and budgets.</div>
 
           <!-- Visual Horizontal Bar Ranking Chart with 57.2% Industry Baseline -->
           <div class="chart-container" style="padding: 7px 10px; margin: 3px 0; position: relative;">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
-              <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">Visa Benchmark: Shopping Success Rate</span>
-              <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">Industry Average: 57.2%</span>
+              <span style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue);">VISA BENCHMARK: ORDER SUCCESS RATE</span>
+              <span style="font-size: 7.2px; font-weight: 700; color: #dc2626; background: #fee2e2; padding: 1px 5px; border-radius: 2px;">Average Score: 57.2%</span>
             </div>
 
             <div class="bar-chart-list">
@@ -1136,7 +1136,7 @@ const htmlContent = `<!doctype html>
 
               <!-- Reference Line: 57.2% Industry Baseline -->
               <div style="border-top: 1.5px dashed #dc2626; margin: 2px 0 3px 0; position: relative;">
-                <span style="position: absolute; right: 0; top: -7px; font-size: 6.8px; font-weight: 700; color: #dc2626; background: #fff; padding: 0 4px;">Baseline Threshold: 57.2%</span>
+                <span style="position: absolute; right: 0; top: -7px; font-size: 6.8px; font-weight: 700; color: #dc2626; background: #fff; padding: 0 4px;">Average Pass Rate: 57.2%</span>
               </div>
 
               <!-- Model 6 -->
@@ -1164,7 +1164,7 @@ const htmlContent = `<!doctype html>
               <!-- Model 8 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>#8 Heuristic Rule-Engine Baseline</span>
+                  <span>#8 Simple Automated Bot</span>
                   <span style="color: #94a3b8; font-weight: 600;">29.4%</span>
                 </div>
                 <div class="bar-chart-track">
@@ -1175,17 +1175,17 @@ const htmlContent = `<!doctype html>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Root Cause Distribution of Commercial Shopping Failures:</strong>
+            <strong>Why AI Models Ordered the Wrong Items:</strong>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 2px; font-size: 7.2px; line-height: 1.35; color: var(--ink-secondary);">
-              <div>- <strong>Implicit Constraint Violation:</strong> 38%</div>
-              <div>- <strong>Inventory/Price Hallucination:</strong> 26%</div>
-              <div>- <strong>Early Search Termination:</strong> 21%</div>
-              <div>- <strong>Cart Checkout DOM Shifts:</strong> 15%</div>
+              <div>- <strong>Missed Size, Fit, or Dimensions:</strong> 38%</div>
+              <div>- <strong>Made Up Items or Prices:</strong> 26%</div>
+              <div>- <strong>Stopped Searching Too Soon:</strong> 21%</div>
+              <div>- <strong>Stuck on Checkout Buttons:</strong> 15%</div>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>The Reverse Logistics Trap:</strong> In commercial e-commerce, a 43% failure rate is catastrophic. While human returns cost ~$12.70 in parcel shipping, freight returns on bulky goods mis-ordered by agents average $138.50 to $188.50 in freight and restocking fees, wiping out the operating margins of dozens of successful transactions.
+            <strong>The High Cost of Returns:</strong> In retail, making mistakes on 4 out of 10 orders is a disaster. Returning a small box costs around $13, but returning large items (like furniture or TVs) costs up to $180 in freight and restocking fees. A single wrong order can wipe out the profit from ten good sales.
           </div>
 
           <div class="exhibit-source-note">
@@ -1207,8 +1207,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Trust & Risk</span>
-      <span>Attack Surfaces: Threat Vectors, Injection Attacks & Defensive Architecture</span>
+      <span class="topic">Security & Safety</span>
+      <span>The Top 5 Risks When AI Spends Money</span>
     </div>
 
     <div class="report-body">
@@ -1244,44 +1244,44 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 6 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 6.1: Security Threat Matrix</div>
-          <div class="exhibit-title">Agentic Commerce Threat Matrix: Vectors & Architectural Defenses</div>
-          <div class="exhibit-subtitle">Classification of critical threat surfaces, exploitation mechanisms, and institutional countermeasures.</div>
+          <div class="exhibit-tag">Exhibit 6.1: Security Risks</div>
+          <div class="exhibit-title">The Top 5 Security Risks in AI Shopping</div>
+          <div class="exhibit-subtitle">New security challenges when software bots spend real money online.</div>
 
           <!-- Visual Threat Vulnerability Bar Chart -->
           <div class="chart-container" style="padding: 7px 10px; margin: 3px 0;">
             <div style="font-size: 7.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 5px;">
-              Cybersecurity Threat Surfaces: Attack Rates & Vulnerability Profiles
+              Cybersecurity Risks: How Often Attacks & Failures Occur
             </div>
 
             <div class="bar-chart-list">
               <!-- Vector 1 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>1. WAF False Positives (Legitimate Buying Agents Blocked)</span>
-                  <span style="color: #dc2626; font-weight: 700;">78.4% Occurrence</span>
+                  <span>1. Store Firewalls Blocking Real Shoppers</span>
+                  <span style="color: #dc2626; font-weight: 700;">78.4% of stores</span>
                 </div>
                 <div class="bar-chart-track">
-                  <div class="bar-chart-fill" style="width: 78.4%; background: #ef4444;">78.4% (Cloudflare/Akamai bot traps)</div>
+                  <div class="bar-chart-fill" style="width: 78.4%; background: #ef4444;">78.4% (Blocked by Cloudflare/Akamai bot traps)</div>
                 </div>
               </div>
 
               <!-- Vector 2 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>2. Indirect Prompt Injection via Catalog Reviews & HTML</span>
-                  <span style="color: #ea580c; font-weight: 700;">27.4% Exploit Rate</span>
+                  <span>2. Fake Reviews with Hidden Commands</span>
+                  <span style="color: #ea580c; font-weight: 700;">27.4% Risk</span>
                 </div>
                 <div class="bar-chart-track">
-                  <div class="bar-chart-fill" style="width: 27.4%; background: #f97316;">27.4% Vulnerability</div>
+                  <div class="bar-chart-fill" style="width: 27.4%; background: #f97316;">27.4%</div>
                 </div>
               </div>
 
               <!-- Vector 3 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>3. Cart Hijacking & Parameter Tampering</span>
-                  <span style="color: #d97706; font-weight: 700;">19.8% Exploit Rate</span>
+                  <span>3. Altering Prices or Shipping Addresses in Cart</span>
+                  <span style="color: #d97706; font-weight: 700;">19.8% Risk</span>
                 </div>
                 <div class="bar-chart-track">
                   <div class="bar-chart-fill" style="width: 19.8%; background: #f59e0b;">19.8%</div>
@@ -1291,8 +1291,8 @@ const htmlContent = `<!doctype html>
               <!-- Vector 4 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>4. SSRF & Internal Inventory Enumeration</span>
-                  <span style="color: #475569; font-weight: 700;">14.2% Attack Surface</span>
+                  <span>4. Bots Probing Store Systems for Hidden Discounts</span>
+                  <span style="color: #475569; font-weight: 700;">14.2% Risk</span>
                 </div>
                 <div class="bar-chart-track">
                   <div class="bar-chart-fill" style="width: 14.2%; background: #64748b;">14.2%</div>
@@ -1302,8 +1302,8 @@ const htmlContent = `<!doctype html>
               <!-- Vector 5 -->
               <div class="bar-chart-item">
                 <div class="bar-chart-header">
-                  <span>5. Sybil Inventory Starvation & Stock Holding</span>
-                  <span style="color: #475569; font-weight: 700;">11.5% Attack Surface</span>
+                  <span>5. Fake Bots Locking Up Stock Without Paying</span>
+                  <span style="color: #475569; font-weight: 700;">11.5% Risk</span>
                 </div>
                 <div class="bar-chart-track">
                   <div class="bar-chart-fill" style="width: 11.5%; background: #94a3b8;">11.5%</div>
@@ -1313,17 +1313,17 @@ const htmlContent = `<!doctype html>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Architectural Defenses & Countermeasures:</strong>
+            <strong>How Stores Protect Themselves:</strong>
             <div style="font-size: 7.2px; line-height: 1.35; color: var(--ink-secondary); margin-top: 2px;">
-              - <strong>WAF Pass-Through:</strong> Verified agent mTLS headers with signed public keys to prevent false blocks.<br>
-              - <strong>Injection Sandboxing:</strong> Dual-LLM architecture isolating untrusted reviews from checkout execution.<br>
-              - <strong>Cart Integrity:</strong> Cryptographically signed session tokens ensuring immutable item pricing.<br>
-              - <strong>Cart Hold TTLs:</strong> 3-minute strict inventory hold expiration to eliminate Sybil cart-locking attacks.
+              - <strong>Fast Lane for Good Bots:</strong> Verified digital passkeys let paying customer bots bypass CAPTCHAs.<br>
+              - <strong>Review Safety Filter:</strong> Check customer reviews for hidden commands before the shopping bot reads them.<br>
+              - <strong>Lock Cart Prices:</strong> Sign prices digitally so hackers cannot tamper with items or delivery addresses.<br>
+              - <strong>3-Minute Cart Limits:</strong> Empty unpaid carts after 3 minutes so real buyers can get the stock.
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>OWASP Top 10 Priority:</strong> Agentic application security differs fundamentally from traditional web security. Protecting the autonomous reasoning loop against malicious prompt injection is now as critical as securing SQL databases against injection flaws.
+            <strong>The Big Security Shift:</strong> In the past, hackers broke into databases with computer code. Today, they try to trick AI bots using normal words hidden in product reviews. Making sure shopping bots aren't misled by text is now as critical as password security.
           </div>
 
           <div class="exhibit-source-note">
@@ -1345,8 +1345,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Legal & Regulatory</span>
-      <span>Liability Allocation: Contract Formation, Errors & Consumer Protection</span>
+      <span class="topic">Legal Rules</span>
+      <span>Who Pays When an AI Shopping Bot Makes a Mistake?</span>
     </div>
 
     <div class="report-body">
@@ -1358,24 +1358,24 @@ const htmlContent = `<!doctype html>
         </div>
 
         <p class="report-p">
-          <strong>Is an AI Purchase Legally Binding?</strong> Under U.S. commercial law, purchases made by automated software are legally binding on the person who set them up. The law treats the AI bot as your authorized helper. But this rule gets complicated when an AI makes a mistake—like misreading a product description or getting tricked by a fake review.
+          <strong>Is an AI Purchase Legally Binding?</strong> Under commercial law, purchases made by automated software are legally binding on the person who set them up. The law treats the AI bot as your authorized helper. But this rule gets complicated when an AI makes a mistake—like misreading a product description or getting tricked by a fake review.
         </p>
 
         <p class="report-p">
-          <strong>The Battle Over Who Pays:</strong> When an AI order goes wrong, who pays for the loss? Today, AI companies (like OpenAI) protect themselves with user agreements that say "use at your own risk." That leaves stores and shoppers to fight over returns, shipping costs, and credit card chargebacks.
+          <strong>The Battle Over Who Pays:</strong> When an AI order goes wrong, who pays for the loss? Today, AI companies protect themselves with user agreements that say "use at your own risk." That leaves stores and shoppers to fight over returns, shipping costs, and credit card chargebacks.
         </p>
 
         <p class="report-p">
-          <strong>Consumer Protection Rules (FTC):</strong> The U.S. Federal Trade Commission (FTC) is cracking down on hidden fees and misleading store practices. If a store uses sneaky pricing algorithms to charge AI bots higher prices, or if an AI enrolls a customer into a recurring monthly fee without a clear human confirmation, regulators will penalize the merchant.
+          <strong>Consumer Protection Rules:</strong> Trade regulators are cracking down on hidden fees and misleading store practices. If a store charges AI bots higher prices, or if an AI enrolls a customer into a recurring monthly fee without a clear human confirmation, regulators will penalize the merchant.
         </p>
 
         <p class="report-p">
-          <strong>Stricter Rules in Europe:</strong> Europe is moving even faster. Under new European AI and banking rules, any software bot that spends money must follow strict guidelines. If a bot tries to spend more than a set limit, European banks will require the human to confirm the payment with two-factor authentication.
+          <strong>Stricter Rules in Europe:</strong> Europe is moving even faster. Under European digital commerce and banking rules, any software bot that spends money must follow strict guidelines. If a bot tries to spend more than a set limit, banks will require the human to confirm the payment with two-factor authentication.
         </p>
 
         <div class="exhibit-analysis-box" style="margin-top: 5px; border-left: 3px solid var(--blue); background: var(--paper-warm);">
           <strong>Key Advice for Legal Teams:</strong>
-          Update your terms of service to cover AI orders clearly. Require humans to tap "Approve" for purchases above a set amount (like $100), keep clear logs of what the AI ordered, and carry insurance for automated order errors.
+          Update store terms to cover AI orders clearly. Require humans to tap "Approve" for purchases above a set amount (like $100), keep clear logs of what the AI ordered, and carry insurance for automated order errors.
         </div>
       </div>
 
@@ -1383,62 +1383,61 @@ const htmlContent = `<!doctype html>
       <div class="report-exhibit-col">
         <div class="exhibit-container">
           <div class="exhibit-tag">Exhibit 7.1: Legal Liability Matrix</div>
-          <div class="exhibit-title">Legal Liability Allocation Across Autonomous Commercial Failure Modes</div>
-          <div class="exhibit-subtitle">Statutory exposure, jurisprudence precedents, and loss apportionment among consumer, merchant, and AI platform.</div>
+          <div class="exhibit-title">Who Takes the Loss When an AI Order Fails?</div>
+          <div class="exhibit-subtitle">How commercial laws divide costs between the shopper, the store, and the AI company.</div>
 
           <table class="report-table" style="table-layout: fixed;">
             <thead>
               <tr>
-                <th style="width: 23%;">Failure Scenario</th>
-                <th style="width: 19%;">Consumer</th>
-                <th style="width: 21%;">Merchant</th>
-                <th style="width: 19%;">AI Platform</th>
-                <th style="width: 18%;">Governing Law</th>
+                <th style="width: 24%;">Failure Scenario</th>
+                <th style="width: 19%;">Shopper</th>
+                <th style="width: 21%;">Store / Merchant</th>
+                <th style="width: 18%;">AI Company</th>
+                <th style="width: 18%;">Governing Rule</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Hallucinated Match</strong></td>
-                <td>Zero (Statutory return right)</td>
-                <td>High (Freight & return loss)</td>
-                <td>Zero (Terms of Service disclaimer)</td>
-                <td>UCC § 2-314</td>
+                <td><strong>AI Buys Wrong Item</strong></td>
+                <td>$0 (Has right to return)</td>
+                <td>High (Pays return shipping & restock)</td>
+                <td>$0 (Protected by user terms)</td>
+                <td>Sales Law (UCC Art 2)</td>
               </tr>
               <tr>
-                <td><strong>Adversarial Injection</strong></td>
-                <td>Protected (Reg E / Fair Credit)</td>
-                <td>High (Intermediary fraud risk)</td>
-                <td>Moderate (Negligence exposure)</td>
-                <td>FTC Act § 5</td>
+                <td><strong>Fake Review Tricks AI</strong></td>
+                <td>Protected by bank rules</td>
+                <td>High (Loses item & pays dispute fees)</td>
+                <td>Low (Tool provider defense)</td>
+                <td>Fair Trade Rules</td>
               </tr>
               <tr>
-                <td><strong>Auto-Rebill Traps</strong></td>
-                <td>Full refund right under law</td>
-                <td>Critical (Regulatory fines)</td>
-                <td>Low (Tool-provider defense)</td>
-                <td>ROSCA / E-SIGN</td>
+                <td><strong>Unwanted Monthly Fee</strong></td>
+                <td>100% full refund right</td>
+                <td>Critical (Faces fines for dark traps)</td>
+                <td>Zero (Store is held responsible)</td>
+                <td>Auto-Renewal Laws</td>
               </tr>
               <tr>
-                <td><strong>Token Compromise</strong></td>
-                <td>$50 max legal exposure</td>
-                <td>Full chargeback fee liability</td>
-                <td>High (Breach of warranty)</td>
-                <td>EBA PSD3</td>
+                <td><strong>Stolen Digital Passkey</strong></td>
+                <td>$50 maximum legal loss</td>
+                <td>High (Must refund fraudulent charge)</td>
+                <td>High if platform was hacked</td>
+                <td>Bank Card Rules</td>
               </tr>
             </tbody>
           </table>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Key Legal Bottleneck: Principal-Agent Attribution:</strong>
-            Under UCC Article 2, if an agent acts with "apparent authority," the principal (consumer) is bound to the contract. However, when an agent hallucination causes a contract formation defect, courts have no uniform precedent for whether the consumer may void the contract without penalty.
+            <strong>Key Legal Question:</strong> When you set an AI bot to shop for you, the law considers it your helper. If the AI buys the wrong product because it misunderstood, you are usually bound to the purchase unless the store's return policy allows a free return.
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Regulatory Evolution:</strong> The FTC and CFPB are expected to issue joint supervisory guidance on Autonomous Commercial Delegation by late 2026, establishing mandatory spending limits and audit trail requirements for agentic consumer transactions.
+            <strong>Upcoming Regulations:</strong> Government regulators are drafting new rules for AI shopping. These rules will require clear spending caps, plain receipts, and simple one-click cancellations before autonomous checkout is allowed at scale.
           </div>
 
           <div class="exhibit-source-note">
-            Source: Statutory frameworks under U.S. Uniform Commercial Code (UCC) Article 2, FTC Act Section 5, Electronic Signatures in Global and National Commerce Act (E-SIGN), and EU AI Act (2025-2026).
+            Source: Legal analysis of U.S. Uniform Commercial Code (UCC) Article 2, FTC consumer protection regulations, and European Union digital commerce directives (2025-2026).
           </div>
         </div>
       </div>
@@ -1456,8 +1455,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Strategic Evolution</span>
-      <span>Gartner Machine Customer Maturity Model & Value Accrual Dynamics</span>
+      <span class="topic">Adoption Timeline</span>
+      <span>The 4 Stages of AI Shopping</span>
     </div>
 
     <div class="report-body">
@@ -1493,9 +1492,9 @@ const htmlContent = `<!doctype html>
       <!-- Right Column: Formal Exhibit 8 -->
       <div class="report-exhibit-col">
         <div class="exhibit-container">
-          <div class="exhibit-tag">Exhibit 8.1: Gartner Maturity Model</div>
-          <div class="exhibit-title">Gartner Machine Customer Maturity Model & Architecture Stages</div>
-          <div class="exhibit-subtitle">Evolution from human-assisted shopping to fully autonomous machine procurement networks.</div>
+          <div class="exhibit-tag">Exhibit 8.1: Maturity Model</div>
+          <div class="exhibit-title">The 4 Stages of AI Shopping Maturity</div>
+          <div class="exhibit-subtitle">How retail moves from simple chatbots to computers that buy supplies automatically.</div>
 
           <!-- Visual 4-Stage Chevron / Horizontal Process Flow Diagram -->
           <div class="process-grid">
@@ -1503,15 +1502,15 @@ const htmlContent = `<!doctype html>
             <div class="process-card">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 7px; font-weight: 800; background: var(--rule); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 1</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #16a34a;">68% Adoption</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: #16a34a;">68% of Stores</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Bound Assist</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Shopping Helper</div>
               <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Low</div>
               <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
-                Conversational search; human reviews and executes manual checkout.
+                Chatbots answer questions, but humans review and click checkout.
               </div>
               <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--rule-subtle); padding-top: 2px; margin-top: 3px;">
-                <strong>Stack:</strong> REST & Headless DOM
+                <strong>Tech:</strong> Web search & standard websites
               </div>
             </div>
 
@@ -1519,15 +1518,15 @@ const htmlContent = `<!doctype html>
             <div class="process-card active">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 7px; font-weight: 800; background: var(--blue); padding: 1px 4px; border-radius: 2px; color: white;">STAGE 2</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: var(--blue);">24% Adoption</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: var(--blue);">24% of Stores</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Governed Execute</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Approved Orders</div>
               <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Moderate</div>
               <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
-                Pre-approved budget; agent autonomously completes single transaction.
+                Human sets a budget limit; the AI searches, selects, and buys.
               </div>
               <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--rule-subtle); padding-top: 2px; margin-top: 3px;">
-                <strong>Stack:</strong> MCP, UCP & Virtual Cards
+                <strong>Tech:</strong> Product APIs & virtual cards
               </div>
             </div>
 
@@ -1535,15 +1534,15 @@ const htmlContent = `<!doctype html>
             <div class="process-card">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 7px; font-weight: 800; background: var(--rule); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 3</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #d97706;">7% Adoption</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: #d97706;">7% of Stores</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Autonomous Replenish</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Automatic Refills</div>
               <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: High</div>
               <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
-                IoT telemetry triggers re-orders within pre-approved spending envelopes.
+                Smart devices reorder everyday supplies before they run out.
               </div>
               <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--rule-subtle); padding-top: 2px; margin-top: 3px;">
-                <strong>Stack:</strong> IoT, Token Rails & Webhooks
+                <strong>Tech:</strong> Smart sensors & saved tokens
               </div>
             </div>
 
@@ -1551,29 +1550,29 @@ const htmlContent = `<!doctype html>
             <div class="process-card">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span style="font-size: 7px; font-weight: 800; background: var(--rule); padding: 1px 4px; border-radius: 2px; color: var(--ink);">STAGE 4</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #dc2626;">1% Adoption</span>
+                <span style="font-size: 7.2px; font-weight: 700; color: #dc2626;">1% of Stores</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Machine Customer</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink); margin-top: 2px;">Autonomous Buyers</div>
               <div style="font-size: 7px; color: var(--blue); font-weight: 600;">Autonomy: Full</div>
               <div style="font-size: 7.2px; color: var(--ink-secondary); line-height: 1.3; margin-top: 2px;">
-                Multi-agent negotiation, algorithmic arbitrage & zero-knowledge settlement.
+                Business computers compare bids, negotiate deals, and pay directly.
               </div>
               <div style="font-size: 6.8px; color: var(--muted); border-top: 1px solid var(--rule-subtle); padding-top: 2px; margin-top: 3px;">
-                <strong>Stack:</strong> Smart Contracts & ZK
+                <strong>Tech:</strong> Automated business contracts
               </div>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Enterprise PIM Readiness Gap:</strong> While 68% of commercial interactions remain in Stage 1, progressive enterprises are preparing for Stage 2 and Stage 3. This transition requires restructuring product information systems from human-centric promotional copy to deterministic, machine-readable parameter trees with sub-second inventory webhooks.
+            <strong>The Big Clean-Up Problem:</strong> Most store websites are designed for humans with colorful pictures and marketing slogans. To sell to AI shoppers, companies must convert their product information into clean, machine-readable data—like exact dimensions, materials, and live stock counts.
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Strategic Timing:</strong> Gartner projects that by 2028, machine customers will render 20% of consumer-facing storefronts obsolete. Retailers failing to expose Stage 2 and Stage 3 programmatic endpoints will become invisible to autonomous procurement agents.
+            <strong>Why Speed Matters:</strong> Analysts project that by 2028, machines will handle one in five online purchases. Stores that don't connect their systems directly to AI shopping networks will simply be bypassed by automated buyers.
           </div>
 
           <div class="exhibit-source-note">
-            Source: Gartner Research, "Modernize Your Digital Commerce Strategy With Agentic Commerce Architecture" and "Predicts: Machine Customers" (2025-2026).
+            Source: Enterprise commerce maturity frameworks synthesized from Gartner digital commerce advisory and leading retail systems integration data (2025-2026).
           </div>
         </div>
       </div>
@@ -1591,8 +1590,8 @@ const htmlContent = `<!doctype html>
        ═════════════════════════════════════════════ -->
   <div class="spread">
     <div class="spread-header">
-      <span class="topic">Strategic Execution</span>
-      <span>The 24-Month Enterprise Agentic Commerce Roadmap</span>
+      <span class="topic">Action Plan</span>
+      <span>The 24-Month Implementation Roadmap for Brands</span>
     </div>
 
     <div class="report-body">
@@ -1604,7 +1603,7 @@ const htmlContent = `<!doctype html>
         </div>
 
         <p class="report-p">
-          <strong>Months 0 to 6: Clean Up Product Data:</strong> The first step is making sure AI bots can find your products without getting blocked. Set up a Model Context Protocol (MCP) server so AI can read your inventory and prices directly. Update your website firewall so it stops blocking legitimate shopping bots with CAPTCHAs, and structure all product listings with clean Schema.org tags.
+          <strong>Months 0 to 6: Clean Up Product Data:</strong> The first step is making sure AI bots can find your products without getting blocked. Set up a catalog server so AI can read your inventory and prices directly. Update your website firewall so it stops blocking legitimate shopping bots with CAPTCHAs, and structure all product listings with clean standard tags.
         </p>
 
         <p class="report-p">
@@ -1612,7 +1611,7 @@ const htmlContent = `<!doctype html>
         </p>
 
         <p class="report-p">
-          <strong>Months 12 to 24: Direct Machine Settlement:</strong> In the final phase, upgrade from virtual credit cards to direct digital tokens (like Visa TAP) to eliminate expensive card processing fees. Create dedicated account portals for business AI buyers with automated volume discounts, and shift your marketing budget from search ads toward making products visible to AI models.
+          <strong>Months 12 to 24: Direct Machine Settlement:</strong> In the final phase, upgrade from virtual credit cards to direct digital tokens (like Visa TAP) to eliminate expensive card processing fees. Create dedicated account portals for business AI buyers with automated volume discounts, and shift your marketing budget toward making products visible to AI models.
         </p>
 
         <p class="report-p">
@@ -1629,8 +1628,8 @@ const htmlContent = `<!doctype html>
       <div class="report-exhibit-col">
         <div class="exhibit-container">
           <div class="exhibit-tag">Exhibit 9.1: Strategic Roadmap</div>
-          <div class="exhibit-title">24-Month Phased Implementation Roadmap for Brand Retailers & Platforms</div>
-          <div class="exhibit-subtitle">Critical workstreams, milestones, executive owners, and quantitative KPIs across the 24-month horizon.</div>
+          <div class="exhibit-title">24-Month Action Plan for Retailers & Brands</div>
+          <div class="exhibit-subtitle">Key projects, milestones, leaders, and targets over the next two years.</div>
 
           <!-- Visual Phased Horizontal Roadmap Gantt / Milestone Diagram -->
           <div class="roadmap-list">
@@ -1640,13 +1639,13 @@ const htmlContent = `<!doctype html>
                 <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #0038ff; padding: 1.5px 5px; border-radius: 2px;">PHASE 1: MONTHS 0 TO 6</span>
                 <span style="font-size: 7px; font-weight: 700; color: var(--muted);">Owner: VP Digital Architecture</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">Foundation & Data Hygiene</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">Data Cleanliness & AI Access</div>
               <div style="font-size: 7.2px; color: var(--muted); line-height: 1.35; margin-top: 2px;">
-                Deploy public Model Context Protocol (MCP) catalog server; whitelist verified agent mTLS headers; structure full catalog feeds into JSON-LD schemas; implement inventory availability webhooks.
+                Deploy public catalog feeds that AI bots can read directly; update website firewalls to stop blocking verified shopping bots; organize product sizes, materials, and live stock into clean standard data fields.
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted-light); border-top: 1px solid var(--rule-subtle); padding-top: 2px;">
-                <span>Key Deliverable: Public MCP Catalog Endpoint</span>
-                <span style="font-weight: 700; color: #16a34a;">Target KPI: &lt;2% agent block rate</span>
+                <span>Key Deliverable: Public AI Catalog Feed</span>
+                <span style="font-weight: 700; color: #16a34a;">Target KPI: &lt;2% bot blocks</span>
               </div>
             </div>
 
@@ -1656,13 +1655,13 @@ const htmlContent = `<!doctype html>
                 <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #2563eb; padding: 1.5px 5px; border-radius: 2px;">PHASE 2: MONTHS 6 TO 12</span>
                 <span style="font-size: 7px; font-weight: 700; color: var(--muted);">Owner: Head of Payments & Checkout</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">Protocol Interoperability & Virtual Cards</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">AI Checkout & Virtual Cards</div>
               <div style="font-size: 7.2px; color: var(--muted); line-height: 1.35; margin-top: 2px;">
-                Implement Google UCP and Stripe ACP merchant endpoints; support Just-In-Time (JIT) virtual card settlement; integrate parametric spending limits; configure dual-LLM sandboxing for catalog defense.
+                Connect checkout to emerging standards like Google UCP and Stripe ACP; support one-time virtual cards with spending limits; add safety filters to stop sneaky instructions in product reviews.
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted-light); border-top: 1px solid var(--rule-subtle); padding-top: 2px;">
-                <span>Key Deliverable: Native UCP/ACP Transaction Gateway</span>
-                <span style="font-weight: 700; color: #2563eb;">Target KPI: &gt;95% virtual card auth rate</span>
+                <span>Key Deliverable: AI Checkout Gateway</span>
+                <span style="font-weight: 700; color: #2563eb;">Target KPI: &gt;95% virtual card success</span>
               </div>
             </div>
 
@@ -1672,23 +1671,23 @@ const htmlContent = `<!doctype html>
                 <span style="font-size: 7px; font-weight: 800; background: #eff6ff; color: #1d4ed8; padding: 1.5px 5px; border-radius: 2px;">PHASE 3: MONTHS 12 TO 24</span>
                 <span style="font-size: 7px; font-weight: 700; color: var(--muted);">Owner: Chief Commercial Officer</span>
               </div>
-              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">Autonomous Settlement & Machine CRM</div>
+              <div style="font-size: 8.5px; font-weight: 700; color: var(--ink);">Direct Settlement & Corporate AI Accounts</div>
               <div style="font-size: 7.2px; color: var(--muted); line-height: 1.35; margin-top: 2px;">
-                Deploy zero-knowledge proof tokens (Visa TAP); enable machine customer account portals; implement algorithmic dynamic pricing and real-time volume negotiation for autonomous enterprise buyers.
+                Adopt direct digital bank passkeys (like Visa TAP) to eliminate card fees; build dedicated portals for corporate AI buyers to negotiate volume discounts and place recurring orders automatically.
               </div>
               <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 7px; color: var(--muted-light); border-top: 1px solid var(--rule-subtle); padding-top: 2px;">
-                <span>Key Deliverable: Dedicated Machine Customer Portal</span>
-                <span style="font-weight: 700; color: #0038ff;">Target KPI: 15% GMV via autonomous buyers</span>
+                <span>Key Deliverable: Corporate AI Buyer Portal</span>
+                <span style="font-weight: 700; color: #0038ff;">Target KPI: 15% of sales from AI buyers</span>
               </div>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 4px;">
-            <strong>Executive Takeaway:</strong> The organizations that will dominate the 2030 digital economy are building their agentic infrastructure today. Treating autonomous buyers as first-class citizens transforms digital commerce from a passive browsing storefront into an active, programmatic sales engine.
+            <strong>Executive Takeaway:</strong> The organizations that will dominate the 2030 digital economy are building their agentic infrastructure today. Making your store easy for AI bots to search, verify, and purchase from transforms your website into an automated sales engine.
           </div>
 
           <div class="exhibit-source-note">
-            Source: Industry best-practice implementation frameworks synthesized from leading enterprise commerce architectures and Gartner Digital Commerce Advisory (2025-2026).
+            Source: Implementation frameworks synthesized from enterprise commerce architectures, payment network technical disclosures, and retail advisory benchmarks (2025-2026).
           </div>
         </div>
       </div>
