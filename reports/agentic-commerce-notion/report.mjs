@@ -6,17 +6,13 @@
  * - Ultra-minimalist Monochrome Palette: Pure White, Black, and Grayscale (matching hashtagweb3.com & web3-jobs)
  * - Zero blue color anywhere in layout, badges, charts, or borders
  * - Multi-column editorial report format with comprehensive research prose
- * - Visual publication exhibits:
- *     - Grayscale SVG column charts with zero line/text collision
- *     - The 4-Layer Agentic Commerce Market Map (25+ companies)
- *     - The 4-Quadrant nofrontend.xyz Agent Payments Map (Cards vs x402 x Wallets vs Checkout)
- *     - The 7-Layer Stack Architecture Table & Stripe Press Illustration
- *     - 6-Protocol Comparison Matrix & Protocol Handshake Architecture
- *     - Compounding Failure Curve (P = p^n) & Visa 22-Model Benchmark
- *     - Dual-Path WAF Screening Gate & Tripartite Liability Matrix
- *     - Merchant Architecture Comparison & AEO / GEO Ranking Signals
- *     - Big Tech 4-Way Power Struggle & Strategic Moats
- *     - 18-Month Enterprise Implementation Roadmap & 5-Point Readiness Checklist
+ * - Grounded in 2025-2026 data & thought leadership:
+ *     - Jas Shah (Fintech: Under the Hood) "The Klarna Effect" & 3x-Win Triangle
+ *     - nofrontend.xyz 4-Quadrant Agent Payments Map (Cards vs x402 x Vaults vs Checkout)
+ *     - The 4-Layer Ecosystem Market Map (25+ companies)
+ *     - Visa 22-Model Shopping Benchmark & Compounding Failure Math (P = p^n)
+ *     - Morgan Stanley ($385B) vs Bain ($500B) vs Gartner ($15T) Market Sizing
+ *     - The Spring 2026 In-Chat Checkout Pivot to Direct Merchant APIs
  * - Zero presentation carditis, zero empty space, zero line collisions.
  */
 
@@ -107,15 +103,15 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
+            <strong>The "Klarna Effect" & The 3x-Win Formula:</strong> As fintech strategist Jas Shah (<em>Fintech: Under the Hood</em>) observes, agentic commerce unlocks a structural "3x-Win" dynamic identical to the rise of Buy Now Pay Later (BNPL). Merchants win through tangible basket conversion lifts; consumers win through low-admin, hyper-tailored shopping; and agent platforms win by capturing transaction routing fees. Agents collapse 10 friction-filled checkout steps into a single binary prompt: "Complete or Cancel" via FaceID.
+          </p>
+
+          <p class="report-p" style="margin-bottom: 7px;">
             <strong>The Spring 2026 In-Chat Pivot:</strong> Early experiments in late 2024 and 2025 attempted to force complete transactions inside chatbot windows like ChatGPT. In spring 2026, leading retailers and AI labs pivoted toward a hybrid model: agents search, compare, and assemble carts via APIs, but hand off final tokenized settlement directly to merchant endpoints. This shift allows merchants to preserve their branding, loyalty programs, and direct customer relationships while giving AI assistants a clean, reliable purchase flow.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
             <strong>The Sizing Debate ($385B vs. $500B vs. $15 Trillion):</strong> Market forecasts vary depending on whether they measure consumer retail or total enterprise trade. Morgan Stanley projects $190 billion to $385 billion in US retail sales influenced by AI by 2030 (about 8% of retail e-commerce). Bain & Company forecasts $500 billion globally across consumer retail. Meanwhile, Gartner forecasts over $15 trillion in autonomous transactions when factoring in B2B enterprise procurement—where machines automatically reorder factory parts, cloud compute, and wholesale inventory.
-          </p>
-
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The 8% Conversion Chasm:</strong> Human e-commerce conversion rates have stagnated between 2.5% and 3.0% for over a decade due to form fatigue, forgotten passwords, and cart abandonment. In contrast, early tests of delegated agentic checkout demonstrate conversion rates exceeding 8.2% once an item is selected. By eliminating manual data entry and resolving shipping choices autonomously, agents collapse the traditional purchase funnel into a single sub-second transaction.
           </p>
 
           <!-- Compact Architectural Figure 1.1 -->
@@ -147,7 +143,7 @@ export async function generateReport() {
               <!-- 2026 Agentic API -->
               <rect x="325" y="4" width="130" height="48" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
               <text x="335" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">3. Agent API Era (2026)</text>
-              <text x="335" y="28" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Autonomous API handoff</text>
+              <text x="335" y="28" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Binary checkout approval</text>
               <text x="335" y="38" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Conversion rate: 8.2%</text>
               <text x="335" y="47" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#a1a1aa">Friction: Zero manual input</text>
               
@@ -250,8 +246,8 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>Where Value Shifts (The New Tollbooths):</strong>
-              Search engine ad auctions face structural declines as buyers bypass search results pages. Value migrates to AI platforms charging 5% to 15% affiliate referral commissions, and payment token vaults capturing settlement volume.
+              <strong>The 3x-Win Equation (Jas Shah Framework):</strong>
+              Just like Klarna and BNPL revolutionized checkout, agentic commerce aligns a 3x-win: merchants gain 8.2% conversion lifts, shoppers eliminate form fatigue, and AI infrastructure players monetize routing tolls.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
@@ -265,7 +261,7 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Synthesized from Morgan Stanley, Bain & Company, Gartner, and Visa Research disclosures (2025-2026).
+              Source: Synthesized from Jas Shah (Fintech: Under the Hood), Morgan Stanley, Bain & Company, Gartner, and Visa Research (2025-2026).
             </div>
           </div>
         </div>
@@ -290,7 +286,11 @@ export async function generateReport() {
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>From Chatbots to Common Rules:</strong> At the top is Layer 1, the AI apps where people ask for things (like ChatGPT, Google Gemini, Claude, and Perplexity). When you tell a chatbot to buy running shoes, it cannot purchase them alone. It relies on Layer 2 and Layer 3, common communication rules (like Anthropic MCP, Google UCP, and Stripe ACP). These protocols translate your natural words into structured computer instructions so the AI can look up products and check real-time store stock.
+            <strong>The 3 Superpowers of Market Winners:</strong> As Jas Shah highlights, successful platforms in the agentic commerce stack dominate three foundational pillars: <strong>1) Verified Identity</strong> (knowing user limits, preferences, and shipping profiles without cold onboarding); <strong>2) Real-Time & Historical Data</strong> (sub-50ms inventory APIs and past spend habits); and <strong>3) Tokenized Payment Rails</strong> (cryptographic vaults and programmable budget execution).
+          </p>
+
+          <p class="report-p" style="margin-bottom: 7px;">
+            <strong>From Chatbots to Common Rules:</strong> At Layer 1 are consumer-facing assistants (ChatGPT, Gemini, Claude, Perplexity). When you ask an AI to buy shoes, it coordinates with Layers 2 and 3: open protocols like Anthropic MCP, Google UCP, and Stripe ACP. These protocols translate fuzzy natural prompts into structured machine commands that ping merchant catalogs and verify live stock.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -298,11 +298,7 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Store Catalogs and Live Stock:</strong> At the base of the stack is Layer 6, the store inventory systems. Platforms like Shopify, commercetools, and Salesforce must share real-time prices, available sizes, and delivery promises in clean machine data. If a store shows outdated inventory, the AI tries to buy an item that is already sold out, crashing the entire checkout session.
-          </p>
-
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Hardware Enclaves and Identity Security:</strong> At Layer 7, biometric hardware enclaves (Apple Secure Enclave, Android FIDO2) protect consumers from unauthorized purchases. When an AI selects a cart, it requests user authorization via fingerprint or facial recognition, locking the purchase to an encrypted one-time transaction token.
+            <strong>Store Catalogs and Hardware Passkeys:</strong> At Layer 6, store inventory backends (Shopify, commercetools) provide live stock feeds. Finally, Layer 7 secures the transaction in hardware enclaves (Apple Secure Enclave, Android FIDO2), ensuring that no payment completes without explicit human biometric approval.
           </p>
 
           <!-- Editorial Architecture Illustration -->
@@ -440,12 +436,12 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The Big Challenge Today:</strong>
-              Most online stores are not built for AI yet, so bots have to click buttons and use temporary credit cards. This causes nearly 1 out of 5 orders to fail. Once stores connect directly to AI shopping rules (UCP & MCP), orders complete with sub-second reliability.
+              <strong>The Dark Horse Enabler (Plaid & Identity Networks):</strong>
+              Identity networks like Plaid and Shop Pay hold an immense structural moat. Because they verify consumer bank accounts and spending histories across millions of merchants, they can preload agent trust vaults with zero onboarding friction.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Ecosystem analysis based on documentation and disclosures from OpenAI, Anthropic, Google, Stripe, Visa, and nofrontend.xyz directory (2025-2026).
+              Source: Ecosystem analysis synthesized from Jas Shah, OpenAI, Anthropic, Google, Stripe, Visa, and nofrontend.xyz directory (2025-2026).
             </div>
           </div>
         </div>
@@ -656,7 +652,7 @@ export async function generateReport() {
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Why Virtual Cards Are Only a Temporary Fix:</strong> Today, services like Stripe and Lithic give AI bots temporary virtual credit cards to buy products. While this works on existing store websites, it causes headaches: fraud filters often flag virtual cards as suspicious, and nearly 1 in 7 transactions get declined because machine purchases look identical to card fraud.
+            <strong>Why Virtual Cards Are Only a Temporary Fix:</strong> Today, services like Stripe and Lithic give AI bots temporary virtual credit cards to buy products. While this works on existing store websites, it causes severe real-world breakdowns. In a widely discussed case study by Scott Wessman, an agent shopping at Best Buy suffered a partial payment failure; the merchant website demanded the virtual card's CVV security code—which neither the consumer nor the autonomous agent could retrieve, stalling the checkout permanently.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -668,11 +664,7 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Credit Cards vs Instant Digital Dollars:</strong> Traditional credit card processing fees (around 3%) and multi-day bank transfers are too expensive and slow for AI bots that make dozens of small purchases per day. Startups are testing digital dollar stablecoins (like USDC) that let bots pay fractions of a cent instantly with near-zero fees.
-          </p>
-
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>High-Frequency Machine Billing:</strong> Autonomous workflows routinely call dozens of specialized web scrapers, image generators, and database tools in seconds. With HTTP 402 protocols, software agents pay exact micro-pennies per API invocation directly from embedded wallets, eliminating monthly SaaS seat subscriptions.
+            <strong>The Hybrid Economic Dilemma (Vignesh / Meta):</strong> As payments researcher Vignesh (Meta) highlights, the market faces a pivotal economic crossroads: will agents optimize payments for consumer reward points (card interchange) or merchant fee savings (stablecoin / x402 rails)? In an autonomous world, agents will programmatically route each order to whichever rail maximizes consumer cash-back while minimizing merchant friction.
           </p>
 
           <!-- Publication-Grade Delegated Token Payment Handshake SVG -->
@@ -831,7 +823,7 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Synthesized from nofrontend.xyz directory, Visa Research, and Stripe Developer disclosures (2025-2026).
+              Source: Synthesized from Jas Shah, nofrontend.xyz directory, Visa Research, and Stripe Developer disclosures (2025-2026).
             </div>
           </div>
         </div>
