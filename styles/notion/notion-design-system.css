@@ -473,28 +473,28 @@ body {
 }
 
 .report-headline {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.22;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: var(--ink-heading);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .report-lead-prose {
-  font-size: 10.8px;
-  line-height: 1.5;
+  font-size: 11.5px;
+  line-height: 1.55;
   font-weight: 600;
   color: var(--ink-heading);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 p.report-p {
-  font-size: 9.8px;
-  line-height: 1.55;
+  font-size: 10.2px;
+  line-height: 1.58;
   color: var(--ink);
   text-align: left;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 p.report-p strong {
@@ -520,7 +520,7 @@ p.report-p strong {
 }
 
 .exhibit-tag {
-  font-size: 8.5px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -528,29 +528,29 @@ p.report-p strong {
 }
 
 .exhibit-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink-heading);
   line-height: 1.25;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .exhibit-subtitle {
-  font-size: 8.8px;
+  font-size: 9.2px;
   color: var(--ink-secondary);
-  line-height: 1.38;
-  margin-bottom: 6px;
+  line-height: 1.4;
+  margin-bottom: 8px;
 }
 
 .exhibit-analysis-box {
   background: var(--paper-subtle);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 8px 12px;
-  font-size: 8.8px;
-  line-height: 1.48;
+  padding: 10px 14px;
+  font-size: 9.2px;
+  line-height: 1.52;
   color: var(--ink);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .exhibit-analysis-box strong {
@@ -559,12 +559,12 @@ p.report-p strong {
 }
 
 .exhibit-source-note {
-  font-size: 7.5px;
+  font-size: 7.8px;
   color: var(--ink-secondary);
   line-height: 1.35;
-  margin-top: 6px;
+  margin-top: 8px;
   border-top: 1px solid var(--border-subtle);
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 /* ─── Publication Charts & Diagrams (Notion Edition) ─── */
