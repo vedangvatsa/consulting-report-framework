@@ -425,6 +425,34 @@ body {
 }
 
 /* ─── Editorial Report Layout (Publication Grade) ─── */
+.report-content-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.report-tier-top {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+  align-items: start;
+  min-height: 0;
+}
+
+.report-tier-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
 .report-body {
   flex: 1 1 auto;
   display: grid;
