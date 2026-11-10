@@ -3,7 +3,7 @@
  * Formatted in Notion Monochrome Design System (Pure White, Black, Cool Zinc Grays)
  * 
  * Deep Academic and Industry Research Basis:
- * - Empirical Web Readiness - V. R. Vatsa (50,000 domain study across Tranco top 1M)
+ * - Empirical Web Readiness - V. R. Vatsa (100,000 domain study across Tranco ranking, Zenodo record 24121071)
  * - Agent Micropayments Economics - V. R. Vatsa (finite-state economic model of buyer VOI and settlement)
  * - Economic Search Theory - J. Yannis Bakos (Management Science), R. M. Ursu Position Bias (Chicago Booth)
  * - Behavioral Decision Science - Dietvorst et al. (Wharton, Algorithm Aversion), Logg et al. (Harvard, Algorithm Appreciation)
@@ -77,7 +77,7 @@ export async function generateReport() {
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">05</span><span>Payment Rails, Settlement & Domain Tokens</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">06</span><span>Accuracy Benchmarks & Behavioral Decision Science</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">07</span><span>Fraud Defense, Bot Classification & Security</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">08</span><span>Catalog Engineering & 50,000 Domain Study</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">08</span><span>Catalog Engineering & 100,000 Domain Study</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">09</span><span>Strategic Ecosystem & Competitive Moats</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">10</span><span>18-Month Roadmap & Legal Governance</span></div>
           </div>
@@ -1059,7 +1059,7 @@ export async function generateReport() {
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Empirical 50,000 Domain Study on Web Readiness (Vatsa Study).</strong> In an empirical measurement study of 50,000 domains sampled from the Tranco top one million websites (Vatsa, 2026 [1]), public web readiness for autonomous agents was found to be severely limited. Basic homepage text was accessible without client-side JavaScript execution on only 45.71% of domains. Only 30.16% of domains permitted automated crawlers (GPTBot and PerplexityBot) with HTTP 200 responses while providing readable text. Sitemaps and robots markers were present on 27.37%, while structured JSON-LD metadata appeared on 21.37%. Dedicated agent guidance files (llms.txt, Markdown negotiation, or MCP endpoints) were detected on 7.50% of domains, and candidate OpenAPI definitions appeared on only 0.16%.
+            <strong>Empirical 100,000 Domain Study on Web Readiness (Vatsa Study, Zenodo).</strong> In an empirical measurement study of 100,000 domains sampled from the Tranco ranking (Vatsa, 2026, Zenodo record 24121071 [1]), public web readiness for autonomous agents was evaluated across nineteen interface checks. Complete HTML was parsed on 48,442 domains (48.44%). XML sitemap structures were observed on 33,392 domains (33.39%), while structured JSON-LD metadata expansion was supported on 23,436 domains (23.44%). Dedicated agent guidance matching the llms.txt heading profile appeared on 7,156 domains (7.16%). In contrast, declared OpenAPI document schemas were identified on only 225 domains (0.23%), and Model Context Protocol (MCP) initialization handshakes succeeded on only 45 domains (0.045%).
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -1110,69 +1110,75 @@ export async function generateReport() {
             </svg>
           </div>
 
-          <!-- Bottom: Catalog Readiness Checklist (Incorporating 50,000 domain data) -->
-          <div class="exhibit-card" style="padding: 9px 12px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; flex: 1;">
-            <div class="exhibit-header" style="margin-bottom: 5px;">
+          <!-- Bottom: Catalog Readiness Checklist (Incorporating 100,000 domain data) -->
+          <div class="exhibit-card" style="padding: 8px 12px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; flex: 1;">
+            <div class="exhibit-header" style="margin-bottom: 4px;">
               <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">Exhibit 7.1 - Merchant Catalog Readiness Checklist</div>
-              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Adoption rates observed across 50,000 domains sampled from Tranco top 1M websites [1]</div>
+              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Adoption rates observed across 100,000 domains sampled from Tranco ranking (Zenodo record 24121071) [1]</div>
             </div>
 
-            <table style="width: 100%; border-collapse: collapse; font-size: 7.5px; margin-bottom: 6px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 7.3px; margin-bottom: 5px;">
               <thead>
                 <tr style="border-bottom: 1.5px solid var(--border); background: var(--paper-subtle);">
-                  <th style="padding: 3px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Technical Requirement</th>
-                  <th style="padding: 3px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Specification Standard</th>
-                  <th style="padding: 3px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">50k Web Study [1]</th>
-                  <th style="padding: 3px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Operational Status</th>
+                  <th style="padding: 2.5px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Technical Requirement</th>
+                  <th style="padding: 2.5px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Specification Standard</th>
+                  <th style="padding: 2.5px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">100k Web Study [1]</th>
+                  <th style="padding: 2.5px 5px; text-align: left; font-weight: 700; color: var(--ink-heading);">Operational Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-subtle);">
-                  <td style="padding: 3px 5px; font-weight: 700;">Plain Text Accessibility</td>
-                  <td style="padding: 3px 5px;">Server-Rendered HTML</td>
-                  <td style="padding: 3px 5px; font-weight: 700; color: #18181b;">45.71% Pass</td>
-                  <td style="padding: 3px 5px; color: #18181b; font-weight: 600;">Basic Baseline</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700;">Complete HTML Parsed</td>
+                  <td style="padding: 2.5px 5px;">Server-Rendered Markup</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">48.44% (48,442)</td>
+                  <td style="padding: 2.5px 5px; color: #18181b; font-weight: 600;">Basic Baseline</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                  <td style="padding: 3px 5px; font-weight: 700;">AI Crawler Permission</td>
-                  <td style="padding: 3px 5px;">GPTBot & Perplexity HTTP 200</td>
-                  <td style="padding: 3px 5px; font-weight: 700; color: #18181b;">30.16% Pass</td>
-                  <td style="padding: 3px 5px; color: #18181b; font-weight: 600;">WAF Challenge Free</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700;">XML Sitemap Structure</td>
+                  <td style="padding: 2.5px 5px;">Sitemaps Protocol XML</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">33.39% (33,392)</td>
+                  <td style="padding: 2.5px 5px; color: #18181b; font-weight: 600;">Content Discovery</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle);">
-                  <td style="padding: 3px 5px; font-weight: 700;">Structured Metadata</td>
-                  <td style="padding: 3px 5px;">Schema.org JSON-LD Product</td>
-                  <td style="padding: 3px 5px; font-weight: 700; color: #18181b;">21.37% Pass</td>
-                  <td style="padding: 3px 5px; color: #18181b; font-weight: 600;">High Impact for AEO</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700;">Structured Metadata</td>
+                  <td style="padding: 2.5px 5px;">Schema.org JSON-LD Expansion</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">23.44% (23,436)</td>
+                  <td style="padding: 2.5px 5px; color: #18181b; font-weight: 600;">High Impact for AEO</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                  <td style="padding: 3px 5px; font-weight: 700;">Dedicated Agent Files</td>
-                  <td style="padding: 3px 5px;">llms.txt / Markdown / MCP</td>
-                  <td style="padding: 3px 5px; font-weight: 700; color: #18181b;">7.50% Pass</td>
-                  <td style="padding: 3px 5px; color: #71717a; font-weight: 600;">Developing Standard</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700;">Dedicated Agent Guidance</td>
+                  <td style="padding: 2.5px 5px;">llms.txt Heading Profile</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">7.16% (7,156)</td>
+                  <td style="padding: 2.5px 5px; color: #71717a; font-weight: 600;">Developing Standard</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 2.5px 5px; font-weight: 700;">Public Machine APIs</td>
+                  <td style="padding: 2.5px 5px;">OpenAPI Document Schema</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">0.23% (225)</td>
+                  <td style="padding: 2.5px 5px; color: #71717a; font-weight: 600;">Major Enterprise Gap</td>
                 </tr>
                 <tr>
-                  <td style="padding: 3px 5px; font-weight: 700;">Public Machine APIs</td>
-                  <td style="padding: 3px 5px;">OpenAPI Specification 3.x</td>
-                  <td style="padding: 3px 5px; font-weight: 700; color: #18181b;">0.16% Pass</td>
-                  <td style="padding: 3px 5px; color: #71717a; font-weight: 600;">Major Enterprise Gap</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700;">Model Context Protocol</td>
+                  <td style="padding: 2.5px 5px;">MCP Initialize Handshake</td>
+                  <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">0.045% (45)</td>
+                  <td style="padding: 2.5px 5px; color: #71717a; font-weight: 600;">Early Developer Pilot</td>
                 </tr>
               </tbody>
             </table>
 
-            <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 6px 9px;">
+            <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 5px 9px;">
               <strong>Readiness Takeaway.</strong>
-              While 45.71% of websites provide accessible text, structured public APIs for autonomous action exist on only 0.16% of domains, presenting an immediate competitive opening for early adopters [1].
+              While 48.44% of domains return parseable HTML and 23.44% provide structured JSON-LD, programmatic machine interfaces remain exceptionally scarce, with OpenAPI schemas on 0.23% of domains and MCP server endpoints on 0.045% [1].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources [1] V. R. Vatsa, "Web Readiness for AI Agents - A 50,000 Domain Study", Tranco 1M Sample (2026); [2] R. M. Ursu, Chicago Booth (2016); [3] Schema.org Working Group; [4] Shopify Engineering (2025).
+              Reference Sources [1] V. R. Vatsa, "Web Access and Agent Interfaces - A 100,000 Domain Study", Tranco Sample, Zenodo record 24121071 (2026); [2] R. M. Ursu, Chicago Booth (2016); [3] Schema.org Working Group; [4] Shopify Engineering (2025).
             </div>
           </div>
         </div>
       </div>
 
-      ${renderFooter("Catalog Engineering and Empirical Web Readiness")}
+      ${renderFooter("Catalog Engineering and 100,000 Domain Audit")}
     </div>
   `);
 
