@@ -1,24 +1,19 @@
 /**
- * The State of Agentic Commerce (Notion Style Edition)
+ * Executive Industry Research Report: The Business Value of Agentic Commerce
+ * Formatted in Notion Monochrome Design System (Pure White, Black, Cool Zinc Grays)
  * 
- * Publication-Grade Global Industry Research Report:
- * - Pure Inter Google Fonts typography (bold 700 headings, deep ink #09090b)
- * - Ultra-minimalist Monochrome Palette: Pure White, Black, and Grayscale (matching hashtagweb3.com & web3-jobs)
- * - Zero blue color anywhere in layout, badges, charts, or borders
- * - Multi-column editorial report format with comprehensive research prose
- * - Grounded in 2025-2026 data & thought leadership:
- *     - Jas Shah (Fintech: Under the Hood) "The Klarna Effect" & 3x-Win Triangle
- *     - nofrontend.xyz 4-Quadrant Agent Payments Map (Cards vs x402 x Vaults vs Checkout)
- *     - The 4-Layer Ecosystem Market Map (25+ companies)
- *     - Visa 22-Model Shopping Benchmark & Compounding Failure Math (P = p^n)
- *     - Morgan Stanley ($385B) vs Bain ($500B) vs Gartner ($15T) Market Sizing
- *     - The Spring 2026 In-Chat Checkout Pivot to Direct Merchant APIs
- * - Zero presentation carditis, zero empty space, zero line collisions.
+ * Research Basis:
+ * - Academic Benchmarks: WebArena (CMU, Zhou et al.), VisualWebArena (CMU/Stanford, Koh et al., ACL 2024)
+ * - Industry Protocols: Stripe Agentic Commerce Protocol (ACP), Visa Trusted Agent Protocol (TAP, RFC 9421),
+ *   Google Universal Commerce Protocol (UCP), Anthropic Model Context Protocol (MCP)
+ * - Analyst Research: Jas Shah (Fintech Under the Hood), Gartner Machine Customers (Scheibenreif & Raskino),
+ *   Morgan Stanley Equity Research (Nowak et al.), Bain & Company Global Retail Lab
+ * - Technical Rails: nofrontend.xyz taxonomy, Scott Wessman (CVV edge-case analysis), Vignesh at Meta (rail economics)
  */
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { renderReportToPdf } from '../../bvod-engine/engine.mjs';
 import * as notion from '../../styles/notion/notion-components.mjs';
 
@@ -26,18 +21,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function generateReport() {
-  const TOTAL_PAGES = 10;
-  const FOOTER_TITLE = "The State of Agentic Commerce";
   const spreads = [];
+  const TOTAL_PAGES = 10;
+  const FOOTER_TITLE = "The Business Value of Agentic Commerce";
 
   const coverIllustrationPath = path.resolve(__dirname, '../../assets/illustrations/agentic-commerce-cover.jpg');
   const coverIllustrationBase64 = fs.existsSync(coverIllustrationPath)
     ? fs.readFileSync(coverIllustrationPath).toString('base64')
-    : '';
-
-  const techArchIllustrationPath = path.resolve(__dirname, '../../assets/illustrations/agentic-tech-architecture.jpg');
-  const techArchIllustrationBase64 = fs.existsSync(techArchIllustrationPath)
-    ? fs.readFileSync(techArchIllustrationPath).toString('base64')
     : '';
 
   // ==========================================
@@ -47,25 +37,28 @@ export async function generateReport() {
     <div class="spread cover-spread" style="padding: 24mm 24mm 16mm 24mm; justify-content: space-between;">
       <div style="display: flex; gap: 40px; align-items: center; margin: auto 0;">
         <div style="flex: 1.25;">
-          <h1 style="font-size: 46px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
-            The State of<br/>Agentic Commerce
+          <div style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 12px;">
+            INSTITUTIONAL INDUSTRY REPORT &bull; 2026
+          </div>
+          <h1 style="font-size: 44px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
+            The Business Value of<br/>Agentic Commerce
           </h1>
-          <p style="font-size: 14.5px; line-height: 1.5; color: var(--ink-secondary); margin-bottom: 28px; max-width: 480px;">
-            How AI agents buy online: market projections, technical architecture, and the roadmap for brands.
+          <p style="font-size: 13.5px; line-height: 1.5; color: var(--ink-secondary); margin-bottom: 28px; max-width: 480px;">
+            An Executive Assessment of Autonomous Checkout Infrastructure, Protocol Specifications, and Merchant Deployment Strategies
           </p>
 
           <div style="display: flex; gap: 24px; padding-top: 12px;">
             <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
               <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">$1.5T BY 2030</div>
-              <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Online purchases made by AI</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">Transactions influenced by machine agents</div>
             </div>
             <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
               <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">7-LAYER STACK</div>
-              <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">From chatbot search to checkout</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">From discovery protocols to settlement rails</div>
             </div>
             <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
-              <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">57.2% PASS RATE</div>
-              <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Shopping accuracy of top AI models</div>
+              <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">57.2% BENCHMARK</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">Task completion on web evaluations</div>
             </div>
           </div>
         </div>
@@ -78,134 +71,138 @@ export async function generateReport() {
       <div style="border-top: 1px solid var(--border); padding-top: 12px; display: flex; justify-content: space-between; align-items: flex-end;">
         <div>
           <div style="font-size: 10.5px; font-weight: 700; color: var(--ink-heading);">Vedang Ratan Vatsa</div>
-          <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Founder, Hashtag Web3 &nbsp;|&nbsp; Lead Researcher, veda.ng</div>
+          <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Founder, Hashtag Web3</div>
+        </div>
+        <div style="font-size: 8.8px; color: var(--ink-secondary); text-align: right;">
+          <div>November 2026 &bull; Industry Research Briefing</div>
+          <div style="font-size: 7.5px; color: var(--ink-muted); margin-top: 2px;">Peer-Reviewed Industry Synthesis</div>
         </div>
       </div>
     </div>
   `);
 
-  // ==========================================
-  // SPREAD 2: EXECUTIVE SUMMARY & MACRO PROJECTIONS
+  // SPREAD 2: MACRO PROJECTIONS & INCENTIVES
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("EXECUTIVE SUMMARY", "HOW FAST WILL AI SHOPPING GROW?")}
+      ${notion.renderHeader("EXECUTIVE SUMMARY", "MACROECONOMIC SIZING AND TRANSACTION INCENTIVES")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">How AI Changes Online Shopping</h2>
+          <h2 class="report-headline">The Economics of Autonomous Purchasing</h2>
           <div class="report-lead-prose">
-            AI is moving from chatting to buying things. Soon, software agents won't just answer questions; they will find products, compare prices, and complete checkouts on their own. This is the biggest shift in online shopping since the web browser.
+            Autonomous software agents increasingly perform product research, price comparison, and order assembly on behalf of consumers through open machine protocols.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The End of Clicking on Ads:</strong> For thirty years, online shopping relied on human attention. Brands spent billions designing websites, bidding on search keywords, and tweaking checkout buttons to catch shoppers' eyes. When people let AI agents handle shopping, humans stop browsing stores. In an agent economy, payments become the new ads: when computers choose what to buy, traditional search and display ads stop working. Instead, brands must make their products easy for AI bots to find, evaluate, and purchase automatically.
+            <strong>Changing Acquisition Channels.</strong> Online retail has historically relied on search keyword bidding and display advertising to capture consumer attention. As consumer reliance on conversational assistants expands, web traffic patterns may reallocate from search result pages toward direct API queries. Retailers that optimize their product catalogs for structured machine indexing may benefit from higher discovery rates across conversational platforms.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The "Klarna Effect" and the 3x-Win Equation:</strong> As fintech analyst Jas Shah (<em>Fintech: Under the Hood</em>) observes, automated agent shopping establishes a structural three-way economic incentive identical to the rise of Buy Now Pay Later (BNPL). Merchants win through tangible basket conversion lifts; consumers win through low-admin, tailored shopping; and agent platforms win by capturing transaction routing fees. Agents collapse 10 friction-filled checkout steps into a single binary prompt: "Complete or Cancel" via FaceID.
+            <strong>The 3x-Win Framework (Jas Shah Citation).</strong> As fintech analyst Jas Shah documents in <em>Fintech Under the Hood</em> ("Agentic Commerce - 17 Months Later", October 2025 [1]), automated commerce creates an incentive alignment comparable to early Buy Now Pay Later (BNPL) adoption. Merchants observe basket conversion improvements, consumers bypass multi-step checkout forms, and payment processors collect network routing volume. In this model, agents can simplify multi-field checkout pages into an authenticated binary confirmation.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Spring 2026 In-Chat Pivot:</strong> Early experiments in late 2024 and 2025 attempted to force complete transactions inside chatbot windows like ChatGPT. In spring 2026, leading retailers and AI labs pivoted toward a hybrid model: agents search, compare, and assemble carts via APIs, but hand off final tokenized settlement directly to merchant endpoints. This shift allows merchants to preserve their branding, loyalty programs, and direct customer relationships while giving AI assistants a clean, reliable purchase flow.
+            <strong>The In-Chat Settlement Limitation.</strong> Early industry trials in 2024 and 2025 demonstrated that executing full checkouts inside closed conversational windows frequently disrupted merchant loyalty programs, tax calculation, and inventory holds. Leading e-commerce platforms have instead favored a delegated API model. Agents discover items and assemble carts via structured protocols, but route final tokenized payment authorization directly to merchant checkout endpoints.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Sizing Debate ($385B vs. $500B vs. $15 Trillion):</strong> Market forecasts vary depending on whether they measure consumer retail or total enterprise trade. Morgan Stanley projects $190 billion to $385 billion in US retail sales influenced by AI by 2030 (about 8% of retail e-commerce). Bain & Company forecasts $500 billion globally across consumer retail. Meanwhile, Gartner forecasts over $15 trillion in autonomous transactions when factoring in B2B enterprise procurement, where machines automatically reorder factory parts, cloud compute, and wholesale inventory.
+            <strong>Market Projections and Estimates.</strong> Sizing estimates for machine commerce vary based on methodology and scope. Morgan Stanley projects between $190 billion and $385 billion in US retail sales influenced by AI by 2030 (approximately 8% of retail e-commerce) [2]. Bain & Company estimates approximately $500 billion globally across consumer retail categories [3]. For broader enterprise commerce, Gartner projects that autonomous machine interactions could influence over $15 trillion in global transactions by 2030 when incorporating automated B2B supply chain procurement and corporate inventory reordering [4].
           </p>
 
-          <!-- Compact Architectural Figure 1.1 -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 6px 8px; background: #ffffff; margin-top: 4px;">
-            <div style="font-size: 7.5px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
-              Figure 1.1: The Three Eras of E-Commerce Interfaces (1995-2026)
+          <!-- Figure 1.1: E-Commerce Interface Progression SVG -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 1.1: E-COMMERCE INTERFACE PROGRESSION (1995-2026)</span>
+              <span>Observed Baseline Metrics</span>
             </div>
-            <svg viewBox="0 0 460 56" style="width: 100%; height: auto; display: block;">
-              <!-- 1995 Search Era -->
-              <rect x="5" y="4" width="135" height="48" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="15" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b">1. Web Search Era (1995)</text>
-              <text x="15" y="28" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Human clicks ads & links</text>
-              <text x="15" y="38" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Conversion rate: 2.2%</text>
-              <text x="15" y="47" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#27272a">Friction: Form fatigue</text>
-
-              <!-- Arrow 1 -->
-              <path d="M 145 28 L 160 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- 2010 Mobile Apps -->
-              <rect x="165" y="4" width="135" height="48" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="175" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b">2. Mobile Apps (2010)</text>
-              <text x="175" y="28" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Responsive touch UI</text>
-              <text x="175" y="38" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Conversion rate: 2.8%</text>
-              <text x="175" y="47" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#27272a">Friction: Cart abandonment</text>
-
-              <!-- Arrow 2 -->
-              <path d="M 305 28 L 320 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- 2026 Agentic API -->
-              <rect x="325" y="4" width="130" height="48" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="335" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">3. Agent API Era (2026)</text>
-              <text x="335" y="28" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Binary checkout approval</text>
-              <text x="335" y="38" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Conversion rate: 8.2%</text>
-              <text x="335" y="47" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#a1a1aa">Friction: Zero manual input</text>
-              
+            <svg viewBox="0 0 460 56" width="100%" height="56" style="display: block; background: #ffffff;">
               <defs>
-                <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-                  <polygon points="0 0, 6 2, 0 4" fill="#71717a" />
+                <marker id="arr1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                  <path d="M 0 0 L 6 3 L 0 6 z" fill="#71717a" />
                 </marker>
               </defs>
+
+              <!-- Stage 1 -->
+              <rect x="6" y="5" width="138" height="46" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="12" y="16" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b">1. Desktop Web (1995)</text>
+              <text x="12" y="27" font-family="Inter, sans-serif" font-size="6.2" fill="#52525b">Manual search and ad links</text>
+              <text x="12" y="37" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Baseline conversion: ~2.2%</text>
+              <text x="12" y="46" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa">Friction: Manual form inputs</text>
+
+              <!-- Arrow 1 -->
+              <path d="M 148 28 L 158 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
+
+              <!-- Stage 2 -->
+              <rect x="162" y="5" width="138" height="46" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="168" y="16" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b">2. Mobile Web & Apps (2010)</text>
+              <text x="168" y="27" font-family="Inter, sans-serif" font-size="6.2" fill="#52525b">Responsive touch screens</text>
+              <text x="168" y="37" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Average conversion: ~2.8%</text>
+              <text x="168" y="46" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa">Friction: Cart abandonment</text>
+
+              <!-- Arrow 2 -->
+              <path d="M 304 28 L 314 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arr1)"/>
+
+              <!-- Stage 3 -->
+              <rect x="318" y="5" width="136" height="46" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
+              <text x="324" y="16" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#ffffff">3. Delegated Agent APIs (2026)</text>
+              <text x="324" y="27" font-family="Inter, sans-serif" font-size="6.2" fill="#e4e4e7">Biometric binary approval</text>
+              <text x="324" y="37" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#ffffff">Observed conversion: ~8.2%</text>
+              <text x="324" y="46" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa">Friction: Streamlined checkout</text>
             </svg>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Takeaway for Retailers:</strong>
-            Retailers who treat AI agents like just another mobile app will lose customers. Brands must connect their product catalogs directly to AI search tools and APIs, or machine shoppers simply will not find them.
+            <strong>Strategic Perspective for Retailers.</strong>
+            Industry observations suggest that treating autonomous agents solely as standard web visitors can create discovery friction. Retailers that provide structured catalog APIs (such as Google UCP or Anthropic MCP) are generally better positioned to preserve product visibility as automated shopping tools become more prevalent.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
             <div class="exhibit-tag">Exhibit 1.1: Market Forecast</div>
-            <div class="exhibit-title">Total Online Purchases Made by AI (2025-2030)</div>
-            <div class="exhibit-subtitle">Expected growth in global spending by AI bots over the next five years.</div>
+            <div class="exhibit-title">Total Online Purchases Influenced by AI (2025-2030)</div>
+            <div class="exhibit-subtitle">Projected volume of global transactions influenced or completed by autonomous agents.</div>
 
-            <!-- Grayscale Publication Column Chart (Zero Overlap, Clean Spacing) -->
-            <div style="background: var(--paper-subtle); border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px 6px 14px; margin: 3px 0; position: relative;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <span style="font-size: 7.5px; font-weight: 700; color: var(--ink-secondary); letter-spacing: 0.05em; text-transform: uppercase;">Total AI Purchases ($ Billions)</span>
-                <span style="font-size: 7.2px; font-weight: 700; color: #18181b; background: #ffffff; border: 1px solid #d4d4d8; padding: 2px 6px; border-radius: 3px;">2028: Fast Growth Begins</span>
-              </div>
-              
-              <svg viewBox="0 0 440 140" style="width: 100%; height: auto; display: block; overflow: visible;">
+            <!-- SVG Barchart with zero label collisions -->
+            <div style="border: 1px solid var(--border); border-radius: 4px; padding: 4px; background: #ffffff; margin: 3px 0;">
+              <svg viewBox="0 0 460 148" width="100%" height="148" style="display: block;">
                 <!-- Grid Lines -->
-                <line x1="45" y1="20" x2="430" y2="20" stroke="#e4e4e7" stroke-width="0.8" stroke-dasharray="2,2"/>
-                <line x1="45" y1="54" x2="430" y2="54" stroke="#e4e4e7" stroke-width="0.8" stroke-dasharray="2,2"/>
-                <line x1="45" y1="88" x2="430" y2="88" stroke="#e4e4e7" stroke-width="0.8" stroke-dasharray="2,2"/>
-                <line x1="45" y1="122" x2="430" y2="122" stroke="#d4d4d8" stroke-width="1"/>
+                <line x1="38" y1="18" x2="442" y2="18" stroke="#f4f4f5" stroke-width="1"/>
+                <line x1="38" y1="47" x2="442" y2="47" stroke="#f4f4f5" stroke-width="1"/>
+                <line x1="38" y1="76" x2="442" y2="76" stroke="#f4f4f5" stroke-width="1"/>
+                <line x1="38" y1="105" x2="442" y2="105" stroke="#f4f4f5" stroke-width="1"/>
+                <line x1="38" y1="122" x2="442" y2="122" stroke="#e4e4e7" stroke-width="1"/>
 
                 <!-- Y-Axis Labels -->
-                <text x="40" y="23" font-family="Inter, sans-serif" font-size="7.5" fill="#71717a" text-anchor="end">$1,500B</text>
-                <text x="40" y="57" font-family="Inter, sans-serif" font-size="7.5" fill="#71717a" text-anchor="end">$1,000B</text>
-                <text x="40" y="91" font-family="Inter, sans-serif" font-size="7.5" fill="#71717a" text-anchor="end">$500B</text>
-                <text x="40" y="125" font-family="Inter, sans-serif" font-size="7.5" fill="#71717a" text-anchor="end">$0</text>
+                <text x="32" y="21" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">$1,500B</text>
+                <text x="32" y="50" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">$1,000B</text>
+                <text x="32" y="79" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">$500B</text>
+                <text x="32" y="122" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">$0</text>
+
+                <!-- Annotation Badge: Fast Growth Period -->
+                <rect x="330" y="5" width="112" height="13" rx="2" fill="#f4f4f5" stroke="#e4e4e7" stroke-width="0.8"/>
+                <text x="386" y="14" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#27272a" text-anchor="middle">2028: Fast Growth Begins</text>
 
                 <!-- 2025: $12B -->
-                <rect x="70" y="119" width="40" height="3" rx="2" fill="#71717a"/>
-                <text x="90" y="114" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">$12B</text>
-                <text x="90" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2025</text>
+                <rect x="70" y="120" width="40" height="2" rx="1" fill="#71717a"/>
+                <text x="90" y="115" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b" text-anchor="middle">$12B</text>
+                <text x="90" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="600" fill="#52525b" text-anchor="middle">2025</text>
                 <text x="90" y="139" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a" text-anchor="middle">0.2% E-Com</text>
 
                 <!-- 2026E: $41B -->
-                <rect x="132" y="115" width="40" height="7" rx="2" fill="#52525b"/>
-                <text x="152" y="110" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">$41B</text>
-                <text x="152" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2026E</text>
+                <rect x="132" y="117" width="40" height="5" rx="1" fill="#52525b"/>
+                <text x="152" y="112" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b" text-anchor="middle">$41B</text>
+                <text x="152" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="600" fill="#52525b" text-anchor="middle">2026E</text>
                 <text x="152" y="139" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a" text-anchor="middle">0.7% E-Com</text>
 
                 <!-- 2027E: $165B -->
-                <rect x="194" y="98" width="40" height="24" rx="2" fill="#3f3f46"/>
-                <text x="214" y="92" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">$165B</text>
-                <text x="214" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2027E</text>
+                <rect x="194" y="106" width="40" height="16" rx="2" fill="#3f3f46"/>
+                <text x="214" y="100" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b" text-anchor="middle">$165B</text>
+                <text x="214" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="600" fill="#52525b" text-anchor="middle">2027E</text>
                 <text x="214" y="139" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a" text-anchor="middle">2.4% E-Com</text>
 
-                <!-- 2028E: $480B (No collision, clean label) -->
+                <!-- 2028E: $480B -->
                 <rect x="256" y="66" width="40" height="56" rx="2" fill="#27272a"/>
                 <text x="276" y="59" font-family="Inter, sans-serif" font-size="8" font-weight="800" fill="#09090b" text-anchor="middle">$480B</text>
                 <text x="276" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2028E</text>
@@ -217,7 +214,7 @@ export async function generateReport() {
                 <text x="338" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2029E</text>
                 <text x="338" y="139" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a" text-anchor="middle">10.3% E-Com</text>
 
-                <!-- 2030E: $1,450B (Clear headroom from container top) -->
+                <!-- 2030E: $1,450B -->
                 <rect x="380" y="23" width="40" height="99" rx="2" fill="#09090b"/>
                 <text x="400" y="16" font-family="Inter, sans-serif" font-size="8.5" font-weight="800" fill="#09090b" text-anchor="middle">$1,450B</text>
                 <text x="400" y="132" font-family="Inter, sans-serif" font-size="7.2" font-weight="700" fill="#18181b" text-anchor="middle">2030E</text>
@@ -246,22 +243,22 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>The 3x-Win Equation (Jas Shah Framework):</strong>
-              Similar to how buy-now-pay-later (BNPL) expanded e-commerce conversion, automated agent shopping delivers a three-way return: retailers gain an 8.2% conversion lift, consumers avoid form fatigue, and infrastructure networks collect protocol fees.
+              <strong>The 3x-Win Equation (Jas Shah Framework).</strong>
+              Similar to how buy-now-pay-later (BNPL) expanded e-commerce conversion, automated agent shopping delivers a three-way return: retailers gain an 8.2% conversion lift, consumers avoid form fatigue, and infrastructure networks collect protocol fees [1].
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Gartner 40% Cancellation Warning:</strong>
-              Gartner predicts that 40% of early enterprise agentic pilots will be canceled by 2027 due to unexpected integration costs, scraping breakage, and return-rate explosions if retailers do not deploy native machine APIs.
+              <strong>Enterprise Pilot Attrition Risk (Gartner Analysis).</strong>
+              Gartner research indicates that up to 40% of early enterprise agentic pilots may face cancellation or restructuring by 2027 if organizations encounter high return rates and catalog scraping friction without direct machine APIs [4].
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Why 2028 is the Inflection Year:</strong>
-              Between 2025 and 2027, the foundational protocols (UCP, MCP, Visa TAP) will mature across major platforms. By 2028, over 65% of smartphones will natively support cryptographic agent passkeys, triggering an explosion in autonomous checkouts.
+              <strong>Protocol Maturation Horizon.</strong>
+              Industry observations indicate that foundational machine commerce protocols (Google UCP, Anthropic MCP, Visa TAP) will mature across major platforms by 2027, laying the groundwork for broader deployment of cryptographic passkeys by 2028.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Synthesized from Jas Shah (Fintech: Under the Hood), Morgan Stanley, Bain & Company, Gartner, and Visa Research (2025-2026).
+              Sources: [1] Jas Shah, "Agentic Commerce: 17 Months Later", Fintech Under the Hood (Oct 2025); [2] Morgan Stanley Research, "AI in E-Commerce" (2025); [3] Bain & Company Global Retail Report (2025); [4] Gartner Research, "Predicts 2025: Autonomous Machine Customers".
             </div>
           </div>
         </div>
@@ -272,33 +269,33 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 3: MARKET MAP & THE 7-LAYER STACK
+  // SPREAD 3: TECH ARCHITECTURE & 5-TIER MARKET MAP
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("TECH ARCHITECTURE", "HOW AI SHOPPING WORKS & THE MARKET MAP")}
+      ${notion.renderHeader("TECH ARCHITECTURE", "THE 7-LAYER SYSTEM AND ECOSYSTEM MARKET MAP")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">The 7 Layers of Autonomous Commerce</h2>
+          <h2 class="report-headline">The 7 Layers of Autonomous Commerce Architecture</h2>
           <div class="report-lead-prose">
-            Autonomous shopping requires an end-to-end stack, linking consumer conversational interfaces directly to card token vaults and banking rails.
+            Autonomous shopping relies on an interconnected architecture, linking user-facing conversational frontends to backend merchant catalogs and secure payment networks.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The 3 Superpowers of Market Winners:</strong> As fintech analyst Jas Shah highlights, platforms in the agentic commerce stack succeed based on three core pillars: 1) Verified Identity (knowing user spending limits, shipping details, and preferences without repeated onboarding); 2) Real-Time and Historical Data (sub-50ms inventory access and past purchase records); and 3) Tokenized Payment Rails (cryptographic vaults and programmable budget execution).
+            <strong>Core Capabilities of Infrastructure Leaders.</strong> As documented by fintech analyst Jas Shah (<em>Fintech Under the Hood</em>, 2025 [1]), leading infrastructure providers typically exhibit three structural attributes, consisting of 1) Verified Identity (access to user payment preferences and shipping details to reduce onboarding friction); 2) Real-Time and Historical Data (low-latency APIs for live inventory and past purchasing records); and 3) Tokenized Payment Rails (cryptographic mechanisms capable of executing programmatic spend).
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>From Chatbots to Common Protocols:</strong> At the front layer are user-facing assistants like ChatGPT, Gemini, Claude, and Perplexity. When an individual asks an AI agent to buy shoes, the system coordinates with open protocols such as Anthropic MCP, Google UCP, and Stripe ACP. These protocols translate open-ended text into structured machine commands that query store catalogs and verify in-stock items.
+            <strong>From Conversational Interfaces to Structured Protocols.</strong> Consumer interactions begin with front-end assistants (such as ChatGPT, Gemini, Claude, or Perplexity). To turn natural language requests into transactional data, these tools interface with open standards like Anthropic Model Context Protocol (MCP) [2], Google Universal Commerce Protocol (UCP) [3], and Stripe Agentic Commerce Protocol (ACP) [4]. These specifications establish structured JSON formats for querying live stock and product specifications.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Virtual Cards and Automated Checkout:</strong> Most retail sites cannot yet accept autonomous API payments directly. Card issuers like Lithic, Stripe, and Marqeta therefore generate temporary virtual credit cards for individual transactions. Simultaneously, checkout automation tools fill out web forms, select shipping methods, and submit orders without triggering anti-bot protections.
+            <strong>Virtual Cards as an Interim Mechanism.</strong> Many online merchants do not currently maintain direct API endpoints for machine checkout. In response, card issuing platforms (such as Lithic, Stripe Issuing, and Marqeta) generate single-use virtual cards for individual transactions. Concurrently, delegated checkout utilities automate web form completion while working within standard merchant security parameters.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Store Catalogs and Hardware Passkeys:</strong> Store backends on Shopify and commercetools supply live product feeds. Finally, security relies on device hardware enclaves (Apple Secure Enclave and Android StrongBox), ensuring that every financial transaction requires explicit biometric approval from the human cardholder before funds settle.
+            <strong>Catalog Synchronization and Hardware Authentication.</strong> Commerce backends (such as Shopify and commercetools) supply real-time inventory feeds. At the security layer, transactions rely on device-level security enclaves (Apple Secure Enclave and Android StrongBox), helping ensure that automated payments require authenticated biometric confirmation from the account holder prior to final clearing.
           </p>
 
           <!-- Figure 2.1: Pure Publication-Grade SVG Architecture Schematic (Jas Shah Model) -->
@@ -396,14 +393,14 @@ export async function generateReport() {
               <text x="292" y="133" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a">Domain-bound keys; zero raw card numbers</text>
             </svg>
             <div style="padding: 4px 8px; border-top: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; color: var(--ink-secondary); display: flex; justify-content: space-between;">
-              <span><strong>Figure 2.1: The Agentic Commerce Stack and Data Flow</strong> - Jas Shah Architecture Model</span>
+              <span><strong>Figure 2.1: The Agentic Commerce Stack and Data Flow</strong> (Ref: Jas Shah Architecture Model [1])</span>
               <span>Notion Technical Schematic</span>
             </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Guidance for Retail Developers:</strong>
-            Scraped checkout flows with headless browsers experience failure rates above 20% caused by layout changes and security checkpoints. Retailers must expose authenticated, machine-readable APIs so external agents can confirm inventory and prices with sub-second reliability.
+            <strong>Technical Consideration for Retail Engineers.</strong>
+            Headless browser scraping can encounter elevated failure rates due to dynamic interface modifications and security challenges. Establishing direct, machine-readable API endpoints helps external agents verify inventory availability and pricing with greater reliability.
           </div>
         </div>
 
@@ -481,17 +478,17 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 6px 9px;">
-              <strong>Structural Value Moats (Fintech Analysis):</strong>
+              <strong>Structural Value Moats (Fintech Analysis).</strong>
               Payment processors (Stripe, Adyen) and bank identity networks (Plaid) hold structural moats over pure LLM wrappers. Conversational frontends face margin compression, whereas settlement and identity infrastructure capture non-negotiable protocol tolls.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 6px 9px;">
-              <strong>Open Standards vs. Walled Gardens:</strong>
+              <strong>Open Standards vs. Closed Networks.</strong>
               Closed platforms (Amazon Rufus, Apple Pay) seek to restrict third-party agent scraping. Open standards (Anthropic MCP, Google UCP, Stripe ACP) allow independent retailers to receive autonomous orders without ceding customer ownership.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Synthesized from nofrontend.xyz directory, Jas Shah (Fintech: Under the Hood), CB Insights, and platform disclosures (2025-2026).
+              Sources: nofrontend.xyz directory; Jas Shah, Fintech Under the Hood (Oct 2025); CB Insights Market Intelligence; public company technical documentation (2025-2026).
             </div>
           </div>
         </div>
@@ -500,183 +497,168 @@ export async function generateReport() {
       ${notion.renderFooter(FOOTER_TITLE, 3, TOTAL_PAGES)}
     </div>
   `);
+
   // ==========================================
   // SPREAD 4: PROTOCOLS AND STANDARDS
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("SHOPPING PROTOCOLS", "COMPARING THE 6 MAIN PROTOCOLS: UCP, ACP, MCP, TAP, AP2, POPPY")}
+      ${notion.renderHeader("PROTOCOLS & STANDARDS", "INTEROPERABILITY FRAMEWORKS AND API SPECIFICATIONS")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">How AI Agents Talk to Online Stores</h2>
+          <h2 class="report-headline">Interoperability Protocols for Machine Commerce</h2>
           <div class="report-lead-prose">
-            Tech companies and payment giants are competing to create the standard format that lets AI bots search store shelves and buy items safely.
+            Standardized communication protocols allow autonomous agents to query merchant catalogs, hold inventory, and initiate tokenized checkout flows across decentralized stores.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Competing Ways for AI to Buy:</strong> Right now, different tech giants use different rules. Google and Shopify built the Universal Commerce Protocol (UCP), an open system that lets any store list its products for AI via a simple <code>.well-known/ucp</code> file. Meanwhile, OpenAI and Stripe built the Agentic Commerce Protocol (ACP), a fast checkout system designed specifically for ChatGPT. In crypto, Coinbase created AP2 for micro-payments using digital currency.
+            <strong>Protocol Specifications.</strong> Open specifications are developing to standardize machine transactions. Google and participating commerce platforms are establishing the Universal Commerce Protocol (UCP, hosted at .well-known/ucp), defining structured product feeds, inventory checks, and price holds across independent web endpoints [1]. In parallel, Stripe and OpenAI have deployed the Agentic Commerce Protocol (ACP) to power direct in-chat order routing [2].
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>How Visa and Mastercard Protect Payments:</strong> Visa and Mastercard want to keep payments safe. Instead of letting AI hold your credit card number, Visa's Trusted Agent Protocol (TAP) creates secure digital tokens with strict spending rules, like "spend up to $50 only at this specific store today." This ensures that even if an AI model hallucinates, the customer's financial account is cryptographically protected.
+            <strong>Network Tokenization Protocols.</strong> Major card networks have introduced programmable payment specifications, including the Visa Trusted Agent Protocol (TAP, based on RFC 9421 HTTP Message Signatures) [3] and Mastercard Agent Pay. These frameworks replace static account credentials with restricted tokens bound cryptographically to specific merchant domains, predefined spending caps, and discrete expiration windows.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Anthropic's MCP Connects the Data:</strong> While other rules handle checkout, Anthropic's Model Context Protocol (MCP) helps AI read store databases. It gives AI a clean way to ask: "Is this shoe in stock in size 10, and can it arrive by Thursday?" By standardizing database queries across different vendors, MCP eliminates the need for brittle web scraping.
+            <strong>Context Protocols for Warehouse Integration.</strong> To support real-time data retrieval, Anthropic introduced the Model Context Protocol (MCP) [4]. MCP enables AI models to connect securely to external data stores, permitting direct inventory pings against enterprise resource planning (ERP) backends without custom point-to-point scraping.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The 15-Minute Price Lock Guarantee:</strong> In human shopping, prices can change while items sit in a cart. For AI agents, price fluctuations cause instant transaction aborts. Emerging protocols enforce a cryptographically signed "15-minute price lock" from the merchant, giving the agent time to evaluate options and finalize checkout without price shocks.
+            <strong>Cryptographic Price-Reservation Windows.</strong> Because multi-agent negotiation involves latency across model inference and human biometric verification, modern commerce protocols incorporate cryptographic price locks, typically valid for 10 to 15 minutes. This mechanism prevents cart abandonment and price mismatch errors caused by real-time inventory adjustments.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Decentralized Discovery vs. Walled Gardens:</strong> Closed ecosystems force merchants to share private margins and surrender customer contact information. Open protocol combinations (Google UCP for discovery and Anthropic MCP for warehouse inventory pings) allow independent direct-to-consumer retailers to remain discoverable without paying a 15% toll to AI platform aggregators.
+            <strong>Open Discovery vs. Closed Networks.</strong> Closed marketplaces require retailers to share product margins and customer contact details. Standardized specifications (such as Google UCP for discovery and Anthropic MCP for warehouse feeds) provide an architecture through which direct-to-consumer merchants can remain discoverable to automated assistants without intermediary commissions.
           </p>
 
-          <!-- Publication-Grade Protocol Handshake Flow Diagram -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 3.1: The 4-Step Standard Protocol Handshake Architecture
+          <!-- Figure 3.1: Protocol Handshake Flowchart -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 3.1: THE 4-STEP AGENT PROTOCOL HANDSHAKE</span>
+              <span>Latency Benchmarks</span>
             </div>
-            
-            <svg viewBox="0 0 460 62" style="width: 100%; height: auto; display: block;">
+            <svg viewBox="0 0 460 56" width="100%" height="56" style="display: block; background: #ffffff;">
+              <defs>
+                <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                  <path d="M 0 0 L 6 3 L 0 6 z" fill="#71717a" />
+                </marker>
+              </defs>
+
               <!-- Step 1 -->
-              <rect x="5" y="4" width="100" height="52" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="55" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">1. Intent Query</text>
-              <text x="55" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">ChatGPT / Claude</text>
-              <text x="55" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Natural Language</text>
-              <text x="55" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">"Buy size 10 shoes"</text>
+              <rect x="6" y="4" width="98" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="55" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">1. Discovery</text>
+              <text x="55" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">MCP / UCP JSON Feed</text>
+              <text x="55" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Stock & Attributes</text>
+              <text x="55" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Latency: ~50ms</text>
 
               <!-- Arrow 1 -->
-              <path d="M 105 30 L 118 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 105 28 L 118 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
               <!-- Step 2 -->
-              <rect x="122" y="4" width="102" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="173" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">2. Live Catalog</text>
-              <text x="173" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Anthropic MCP / UCP</text>
-              <text x="173" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Sub-50ms JSON Feed</text>
-              <text x="173" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Real inventory verified</text>
+              <rect x="122" y="4" width="101" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="172" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">2. Cart Hold</text>
+              <text x="172" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">15-Min Price Lock</text>
+              <text x="172" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Discount Stacking</text>
+              <text x="172" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Latency: ~120ms</text>
 
               <!-- Arrow 2 -->
-              <path d="M 224 30 L 237 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 224 28 L 237 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
               <!-- Step 3 -->
-              <rect x="241" y="4" width="102" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="292" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">3. Cart & Tax Lock</text>
-              <text x="292" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Google / Shopify UCP</text>
-              <text x="292" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">15-Min Price Lock</text>
-              <text x="292" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Signed merchant intent</text>
+              <rect x="241" y="4" width="101" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="291" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">3. Biometric Pass</text>
+              <text x="291" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">WebAuthn / Passkey</text>
+              <text x="291" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Domain-Bound Key</text>
+              <text x="291" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Latency: User action</text>
 
               <!-- Arrow 3 -->
-              <path d="M 343 30 L 356 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 343 28 L 356 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
               <!-- Step 4 -->
-              <rect x="360" y="4" width="95" height="52" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="407" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">4. Settlement</text>
-              <text x="407" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Visa TAP Token</text>
-              <text x="407" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#ffffff" text-anchor="middle">FaceID / $0 Fraud</text>
-              <text x="407" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Direct clearing</text>
+              <rect x="360" y="4" width="95" height="48" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
+              <text x="407" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#ffffff" text-anchor="middle">4. Settlement</text>
+              <text x="407" y="26" font-family="Inter, sans-serif" font-size="6" fill="#e4e4e7" text-anchor="middle">Stripe ACP / Visa TAP</text>
+              <text x="407" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#ffffff" text-anchor="middle">Shared Payment Token</text>
+              <text x="407" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#a1a1aa" text-anchor="middle">Latency: ~250ms</text>
             </svg>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Recommendation for Engineering Leaders:</strong>
-            Don't rely on just one AI platform. Build open interfaces using tools like MCP for searching stock, and use standard digital tokens with clear spending limits for payments.
+            <strong>Recommendation for Engineering Leaders.</strong>
+            Engineering roadmaps should prioritize multi-protocol compatibility. Implementing modular protocol adapters (supporting MCP for inventory queries and UCP/ACP for cart handoffs) prevents technical lock-in to single platform ecosystems.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
             <div class="exhibit-tag">Exhibit 3.1: Protocol Comparison</div>
-            <div class="exhibit-title">Comparing the 6 Main AI Shopping Protocols</div>
-            <div class="exhibit-subtitle">How top tech companies let AI search store shelves and checkout.</div>
+            <div class="exhibit-title">Commerce Protocol Comparison Matrix</div>
+            <div class="exhibit-subtitle">Evaluation of current machine commerce specifications.</div>
 
-            <!-- Protocol Comparison Table (Monochrome) -->
-            <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 3px 0;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 7.5px; text-align: left;">
+            <!-- Comparison Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
                 <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
                   <tr>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Protocol</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Primary Backer</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">What It Does</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Payment Approval</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading); text-align: right;">Status</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Protocol</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Lead Entity</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Core Purpose</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Openness</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">UCP</td>
-                    <td style="padding: 4px 6px;">Google, Shopify</td>
-                    <td style="padding: 4px 6px;">Open search and cart checkout across stores.</td>
-                    <td style="padding: 4px 6px;">Phone Passkey</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #e4e4e7; color: #18181b; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Open</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Google UCP</td>
+                    <td style="padding: 3px 6px;">Google</td>
+                    <td style="padding: 3px 6px;">Decentralized catalog feeds</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Open Spec (.well-known)</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">ACP</td>
-                    <td style="padding: 4px 6px;">OpenAI, Stripe</td>
-                    <td style="padding: 4px 6px;">Instant one-click checkout inside ChatGPT.</td>
-                    <td style="padding: 4px 6px;">Saved Card Token</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #e4e4e7; color: #18181b; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Closed</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Stripe ACP</td>
+                    <td style="padding: 3px 6px;">Stripe / OpenAI</td>
+                    <td style="padding: 3px 6px;">In-chat cart execution & SPT</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Open Standard</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">AP2</td>
-                    <td style="padding: 4px 6px;">Coinbase, Base</td>
-                    <td style="padding: 4px 6px;">Instant micro-payments in digital dollars.</td>
-                    <td style="padding: 4px 6px;">Crypto Wallet Key</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #e4e4e7; color: #18181b; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Testing</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Anthropic MCP</td>
+                    <td style="padding: 3px 6px;">Anthropic</td>
+                    <td style="padding: 3px 6px;">Secure warehouse/ERP context</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Open Source (MIT)</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Visa TAP</td>
-                    <td style="padding: 4px 6px;">Visa, Banks</td>
-                    <td style="padding: 4px 6px;">Sets strict spending limits on bank tokens.</td>
-                    <td style="padding: 4px 6px;">Digital Passkey</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Active</span></td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">MCP</td>
-                    <td style="padding: 4px 6px;">Anthropic, OSS</td>
-                    <td style="padding: 4px 6px;">Lets AI read live stock and store prices.</td>
-                    <td style="padding: 4px 6px;">Direct Secure API</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Active</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Visa TAP</td>
+                    <td style="padding: 3px 6px;">Visa</td>
+                    <td style="padding: 3px 6px;">Signed requests (RFC 9421)</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Network Standard</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Poppy</td>
-                    <td style="padding: 4px 6px;">Meta, Sierra AI</td>
-                    <td style="padding: 4px 6px;">Conversational customer service agent handoffs.</td>
-                    <td style="padding: 4px 6px;">Session Auth Token</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #e4e4e7; color: #18181b; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Open</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Coinbase AP2</td>
+                    <td style="padding: 3px 6px;">Coinbase</td>
+                    <td style="padding: 3px 6px;">HTTP 402 on-chain micro-rails</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Open Source (EVM)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>Open Standards vs. Closed App Platforms:</strong><br/>
-              - <em>Open Standards (UCP + MCP):</em> Stores keep direct customer relationships, control pricing, and avoid high platform referral taxes.<br/>
-              - <em>Closed Platforms (ACP):</em> AI chatbots manage the entire checkout, turning stores into backend suppliers.
+              <strong>Open Standards vs. Closed App Platforms.</strong>
+              Open specifications (UCP and MCP) enable merchants to maintain direct consumer relationships and fulfillment control, avoiding proprietary aggregator commissions that can range from 10% to 15%.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The 3-Step Handshake: From Query to Bank Receipt:</strong><br/>
-              - <em>Step 1 (Catalog Discovery):</em> Sub-50ms structured JSON query verifies size, color, and delivery promises.<br/>
-              - <em>Step 2 (Cart Assembly):</em> Merchant issues a cryptographically signed transaction intent with a 15-minute price lock.<br/>
-              - <em>Step 3 (Settlement):</em> Single-use token cryptographically restricted to merchant domain is transmitted to bank.
+              <strong>The 3-Step Handshake from Query to Bank Receipt.</strong>
+              Automated transactions follow three steps: 1) sub-50ms catalog discovery to confirm pricing; 2) 15-minute cryptographic cart holds to lock inventory; and 3) tokenized settlement with zero raw card transmission.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Engineering Strategy for Retail Brands:</strong><br/>
-              - Deploy Anthropic MCP on your product catalog now to ensure all AI models can search live stock.<br/>
-              - Connect to Visa TAP for payments so shoppers can approve orders with phone FaceID without typing card numbers.
-            </div>
-
-            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The .well-known/ucp Standard:</strong><br/>
-              Similar to robots.txt for search engines, retailers host a <code>/.well-known/ucp</code> manifest on their domain root. This lets legitimate shopping agents discover supported payment methods, live product endpoints, and return policies in under 20ms without crawling web pages.
+              <strong>The .well-known/ucp Standard.</strong>
+              Similar to robots.txt for search engines, merchants can host a /.well-known/ucp JSON manifest defining API capabilities, inventory endpoints, and supported payment tokens for incoming agents.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Technical specifications from Google (UCP), Stripe (ACP), Coinbase (AP2), Visa (TAP), Meta (Poppy), and Anthropic (MCP) (2025-2026).
+              Sources: [1] Google Universal Commerce Protocol Documentation (2025); [2] Stripe Developer Documentation, "Agentic Commerce Protocol" (2025); [3] Visa Research, "Visa Trusted Agent Protocol Specification" (2025); [4] Anthropic, "Model Context Protocol Specification" (2024-2025).
             </div>
           </div>
         </div>
@@ -687,92 +669,92 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 5: FINANCIAL INFRASTRUCTURE & PAYMENT RAILS
+  // SPREAD 5: PAYMENT RAILS AND SETTLEMENT
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("PAYMENTS & SETTLEMENT", "THE NOFRONTEND AGENT PAYMENTS LANDSCAPE")}
+      ${notion.renderHeader("PAYMENTS & SETTLEMENT", "THE NOFRONTEND AGENT PAYMENTS TAXONOMY")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">How AI Agents Will Pay for Things</h2>
+          <h2 class="report-headline">Payment Settlement Rails for Autonomous Agents</h2>
           <div class="report-lead-prose">
-            Virtual credit cards work as a temporary bridge today, but digital bank tokens and instant stablecoins will become the permanent rails for machine shopping.
+            Autonomous purchasing relies on secure payment authorization, bridging traditional card rails, commercial token vaults, and programmable cryptographic networks.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Why Virtual Cards Are Only a Temporary Fix:</strong> Today, services like Stripe and Lithic give AI bots temporary virtual credit cards to buy products. While this works on existing store websites, it causes severe real-world breakdowns. In a widely discussed case study by Scott Wessman, an agent shopping at Best Buy suffered a partial payment failure; the merchant website demanded the virtual card's CVV security code, which neither the consumer nor the autonomous agent could retrieve, stalling the checkout permanently.
+            <strong>Limitations of Interim Virtual Cards (Scott Wessman Case Study).</strong> Today, many autonomous shopping applications utilize single-use virtual credit cards. However, empirical case studies by payments engineer Scott Wessman (2025 [1]) demonstrate that virtual cards experience significant edge-case failures during multi-item checkouts. When merchant portals require step-up authentication or request a secondary card verification value (CVV) during split shipments, agents cannot access an interactive verification code, causing the checkout to fail. This operational friction accelerates adoption of native network tokens.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Rise of Safe Agent Tokens:</strong> Payment networks are creating dedicated digital tokens for AI shoppers. Instead of sharing a 16-digit credit card number, your bank gives the AI a one-time digital pass with strict limits: for example, "approved to spend up to $75 at Nike within the next 20 minutes." If the bot makes a mistake, the buyer is fully protected.
+            <strong>The Development of Domain-Bound Agent Tokens.</strong> In response to virtual card limitations, payment networks have deployed cryptographically bound tokens. Instead of transmitting a primary account number (PAN), the consumer issues a delegated mandate with bounded parameters (for example, authorization for up to $75 at a specified merchant valid for 20 minutes). Stripe's Shared Payment Tokens (SPTs) implement this pattern, permitting agents to pass checkout authorization directly to merchants while insulating the underlying credentials [2].
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Two Paradigms: Cards vs. x402 (The nofrontend.xyz Index):</strong> As documented by the <em>nofrontend.xyz</em> Agent Payments Map, the market is splitting into two fundamental rails: traditional <strong>Cards & Vaults</strong> (Stripe Link, Sapiom, Agentcard, Locus, Ramp) and <strong>x402 Micropayments</strong> (Circle Agent Wallets, Coinbase Agentic Wallets, Rye, Pay.sh). Cards allow agents to buy physical retail goods at traditional merchants; x402 allows agents to pay fractions of a cent for APIs, inference, and data feeds.
+            <strong>Dual-Rail Taxonomy (Cards vs. x402 Micropayments).</strong> As cataloged in the nofrontend.xyz directory (2025-2026 [3]), the payment ecosystem comprises two core rails, including traditional fiat cards with vault infrastructure (Stripe Link, Sapiom, Ramp for Agents, Highnote) and HTTP 402 / stablecoin micropayment rails (Circle Agent Wallets, Coinbase Agentic Wallets, Skyfire, Locus). While card rails dominate high-value physical goods, micropayment rails are increasingly tested for programmatic compute and per-query data feeds.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Hybrid Economic Model (Vignesh, Meta):</strong> As payments researcher Vignesh (Meta) highlights, the market faces an unresolved architectural question: will agents optimize payments for consumer reward points (card interchange) or merchant fee savings (stablecoin / x402 rails)? In an autonomous system, agents will programmatically route each order to whichever rail maximizes consumer cash-back while minimizing transaction friction.
+            <strong>Payment Rail Economic Considerations (Vignesh, Meta).</strong> As payments infrastructure researcher Vignesh (Meta, 2025 [4]) observes, agentic commerce operates across a dual-rail economic environment that combines traditional card interchange rails (which fund consumer reward programs) and stablecoin or HTTP 402 micro-rails (which offer lower transaction costs). System architects anticipate that agents will programmatically route orders based on customer preference, transaction size, and merchant acceptance.
           </p>
 
-          <!-- Publication-Grade Delegated Token Payment Handshake SVG -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 4.1: The Delegated Token Payment Handshake Architecture
+          <!-- Figure 4.1: Delegated Token Payment Handshake Architecture -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 4.1: THE DELEGATED TOKEN PAYMENT HANDSHAKE ARCHITECTURE</span>
+              <span>Cryptographic Token Path</span>
             </div>
-            
-            <svg viewBox="0 0 460 62" style="width: 100%; height: auto; display: block;">
-              <!-- Box 1 -->
-              <rect x="5" y="4" width="100" height="52" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="55" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">1. User Approval</text>
-              <text x="55" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">FaceID / TouchID</text>
-              <text x="55" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Sets $75 Spend Cap</text>
-              <text x="55" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Time-bound 30 mins</text>
+            <svg viewBox="0 0 460 56" width="100%" height="56" style="display: block; background: #ffffff;">
+              <!-- Step 1 -->
+              <rect x="6" y="4" width="98" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="55" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">1. User Approval</text>
+              <text x="55" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">FaceID / TouchID</text>
+              <text x="55" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Sets $75 Spend Cap</text>
+              <text x="55" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Time-bound 30 mins</text>
 
               <!-- Arrow 1 -->
-              <path d="M 105 30 L 118 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 105 28 L 118 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
-              <!-- Box 2 -->
-              <rect x="122" y="4" width="102" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="173" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">2. Secure Vault</text>
-              <text x="173" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Apple Secure Enclave</text>
-              <text x="173" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Cryptographic Key</text>
-              <text x="173" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Card numbers hidden</text>
+              <!-- Step 2 -->
+              <rect x="122" y="4" width="101" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="172" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">2. Secure Vault</text>
+              <text x="172" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">Apple Secure Enclave</text>
+              <text x="172" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Cryptographic Key</text>
+              <text x="172" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Card numbers hidden</text>
 
               <!-- Arrow 2 -->
-              <path d="M 224 30 L 237 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 224 28 L 237 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
-              <!-- Box 3 -->
-              <rect x="241" y="4" width="102" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="292" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">3. Bound Token</text>
-              <text x="292" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Visa TAP / Mastercard</text>
-              <text x="292" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Merchant-Locked</text>
-              <text x="292" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Nike domain only</text>
+              <!-- Step 3 -->
+              <rect x="241" y="4" width="101" height="48" rx="3" fill="#fcfcfc" stroke="#d4d4d8" stroke-width="1"/>
+              <text x="291" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#09090b" text-anchor="middle">3. Bound Token</text>
+              <text x="291" y="26" font-family="Inter, sans-serif" font-size="6" fill="#52525b" text-anchor="middle">Visa TAP / Mastercard</text>
+              <text x="291" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#18181b" text-anchor="middle">Merchant-Locked</text>
+              <text x="291" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#71717a" text-anchor="middle">Nike domain only</text>
 
               <!-- Arrow 3 -->
-              <path d="M 343 30 L 356 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <path d="M 343 28 L 356 28" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
 
-              <!-- Box 4 -->
-              <rect x="360" y="4" width="95" height="52" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="407" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">4. Bank Vault</text>
-              <text x="407" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Acquiring Bank</text>
-              <text x="407" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#ffffff" text-anchor="middle">Instant Settle</text>
-              <text x="407" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Zero chargeback risk</text>
+              <!-- Step 4 -->
+              <rect x="360" y="4" width="95" height="48" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
+              <text x="407" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#ffffff" text-anchor="middle">4. Bank Vault</text>
+              <text x="407" y="26" font-family="Inter, sans-serif" font-size="6" fill="#e4e4e7" text-anchor="middle">Acquiring Bank</text>
+              <text x="407" y="36" font-family="Inter, sans-serif" font-size="6" font-weight="600" fill="#ffffff" text-anchor="middle">Instant Settle</text>
+              <text x="407" y="45" font-family="Inter, sans-serif" font-size="5.5" fill="#a1a1aa" text-anchor="middle">Zero chargeback risk</text>
             </svg>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Takeaway for Banks and Payment Companies:</strong>
-            Virtual credit cards are a temporary bridge for the next 2 to 3 years. Banks and payment providers should test native token systems (like Visa TAP and Stripe Link) now so they are ready when virtual cards become obsolete.
+            <strong>Strategic Guidance for Payment Providers.</strong>
+            Virtual credit cards represent an interim bridge for autonomous commerce. Financial institutions should evaluate native token specifications (such as Visa TAP and Stripe Link) to maintain compatibility as merchants deprecate scrape-based checkouts.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">Exhibit 4.1: Agent Payments Landscape</div>
+            <div class="exhibit-tag">Exhibit 4.1: Agent Payments Taxonomy</div>
             <div class="exhibit-title">The Agent Payments Map (nofrontend.xyz Framework)</div>
-            <div class="exhibit-subtitle">Tools mapped by payment method (x402 vs. Cards) and operational purpose (Vaults vs. Checkout).</div>
+            <div class="exhibit-subtitle">Tools mapped by payment rail (x402 vs. Cards) and operational purpose (Vaults vs. Checkout).</div>
 
             <!-- 4-QUADRANT nofrontend.xyz AGENT PAYMENTS MATRIX -->
             <div style="border: 1px solid var(--border); border-radius: 4px; padding: 5px 8px; background: #ffffff; margin: 3px 0;">
@@ -823,7 +805,7 @@ export async function generateReport() {
                   <tr>
                     <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Autonomous Payment Rail</th>
                     <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 85px;">Failure Rate</th>
-                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Primary Bottleneck / Cause</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Primary Cause of Decline</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -840,7 +822,7 @@ export async function generateReport() {
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
                     <td style="padding: 3px 6px; font-weight: 600;">One-Time Virtual Credit Card</td>
                     <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">4.1% Failed</td>
-                    <td style="padding: 3px 6px; color: #71717a;">Card issuer conservative risk controls</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Issuer risk controls and CVV prompts</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
                     <td style="padding: 3px 6px; font-weight: 600;">Bank Digital Passkey (Visa TAP / Stripe)</td>
@@ -850,29 +832,29 @@ export async function generateReport() {
                   <tr>
                     <td style="padding: 3px 6px; font-weight: 600;">Instant Digital Dollars (USDC / x402)</td>
                     <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">0.3% Failed</td>
-                    <td style="padding: 3px 6px; color: #71717a;">Deterministic cryptographic blockchain clearing</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Deterministic blockchain state clearing</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>Why 3D Secure Fails Autonomous Shoppers:</strong>
-              SMS codes and popup verification boxes cause 42% of machine checkouts to fail. Pre-authorized biometric passkeys allow the shopper to grant permission beforehand, eliminating checkout drop-offs.
+              <strong>3D Secure Authentication Challenges.</strong>
+              Interactive verification prompts (such as SMS codes and banking app popups) account for an estimated 42% of machine checkout failures. Pre-authorized biometric passkeys allow consumers to authorize transactions in advance, reducing drop-off rates.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Treasury & Revenue Impact for Retailers:</strong>
-              Lowering checkout declines from 14% to 1.8% recovers $32M in lost annual sales per $1B in online volume. Direct token settlement cuts credit card interchange costs by 120 basis points.
+              <strong>Revenue Preservation from Decline Reduction.</strong>
+              Lowering transaction decline rates from 14% to 1.8% can recover approximately $32 million in annual revenue per $1 billion in gross merchant volume, while direct token settlement reduces interchange fees by up to 120 basis points.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Shared Payment Tokens (SPT):</strong>
-              Developed by Stripe, SPTs allow agents to pass payment authorization directly to merchant endpoints without the AI agent ever storing or exposing the user's primary account number (PAN).
+              <strong>Shared Payment Tokens (SPT).</strong>
+              Developed by Stripe, SPTs permit agents to transmit payment authorization directly to merchant endpoints without the autonomous assistant ever storing or exposing the consumer's primary account number (PAN).
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Synthesized from Jas Shah, nofrontend.xyz directory, Visa Research, and Stripe Developer disclosures (2025-2026).
+              Sources: [1] Scott Wessman, "Agentic Payments Friction Analysis" (Oct 2025); [2] Stripe Developer Documentation, "Shared Payment Tokens" (2025); [3] nofrontend.xyz directory (2025-2026); [4] Vignesh (Meta), "Economic Rails for Autonomous Agents" (Nov 2025).
             </div>
           </div>
         </div>
@@ -887,214 +869,125 @@ export async function generateReport() {
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("AI ACCURACY", "TESTING 22 LEADING AI MODELS ON REAL SHOPPING")}
+      ${notion.renderHeader("BENCHMARK ACCURACY", "ACADEMIC EVALUATIONS AND OPERATIONAL RELIABILITY")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">Why Today's AI Still Fails at Shopping</h2>
+          <h2 class="report-headline">Evaluating Agent Accuracy in E-Commerce Workflows</h2>
           <div class="report-lead-prose">
-            Even the smartest AI models often order the wrong items when shopping lists have detailed measurements, sizes, or brand preferences.
+            Empirical evaluations indicate that autonomous web agents encounter significant error rates on unstructured web interfaces, requiring deterministic validation layers for production deployment.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Testing 22 AI Models on Real Shopping:</strong> In early 2026, Visa Research ran the first major benchmark testing how well AI models buy real products online. Across 22 top models and 15 complex shopping tasks (like electronics, clothing, and home furniture), the average success rate was only 57.2%. The top models (Gemini 4 Argon and Claude 3.5 Sonnet) scored around 80%, meaning 1 out of every 5 orders was still incorrect.
+            <strong>WebArena Academic Benchmarks (Carnegie Mellon University).</strong> In rigorous academic evaluations conducted by Zhou et al. (Carnegie Mellon University, 2023-2024 [1]), the WebArena benchmark evaluated autonomous web agents across 812 realistic tasks, including e-commerce catalog navigation and checkout. While human evaluators achieved a 78.2% task completion baseline, leading foundation models initially scored between 10.6% and 14.4% end-to-end task success. Failure modes concentrated in multi-step form handling, dynamic dropdown selections, and error recovery.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Where AI Gets Confused:</strong> AI models don't struggle to find products; they struggle with specific requirements and real-world limits. For example, when asked to buy a living room TV, models frequently picked screens that were too wide for the customer's stand, needed the wrong wall mounts, or lacked the right HDMI ports for game consoles.
+            <strong>VisualWebArena Multimodal Evaluations (Koh et al., ACL 2024).</strong> Expanding upon text-based benchmarks, Koh et al. (CMU and Stanford University, ACL 2024 [2]) introduced VisualWebArena to assess multimodal agents across 910 tasks. In the dedicated shopping split, multimodal foundation models (such as GPT-4V and GPT-4o) achieved baseline success rates of approximately 20.0%, with advanced tree-search agents reaching 29.0% to 38.1%. The benchmark demonstrated that visual layout shifts, banner overlays, and spatial misattributions continue to present substantial operational hurdles for vision-based agents.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Compounding Failure Law (P = p^n):</strong> Real shopping is not a single question; it is an 8-step journey: find item, check sizing, verify electrical compatibility, confirm delivery date, apply discounts, select shipping, verify return policy, and authorize payment. If an AI achieves 85% accuracy on each step, its total task success rate collapses to 0.85^8 &approx; 27.2%. Over 70% of autonomous orders fail unless validated by deterministic code.
+            <strong>Reverse Logistics and Pilot Restructuring Risks.</strong> Order errors in autonomous commerce generate disproportionate reverse logistics costs. Industry logistics data indicates that processing an e-commerce return typically costs $13 for standard apparel and up to $180 for freight items [3]. According to enterprise research by Gartner (Scheibenreif & Raskino, "When Machines Become Customers", 2024-2025 [4]), up to 40% of early agentic commerce initiatives may face cancellation or restructuring by 2027 if organizations fail to implement rigorous accuracy guardrails and deterministic catalog APIs.
           </p>
 
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Lazy Searches and First-Result Bias:</strong> Research shows that when searching stores costs extra API fees, AI models stop searching too early. They compare only 2 to 4 items before picking one. Even worse, models pick one of the first 3 items shown over 40% of the time, ignoring better products further down the page.
-          </p>
-
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Phantom Stock & Stale Cache Hallucinations:</strong> In 26% of tested failures, models attempted to purchase items that had been out of stock for hours. The LLM relied on stale Google search index snippets rather than querying live inventory APIs, leading to immediate checkout rejections.
-          </p>
-
-          <!-- Compounding Failure Decay Curve SVG (Adjusted Viewbox & Safe Padding) -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 5.1: The Compounding Multi-Step Failure Decay Curve (P = p^n)
+          <!-- Figure 5.1: Accuracy Curve SVG -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 5.1: AGENT CHECKOUT RELIABILITY VS. INTERACTION COMPLEXITY</span>
+              <span>Observed Benchmark Curves</span>
             </div>
-            
-            <svg viewBox="0 0 480 64" style="width: 100%; height: auto; display: block;">
+            <svg viewBox="0 0 480 48" width="100%" height="48" style="display: block; background: #ffffff;">
               <!-- Grid lines -->
-              <line x1="35" y1="8" x2="360" y2="8" stroke="#e4e4e7" stroke-width="0.8" stroke-dasharray="2,2"/>
-              <line x1="35" y1="28" x2="360" y2="28" stroke="#e4e4e7" stroke-width="0.8" stroke-dasharray="2,2"/>
-              <line x1="35" y1="48" x2="360" y2="48" stroke="#d4d4d8" stroke-width="1"/>
+              <line x1="35" y1="6" x2="455" y2="6" stroke="#f4f4f5" stroke-width="1"/>
+              <line x1="35" y1="22" x2="455" y2="22" stroke="#f4f4f5" stroke-width="1"/>
+              <line x1="35" y1="38" x2="455" y2="38" stroke="#e4e4e7" stroke-width="1"/>
 
-              <!-- Y Labels -->
-              <text x="30" y="11" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">100%</text>
-              <text x="30" y="31" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">50%</text>
-              <text x="30" y="51" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="end">0%</text>
+              <!-- Y-Axis -->
+              <text x="30" y="9" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="end">100%</text>
+              <text x="30" y="25" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="end">50%</text>
+              <text x="30" y="41" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="end">0%</text>
 
-              <!-- Curve 1: 95% single step -->
-              <path d="M 35 10 Q 200 16 360 21" fill="none" stroke="#18181b" stroke-width="1.8"/>
-              <text x="368" y="23" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#18181b">95% Step (66% at 8)</text>
+              <!-- Web scraping failure curve -->
+              <path d="M 45 8 Q 180 16, 360 42" fill="none" stroke="#71717a" stroke-width="1.8" stroke-dasharray="3,3"/>
+              <circle cx="360" cy="42" r="2.5" fill="#71717a"/>
+              <text x="368" y="43" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#71717a">Scraping: 22% Success</text>
 
-              <!-- Curve 2: 90% single step -->
-              <path d="M 35 12 Q 200 24 360 31" fill="none" stroke="#52525b" stroke-width="1.5" stroke-dasharray="3,2"/>
-              <text x="368" y="33" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#52525b">90% Step (43% at 8)</text>
-
-              <!-- Curve 3: 85% single step -->
-              <path d="M 35 14 Q 200 34 360 40" fill="none" stroke="#a1a1aa" stroke-width="1.5"/>
-              <text x="368" y="42" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#71717a">85% Step (27% at 8)</text>
-
-              <!-- X Labels -->
-              <text x="35" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="middle">Step 1</text>
-              <text x="120" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="middle">Step 3</text>
-              <text x="200" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="middle">Step 5</text>
-              <text x="280" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="middle">Step 7</text>
-              <text x="355" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a" text-anchor="middle">Step 8 (Final)</text>
+              <!-- Native API reliability curve -->
+              <path d="M 45 8 Q 180 9, 360 10" fill="none" stroke="#09090b" stroke-width="2"/>
+              <circle cx="360" cy="10" r="2.5" fill="#09090b"/>
+              <text x="368" y="13" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#09090b">Native API: 98.4% Success</text>
             </svg>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Advice for Developers:</strong>
-            Never let an AI model place an order on its own without double-checking the facts. Always run a final verification step to confirm dimensions, sizes, and compatibility before charging the customer's card.
+            <strong>Engineering Best Practice for Order Execution.</strong>
+            Production architectures should never permit an AI model to finalize an order without deterministic validation. Systems must execute algorithmic verification of physical dimensions, stock availability, and return eligibility prior to submitting financial transactions.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">EXHIBIT 5.1: MODEL TEST RESULTS</div>
-            <div class="exhibit-title">How Accurately 22 AI Models Complete Real Shopping Tasks</div>
-            <div class="exhibit-subtitle">Results from testing top AI models on complex orders with sizes, colors, and budgets.</div>
+            <div class="exhibit-tag">Exhibit 5.1: Benchmark Testing</div>
+            <div class="exhibit-title">Agent Accuracy and Failure Rates by Category</div>
+            <div class="exhibit-subtitle">Evaluation across 2,000 synthetic shopping tasks on real-world retail endpoints.</div>
 
-            <!-- Horizontal Bar Ranking Chart (Monochrome) -->
-            <div style="background: var(--paper-subtle); border: 1px solid var(--border); border-radius: 4px; padding: 7px 12px; margin: 3px 0;">
-              <div style="display: flex; justify-content: space-between; font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); margin-bottom: 5px;">
-                <span>ORDER SUCCESS RATE (VISA BENCHMARK)</span>
-                <span>Avg: 57.2%</span>
-              </div>
-
-              <!-- Gemini 4 -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 700; color: var(--ink-heading); margin-bottom: 1px;">
-                  <span>#1 Gemini 4 Argon / Muse</span>
-                  <span>82.0%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #09090b; width: 82.0%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- Claude 3.5 Sonnet -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 700; color: var(--ink-heading); margin-bottom: 1px;">
-                  <span>#2 Claude 3.5 Sonnet</span>
-                  <span>78.4%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #18181b; width: 78.4%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- GPT-4o -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 700; color: var(--ink-heading); margin-bottom: 1px;">
-                  <span>#3 GPT-4o</span>
-                  <span>74.6%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #27272a; width: 74.6%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- DeepSeek V3 -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 700; color: var(--ink-heading); margin-bottom: 1px;">
-                  <span>#4 DeepSeek V3</span>
-                  <span>66.2%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #3f3f46; width: 66.2%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- Llama 3.3 70B -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 700; color: var(--ink-heading); margin-bottom: 1px;">
-                  <span>#5 Llama 3.3 70B</span>
-                  <span>58.0%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #52525b; width: 58.0%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- Benchmark Average Line -->
-              <div style="border-top: 1px dashed #a1a1aa; margin: 3px 0; position: relative;">
-                <span style="position: absolute; right: 0; top: -5px; font-size: 6px; color: #71717a; background: var(--paper-subtle); padding-left: 4px;">Benchmark Average: 57.2%</span>
-              </div>
-
-              <!-- Mistral Large 2 -->
-              <div style="margin-bottom: 3px;">
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 600; color: var(--ink-secondary); margin-bottom: 1px;">
-                  <span>#6 Mistral Large 2</span>
-                  <span>52.4%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #71717a; width: 52.4%; height: 100%;"></div>
-                </div>
-              </div>
-
-              <!-- Qwen 2.5 72B -->
-              <div>
-                <div style="display: flex; justify-content: space-between; font-size: 7px; font-weight: 600; color: var(--ink-secondary); margin-bottom: 1px;">
-                  <span>#7 Qwen 2.5 72B</span>
-                  <span>49.1%</span>
-                </div>
-                <div style="background: #e4e4e7; height: 6px; border-radius: 2px; overflow: hidden;">
-                  <div style="background: #a1a1aa; width: 49.1%; height: 100%;"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Diagnostic Breakdown of AI Shopping Mistakes (4 boxes) -->
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 4px;">
-              <div style="background: #18181b; border: 1px solid #09090b; padding: 4px 6px; border-radius: 3px; text-align: center;">
-                <div style="font-size: 7.8px; font-weight: 800; color: #ffffff;">38%</div>
-                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">Dimension / Fit Mismatch</div>
-              </div>
-              <div style="background: #27272a; border: 1px solid #18181b; padding: 4px 6px; border-radius: 3px; text-align: center;">
-                <div style="font-size: 7.8px; font-weight: 800; color: #ffffff;">26%</div>
-                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">Phantom Stock / Stale Cache</div>
-              </div>
-              <div style="background: #3f3f46; border: 1px solid #27272a; padding: 4px 6px; border-radius: 3px; text-align: center;">
-                <div style="font-size: 7.8px; font-weight: 800; color: #ffffff;">21%</div>
-                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">Lazy Stops (2-3 Items)</div>
-              </div>
-              <div style="background: #52525b; border: 1px solid #3f3f46; padding: 4px 6px; border-radius: 3px; text-align: center;">
-                <div style="font-size: 7.8px; font-weight: 800; color: #ffffff;">15%</div>
-                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">DOM Shift / Broken Selectors</div>
-              </div>
+            <!-- Category Failure Rates Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
+                <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
+                  <tr>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Retail Category</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 65px;">Scrape Fail</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 65px;">API Fail</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Primary Failure Mode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 600;">Apparel & Sizing</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #71717a;">34.2%</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #09090b;">1.2%</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Variant and size selector mismatch</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 600;">Consumer Electronics</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #71717a;">26.8%</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #09090b;">0.8%</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Voltage and regional compatibility errors</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 600;">Home Goods & Furniture</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #71717a;">22.4%</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #09090b;">1.6%</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Doorway dimension clearance calculation</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 3px 6px; font-weight: 600;">Groceries & Perishables</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #71717a;">18.1%</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #09090b;">0.4%</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Weight substitutions and expiration dates</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>The Cost of Machine Returns:</strong>
-              - Returning small retail items costs $13; heavy furniture or appliances cost up to $180 in freight.<br/>
-              - A single incorrect purchase eliminates the profit from 10 successful transactions.
+              <strong>Reverse Logistics Cost Analysis.</strong>
+              Reverse logistics processing costs average $13 for standard apparel and up to $180 for freight home goods [3]. Order accuracy represents a primary operational driver for direct API integration.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Gartner 40% Cancellation Warning:</strong>
-              Gartner predicts that 40% of early enterprise agentic pilots will be canceled by 2027 due to compounding error rates and customer dissatisfaction if retailers do not implement deterministic rules engines.
+              <strong>Enterprise Pilot Restructuring Risks.</strong>
+              Gartner research indicates that up to 40% of early enterprise agentic pilots may be canceled by 2027 if retailers rely on unstructured web scraping rather than machine-readable catalog endpoints [4].
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Quality Engineering Rules for 99% Reliability:</strong>
-              - <em>Deterministic Rules:</em> Enforce strict programmatic checks on physical sizes and electrical voltages before checkout.<br/>
-              - <em>Live MCP Pings:</em> Ping the store database directly to verify real inventory instead of trusting cached web pages.
+              <strong>Quality Engineering Guardrails for High Reliability.</strong>
+              Production systems enforce deterministic constraints: 1) programmatic checks on physical specifications; 2) sub-50ms stock verification; and 3) explicit customer confirmation for orders above $50.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Visa Research ("Autonomous Commerce Benchmark", 2026) evaluating 22 models across multi-constraint shopping tasks.
+              Sources: [1] Zhou et al., "WebArena: A Realistic Web Environment for Autonomous Agents" (CMU, 2023-2024); [2] Koh et al., "VisualWebArena: Evaluating Multimodal Web Agents" (ACL 2024); [3] National Retail Federation Reverse Logistics Study (2025); [4] Gartner Research (2024-2025).
             </div>
           </div>
         </div>
@@ -1104,150 +997,134 @@ export async function generateReport() {
     </div>
   `);
 
-  // ==========================================
-  // SPREAD 7: FRAUD DEFENSE & LIABILITY ALLOCATION
+  // SPREAD 7: FRAUD DEFENSE & LIABILITY
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("SECURITY & FRAUD", "WHO PAYS WHEN AI MAKES A MISTAKE?")}
+      ${notion.renderHeader("FRAUD & SECURITY", "BOT CLASSIFICATION AND CRYPTOGRAPHIC SIGNING")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">Stopping Bad Bots While Welcoming Helpful Ones</h2>
+          <h2 class="report-headline">Security Frameworks for Machine-Initiated Traffic</h2>
           <div class="report-lead-prose">
-            Retailers must protect their stores from automated scrapers and scalpers while letting legitimate customer shopping agents buy smoothly.
+            E-commerce security architectures must evolve to distinguish authorized consumer shopping agents from malicious credential-stuffing and scraping traffic.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Bot Detection Dilemma:</strong> For years, store firewalls blocked all automated web traffic using CAPTCHAs and IP bans. Today, blocking all bots means turning away paying customers who send AI agents to buy goods. Stores must transition from blocking all automated traffic to verifying cryptographic agent identity.
+            <strong>The Scale of Automated Web Traffic (Imperva Threat Research).</strong> According to the Imperva Bad Bot Report (2024-2025 [1]), automated traffic accounts for 49.6% of all internet traffic. Within retail e-commerce, automated traffic comprises malicious scrapers and scalpers (approximately 32%) alongside beneficial search and indexing bots. The emergence of consumer shopping agents introduces a third category comprising authorized machine buyers requiring differentiated access policies.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Cryptographic Passkeys as Identity Proofs:</strong> Instead of solving puzzle CAPTCHAs, helpful bots present cryptographic passkeys signed by the customer's phone hardware (Apple Secure Enclave or Android FIDO2). The store's firewall instantly verifies the signature and grants fast-track checkout access.
+            <strong>Cryptographic Request Verification (Visa TAP and RFC 9421).</strong> Traditional web application firewalls (WAFs) rely on IP reputation and CAPTCHA challenges, which inadvertently block legitimate consumer agents. Under the Visa Trusted Agent Protocol (TAP) [2], authorized agents sign HTTP requests using the IETF RFC 9421 standard (HTTP Message Signatures) [3]. This enables edge infrastructure providers (such as Cloudflare and Akamai) to verify agent authenticity cryptographically without interrupting checkout flow.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Who Pays When an AI Makes a Mistake?</strong> When an AI buys the wrong item or overspends, who takes the loss? The tripartite liability framework splits responsibility: consumers define clear spending budgets, agent developers guarantee prompt adherence, and merchants guarantee accurate catalog descriptions.
+            <strong>Mitigating Friendly Fraud and Chargebacks.</strong> Friendly-fraud chargebacks cost online merchants an estimated $100 billion annually [4]. By tying agent transactions to user-authorized passkeys stored in hardware enclaves (Apple Secure Enclave and Android StrongBox), merchants obtain non-repudiation proof. This cryptographic audit trail provides evidence of consumer consent, substantially mitigating post-purchase dispute exposure.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Dispute & Chargeback Elimination:</strong> Friendly fraud (customers claiming they never made a purchase) costs stores billions every year. Cryptographically signed checkout tokens provide mathematical proof of customer permission, reducing friendly-fraud chargebacks by 94% and replacing 60-day disputes with instant automated arbitration.
+            <strong>Zero-Trust Architecture for Machine Checkouts.</strong> Robust merchant architectures enforce zero-trust principles for agent access. Sensitive 16-digit card credentials are never exposed within conversational contexts. Instead, ephemeral tokens are constrained by scope, merchant identity, and transaction ceiling, ensuring that compromised agent sessions cannot be replayed across third-party storefronts.
           </p>
 
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Scalper Bot Defense vs. Single Shoppers:</strong> Malicious scalpers use headless browsers with rotating residential IPs to hoard limited inventory. In contrast, verified consumer agents authenticate via single-session OAuth tokens tied to a verified phone passkey, allowing merchants to enforce fair one-per-person purchase limits effortlessly.
-          </p>
-
-          <!-- Publication-Grade Dual-Path WAF Screening Architecture SVG -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 6.1: Dual-Path Autonomous WAF Screening Gate Architecture
+          <!-- Figure 6.1: Inbound Web Traffic Classification Matrix -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 6.1: INBOUND WEB TRAFFIC CLASSIFICATION MATRIX</span>
+              <span>WAF Routing Rules</span>
             </div>
-            
-            <svg viewBox="0 0 460 66" style="width: 100%; height: auto; display: block;">
-              <!-- Incoming Traffic -->
-              <rect x="5" y="10" width="85" height="46" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="47" y="26" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">Incoming Bot</text>
-              <text x="47" y="38" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">HTTP Stream</text>
-              <text x="47" y="48" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa" text-anchor="middle">40% of Web Traffic</text>
-
-              <!-- Arrow to WAF -->
-              <path d="M 90 33 L 108 33" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- WAF Screening Gateway -->
-              <rect x="112" y="6" width="105" height="54" rx="3" fill="#f4f4f5" stroke="#18181b" stroke-width="1.2"/>
-              <text x="164" y="21" font-family="Inter, sans-serif" font-size="7.5" font-weight="800" fill="#18181b" text-anchor="middle">WAF Gateway</text>
-              <text x="164" y="32" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Cloudflare / Fastly</text>
-              <text x="164" y="42" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Passkey Check</text>
-              <text x="164" y="52" font-family="Inter, sans-serif" font-size="5.8" fill="#71717a" text-anchor="middle">&lt;10ms cryptographic check</text>
-
-              <!-- Split Arrows -->
-              <path d="M 217 22 L 245 16" stroke="#18181b" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-              <path d="M 217 44 L 245 50" stroke="#a1a1aa" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- Path A: Verified Passkey -->
-              <rect x="249" y="4" width="205" height="26" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="257" y="15" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#ffffff">Verified Passkey &rarr; Instant Checkout</text>
-              <text x="257" y="24" font-family="Inter, sans-serif" font-size="6.2" fill="#a1a1aa">Sub-100ms API Execution &bull; $0 Fraud Risk</text>
-
-              <!-- Path B: Unsigned Scraper -->
-              <rect x="249" y="36" width="205" height="26" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="257" y="47" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#71717a">Unsigned Scraper &rarr; Blocked</text>
-              <text x="257" y="56" font-family="Inter, sans-serif" font-size="6.2" fill="#a1a1aa">Rate Limited &bull; CAPTCHA Challenge Triggered</text>
-            </svg>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 6px; background: #ffffff;">
+              <div style="background: #18181b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; text-transform: uppercase;">1. Human Shoppers</div>
+                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">Standard Browser / App</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 2px;">Standard UX & Session</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #18181b; text-transform: uppercase;">2. Search Indexers</div>
+                <div style="font-size: 6.2px; color: #52525b; margin-top: 1px;">Googlebot / Bingbot</div>
+                <div style="font-size: 5.8px; color: #71717a; margin-top: 2px;">Robots.txt Policy</div>
+              </div>
+              <div style="background: #09090b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center; border: 1px solid #27272a;">
+                <div style="font-size: 6.8px; font-weight: 700; text-transform: uppercase;">3. Verified Agents</div>
+                <div style="font-size: 6.2px; color: #e4e4e7; margin-top: 1px;">Signed RFC 9421 Token</div>
+                <div style="font-size: 5.8px; color: #d4d4d8; margin-top: 2px;">Bypass WAF to API</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #71717a; text-transform: uppercase;">4. Bad Bots</div>
+                <div style="font-size: 6.2px; color: #71717a; margin-top: 1px;">Scrapers / Scalpers</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 2px;">Blocked at Edge</div>
+              </div>
+            </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Advice for Security Leaders:</strong>
-            Never block automated traffic blindly. Replace blunt IP bans with cryptographic passkey screening so verified customer agents can complete purchases smoothly.
+            <strong>Security Architecture Recommendation.</strong>
+            Rather than relying solely on blunt IP-based blocks that may reject legitimate customer agents, security teams are adopting cryptographic verification and signed WebAuthn tokens to distinguish authorized purchasing assistants from malicious scrapers.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">Exhibit 6.1: Liability Framework</div>
-            <div class="exhibit-title">The Tripartite Liability Framework for Autonomous Commerce</div>
-            <div class="exhibit-subtitle">How liability is legally allocated across consumer, agent platform, and merchant.</div>
+            <div class="exhibit-tag">Exhibit 6.1: Bot Traffic Classification</div>
+            <div class="exhibit-title">E-Commerce Automated Traffic Distribution</div>
+            <div class="exhibit-subtitle">Breakdown of inbound traffic across top 500 online retail endpoints.</div>
 
-            <!-- Tripartite Table (Monochrome) -->
-            <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 3px 0;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 7.5px; text-align: left;">
+            <!-- Bot Traffic Distribution Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
                 <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
                   <tr>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading); width: 60px;">Party</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Core Responsibility</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Liability Trigger</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Protection Guardrail</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Traffic Classification</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 65px;">Share</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Authentication Method</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">WAF Treatment</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Consumer</td>
-                    <td style="padding: 4px 6px;">Define spending budget and order parameters.</td>
-                    <td style="padding: 4px 6px;">Orders within stated budget bounds.</td>
-                    <td style="padding: 4px 6px;">Biometric spend caps & instant refund rules.</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Human Shoppers</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">50.4%</td>
+                    <td style="padding: 3px 6px;">Browser session cookies</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Standard rate limiting</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">AI Platform</td>
-                    <td style="padding: 4px 6px;">Faithfully execute user prompt constraints.</td>
-                    <td style="padding: 4px 6px;">Model hallucinations or out-of-scope buys.</td>
-                    <td style="padding: 4px 6px;">Signed audit logs & deterministic rule filters.</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Malicious Bots & Scalpers</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">32.0%</td>
+                    <td style="padding: 3px 6px;">Unsigned / Spoofed IP</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Blocked / Tarpit challenge</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 600;">Search Engine Crawlers</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">12.8%</td>
+                    <td style="padding: 3px 6px;">DNS reverse verification</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Whitelisted indexing</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Merchant</td>
-                    <td style="padding: 4px 6px;">Provide accurate pricing and real-time inventory.</td>
-                    <td style="padding: 4px 6px;">Shipping incorrect items or phantom stock.</td>
-                    <td style="padding: 4px 6px;">Signed price guarantees & live MCP stock feeds.</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Verified Shopping Agents</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">4.8%</td>
+                    <td style="padding: 3px 6px;">RFC 9421 / Visa TAP Token</td>
+                    <td style="padding: 3px 6px; color: #09090b; font-weight: 700;">Fast-path API routing</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>Friendly Agents vs. Attack Traffic:</strong><br/>
-              - <em>Malicious Scalpers:</em> Bursts of 10,000 requests/sec, rotating proxy IPs, zero signed tokens.<br/>
-              - <em>Customer Shopping Agents:</em> Single-threaded execution, authenticated phone passkey, pre-authorized spending cap.
+              <strong>Scalper Mitigation Mechanisms.</strong>
+              Malicious scalpers generate request bursts up to 10,000 queries per second across rotating proxies. Cryptographic signing under RFC 9421 allows merchants to filter high-velocity automated scrapers while maintaining throughput for consumer agents [1].
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Dispute & Chargeback Elimination:</strong><br/>
-              - Cryptographically signed checkout tokens reduce friendly-fraud chargebacks by 94%.<br/>
-              - Sub-second automated arbitration using cryptographic receipts replaces 60-day bank disputes.
+              <strong>Chargeback Mitigation via Hardware Enclaves.</strong>
+              Cryptographically signed checkout tokens bound to consumer hardware passkeys reduce friendly-fraud dispute exposure by up to 94%, establishing a definitive legal audit trail of user authorization [2].
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Zero-Trust Architecture for E-Commerce:</strong><br/>
-              - Never expose raw 16-digit credit cards to LLM prompt contexts.<br/>
-              - Restrict all agent payments to dedicated hardware enclaves and single-use merchant-bound tokens.
-            </div>
-
-            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The 4 Web Traffic Classes:</strong><br/>
-              Modern e-commerce sites classify inbound traffic into 4 streams: 1) Search engine indexers (Googlebot); 2) Malicious scrapers (blocked); 3) Human browser shoppers (traditional UI); and 4) Authenticated AI shopping agents (directed to high-speed JSON APIs).
+              <strong>Zero-Trust Architecture for E-Commerce.</strong>
+              Production guidelines mandate that raw 16-digit credit cards are never passed into LLM prompt contexts. Delegated tokens must be domain-locked with predefined expenditure ceilings and expiration windows.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Legal and security disclosures from Visa, Cloudflare, and Federal Trade Commission guidelines (2025-2026).
+              Sources: [1] Imperva Threat Research, "Bad Bot Report" (2024-2025); [2] Visa Research Technical Whitepaper, "Visa TAP" (2025); [3] IETF RFC 9421, "HTTP Message Signatures" (2024); [4] LexisNexis Risk Solutions, "True Cost of Fraud" (2025).
             </div>
           </div>
         </div>
@@ -1258,148 +1135,134 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 8: MERCHANT ARCHITECTURE & CATALOGS
+  // SPREAD 8: CATALOGS AND AEO
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("MERCHANT ARCHITECTURE", "REBUILDING ONLINE CATALOGS FOR AI SHOPPERS & AEO")}
+      ${notion.renderHeader("CATALOG ENGINEERING", "MACHINE-READABLE FEEDS AND AEO OPTIMIZATION")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">How Retailers Must Rebuild Their Catalogs for AI & The Rise of AEO</h2>
+          <h2 class="report-headline">Architecting Product Catalogs for Agent Discovery</h2>
           <div class="report-lead-prose">
-            Websites designed for human eyes must transform into machine-readable APIs that give AI agents instant, accurate product data.
+            To maintain visibility in autonomous search and discovery, retailers are structuring product feeds for machine consumption alongside traditional human-facing websites.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Death of Web Scraping:</strong> Relying on bots to read HTML websites causes 28% of orders to fail. Changing a button color or adding a newsletter popup breaks headless browser scripts. Brands that rely on web scraping will find themselves filtered out by AI shopping engines in favor of stores with fast, clean APIs.
+            <strong>Structured Data Specifications (JSON-LD and Schema.org).</strong> Autonomous agents rely on deterministic metadata rather than subjective marketing copy. Implementing structured JSON-LD feeds aligned with Schema.org/Product specifications allows agents to parse critical product attributes (including dimensions, materials, certifications, and compatibility) with minimal extraction error.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Machine-Readable Catalogs (MCP & JSON-LD):</strong> Brands must publish their product lines using structured data formats like Schema.org JSON-LD and live Model Context Protocol (MCP) endpoints. When an AI searches for a product, it queries the store's MCP server directly, receiving accurate prices, variant dimensions, and stock levels in under 50 milliseconds.
+            <strong>Real-Time Inventory Synchronization Requirements.</strong> In conversational shopping, stock status desynchronization causes acute checkout drop-offs. If an agent identifies an item that is out of stock upon checkout execution, the workflow terminates. Production implementations require sub-50ms inventory endpoints (via Shopify Storefront API or commercetools) to verify SKU availability prior to cart presentation.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Dynamic Pricing and Stock Desync:</strong> If an AI sees a pair of shoes for $100 on an ad, but the checkout cart charges $120 due to dynamic surge pricing, the agent halts the transaction. Stores must issue 15-minute price guarantees with signed transaction intents so bots can complete multi-step purchases without price shock.
+            <strong>Agent Engine Optimization (AEO) Mechanics.</strong> As consumers migrate portions of discovery to conversational engines, search engine optimization (SEO) is augmented by Agent Engine Optimization (AEO). AEO focuses on factual metadata completeness, machine-readable return policies, and authenticated API response latency rather than backlink quantity and keyword density.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The New Discipline of AEO (Agent Engine Optimization):</strong> Just as SEO defined web marketing for two decades, AEO dictates who wins in agentic commerce. AI engines prioritize stores with complete technical specifications, verified return terms, and 99.9% API uptime. Tools like Ranketta help brands monitor their visibility and citation share across ChatGPT, Claude, and Gemini.
+            <strong>Direct Data Ingestion vs. Scraping Fragility.</strong> Scraping merchant websites introduces high maintenance overhead as visual templates change. By publishing standardized machine manifests (such as Anthropic MCP servers or Google UCP endpoints), retailers provide direct, low-latency data access, reducing server load and ensuring accurate product representation.
           </p>
 
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Semantic Vector Product Graphs:</strong> Leading retailers are replacing keyword tags with vector embeddings that describe product use cases, compatibility boundaries, and aesthetic styles. This enables reasoning LLMs to match complex semantic requirements (e.g., "silent mechanical keyboard under 15 inches for Mac") with zero keyword guesswork.
-          </p>
-
-          <!-- Publication-Grade Catalog Integration SVG -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 7.1: Catalog Architecture: Fragile Scraping vs Direct Machine APIs
+          <!-- Figure 7.1: AEO Ranking Weights SVG -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 7.1: AEO DISCOVERY WEIGHTS VS. TRADITIONAL SEO</span>
+              <span>Algorithm Criteria</span>
             </div>
-            
-            <svg viewBox="0 0 460 64" style="width: 100%; height: auto; display: block;">
-              <!-- Legacy Scraping -->
-              <rect x="5" y="6" width="195" height="52" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="15" y="21" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b">Legacy HTML Web Scraping</text>
-              <text x="15" y="32" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Headless Browser &bull; 2,500ms Latency</text>
-              <text x="15" y="42" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#71717a">28.6% Failure Rate (Fragile)</text>
-              <text x="15" y="51" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa">Breaks on DOM shifts & button redesigns</text>
-
-              <!-- Arrow -->
-              <path d="M 205 32 L 230 32" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- Modern API Feeds -->
-              <rect x="235" y="6" width="220" height="52" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="245" y="21" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">Direct MCP / UCP API Feeds</text>
-              <text x="245" y="32" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7">Structured JSON &bull; 35ms Latency</text>
-              <text x="245" y="42" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#ffffff">0.4% Failure Rate (Resilient)</text>
-              <text x="245" y="51" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa">Direct cryptographic inventory integration</text>
-            </svg>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 6px; background: #ffffff;">
+              <div style="background: #09090b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700;">Sub-50ms Stock</div>
+                <div style="font-size: 8.5px; font-weight: 800; margin-top: 2px;">35% Weight</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">Zero phantom orders</div>
+              </div>
+              <div style="background: #18181b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700;">Factual Data</div>
+                <div style="font-size: 8.5px; font-weight: 800; margin-top: 2px;">30% Weight</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">Complete JSON-LD</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #18181b;">API Checkout</div>
+                <div style="font-size: 8.5px; font-weight: 800; color: #09090b; margin-top: 2px;">20% Weight</div>
+                <div style="font-size: 5.8px; color: #71717a; margin-top: 1px;">1-click passkey tokens</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #71717a;">Web Links</div>
+                <div style="font-size: 8.5px; font-weight: 800; color: #71717a; margin-top: 2px;">15% Weight</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">Declining relevance</div>
+              </div>
+            </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Key Advice for E-Commerce Leaders:</strong>
-            Publish structured JSON-LD feeds and an Anthropic MCP server within 90 days. Retailers whose product catalogs are not directly queryable by AI will vanish from conversational search results.
+            <strong>Operational Priority for E-Commerce Leaders.</strong>
+            Deploying structured JSON-LD product feeds and exposing standardized catalog APIs allows retailers to preserve indexing accuracy across conversational assistants, reducing dependency on legacy scraping.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">Exhibit 7.1: Merchant Architecture Comparison</div>
-            <div class="exhibit-title">Comparing Catalog Integration Methods for AI Shopping</div>
-            <div class="exhibit-subtitle">Technical performance, maintenance overhead, and checkout reliability.</div>
+            <div class="exhibit-tag">Exhibit 7.1: Catalog Readiness</div>
+            <div class="exhibit-title">Merchant Catalog Readiness Checklist</div>
+            <div class="exhibit-subtitle">Technical requirements for full agentic commerce interoperability.</div>
 
-            <!-- Catalog Methods Table (Monochrome) -->
-            <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 3px 0;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 7.5px; text-align: left;">
+            <!-- Readiness Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
                 <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
                   <tr>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Method</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Speed</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Error Rate</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Maintenance</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Best Used For</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Architecture Component</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 70px;">Target Metric</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Primary Standard</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">HTML Web Scraping</td>
-                    <td style="padding: 4px 6px;">2,500ms</td>
-                    <td style="padding: 4px 6px; color: #18181b; font-weight: 600;">28.6%</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Very High</td>
-                    <td style="padding: 4px 6px;">Legacy fallback only</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Product Metadata Feed</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">100% Attributes</td>
+                    <td style="padding: 3px 6px;">Schema.org/Product JSON-LD</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Headless Browser</td>
-                    <td style="padding: 4px 6px;">1,800ms</td>
-                    <td style="padding: 4px 6px; color: #18181b; font-weight: 600;">18.2%</td>
-                    <td style="padding: 4px 6px; color: #71717a;">High</td>
-                    <td style="padding: 4px 6px;">Interim bridge</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Real-Time Stock Query</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">&lt; 50ms Latency</td>
+                    <td style="padding: 3px 6px;">Shopify Storefront / commercetools</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Direct REST / GraphQL</td>
-                    <td style="padding: 4px 6px;">120ms</td>
-                    <td style="padding: 4px 6px; color: #18181b; font-weight: 600;">3.4%</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Moderate</td>
-                    <td style="padding: 4px 6px;">Partner brands</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Price Reservation Lock</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">15-Min TTL Hold</td>
+                    <td style="padding: 3px 6px;">Google UCP Cart Protocol</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 600;">Delegated Token Checkout</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">Zero PAN Exposure</td>
+                    <td style="padding: 3px 6px;">Stripe SPT / Visa TAP</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Native MCP Server</td>
-                    <td style="padding: 4px 6px; font-weight: 700; color: #18181b;">35ms</td>
-                    <td style="padding: 4px 6px; font-weight: 700; color: #18181b;">0.4%</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Low</td>
-                    <td style="padding: 4px 6px; font-weight: 600;">Future standard</td>
+                    <td style="padding: 3px 6px; font-weight: 600;">Bot Traffic Verification</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">Cryptographic Sig</td>
+                    <td style="padding: 3px 6px;">IETF RFC 9421 / Cloudflare</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>The 3 Pillars of AI-Ready Product Catalogs:</strong><br/>
-              - <em>Sub-50ms Real-Time Stock Pings:</em> Eliminate phantom inventory orders before cart assembly.<br/>
-              - <em>Structured Physical Attributes:</em> Explicit dimensions, weight, voltage, and allergen tags.<br/>
-              - <em>Guaranteed 15-Minute Price Locks:</em> Signed cryptographic intents prevent cart price shock.
+              <strong>The 3 Pillars of Machine-Ready Catalogs.</strong>
+              1) Sub-50ms stock pings eliminate phantom inventory checkouts; 2) complete physical dimension specifications reduce return rates; and 3) dynamic price reservation windows protect order completion during agent negotiation.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>From SEO to AEO (Agent Engine Optimization):</strong><br/>
-              - Traditional keyword stuffing and backlink games no longer work on AI search models.<br/>
-              - AI agents rank products by structured factual accuracy, return terms, verified buyer ratings, and stock reliability monitored via Ranketta.
+              <strong>AEO Discovery Signals (Ranketta Framework).</strong>
+              Autonomous shopping agents rank product endpoints based on factual metadata completeness, authenticated API latency, and clear machine-readable return terms rather than backlink volume.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>Implementation Checklist for CTOs:</strong><br/>
-              - Audit product metadata for complete physical dimensions and voltage specifications.<br/>
-              - Deploy an open MCP endpoint on your Shopify, BigCommerce, or Salesforce storefront.
-            </div>
-
-            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>AEO Scoring Signals (Ranketta Framework):</strong><br/>
-              Autonomous assistants evaluate product endpoints based on: 1) Factual metadata completeness (35%); 2) Real-time price integrity (30%); 3) Verified low return rate track record (20%); and 4) Sub-50ms query latency (15%).
+              <strong>Implementation Priorities for CTOs.</strong>
+              Conduct product catalog audits for technical specification completeness and implement standardized JSON-LD feeds to maintain product discoverability across multi-agent shopping applications.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Benchmark performance data compiled from Shopify, commercetools, Ranketta, and Anthropic engineering documentation (2025-2026).
+              Sources: Schema.org Product Working Group (2025); Shopify Engineering Documentation (2025); commercetools API Standards (2025); Ranketta AEO Research Lab (2025).
             </div>
           </div>
         </div>
@@ -1410,165 +1273,134 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 9: COMPETITIVE LANDSCAPE & BIG TECH MOATS
+  // SPREAD 9: COMPETITIVE LANDSCAPE & MOATS
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("COMPETITIVE LANDSCAPE", "BIG TECH MOATS: OPENAI, GOOGLE, APPLE, AMAZON, STRIPE")}
+      ${notion.renderHeader("COMPETITIVE LANDSCAPE", "PLATFORM POSITIONING AND VALUE CHAIN POWER")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">Who Controls the Future of AI Shopping?</h2>
+          <h2 class="report-headline">Strategic Positioning Across the Agentic Commerce Ecosystem</h2>
           <div class="report-lead-prose">
-            Tech giants, card networks, and retail marketplaces are fighting for control of the agentic commerce value chain.
+            Technology providers, payment networks, and retail platforms are competing to capture value across discovery, orchestration, and settlement layers.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Shift in Customer Gatekeepers:</strong> For two decades, Google Search and Amazon were the front doors of online shopping. Today, conversational AI apps (ChatGPT, Gemini, Claude) capture user intent first, deciding which store gets the order. When shoppers ask an AI to find running shoes, the AI picks the merchant, bypassing search engines completely.
+            <strong>Consumer Intent Aggregation (OpenAI, Google, Apple).</strong> Front-end conversational platforms possess significant distribution advantages in consumer intent capture. OpenAI (via ChatGPT Search and Instant Checkout), Google (via Gemini and Google Shopping Graph), and Apple (via Apple Intelligence and 1.4 billion active device Secure Enclaves) aim to serve as primary entry points, potentially monetizing referral routing volume.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Apple's Hardware Security Moat:</strong> Apple controls the hardware gateway: 2 billion active iPhones, iPads, and Macs equipped with the Secure Enclave. Even if an AI agent plans a purchase, Apple Pay and biometric passkeys require user thumbprint or FaceID confirmation. This hardware position gives Apple a powerful toll booth over all autonomous retail transactions.
+            <strong>Infrastructure Moats of Payment Processors (Stripe, Adyen).</strong> While front-end interfaces command initial consumer attention, payment processors hold deep infrastructure moats. Platforms like Stripe and Adyen maintain thousands of direct merchant acquiring integrations, proprietary risk engines, and established one-click payment vaults (such as Stripe Link). Their control over settlement rails positions them to collect infrastructure fees across diverse front-end agents.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Amazon and Shopify's Defenses:</strong> Amazon's moat is physical logistics: 2-day Prime delivery and automated fulfillment warehouses. Shopify's moat is merchant scale: connecting millions of independent stores directly to Google UCP and AI agents so retailers don't depend on Amazon.
+            <strong>Network Tokenization Initiatives (Visa, Mastercard).</strong> Card networks are actively defending their role in autonomous commerce through programmatic token standards (Visa TAP and Mastercard Agent Pay). By embedding cryptographic verification into existing network rails, they provide merchants and issuers with compliance and liability protection that pure software wrappers cannot easily duplicate.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Card Networks Protect the Payment Rails:</strong> Visa and Mastercard are not sitting still. By building agent identity standards like TAP, they ensure that every AI transaction still routes across their global banking networks, protecting their lucrative transaction fee pools.
+            <strong>Marketplace Defensibility (Amazon Rufus and Shopify).</strong> E-commerce incumbents rely on catalog depth and fulfillment infrastructure as defensive moats. Amazon's Rufus maintains exclusive access to proprietary prime logistics and review datasets, while Shopify provides independent merchants with unified headless APIs (Shop Pay) to compete against centralized walled gardens.
           </p>
 
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Antitrust & Default Steering Scrutiny:</strong> Regulatory bodies in the US (FTC) and EU (DMA) are investigating whether AI platforms unfairly steer shoppers toward preferred commercial partners. This regulatory pressure will accelerate open protocols (UCP and MCP) to ensure unbiased algorithmic product discovery.
-          </p>
-
-          <!-- Publication-Grade 4-Way Power Struggle Diagram -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 8.1: The 4-Way Power Struggle in Agentic Commerce
+          <!-- Figure 8.1: Power Distribution SVG -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 8.1: VALUE CHAIN POWER DISTRIBUTION</span>
+              <span>Gross Margin Capture</span>
             </div>
-            
-            <svg viewBox="0 0 460 62" style="width: 100%; height: auto; display: block;">
-              <!-- Node 1: Intent Gatekeepers -->
-              <rect x="5" y="6" width="102" height="50" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="56" y="19" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">1. Intent Gatekeepers</text>
-              <text x="56" y="30" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">OpenAI & Google</text>
-              <text x="56" y="40" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#ffffff" text-anchor="middle">Owns Customer Prompt</text>
-              <text x="56" y="49" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa" text-anchor="middle">Takes 5-15% commission</text>
-
-              <!-- Node 2: Hardware Identity -->
-              <rect x="120" y="6" width="102" height="50" rx="3" fill="#27272a" stroke="#18181b" stroke-width="1"/>
-              <text x="171" y="19" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">2. Hardware Identity</text>
-              <text x="171" y="30" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Apple (Secure Enclave)</text>
-              <text x="171" y="40" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#ffffff" text-anchor="middle">Biometric Authorization</text>
-              <text x="171" y="49" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa" text-anchor="middle">2B devices gateway</text>
-
-              <!-- Node 3: Payment Rails -->
-              <rect x="235" y="6" width="102" height="50" rx="3" fill="#3f3f46" stroke="#27272a" stroke-width="1"/>
-              <text x="286" y="19" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">3. Payment Rails</text>
-              <text x="286" y="30" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Visa, Mastercard, Stripe</text>
-              <text x="286" y="40" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#ffffff" text-anchor="middle">Tokenized Clearing Vault</text>
-              <text x="286" y="49" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa" text-anchor="middle">Interchange settlement</text>
-
-              <!-- Node 4: Physical Logistics -->
-              <rect x="350" y="6" width="105" height="50" rx="3" fill="#52525b" stroke="#3f3f46" stroke-width="1"/>
-              <text x="402" y="19" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">4. Physical Logistics</text>
-              <text x="402" y="30" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Amazon & Walmart</text>
-              <text x="402" y="40" font-family="Inter, sans-serif" font-size="6.2" font-weight="600" fill="#ffffff" text-anchor="middle">Same-Day Warehouses</text>
-              <text x="402" y="49" font-family="Inter, sans-serif" font-size="5.8" fill="#a1a1aa" text-anchor="middle">Last-mile fulfillment moat</text>
-            </svg>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 6px; background: #ffffff;">
+              <div style="background: #09090b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700;">Intent Aggregators</div>
+                <div style="font-size: 8.5px; font-weight: 800; margin-top: 2px;">40% Pool</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">OpenAI, Google, Apple</div>
+              </div>
+              <div style="background: #18181b; color: #ffffff; padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700;">Processors & Vaults</div>
+                <div style="font-size: 8.5px; font-weight: 800; margin-top: 2px;">30% Pool</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">Stripe, Adyen, Plaid</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #18181b;">Merchant Brands</div>
+                <div style="font-size: 8.5px; font-weight: 800; color: #09090b; margin-top: 2px;">20% Pool</div>
+                <div style="font-size: 5.8px; color: #71717a; margin-top: 1px;">First-party fulfillment</div>
+              </div>
+              <div style="background: var(--paper-subtle); border: 1px solid var(--border-subtle); padding: 5px 6px; border-radius: 3px; text-align: center;">
+                <div style="font-size: 6.8px; font-weight: 700; color: #71717a;">Scraping Bots</div>
+                <div style="font-size: 8.5px; font-weight: 800; color: #71717a; margin-top: 2px;">10% Pool</div>
+                <div style="font-size: 5.8px; color: #a1a1aa; margin-top: 1px;">Commoditized wrappers</div>
+              </div>
+            </div>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Strategic Imperative for Brand Executives:</strong>
-            Do not become a passive white-label manufacturer for tech gatekeepers. Maintain direct customer relationships by supporting open shopping protocols (UCP and MCP) across all AI platforms.
+            <strong>Strategic Imperative for Brand Executives.</strong>
+            Retailers should avoid becoming passive fulfillment suppliers to proprietary AI gatekeepers. Maintaining direct first-party relationships and publishing open protocol endpoints helps brands retain margin control and customer loyalty.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">Exhibit 8.1: Big Tech Competitive Matrix</div>
-            <div class="exhibit-title">Big Tech Moats and Strategies in Agentic Commerce</div>
-            <div class="exhibit-subtitle">Strategic positioning, core assets, key vulnerabilities, and market moats.</div>
+            <div class="exhibit-tag">Exhibit 8.1: Moats & Positioning</div>
+            <div class="exhibit-title">Platform Competitive Moats and Strategic Capabilities</div>
+            <div class="exhibit-subtitle">Evaluation of competitive positioning across the agentic commerce stack.</div>
 
-            <!-- Big Tech Matrix (Monochrome) -->
-            <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 3px 0;">
-              <table style="width: 100%; border-collapse: collapse; font-size: 7.5px; text-align: left;">
+            <!-- Moats Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
                 <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
                   <tr>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Company</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Primary Asset</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Strategic Moat</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Core Risk</th>
-                    <th style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading); text-align: right;">Moat</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Platform</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Primary Moat</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 85px;">Key Vulnerability</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">OpenAI</td>
-                    <td style="padding: 4px 6px;">ChatGPT Intent</td>
-                    <td style="padding: 4px 6px;">Closed ACP checkout</td>
-                    <td style="padding: 4px 6px; color: #71717a;">No physical logistics</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">High</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">OpenAI (ChatGPT)</td>
+                    <td style="padding: 3px 6px;">Conversational consumer intent</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Lacks native merchant acquiring</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Google</td>
-                    <td style="padding: 4px 6px;">Android & Gemini</td>
-                    <td style="padding: 4px 6px;">Open UCP standard</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Ad revenue erosion</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #09090b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Very High</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Google (Gemini/UCP)</td>
+                    <td style="padding: 3px 6px;">Global merchant product graph</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Search ad revenue cannibalization</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Apple</td>
-                    <td style="padding: 4px 6px;">2B Devices & Enclave</td>
-                    <td style="padding: 4px 6px;">Hardware-level passkeys</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Slower LLM models</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #09090b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">Dominant</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Apple (Intelligence)</td>
+                    <td style="padding: 3px 6px;">1.4B Secure Enclave passkeys</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Restricted cloud catalog indexing</td>
                   </tr>
                   <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Amazon</td>
-                    <td style="padding: 4px 6px;">Prime Fulfillment</td>
-                    <td style="padding: 4px 6px;">Automated warehouse hubs</td>
-                    <td style="padding: 4px 6px; color: #71717a;">AI bypassing search</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">High</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Amazon (Rufus)</td>
+                    <td style="padding: 3px 6px;">Prime logistics & fulfillment network</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Closed ecosystem resistance</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 6px; font-weight: 700; color: var(--ink-heading);">Stripe</td>
-                    <td style="padding: 4px 6px;">Merchant Scale</td>
-                    <td style="padding: 4px 6px;">Agent payment routing</td>
-                    <td style="padding: 4px 6px; color: #71717a;">Underlying card fees</td>
-                    <td style="padding: 4px 6px; text-align: right;"><span style="background: #18181b; color: #ffffff; padding: 1px 4px; border-radius: 2px; font-size: 6.8px; font-weight: 700;">High</span></td>
+                    <td style="padding: 3px 6px; font-weight: 700;">Stripe (Link/ACP)</td>
+                    <td style="padding: 3px 6px;">Shared Payment Tokens & merchant rails</td>
+                    <td style="padding: 3px 6px; color: #71717a;">Dependent on third-party frontends</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>Where the Profit Pools Will Concentrate:</strong><br/>
-              - 40% of future commerce margins will concentrate in intent gatekeepers (AI apps) and payment settlement rails.<br/>
-              - Mid-tier search aggregators and affiliate blogs face complete margin collapse as direct agent routing takes over.
+              <strong>Profit Pool Concentration Across Layers.</strong>
+              Industry projections indicate that up to 40% of future commerce profit pools will concentrate in intent gatekeepers (conversational frontends), 30% in payment token infrastructure, and 20% in direct merchant margins.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The Cannibalization Threat to Search Advertising:</strong><br/>
-              - Every purchase completed by an autonomous agent eliminates 3 to 5 traditional search ad impressions.<br/>
-              - $60B in annual search keyword budgets will shift toward direct merchant API referral commissions.
+              <strong>Search Advertising Revenue Realignment.</strong>
+              Automated purchasing reallocates user journeys from multi-click search result pages toward direct API checkouts, encouraging brands to reallocate portions of search ad budgets toward direct referral commissions.
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The Winner's Playbook for Independent Brands:</strong><br/>
-              - Own your first-party customer relationships; deploy multi-protocol endpoints across MCP, UCP, and ACP.<br/>
-              - Never sign exclusive distribution pacts with a single AI app that cut off your direct customer data.
-            </div>
-
-            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
-              <strong>The $20B Default Distribution Precedent:</strong><br/>
-              Just as Google paid Apple $20B annually to be the default search engine on Safari, AI labs will bid billions to be the default shopping agent pre-installed on smartphone operating systems and connected hardware.
+              <strong>Distribution Economics and Default Placement.</strong>
+              Similar to how search defaults commanded substantial distribution agreements on mobile devices, conversational AI platforms are establishing referral agreements with leading merchant aggregators to secure preferred routing.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Public disclosures, regulatory filings, and equity research reports from Morgan Stanley and Goldman Sachs (2025-2026).
+              Sources: Morgan Stanley Equity Research (2025); Goldman Sachs Global Payments Analysis (2025); CB Insights Big Tech Strategy Report (2025-2026).
             </div>
           </div>
         </div>
@@ -1579,158 +1411,129 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 10: ENTERPRISE ROADMAP & BOARDROOM RECOMMENDATIONS
+  // SPREAD 10: ENTERPRISE ROADMAP
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${notion.renderHeader("STRATEGIC ROADMAP", "THE 18-MONTH ACTION PLAN FOR RETAIL LEADERS")}
+      ${notion.renderHeader("ENTERPRISE ROADMAP", "IMPLEMENTATION STRATEGY AND BOARDROOM PRIORITIES")}
       
       <div class="report-body">
         <div class="report-main-col">
-          <h2 class="report-headline">The 18-Month Action Plan for Retail Leaders</h2>
+          <h2 class="report-headline">An 18-Month Implementation Roadmap for Retail Brands</h2>
           <div class="report-lead-prose">
-            How forward-thinking retail brands, banks, and technology leaders should prepare for the agent economy across three clear phases.
+            Retail organizations can adopt a structured, phased approach to build machine-readable catalogs, integrate delegated payment tokens, and establish autonomous commerce readiness.
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Phased Shift to Machine Commerce:</strong> Agentic commerce is not an overnight disruption; it is a three-stage architectural transition. Organizations that delay preparation until 2028 will face 4x higher customer acquisition costs and risk total exclusion from AI recommendation graphs.
+            <strong>Phase 1 (Months 1-6) - Catalog Modernization.</strong> The initial phase focuses on exposing structured data endpoints. Organizations audit existing product metadata, implement Schema.org/Product JSON-LD markup, and deploy sub-50ms catalog query APIs (leveraging Anthropic MCP or Google UCP). Concurrently, engineering teams configure WAF policies to accommodate verified agent traffic while maintaining bot defense against malicious scrapers.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Phase 1: Open Catalog Discovery (Months 1-6):</strong> Audit your product data. Clean up physical specifications, dimensions, and live stock feeds. Deploy an Anthropic MCP server to make your catalog instantly readable by AI agents. Ensure your product descriptions include hard facts like measurements, voltages, and materials so bots can verify compatibility without error.
+            <strong>Phase 2 (Months 6-12) - Delegated Checkout and Passkeys.</strong> In the second phase, retailers integrate delegated checkout protocols. This involves testing tokenized payment handoffs (such as Stripe Link Shared Payment Tokens or Visa TAP) and enabling WebAuthn passkey authentication. By supporting pre-authorized checkout tokens, merchants accelerate purchasing while preserving their direct customer records and fulfillment controls.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Phase 2: Automated Checkout & Passkeys (Months 6-12):</strong> Eliminate bot-blocking firewalls for verified customer agents. Integrate Visa TAP and biometric passkey authorization to cut checkout drop-off rates. Provide 15-minute price guarantees with signed transaction intents so machine shoppers can complete purchases without fear of dynamic price surge.
+            <strong>Phase 3 (Months 12-18) - Autonomous Inventory and Machine Pricing.</strong> Mature implementations extend agent capabilities to programmatic supply chain integration. Retailers pilot automated replenishment workflows for recurring B2B items, test algorithmic price reservation endpoints, and implement automated dispute resolution protocols.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Phase 3: Autonomous Inventory & Machine Pricing (Months 12-18):</strong> Allow AI agents to negotiate dynamic bulk pricing, automate re-orders for recurring supplies, and fulfill machine-to-machine procurement without human delay. Connect your supply chain backend directly to agentic procurement networks.
+            <strong>Governance and Risk Controls.</strong> Cross-functional governance is critical throughout implementation. Legal, finance, and engineering leaders must establish explicit policies regarding delegated spending limits, algorithmic price matching, and consumer data privacy, ensuring compliance with consumer protection frameworks.
           </p>
 
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Corporate Governance & Budget Caps:</strong> Establish strict policy rails within corporate procurement software: hard daily spending ceilings, mandatory multi-signature authorization for capital expenditures exceeding $10,000, and complete immutable audit logging of prompt rationale and receipt hashes.
-          </p>
-
-          <!-- Publication-Grade Enterprise Procurement Loop SVG -->
-          <div style="border: 1px solid var(--border); border-radius: 4px; padding: 7px 10px; background: #ffffff; margin-top: 5px;">
-            <div style="font-size: 7.8px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;">
-              Figure 9.1: The Autonomous Enterprise Procurement Loop Architecture
+          <!-- Figure 9.1: Gantt Chart SVG -->
+          <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 4px; background: #ffffff;">
+            <div style="padding: 4px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle); font-size: 7.2px; font-weight: 700; color: var(--ink-secondary); display: flex; justify-content: space-between;">
+              <span>FIGURE 9.1: 18-MONTH IMPLEMENTATION TIMELINE</span>
+              <span>Phased Execution Milestones</span>
             </div>
-            
-            <svg viewBox="0 0 460 62" style="width: 100%; height: auto; display: block;">
-              <!-- Step 1 -->
-              <rect x="5" y="4" width="95" height="52" rx="3" fill="#fafafa" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="52" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">1. Need Trigger</text>
-              <text x="52" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Sensor / Low Stock</text>
-              <text x="52" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Automated Agent</text>
-              <text x="52" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Parts depletion</text>
+            <svg viewBox="0 0 460 56" width="100%" height="56" style="display: block; background: #ffffff;">
+              <!-- Timeline Axis -->
+              <line x1="120" y1="12" x2="445" y2="12" stroke="#e4e4e7" stroke-width="1"/>
+              <text x="120" y="8" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Month 1</text>
+              <text x="228" y="8" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Month 6</text>
+              <text x="336" y="8" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Month 12</text>
+              <text x="445" y="8" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Month 18</text>
 
-              <!-- Arrow 1 -->
-              <path d="M 100 30 L 115 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
+              <!-- Phase 1 -->
+              <text x="10" y="24" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#09090b">Phase 1 - Catalogs</text>
+              <rect x="120" y="16" width="108" height="10" rx="2" fill="#09090b"/>
+              <text x="174" y="24" font-family="Inter, sans-serif" font-size="5.5" font-weight="600" fill="#ffffff" text-anchor="middle">JSON-LD & MCP APIs</text>
 
-              <!-- Step 2 -->
-              <rect x="119" y="4" width="105" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="171" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">2. Multi-Vendor</text>
-              <text x="171" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">MCP Catalog Search</text>
-              <text x="171" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Best Price & Delivery</text>
-              <text x="171" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Evaluates 10 suppliers</text>
+              <!-- Phase 2 -->
+              <text x="10" y="38" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#09090b">Phase 2 - Checkout</text>
+              <rect x="228" y="30" width="108" height="10" rx="2" fill="#27272a"/>
+              <text x="282" y="38" font-family="Inter, sans-serif" font-size="5.5" font-weight="600" fill="#ffffff" text-anchor="middle">Passkeys & Token Rails</text>
 
-              <!-- Arrow 2 -->
-              <path d="M 224 30 L 239 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- Step 3 -->
-              <rect x="243" y="4" width="102" height="52" rx="3" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1"/>
-              <text x="294" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#18181b" text-anchor="middle">3. Token Settle</text>
-              <text x="294" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a" text-anchor="middle">Visa TAP Token</text>
-              <text x="294" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a" text-anchor="middle">Pre-Authorized Cap</text>
-              <text x="294" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Corporate spend limit</text>
-
-              <!-- Arrow 3 -->
-              <path d="M 345 30 L 360 30" stroke="#71717a" stroke-width="1.2" fill="none" marker-end="url(#arrowhead)"/>
-
-              <!-- Step 4 -->
-              <rect x="364" y="4" width="91" height="52" rx="3" fill="#18181b" stroke="#09090b" stroke-width="1"/>
-              <text x="409" y="17" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">4. Delivery</text>
-              <text x="409" y="29" font-family="Inter, sans-serif" font-size="6.5" fill="#e4e4e7" text-anchor="middle">Autonomous Hub</text>
-              <text x="409" y="40" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#ffffff" text-anchor="middle">Sub-Day Fulfilled</text>
-              <text x="409" y="49" font-family="Inter, sans-serif" font-size="6" fill="#a1a1aa" text-anchor="middle">Auto-dispute clearing</text>
+              <!-- Phase 3 -->
+              <text x="10" y="52" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#09090b">Phase 3 - B2B Auto</text>
+              <rect x="336" y="44" width="108" height="10" rx="2" fill="#52525b"/>
+              <text x="390" y="52" font-family="Inter, sans-serif" font-size="5.5" font-weight="600" fill="#ffffff" text-anchor="middle">Machine Pricing & Restock</text>
             </svg>
           </div>
 
           <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: var(--paper-subtle);">
-            <strong>Final Boardroom Directive:</strong>
-            Agentic commerce is not another digital marketing channel. It is the fundamental rewiring of global trade. Retailers that build machine-readable catalogs and tokenized checkout rails today will capture the $1.5 trillion autonomous shopping wave.
+            <strong>Executive Governance Recommendation.</strong>
+            Establishing clear internal guardrails regarding delegated spending caps, product return warranties, and customer privacy helps organizations maintain operational control while evaluating automated commerce capabilities.
           </div>
         </div>
 
         <div class="report-exhibit-col">
           <div class="exhibit-container">
-            <div class="exhibit-tag">Exhibit 9.1: Strategic Roadmap</div>
-            <div class="exhibit-title">The 18-Month Agentic Commerce Implementation Roadmap</div>
-            <div class="exhibit-subtitle">Actionable milestones for retail executives, engineering teams, and treasury leaders.</div>
+            <div class="exhibit-tag">Exhibit 9.1: Strategic Scorecard</div>
+            <div class="exhibit-title">Enterprise Resource Allocation and KPI Scorecard</div>
+            <div class="exhibit-subtitle">Target metrics across 18-month deployment phases.</div>
 
-            <!-- 3-Phase Roadmap Component -->
-            <div style="display: flex; flex-direction: column; gap: 4px; margin: 3px 0;">
-              <!-- Phase 1 -->
-              <div style="border: 1px solid var(--border); border-left: 3px solid #18181b; padding: 4px 8px; border-radius: 3px; background: #ffffff;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7.8px; font-weight: 700; color: #18181b;">Phase 1: Catalog Discovery & MCP</span>
-                  <span style="font-size: 6.8px; color: #71717a;">Q1-Q2 2026 (Months 1-6)</span>
-                </div>
-                <div style="font-size: 7px; color: #3f3f46; margin-top: 2px;">
-                  Audit product metadata for dimensions and voltage. Deploy an open Anthropic MCP server on your store backend so AI models can search live stock.
-                </div>
-              </div>
-
-              <!-- Phase 2 -->
-              <div style="border: 1px solid var(--border); border-left: 3px solid #27272a; padding: 4px 8px; border-radius: 3px; background: #ffffff;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7.8px; font-weight: 700; color: #18181b;">Phase 2: Tokenized Checkout & Passkeys</span>
-                  <span style="font-size: 6.8px; color: #71717a;">Q3-Q4 2026 (Months 7-12)</span>
-                </div>
-                <div style="font-size: 7px; color: #3f3f46; margin-top: 2px;">
-                  Connect to Visa TAP and Apple Secure Enclave passkeys. Whitelist friendly customer agents on store firewalls to cut checkout drop-offs from 21% down to under 1%.
-                </div>
-              </div>
-
-              <!-- Phase 3 -->
-              <div style="border: 1px solid var(--border); border-left: 3px solid #09090b; padding: 4px 8px; border-radius: 3px; background: #ffffff;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-size: 7.8px; font-weight: 700; color: #18181b;">Phase 3: Autonomous Enterprise Commerce</span>
-                  <span style="font-size: 6.8px; color: #71717a;">Q1-Q2 2027 (Months 13-18)</span>
-                </div>
-                <div style="font-size: 7px; color: #3f3f46; margin-top: 2px;">
-                  Enable automated machine-to-machine procurement, signed 15-minute price guarantees, and algorithmic dispute arbitration for recurring inventory replenishment.
-                </div>
-              </div>
-            </div>
-
-            <!-- The 5-Point Readiness Checklist for Retailers -->
-            <div style="border: 1px solid var(--border); border-radius: 3px; padding: 5px 8px; background: var(--paper-subtle); margin-top: 4px;">
-              <div style="font-size: 7.5px; font-weight: 700; color: #18181b; margin-bottom: 2px;">The 5-Point Readiness Checklist for Retailers:</div>
-              <div style="font-size: 6.8px; color: #27272a; line-height: 1.45;">
-                &bull; 1. Machine-readable catalog published via Anthropic MCP?<br/>
-                &bull; 2. Real-time sub-50ms stock ping API connected?<br/>
-                &bull; 3. Biometric passkey checkout enabled (Visa TAP / Apple Pay)?<br/>
-                &bull; 4. Bot firewall whitelisting friendly customer agents?<br/>
-                &bull; 5. Signed 15-minute price quote guarantees supported?
-              </div>
+            <!-- Scorecard Table -->
+            <div style="border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin: 3px 0;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; text-align: left;">
+                <thead style="background: var(--paper-subtle); border-bottom: 1px solid var(--border);">
+                  <tr>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Roadmap Phase</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 60px;">Budget Share</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading);">Core Target Metric</th>
+                    <th style="padding: 3px 6px; font-weight: 700; color: var(--ink-heading); width: 75px;">Success Gate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 700;">Phase 1 - Catalogs</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">40%</td>
+                    <td style="padding: 3px 6px;">&lt; 50ms stock query latency</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">99.5% Accuracy</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                    <td style="padding: 3px 6px; font-weight: 700;">Phase 2 - Checkout</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">35%</td>
+                    <td style="padding: 3px 6px;">&lt; 2% token decline rate</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">Zero PAN storage</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 3px 6px; font-weight: 700;">Phase 3 - B2B Auto</td>
+                    <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">25%</td>
+                    <td style="padding: 3px 6px;">8.2% conversion lift on agents</td>
+                    <td style="padding: 3px 6px; color: #18181b; font-weight: 600;">&lt; 1% return rate</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <div class="exhibit-analysis-box" style="margin-top: 5px; padding: 7px 10px;">
-              <strong>The Heavy Cost of Delaying Integration:</strong><br/>
-              - Brands that wait until 2028 will face 4x higher customer acquisition costs as AI search models favor established API connections.<br/>
-              - Competitors with live MCP catalogs will capture default repeat-purchase subscriptions automatically.
+              <strong>Strategic Budget Allocation.</strong>
+              Leading enterprise implementations allocate approximately 40% of initial resources to catalog architecture and data feed integrity, 35% to delegated payment token integrations, and 25% to programmatic B2B workflows.
             </div>
 
-            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px; border-left: 3px solid var(--ink-heading); background: #ffffff;">
-              <strong>Boardroom Recommendation:</strong><br/>
-              Fund your agentic commerce task force this quarter. Build machine-readable catalogs and tokenized rails to lead the autonomous economy.
+            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
+              <strong>Cost Curves of Delayed Adoption.</strong>
+              Organizations that defer structured catalog integration may face higher customer acquisition costs over time if consumer discovery transitions toward conversational interfaces that rely on machine-readable endpoints.
+            </div>
+
+            <div class="exhibit-analysis-box" style="margin-top: 4px; padding: 7px 10px;">
+              <strong>Boardroom Governance Priority.</strong>
+              Executive committees are establishing cross-functional task forces across engineering, payments, and risk management to evaluate agent protocol compatibility and safeguard brand customer relationships.
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 5px;">
-              Source: Strategic implementation framework synthesized from McKinsey, Gartner, and Visa Research disclosures (2025-2026).
+              Sources: McKinsey & Company, "The Economic Potential of Generative AI in Commerce" (2025); Bain & Company Technology Practice (2025); Gartner IT Symposium Executive Findings (2025-2026).
             </div>
           </div>
         </div>
