@@ -5,6 +5,13 @@
  * Deep Academic and Industry Research Basis:
  * - Empirical Web Readiness - V. R. Vatsa (100,000 domain study across Tranco ranking, Zenodo record 24121071)
  * - Agent Micropayments Economics - V. R. Vatsa (finite-state economic model of buyer VOI and settlement)
+ * - Management Consultancies:
+ *   * McKinsey QuantumBlack ("The Automation Curve in Agentic Commerce" - 6-level delegation, regret-risk model, $3T-$5T projection)
+ *   * Boston Consulting Group ("Agentic Commerce" - $1.3T impacted spend, $400B autonomous, 81% consumer readiness, 59% CPG gap)
+ *   * Accenture Strategy ("Agentic Commerce - Make Your Brand Unmissable" - 90% brand switching, Demand of One, 45% adoption)
+ *   * Thoughtworks & Stripe ("From Confidence to Execution" - 63% vs 11% execution gap, 35% catalog readiness, +30pp token trust)
+ *   * Visa Consulting & Analytics ("The Rise of Agentic Commerce" - 6-layer rails, 1,200% GenAI referral uplift, 57.2% benchmark)
+ *   * Semrush Research ("Agentic Commerce Optimization" - ACO three-layer catalog framework)
  * - Economic Search Theory - J. Yannis Bakos (Management Science), R. M. Ursu Position Bias (Chicago Booth)
  * - Behavioral Decision Science - Dietvorst et al. (Wharton, Algorithm Aversion), Logg et al. (Harvard, Algorithm Appreciation)
  * - Agent Benchmarks - WebArena (CMU, Zhou et al.), VisualWebArena (CMU/Stanford, Koh et al., ACL 2024),
@@ -13,8 +20,7 @@
  * - Technical Protocols - Stripe & OpenAI ACP (RFC 7231 Idempotency-Key), Google UCP (/.well-known/ucp),
  *   Coinbase AP2 (Open vs Closed Mandates), Visa TAP (RFC 9421 HTTP Signatures), Mastercard Verifiable Intent, x402
  * - Market Analysis - Jas Shah (Fintech Under the Hood), Scott Wessman (CVV failure analysis),
- *   Vignesh at Meta (interchange vs stablecoin economics), Gartner Machine Customers (Scheibenreif & Raskino),
- *   Morgan Stanley (Nowak et al.), Bain & Company Global Retail Lab
+ *   Vignesh at Meta (interchange vs stablecoin economics), Gartner Machine Customers (Scheibenreif & Raskino)
  * - Legal & Regulatory Frameworks - Christoph Busch (Consumer Law for AI Agents, German Law Journal / Oxford), US UETA, EU AI Act
  */
 
@@ -71,15 +77,15 @@ export async function generateReport() {
             Report Structure & Coverage
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px; font-size: 8px; color: var(--ink-secondary);">
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">02</span><span>Economics of Autonomous Purchasing</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">03</span><span>7-Layer Technical Architecture & Market Map</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">02</span><span>Economics, Search Theory & The Automation Curve</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">03</span><span>7-Layer Technical Stack & 5-Tier Market Map</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">04</span><span>Commerce Protocols & Standards (ACP, UCP, AP2)</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">05</span><span>Payment Rails, Settlement & Domain Tokens</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">05</span><span>Payment Settlement Rails & The Execution Gap</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">06</span><span>Accuracy Benchmarks & Behavioral Decision Science</span></div>
             <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">07</span><span>Fraud Defense, Bot Classification & Security</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">08</span><span>Catalog Engineering & 100,000 Domain Study</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">09</span><span>Strategic Ecosystem & Competitive Moats</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">10</span><span>18-Month Roadmap & Legal Governance</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">08</span><span>Catalog Engineering, ACO & 100,000 Domain Study</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">09</span><span>Strategic Ecosystem Dynamics & Platform Moats</span></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">10</span><span>18-Month Enterprise Roadmap & Legal Governance</span></div>
           </div>
         </div>
       </div>
@@ -98,30 +104,30 @@ export async function generateReport() {
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${renderHeader("EXECUTIVE SUMMARY", "MACRO PROJECTIONS AND ECONOMIC INCENTIVES", "02")}
+      ${renderHeader("EXECUTIVE SUMMARY", "MACRO PROJECTIONS AND THE AUTOMATION CURVE", "02")}
 
       <div class="report-content" style="display: flex; gap: 28px; flex: 1;">
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 9px;">
             <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Macro Foundation</div>
-            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">The Economics of Autonomous Purchasing</h2>
+            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Economics of Autonomous Purchasing and Delegation</h2>
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Delegation Paradox and Physical Need Satisfaction.</strong> Artificial intelligence shopping agents can identify merchandise and submit payment credentials, but granting permission to pay does not establish that a selected item satisfies the consumer's physical requirements. In retail transactions, goods must match exact spatial dimensions, fulfill delivery schedules, and satisfy unstated personal preferences. As established in the literature, evaluating consumer studies, benchmarks, and payment specifications reveals instances where an accepted recommendation or valid payment leaves core purchase needs unverified.
+            <strong>The Delegation Paradox and Need Satisfaction.</strong> Artificial intelligence shopping agents can identify merchandise and submit payment credentials, but granting permission to pay does not establish that a selected item satisfies the consumer's physical requirements. In retail transactions, goods must match exact spatial dimensions, fulfill delivery schedules, and satisfy unstated personal preferences. As established in the literature, evaluating consumer studies, benchmarks, and payment specifications reveals instances where an accepted recommendation or valid payment leaves core purchase needs unverified.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Economic Search Theory and Search Cost Asymmetries (Bakos Model).</strong> Mathematical economics of electronic marketplaces formulated by J. Yannis Bakos (Management Science, 1997 [1]) distinguishes between the cost of searching for prices and the cost of searching for product attributes. When price search costs decrease in isolation, price competition intensifies towards marginal cost. However, when attribute search costs decrease through automated agent evaluation, consumers identify differentiated products aligned with specific requirements. This differentiation softens direct price competition, increases total consumer surplus, and enables merchants to preserve gross margins.
+            <strong>The Six-Level Automation Curve and Regret Risk (McKinsey QuantumBlack).</strong> Research by McKinsey QuantumBlack (2025-2026 [1]) charts consumer delegation across a six-level maturity spectrum, progressing from manual human search (Level 0) to unconstrained autonomous buying (Level 5). The research indicates that delegation does not advance uniformly across merchandise. It is governed by regret risk, defined as the perceived emotional or financial cost of an erroneous purchase. Routine consumer replenishment and repetitive procurement migrate rapidly up the curve, while considered luxury purchases retain human approval.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The 3x-Win Framework and Live Commercial Precedents.</strong> As fintech analyst Jas Shah documents in Fintech Under the Hood ("Agentic Commerce - 17 Months Later", October 2025 [2]), automated commerce creates an economic alignment across market participants. Retailers observe conversion rate gains from approximately 2.2% on standard mobile web traffic to 8.2% on verified agent checkouts, consumers avoid form fatigue, and infrastructure networks collect protocol routing fees. Real-world precedents demonstrate early traction, including OpenAI Instant Checkout (September 2025 single-item Etsy integration) and Amazon Alexa for Shopping (May 2026 Auto Buy and cart coordination flows).
+            <strong>Search Cost Asymmetry and Brand Switching (Bakos & Accenture).</strong> Economic search theory by J. Yannis Bakos (Management Science, 1997 [2]) separates the cost of discovering prices from the cost of evaluating product attributes. Lower attribute search costs enable consumers to find tailored items, softening direct price competition. However, survey data from Accenture Strategy (FY26 [3]) indicates that 90% of frequent AI users in North America are open to switching away from a preferred brand if their agent recommends a superior alternative. This introduces acute brand volatility unless merchants expose machine-readable attribute feeds.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Independent Market Sizing Estimates and Scope Boundaries.</strong> Industry forecasts project substantial expansion in agent-mediated gross merchandise volume (GMV). Morgan Stanley Equity Research (Nowak et al., 2025 [3]) projects $150B to $400B in US digital retail volume influenced by autonomous agents by 2030, representing 10% to 25% of total e-commerce. Bain & Company Global Retail Lab (2025 [4]) estimates that automated comparison agents will mediate over 30% of routine household replenishment by 2030. Gartner Research (Scheibenreif & Raskino [5]) models the broader machine customer economy at $30T by 2030 across enterprise B2B procurement and consumer transactions.
+            <strong>Macro Sizing Synthesis and Enterprise Scope Boundaries.</strong> Sizing projections from premier advisory houses indicate rapid transaction reallocation. Boston Consulting Group (BCG, 2026 [4]) estimates that over $1.3 trillion in retail spending will be influenced by agentic commerce, with roughly $400 billion driven mostly autonomously. McKinsey projects $3 trillion to $5 trillion in global consumer transactions mediated by agents by 2030 [1]. Meanwhile, Gartner Research (Scheibenreif & Raskino [5]) models the broader machine customer economy at $30 trillion across enterprise B2B procurement and digital retail.
           </p>
         </div>
 
@@ -130,109 +136,110 @@ export async function generateReport() {
           <!-- Exhibit Top: Evolution SVG -->
           <div class="exhibit-card" style="padding: 9px 12px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px;">
             <div class="exhibit-header" style="margin-bottom: 5px;">
-              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">FIGURE 1.1 - E-COMMERCE INTERFACE PROGRESSION (1995-2026)</div>
-              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Comparison of user interaction modes, conversion baselines, and checkout friction</div>
+              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">FIGURE 1.1 - THE 6-LEVEL AUTOMATION SPECTRUM (REF - MCKINSEY QUANTUMBLACK [1])</div>
+              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Progression of delegation autonomy from human browsing to autonomous multi-agent settlement</div>
             </div>
 
             <svg viewBox="0 0 460 108" width="100%" height="108" style="display: block;">
-              <!-- 1995 Web Browser -->
+              <!-- 3 Core Phase Groupings -->
+              <!-- Group 1: Levels 0-1 -->
               <rect x="0" y="4" width="144" height="100" rx="3" fill="#ffffff" stroke="#e4e4e7" stroke-width="1"/>
               <rect x="0" y="4" width="144" height="18" rx="3" fill="#f4f4f5"/>
-              <text x="8" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b">1995 - Web Browser</text>
-              <text x="8" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#27272a">Mode - Search & Click</text>
-              <text x="8" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Discovery via text engines</text>
-              <text x="8" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Manual form fill at cart</text>
+              <text x="8" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b">Levels 0-1 - Assisted Search</text>
+              <text x="8" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#27272a">Mode - Human Buys</text>
+              <text x="8" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Conversational product discovery</text>
+              <text x="8" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Manual checkout on seller site</text>
               <line x1="8" y1="68" x2="136" y2="68" stroke="#f4f4f5" stroke-width="1"/>
-              <text x="8" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">Baseline conversion ~2.2%</text>
-              <text x="8" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a">Friction - Manual form inputs</text>
+              <text x="8" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">BCG Survey - 96% Discovery [4]</text>
+              <text x="8" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a">Consumer retains total control</text>
 
-              <!-- 2010 Mobile App -->
+              <!-- Group 2: Levels 2-3 -->
               <rect x="158" y="4" width="144" height="100" rx="3" fill="#ffffff" stroke="#e4e4e7" stroke-width="1"/>
               <rect x="158" y="4" width="144" height="18" rx="3" fill="#f4f4f5"/>
-              <text x="166" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b">2010 - Mobile & 1-Click</text>
-              <text x="166" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#27272a">Mode - Tap & Scroll</text>
-              <text x="166" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">App ecosystem silos</text>
-              <text x="166" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Stored digital wallets</text>
+              <text x="166" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b">Levels 2-3 - Guided Checkout</text>
+              <text x="166" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#27272a">Mode - One-Click Approval</text>
+              <text x="166" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Agent prepares cart & total</text>
+              <text x="166" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">User confirms payment mandate</text>
               <line x1="166" y1="68" x2="294" y2="68" stroke="#f4f4f5" stroke-width="1"/>
-              <text x="166" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">Average conversion ~2.8%</text>
-              <text x="166" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a">Friction - Cart abandonment</text>
+              <text x="166" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">BCG Survey - 42% Willing [4]</text>
+              <text x="166" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#71717a">Friction - Mandate approval</text>
 
-              <!-- 2026 Autonomous Agent -->
+              <!-- Group 3: Levels 4-5 -->
               <rect x="316" y="4" width="144" height="100" rx="3" fill="#ffffff" stroke="#09090b" stroke-width="1.5"/>
               <rect x="316" y="4" width="144" height="18" rx="3" fill="#09090b"/>
-              <text x="324" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">2026 - Agentic AI</text>
-              <text x="324" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#09090b">Mode - Intent Delegation</text>
-              <text x="324" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#52525b">Cross-merchant discovery</text>
-              <text x="324" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#52525b">Cryptographic token rails</text>
+              <text x="324" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#ffffff">Levels 4-5 - Full Autonomy</text>
+              <text x="324" y="36" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#09090b">Mode - Machine Execution</text>
+              <text x="324" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#52525b">Autonomous replenishment</text>
+              <text x="324" y="60" font-family="Inter, sans-serif" font-size="6.5" fill="#52525b">Token settlement under budget</text>
               <line x1="324" y1="68" x2="452" y2="68" stroke="#e4e4e7" stroke-width="1"/>
-              <text x="324" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">Observed conversion ~8.2%</text>
-              <text x="324" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#52525b">Friction - Form fatigue eliminated</text>
+              <text x="324" y="80" font-family="Inter, sans-serif" font-size="6.8" font-weight="700" fill="#09090b">Accenture - 9% Full Auto [3]</text>
+              <text x="324" y="92" font-family="Inter, sans-serif" font-size="6.2" fill="#52525b">Restricted to low-regret items</text>
             </svg>
           </div>
 
           <!-- Exhibit Bottom: Data Table -->
           <div class="exhibit-card" style="padding: 9px 12px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; flex: 1;">
             <div class="exhibit-header" style="margin-bottom: 5px;">
-              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">Exhibit 1.1 - Market Forecast Projections</div>
-              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Synthesis of independent equity research and management consultancy estimates</div>
+              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">Exhibit 1.1 - Market Forecast Projections Across Global Advisory Houses</div>
+              <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Synthesis of independent equity research, strategy consultancies, and market analysts</div>
             </div>
 
             <table style="width: 100%; border-collapse: collapse; font-size: 7.6px; margin-bottom: 6px;">
               <thead>
                 <tr style="border-bottom: 1.5px solid var(--border); background: var(--paper-subtle);">
-                  <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Institution</th>
+                  <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Advisory House</th>
                   <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Projected Scale</th>
                   <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Target Horizon</th>
-                  <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Underlying Thesis</th>
+                  <th style="padding: 3px 6px; text-align: left; font-weight: 700; color: var(--ink-heading);">Core Thesis & Data Basis</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 3px 6px; font-weight: 700;">McKinsey QuantumBlack</td>
+                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$3T - $5 Trillion</td>
+                  <td style="padding: 3px 6px;">2030 (Global Consumer)</td>
+                  <td style="padding: 3px 6px;">6-level automation curve across consumer retail [1]</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                  <td style="padding: 3px 6px; font-weight: 700;">Boston Consulting Group</td>
+                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$1.3 Trillion+</td>
+                  <td style="padding: 3px 6px;">2028-2030 (Global)</td>
+                  <td style="padding: 3px 6px;">$400B autonomous; 81% consumer readiness [4]</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 3px 6px; font-weight: 700;">Accenture Strategy</td>
+                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">45% of Shoppers</td>
+                  <td style="padding: 3px 6px;">2-Year Horizon</td>
+                  <td style="padding: 3px 6px;">Half of purchases mediated by agents; 90% brand switch [3]</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                  <td style="padding: 3px 6px; font-weight: 700;">Gartner Research</td>
+                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$30 Trillion</td>
+                  <td style="padding: 3px 6px;">2030 (Total Market)</td>
+                  <td style="padding: 3px 6px;">Machine customer economy across procurement and retail [5]</td>
+                </tr>
+                <tr>
                   <td style="padding: 3px 6px; font-weight: 700;">Morgan Stanley</td>
                   <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$150B - $400B</td>
                   <td style="padding: 3px 6px;">2030 (US Retail)</td>
-                  <td style="padding: 3px 6px;">10% to 25% of digital commerce mediated by agents [3]</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                  <td style="padding: 3px 6px; font-weight: 700;">Bain & Company</td>
-                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">30%+ Replenish</td>
-                  <td style="padding: 3px 6px;">2030 (Global)</td>
-                  <td style="padding: 3px 6px;">Automated comparison dominates commodity reorders [4]</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle);">
-                  <td style="padding: 3px 6px; font-weight: 700;">Gartner</td>
-                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$30 Trillion</td>
-                  <td style="padding: 3px 6px;">2030 (Global B2B/B2C)</td>
-                  <td style="padding: 3px 6px;">Total machine customer market across procurement [5]</td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
-                  <td style="padding: 3px 6px; font-weight: 700;">Goldman Sachs</td>
-                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">$220 Billion</td>
-                  <td style="padding: 3px 6px;">2028 (US Commerce)</td>
-                  <td style="padding: 3px 6px;">Conversion expansion driven by automated checkout</td>
-                </tr>
-                <tr>
-                  <td style="padding: 3px 6px; font-weight: 700;">Forrester</td>
-                  <td style="padding: 3px 6px; font-weight: 700; color: #18181b;">18.5% Share</td>
-                  <td style="padding: 3px 6px;">2029 (Retail GMV)</td>
-                  <td style="padding: 3px 6px;">Adoption driven by conversational assistant defaults</td>
+                  <td style="padding: 3px 6px;">10% to 25% of digital commerce mediated by agents</td>
                 </tr>
               </tbody>
             </table>
 
             <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 6px 9px;">
-              <strong>Analytical Takeaway.</strong>
-              Autonomous agent shopping delivers a three-way return, where retailers gain an 8.2% conversion lift, consumers avoid form fatigue, and infrastructure networks collect protocol routing fees [2].
+              <strong>Strategic Takeaway.</strong>
+              Delegation scales first in low-regret commodity goods. While 81% of shoppers explore AI assistance, only 9% permit unconstrained transactions, requiring merchants to support structured checkout approval flows [3, 4].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources [1] J. Y. Bakos, Management Science (1997); [2] Jas Shah, Fintech Under the Hood (Oct 2025); [3] Morgan Stanley Research (2025); [4] Bain & Company Global Retail Report (2025); [5] Gartner Research (2025).
+              Reference Sources [1] McKinsey QuantumBlack, "The Automation Curve in Agentic Commerce" (2025-2026); [2] J. Y. Bakos, Management Science (1997); [3] Accenture Strategy, "Agentic Commerce - Make Your Brand Unmissable" (FY26); [4] Boston Consulting Group, "Agentic Commerce" (2026); [5] Gartner Research (2025).
             </div>
           </div>
         </div>
       </div>
 
-      ${renderFooter("Macro Foundations and Market Sizing")}
+      ${renderFooter("Macro Foundations and The Automation Curve")}
     </div>
   `);
 
@@ -256,11 +263,11 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Translating Natural Language Intent into Structured Schemas.</strong> Consumer requests begin in conversational interfaces such as ChatGPT Search, Claude Artifacts, or Perplexity. The agent engine decomposes unconstrained prompts into structured JSON parameters. Through the Model Context Protocol (MCP), the agent invokes remote merchant tools (such as checking real-time inventory or computing location-specific shipping fees) without scraping unstructured web layouts. Deterministic JSON schemas prevent hallucinated product attributes from entering checkout pipelines.
+            <strong>The Six-Stage Transaction Pipeline (Visa Consulting & Analytics).</strong> In its framework analyzing the rise of machine-initiated spending, Visa Consulting & Analytics (2026 [2]) maps transactions across six technical gates, specifically intent capture, cart construction, agent identity validation, credential access, authentication, and liability routing. Visa notes that while 56% of consumers readily delegate product search and comparison, fewer than 40% permit automated credential access without explicit approval gates.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Limitations of Interim Virtual Cards and Token Transitions.</strong> Many retail platforms do not yet support direct machine checkout endpoints. Early autonomous purchasing applications therefore rely on single-use virtual credit cards (VCCs) issued by processors such as Lithic, Stripe Issuing, or Highnote. While VCCs enable immediate execution across legacy payment gateways, they introduce friction points, including out-of-band 3D Secure verification challenges and billing address rejections. Newer standards transition these workflows toward native protocol handshakes.
+            <strong>Translating Natural Language Intent into Structured Schemas.</strong> Consumer requests begin in conversational interfaces such as ChatGPT Search, Claude Artifacts, or Perplexity. The agent engine decomposes unconstrained prompts into structured JSON parameters. Through the Model Context Protocol (MCP), the agent invokes remote merchant tools (such as checking real-time inventory or computing location-specific shipping fees) without scraping unstructured web layouts. Deterministic JSON schemas prevent hallucinated product attributes from entering checkout pipelines.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -382,7 +389,7 @@ export async function generateReport() {
                   Tier 3 - Payment Rails, Token Vaults & Virtual Cards
                 </div>
                 <div style="color: var(--ink-secondary); line-height: 1.35;">
-                  <strong>Card Network Token Protocols.</strong> Visa Trusted Agent Protocol (TAP), Mastercard Agent Pay, Shared Payment Tokens (SPT)<br/>
+                  <strong>Card Network Token Protocols.</strong> Visa Trusted Agent Protocol (TAP), Visa Agentic Ready Program, Mastercard Agent Pay, Shared Payment Tokens (SPT)<br/>
                   <strong>Virtual Card Issuers & Processors.</strong> Lithic, Highnote, Marqeta, Adyen Issuing, Stripe Issuing, Checkout.com<br/>
                   <strong>Autonomous Corporate Spend.</strong> Ramp for Agents, Brex Autonomous Spend, Sapiom, Agentcard<br/>
                   <strong>x402 & Agentic Stablecoin Wallets.</strong> Circle Agent Wallets (USDC), Coinbase Agentic Wallets, Skyfire, Payman, Locus
@@ -414,7 +421,7 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources nofrontend.xyz directory; Jas Shah, Fintech Under the Hood (Oct 2025); CB Insights Market Intelligence; public company technical documentation (2025-2026).
+              Reference Sources nofrontend.xyz directory; Jas Shah, Fintech Under the Hood (Oct 2025); Visa Consulting & Analytics (2026); CB Insights Market Intelligence; company technical documentation.
             </div>
           </div>
         </div>
@@ -498,7 +505,7 @@ export async function generateReport() {
               <rect x="234" y="4" width="108" height="18" rx="3" fill="#f4f4f5"/>
               <text x="242" y="16" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#09090b">3. Mandate</text>
               <text x="242" y="36" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#27272a">FIDO2 Signature</text>
-              <text x="242" y="48" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Closed AP2 Mandate</text>
+              <text x="242" y="48" font-family="Inter, sans-serif" font-size="6.5" fill="#71717a">Closed AP2 Mandate</text>
               <text x="242" y="58" font-family="Inter, sans-serif" font-size="6" fill="#71717a">Enclave hardware key</text>
               <line x1="242" y1="68" x2="334" y2="68" stroke="#f4f4f5" stroke-width="1"/>
               <text x="242" y="80" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#09090b">Latency - User action</text>
@@ -594,30 +601,30 @@ export async function generateReport() {
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${renderHeader("PAYMENT INFRASTRUCTURE", "PAYMENT SETTLEMENT AND TOKEN RAILS", "05")}
+      ${renderHeader("PAYMENT INFRASTRUCTURE", "PAYMENT SETTLEMENT AND THE EXECUTION GAP", "05")}
 
       <div class="report-content" style="display: flex; gap: 28px; flex: 1;">
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 9px;">
             <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Settlement Mechanics</div>
-            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Payment Settlement Rails for Autonomous Agents</h2>
+            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Payment Settlement Rails and The Execution Gap</h2>
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Empirical Analysis of Virtual Card Failures (Scott Wessman Study).</strong> Many deployed shopping agents utilize single-use virtual credit cards (VCCs). However, empirical investigations by payments engineer Scott Wessman (2025 [1]) demonstrate that virtual cards encounter acute operational failures during multi-item checkouts. When merchants split orders across distribution centers, multiple captures occur against a single authorization token, triggering card declines. Additionally, merchant fraud engines routinely demand dynamic 3D Secure (3DS) SMS verification or CVV re-entry during address recalculation, creating terminal drop-offs for automated workflows.
+            <strong>The Enterprise Execution Gap (Thoughtworks & Stripe Study).</strong> Empirical joint research by Thoughtworks and Stripe (2025-2026 [1]) reveals an acute execution gap across commercial enterprises. While 63% of surveyed business leaders state their organizations are prepared for agent-driven commerce, only 11% are actively executing live agentic checkout integrations. Additionally, only 35% of businesses maintain structured, machine-readable catalogues capable of supporting programmatic agent evaluation, creating an immediate technical bottleneck for autonomous sales.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Development of Domain-Bound Shared Payment Tokens (SPTs).</strong> To resolve virtual card friction, card networks and payment gateways have deployed Shared Payment Tokens (SPTs [2]). Rather than transmitting sensitive 16-digit Primary Account Numbers (PANs), the agent runtime receives a cryptographically restricted token bound to a specific merchant domain, an exact ceiling price, and an expiration timestamp. The merchant processes the token through standard card acquiring rails, ensuring zero exposure of underlying consumer credentials.
+            <strong>Funnel Trust Decay and Token Confidence Lifts.</strong> Consumer willingness to delegate drops sharply across transaction stages. Thoughtworks and Stripe find that 52% of consumers trust AI agents during product research and 41% during item selection, but trust falls to 22% at final checkout due to data privacy concerns [1]. However, deploying single-use Shared Payment Tokens (SPTs) that mask underlying primary account numbers (PANs) increases consumer willingness to complete agent checkouts by 30 percentage points, demonstrating that tokenization directly restores adoption.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Dual-Rail Taxonomy of Machine Payments (nofrontend.xyz Directory).</strong> As cataloged in the nofrontend.xyz directory (2025-2026 [3]), machine payments divide into two distinct structural rails. The first consists of tokenized card networks (Visa TAP, Mastercard Agent Pay) optimized for high-value consumer retail transactions ($10 to $2,000) requiring chargeback protections and return rights. The second consists of autonomous micropayment protocols (x402, Skyfire, Payman) designed for sub-dollar API queries, dynamic compute allocation, and real-time data ingestion.
+            <strong>Empirical Analysis of Virtual Card Failures (Scott Wessman Study).</strong> Many early shopping agents rely on single-use virtual credit cards (VCCs). Payments engineer Scott Wessman (2025 [2]) demonstrates that virtual cards encounter acute operational failures during multi-item checkouts. When merchants split orders across distribution centers, multiple captures occur against a single authorization token, triggering card declines. Additionally, merchant fraud engines routinely demand dynamic 3D Secure (3DS) SMS verification or CVV re-entry during address recalculation, creating terminal drop-offs for automated workflows.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Payment Rail Economic Asymmetries (Vignesh, Meta Infrastructure Analysis).</strong> As payments researcher Vignesh (Meta, 2025 [4]) observes, traditional interchange rails carry 150 to 350 basis points (1.5% to 3.5%) in transaction processing fees along with 30-to-90-day dispute liability windows. While sustainable for retail goods, this structure is economically non-viable for autonomous machine-to-machine micropayments. Stablecoin rails offer transaction costs below $0.005 with deterministic finality, establishing an optimal settlement mechanism for high-frequency algorithmic queries.
+            <strong>Payment Rail Economic Asymmetries (Vignesh, Meta Infrastructure Analysis).</strong> As payments researcher Vignesh (Meta, 2025 [3]) observes, traditional interchange rails carry 150 to 350 basis points (1.5% to 3.5%) in transaction processing fees along with 30-to-90-day dispute liability windows. While sustainable for retail goods, this structure is economically non-viable for autonomous machine-to-machine micropayments. Stablecoin rails offer transaction costs below $0.005 with deterministic finality, establishing an optimal settlement mechanism for high-frequency algorithmic queries.
           </p>
         </div>
 
@@ -734,7 +741,7 @@ export async function generateReport() {
                   <td style="padding: 3px 5px;">&lt; $0.005 Flat Fee</td>
                   <td style="padding: 3px 5px;">Sub-Second Finality</td>
                   <td style="padding: 3px 5px;">Zero / Final</td>
-                  <td style="padding: 3px 5px; font-weight: 600;">Sub-Cent API & Data Querying [3]</td>
+                  <td style="padding: 3px 5px; font-weight: 600;">Sub-Cent API & Data Querying</td>
                 </tr>
                 <tr>
                   <td style="padding: 3px 5px; font-weight: 700;">Corporate Enclaves (Ramp, Brex)</td>
@@ -748,17 +755,17 @@ export async function generateReport() {
 
             <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 6px 9px;">
               <strong>Settlement Takeaway.</strong>
-              Virtual cards bridge legacy web forms but suffer edge-case declines during split shipments [1]. Scalable architectures require native Shared Payment Tokens (SPTs) for consumer goods and x402 micropayments for data feeds [4].
+              While 63% of executives believe their systems are ready, only 11% have live integrations [1]. Shared Payment Tokens (SPTs) eliminate CVV drops and boost consumer checkout confidence by 30 percentage points [1, 2].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources [1] Scott Wessman, Payments Friction Analysis (Oct 2025); [2] Stripe Developer Documentation (2025); [3] nofrontend.xyz directory (2025-2026); [4] Vignesh (Meta), Economic Rails for Autonomous Agents (Nov 2025).
+              Reference Sources [1] Thoughtworks & Stripe, "Agentic Commerce - From Confidence to Execution" (2025-2026); [2] Scott Wessman, Payments Friction Analysis (2025); [3] Vignesh (Meta), Economic Rails for Autonomous Agents (2025); [4] nofrontend.xyz directory.
             </div>
           </div>
         </div>
       </div>
 
-      ${renderFooter("Payment Rails and Token Settlement")}
+      ${renderFooter("Payment Rails and The Execution Gap")}
     </div>
   `);
 
@@ -778,19 +785,19 @@ export async function generateReport() {
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>CMU WebArena Academic Benchmarks (Zhou et al.).</strong> In academic evaluations conducted by Zhou et al. at Carnegie Mellon University (WebArena, 2024 [1]), autonomous language agents achieved an overall task completion rate of 10.6% to 14.4% on realistic web tasks, compared to 78.2% for human baselines. The benchmark highlights the necessity of justified refusal, where an agent correctly stops execution when product specifications do not match or required shipping parameters are unavailable, rather than hallucinating an erroneous checkout.
+            <strong>Visa Agentic Commerce Benchmark Results.</strong> In multi-step automated shopping evaluations conducted under the Visa Agentic Commerce Benchmark (2025-2026 [1]), leading AI models completed 57.2% of standardized retail discovery and checkout runs without human intervention. This left a 42.8% friction and failure rate across real-world web environments. The observed friction concentrated around dynamic DOM modifications, missing price transparency, and checkout form validation failures, confirming that unguided agents struggle on conventional consumer websites.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>VisualWebArena Multimodal Evaluations (Koh et al., ACL 2024).</strong> Expanding upon text-based environments, Koh et al. (CMU and Stanford, ACL 2024 [2]) evaluated multimodal agents on complex web interfaces in VisualWebArena. On e-commerce shopping tasks, baseline multimodal agents attained a 20.0% completion rate. Integrating visual tree-search planning increased success to 38.1%, leaving a 61.9% failure rate on visual interface elements such as dropdown selectors, size matrices, and promotional modal overlays.
+            <strong>CMU WebArena and VisualWebArena Evaluations (ACL 2024).</strong> In rigorous academic testing on live environments, Zhou et al. (CMU WebArena [2]) observed agent completion rates of 10.6% to 14.4%, compared to 78.2% for humans. Koh et al. (CMU and Stanford, ACL 2024 [3]) evaluated multimodal shopping tasks in VisualWebArena, finding baseline success of 20.0%, which improved to 38.1% with visual tree-search planning. Both studies emphasize the necessity of justified refusal, where an agent stops execution rather than hallucinating an erroneous purchase when items are unavailable.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>ACES Benchmark, EComAgentBench, and Tool-Lab Findings.</strong> In the ACES shopping evaluation (Allouah et al., Columbia University, Dec 2025 [3]), agents tested across eight product categories displayed pronounced susceptibility to rank positioning and platform badges. A sponsored label reduced selection probability at a fixed rank, while an "Overall Pick" badge increased it. In EComAgentBench (Du et al., Shopee Research, Sept 2026 [4]), testing 662 long-horizon tasks with distributed hidden needs, Claude Opus 4.6 achieved 57.1% accuracy while GPT-5.4 led in individual requirement satisfaction. In Tool-Lab (Wadi & Ma, Sept 2026 [5]), introducing $10 and $50 simulated tool lookup fees caused agents with vague goals to prematurely truncate search, selecting higher unit-cost items.
+            <strong>ACES Benchmark, EComAgentBench, and Tool-Lab Findings.</strong> In the ACES shopping evaluation (Allouah et al., Columbia University, Dec 2025 [4]), agents tested across eight product categories displayed pronounced susceptibility to rank positioning and platform badges. A sponsored label reduced selection probability at a fixed rank, while an "Overall Pick" badge increased it. In EComAgentBench (Du et al., Shopee Research, Sept 2026 [5]), testing 662 long-horizon tasks with distributed hidden needs, Claude Opus 4.6 achieved 57.1% accuracy while GPT-5.4 led in individual requirement satisfaction. In Tool-Lab (Wadi & Ma, Sept 2026 [6]), introducing $10 and $50 simulated tool lookup fees caused agents with vague goals to prematurely truncate search, selecting higher unit-cost items.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Behavioral Decision Science - Algorithm Aversion and Control.</strong> Experimental studies by Dietvorst, Simmons, and Massey (Wharton, 2015 [6]) document severe algorithm aversion, where consumers avoid algorithms after seeing them err, even when the model outperforms human alternatives. However, follow-up research (Dietvorst et al., Management Science, 2018 [7]) demonstrates that allowing users to modify an agent's forecast or decision by even 2% to 5% substantially eliminates algorithm aversion. Logg, Minson, and Moore (Harvard, 2019 [8]) note baseline algorithm appreciation for objective advice, but this declines when consumers possess strong personal preferences.
+            <strong>Behavioral Decision Science - Algorithm Aversion and Control.</strong> Experimental studies by Dietvorst, Simmons, and Massey (Wharton, 2015 [7]) document severe algorithm aversion, where consumers avoid algorithms after seeing them err, even when the model outperforms human alternatives. However, follow-up research (Dietvorst et al., Management Science, 2018 [8]) demonstrates that allowing users to modify an agent's forecast or decision by even 2% to 5% substantially eliminates algorithm aversion. Logg, Minson, and Moore (Harvard, 2019 [9]) note baseline algorithm appreciation for objective advice, but this declines when consumers possess strong personal preferences.
           </p>
         </div>
 
@@ -840,7 +847,7 @@ export async function generateReport() {
           <div class="exhibit-card" style="padding: 7px 10px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px; flex: 1;">
             <div class="exhibit-header" style="margin-bottom: 4px;">
               <div class="exhibit-title" style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">Exhibit 5.1 - Benchmark Performance Matrix</div>
-              <div class="exhibit-subtitle" style="font-size: 7.2px; color: var(--ink-secondary);">Rigorous empirical evaluations across academic shopping environments</div>
+              <div class="exhibit-subtitle" style="font-size: 7.2px; color: var(--ink-secondary);">Rigorous empirical evaluations across academic shopping environments and industry tests</div>
             </div>
 
             <table style="width: 100%; border-collapse: collapse; font-size: 7.2px; margin-bottom: 4px;">
@@ -849,56 +856,56 @@ export async function generateReport() {
                   <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Benchmark</th>
                   <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Institution / Scope</th>
                   <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Observed Metric</th>
-                  <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Human Baseline</th>
-                  <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Key Finding</th>
+                  <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Baseline Comparison</th>
+                  <th style="padding: 2px 4px; text-align: left; font-weight: 700; color: var(--ink-heading);">Core Finding</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 2px 4px; font-weight: 700;">Visa Agentic Benchmark</td>
+                  <td style="padding: 2px 4px;">Visa Consulting [1]</td>
+                  <td style="padding: 2px 4px;">57.2% Multi-Step Pass</td>
+                  <td style="padding: 2px 4px; font-weight: 700;">42.8% Friction Rate</td>
+                  <td style="padding: 2px 4px;">DOM changes cause failures</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
                   <td style="padding: 2px 4px; font-weight: 700;">WebArena</td>
-                  <td style="padding: 2px 4px;">CMU (Zhou et al.) [1]</td>
+                  <td style="padding: 2px 4px;">CMU (Zhou et al.) [2]</td>
                   <td style="padding: 2px 4px;">10.6% - 14.4% Success</td>
                   <td style="padding: 2px 4px; font-weight: 700;">78.2% Human</td>
                   <td style="padding: 2px 4px;">Justified refusal is essential</td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
                   <td style="padding: 2px 4px; font-weight: 700;">VisualWebArena</td>
-                  <td style="padding: 2px 4px;">CMU / Stanford (ACL 2024) [2]</td>
+                  <td style="padding: 2px 4px;">CMU / Stanford (ACL 2024) [3]</td>
                   <td style="padding: 2px 4px;">20.0% - 38.1% Success</td>
                   <td style="padding: 2px 4px; font-weight: 700;">88.7% Human</td>
                   <td style="padding: 2px 4px;">Tree search aids visual parsing</td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
                   <td style="padding: 2px 4px; font-weight: 700;">ACES Shopping</td>
-                  <td style="padding: 2px 4px;">Columbia (Allouah et al.) [3]</td>
+                  <td style="padding: 2px 4px;">Columbia (Allouah et al.) [4]</td>
                   <td style="padding: 2px 4px;">8 Categories x 8 Items</td>
                   <td style="padding: 2px 4px;">N/A (Synthetic)</td>
                   <td style="padding: 2px 4px;">Rank & badge bias observed</td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
+                <tr>
                   <td style="padding: 2px 4px; font-weight: 700;">EComAgentBench</td>
-                  <td style="padding: 2px 4px;">Shopee (Du et al.) [4]</td>
+                  <td style="padding: 2px 4px;">Shopee (Du et al.) [5]</td>
                   <td style="padding: 2px 4px;">57.1% (Claude Opus 4.6)</td>
                   <td style="padding: 2px 4px;">N/A (Multi-Turn)</td>
                   <td style="padding: 2px 4px;">Hidden profile needs neglected</td>
-                </tr>
-                <tr>
-                  <td style="padding: 2px 4px; font-weight: 700;">Tool-Lab</td>
-                  <td style="padding: 2px 4px;">Wadi & Ma (2026) [5]</td>
-                  <td style="padding: 2px 4px;">$10 / $50 Tool Fees</td>
-                  <td style="padding: 2px 4px;">N/A (Cost Model)</td>
-                  <td style="padding: 2px 4px;">Cost truncates agent search</td>
                 </tr>
               </tbody>
             </table>
 
             <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 4px 8px; font-size: 7px;">
               <strong>Engineering Takeaway.</strong>
-              Production deployments must enforce deterministic validation, including sub-50ms stock checks, parameter boundaries, and user confirmation thresholds to prevent catastrophic edge-case drift [7].
+              Production deployments must enforce deterministic validation, including sub-50ms stock checks, parameter boundaries, and user confirmation thresholds to prevent catastrophic edge-case drift [8].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 3px;">
-              Reference Sources [1] Zhou et al., WebArena (CMU); [2] Koh et al., VisualWebArena (ACL 2024); [3] Allouah et al., ACES (Columbia Univ); [4] Du et al., EComAgentBench (Shopee); [5] Tool-Lab; [6] Dietvorst et al. (Wharton, 2015); [7] Dietvorst et al. (Management Science, 2018); [8] Logg et al. (Harvard, 2019).
+              Reference Sources [1] Visa Consulting & Analytics (2026); [2] Zhou et al., WebArena (CMU); [3] Koh et al., VisualWebArena (ACL 2024); [4] Allouah et al., ACES (Columbia Univ); [5] Du et al., EComAgentBench (Shopee); [6] Tool-Lab; [7] Dietvorst et al. (Wharton, 2015); [8] Dietvorst et al. (Management Science, 2018); [9] Logg et al. (Harvard, 2019).
             </div>
           </div>
         </div>
@@ -924,15 +931,15 @@ export async function generateReport() {
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>The Scale of Automated Web Traffic (Imperva Threat Research).</strong> According to the Imperva Bad Bot Report (2024-2025 [1]), automated traffic accounts for 49.6% of total internet traffic. Within this automated volume, 32.0% represents malicious scrapers, inventory hoarding bots, and credential stuffers, while verified AI agents represent approximately 4.8%. Merchants must establish technical mechanisms to distinguish legitimate buyer agents from predatory scrapers without degrading performance or triggering destructive CAPTCHAs that break autonomous flows.
+            <strong>Surging Machine Referral Traffic (Visa Data).</strong> Analysis by Visa Acceptance Solutions (2025-2026 [1]) records a 1,200% surge in traffic referred directly from generative AI applications to merchant websites. Additionally, 68% of enterprise merchants project that autonomous AI agents will initiate at least 10% of their total transaction volume within three years. This influx introduces operational strain on legacy web application firewalls (WAFs), which are accustomed to evaluating human browser behavior.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Adversarial Vulnerabilities and Prompt Injection (AgentDojo Benchmark).</strong> Security evaluations in the AgentDojo benchmark (Debenedetti et al., 2024-2025 [2]) examine 629 security scenarios across 97 distinct user tasks. Testing indicates that adversarial prompt injections embedded within third-party content can divert agent execution toward unauthorized actions or data exfiltration. The study emphasizes that security requires joint reporting of user task completion without attack alongside success rates under adversarial conditions.
+            <strong>The Scale of Automated Web Traffic (Imperva Threat Research).</strong> According to the Imperva Bad Bot Report (2024-2025 [2]), automated traffic accounts for 49.6% of total internet traffic. Within this automated volume, 32.0% represents malicious scrapers, inventory hoarding bots, and credential stuffers, while verified AI agents represent approximately 4.8%. Merchants must establish technical mechanisms to distinguish legitimate buyer agents from predatory scrapers without degrading performance or triggering destructive CAPTCHAs that break autonomous flows.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Merchant Catalog Injection Vulnerabilities (Whispers of Wealth Study).</strong> The Whispers of Wealth study [3] tested AP2-style agents (Gemini-2.5-Flash) against indirect prompt injections embedded in merchant product descriptions. Across 10 repeated trials, an adversarial description successfully redirected the agent to select the attacker's product in all 10 cases, with the authors judging that six runs violated explicit user constraints. In two runs, synthetic cross-account credential leakage occurred, demonstrating that unverified third-party catalog data poses concrete operational risks.
+            <strong>Adversarial Vulnerabilities and Prompt Injection (AgentDojo & Whispers).</strong> Security evaluations in the AgentDojo benchmark (Debenedetti et al. [3]) examine 629 security scenarios across 97 tasks, demonstrating that prompt injections divert agents toward unauthorized tool calls or credential leakage. In the Whispers of Wealth study [4], AP2-style agents (Gemini-2.5-Flash) were tested against indirect prompt injections embedded in merchant product descriptions. In 10 out of 10 repeated trials, an adversarial description successfully redirected the agent to select the attacker's product, illustrating that unverified third-party catalog data presents tangible transaction risks.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -997,7 +1004,7 @@ export async function generateReport() {
                 <tr style="border-bottom: 1px solid var(--border-subtle);">
                   <td style="padding: 3px 5px; font-weight: 700;">Prompt Injection</td>
                   <td style="padding: 3px 5px;">Input sanitization / WAF</td>
-                  <td style="padding: 3px 5px;">Catalog descriptions alter goals [2]</td>
+                  <td style="padding: 3px 5px;">Catalog descriptions alter goals [3]</td>
                   <td style="padding: 3px 5px; font-weight: 600;">Deterministic JSON schema bounds</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
@@ -1016,7 +1023,7 @@ export async function generateReport() {
                   <td style="padding: 3px 5px; font-weight: 700;">Card Spinning</td>
                   <td style="padding: 3px 5px;">Velocity rules on PANs</td>
                   <td style="padding: 3px 5px;">Single-use VCCs trigger false fraud</td>
-                  <td style="padding: 3px 5px; font-weight: 600;">Visa TAP RFC 9421 signatures [4]</td>
+                  <td style="padding: 3px 5px; font-weight: 600;">Visa TAP RFC 9421 signatures</td>
                 </tr>
                 <tr>
                   <td style="padding: 3px 5px; font-weight: 700;">Price Scraping</td>
@@ -1029,11 +1036,11 @@ export async function generateReport() {
 
             <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 6px 9px;">
               <strong>Security Takeaway.</strong>
-              Distinguishing legitimate AI buyers from malicious scraping bots requires moving beyond IP reputation toward cryptographic request signing under RFC 9421 and FIDO2 hardware attestation [4].
+              Distinguishing legitimate AI buyers from malicious scraping bots requires moving beyond IP reputation toward cryptographic request signing under RFC 9421 and FIDO2 hardware attestation [1, 2].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources [1] Imperva Threat Research, Bad Bot Report (2024-2025); [2] Debenedetti et al., AgentDojo (2024-2025); [3] Whispers of Wealth Study (2025); [4] Visa Research Technical Whitepaper (2025); [5] IETF RFC 9421 (2024).
+              Reference Sources [1] Visa Acceptance Solutions (2025-2026); [2] Imperva Threat Research, Bad Bot Report (2024-2025); [3] Debenedetti et al., AgentDojo; [4] Whispers of Wealth Study; [5] IETF RFC 9421.
             </div>
           </div>
         </div>
@@ -1044,18 +1051,18 @@ export async function generateReport() {
   `);
 
   // ==========================================
-  // SPREAD 8: CATALOGS AND AEO
+  // SPREAD 8: CATALOGS AND ACO
   // ==========================================
   spreads.push(`
     <div class="spread">
-      ${renderHeader("MERCHANT READINESS", "CATALOG ARCHITECTURE AND AEO", "08")}
+      ${renderHeader("MERCHANT READINESS", "CATALOG ARCHITECTURE AND ACO", "08")}
 
       <div class="report-content" style="display: flex; gap: 28px; flex: 1;">
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 9px;">
             <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Catalog Optimization</div>
-            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Architecting Product Catalogs for Agent Discovery</h2>
+            <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Agentic Commerce Optimization and Catalog Engineering</h2>
           </div>
 
           <p class="report-p" style="margin-bottom: 7px;">
@@ -1063,15 +1070,15 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
+            <strong>The Three-Layer ACO Framework (Semrush & BCG Analysis).</strong> In its analysis of Agentic Commerce Optimization (ACO), Semrush (2026 [2]) outlines a three-layer technical framework. Layer 1 guarantees crawler accessibility by preventing over-aggressive bot firewalls from blocking legitimate assistant IP ranges. Layer 2 standardizes product attribute normalization, ensuring that field names (such as dimensions, weight, and battery life) align with structured feeds. Layer 3 integrates protocol checkout execution. BCG research [3] indicates that 59% of US consumer brands currently lack meaningful agentic capabilities, leaving early adopters an open window to gain algorithmic market share.
+          </p>
+
+          <p class="report-p" style="margin-bottom: 7px;">
             <strong>Structured Metadata Specifications (Schema.org JSON-LD).</strong> Autonomous agents depend on deterministic metadata rather than subjective advertising copy. Retailers must structure product catalogs using Schema.org JSON-LD, providing explicit fields for price, priceCurrency, availability, itemCondition, hasMerchantReturnPolicy, and shippingDetails. Sites lacking machine-readable schemas force agents to infer specifications through language models, resulting in hallucinated prices and elevated checkout abandonment.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Ursu Position Bias Field Evidence (Chicago Booth).</strong> In econometric field research analyzing consumer search on randomized result rankings, R. M. Ursu (University of Chicago Booth School of Business, 2016 [2]) found that higher search rank strongly drives initial clicks and consideration. However, conditional on an item receiving a click, position rank exhibited no detectable direct effect on eventual booking conversion. For agentic commerce, this indicates that appearing in an agent's consideration set is required for discovery, but final conversion is determined by deterministic product attributes (price, delivery time, return terms).
-          </p>
-
-          <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Agent Engine Optimization (AEO) Core Ranking Factors.</strong> As consumer product discovery transitions from traditional search engines to conversational agents, search engine optimization (SEO) evolves into Agent Engine Optimization (AEO). Key ranking factors in agent synthesis include structured metadata completeness, inventory query latency (<50ms p95), verified review sentiment, and programmatic return policies. Merchants meeting these requirements secure higher placement in agent-generated comparison sets.
+            <strong>Ursu Position Bias Field Evidence (Chicago Booth).</strong> In econometric field research analyzing consumer search on randomized result rankings, R. M. Ursu (University of Chicago Booth School of Business, 2016 [4]) found that higher search rank strongly drives initial clicks and consideration. However, conditional on an item receiving a click, position rank exhibited no detectable direct effect on eventual booking conversion. For agentic commerce, this indicates that appearing in an agent's consideration set is required for discovery, but final conversion is determined by deterministic product attributes (price, delivery time, return terms).
           </p>
         </div>
 
@@ -1080,7 +1087,7 @@ export async function generateReport() {
           <!-- Top SVG: AEO Discovery Weights -->
           <div class="exhibit-card" style="padding: 9px 12px; background: var(--paper-card); border: 1px solid var(--border); border-radius: 4px;">
             <div class="exhibit-header" style="margin-bottom: 5px;">
-              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">FIGURE 7.1 - AEO DISCOVERY WEIGHTS VS. TRADITIONAL SEO</div>
+              <div class="exhibit-title" style="font-size: 9px; font-weight: 700; color: var(--ink-heading); text-transform: uppercase; letter-spacing: 0.04em;">FIGURE 7.1 - ACO DISCOVERY WEIGHTS VS. TRADITIONAL SEO</div>
               <div class="exhibit-subtitle" style="font-size: 7.8px; color: var(--ink-secondary);">Algorithmic ranking factors prioritized by LLM purchasing agents during product selection</div>
             </div>
 
@@ -1143,7 +1150,7 @@ export async function generateReport() {
                   <td style="padding: 2.5px 5px; font-weight: 700;">Structured Metadata</td>
                   <td style="padding: 2.5px 5px;">Schema.org JSON-LD Expansion</td>
                   <td style="padding: 2.5px 5px; font-weight: 700; color: #18181b;">23.44% (23,436)</td>
-                  <td style="padding: 2.5px 5px; color: #18181b; font-weight: 600;">High Impact for AEO</td>
+                  <td style="padding: 2.5px 5px; color: #18181b; font-weight: 600;">High Impact for ACO</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
                   <td style="padding: 2.5px 5px; font-weight: 700;">Dedicated Agent Guidance</td>
@@ -1172,7 +1179,7 @@ export async function generateReport() {
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources [1] V. R. Vatsa, "Web Access and Agent Interfaces - A 100,000 Domain Study", Tranco Sample, Zenodo record 24121071 (2026); [2] R. M. Ursu, Chicago Booth (2016); [3] Schema.org Working Group; [4] Shopify Engineering (2025).
+              Reference Sources [1] V. R. Vatsa, "Web Access and Agent Interfaces - A 100,000 Domain Study", Tranco Sample, Zenodo record 24121071 (2026); [2] Semrush Research, "Agentic Commerce Optimization" (2026); [3] Boston Consulting Group (2026); [4] R. M. Ursu, Chicago Booth (2016).
             </div>
           </div>
         </div>
@@ -1202,15 +1209,15 @@ export async function generateReport() {
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Consumer Intent Aggregation Moats (OpenAI, Google, Apple).</strong> Front-end conversational platforms possess substantial distribution advantages in intent capture. By operating the direct user interface and managing contextual memory, these platforms capture the initial point of consumer demand. Their strategic challenge centers on executing accurate checkouts without assuming merchant fulfillment or inventory liabilities.
+            <strong>Supply Chain Transformation to the Demand of One (Accenture).</strong> In its strategic assessment, Accenture Strategy (FY26 [1]) observes that agent-mediated commerce dismantles conventional aggregate demand forecasting. Autonomous agents trigger purchasing actions based on immediate, unit-level consumption triggers (termed the "Demand of One"). Merchants whose supply chains depend on batch replenishment cycles face inventory stockouts or costly emergency air freight when AI agents coordinate simultaneous reorders.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Infrastructure Defensibility of Payment Processors (Stripe, Adyen).</strong> While conversational frontends control user interaction, payment infrastructure providers (Stripe, Adyen) maintain durable competitive moats. Processors control merchant acquiring relationships, fraud prevention models, payment rail licenses, and complex tax compliance across global jurisdictions. Replicating this regulatory and operational infrastructure presents high barriers to entry for software aggregators.
+            <strong>Revenue Expansion from Owned Agents (BCG Analysis).</strong> While middle-tier resellers face margin pressure, Boston Consulting Group (2026 [2]) finds that enterprise brands establishing early agentic capabilities generate substantial top-line gains. Brands optimizing product detail pages for Generative Engine Optimization (GEO) record a 1% to 5% incremental revenue increase. Organizations deploying owned, first-party AI shopping agents integrated directly with their catalog backends report a 3% to 10% revenue lift.
           </p>
 
           <p class="report-p" style="margin-bottom: 7px;">
-            <strong>Retailer and Marketplace Defensibility (Amazon, Shopify).</strong> E-commerce incumbents defend market share through physical logistics, proprietary inventory, and established customer trust. Amazon's fulfillment infrastructure and Prime delivery speeds create defensible moats that pure software agents cannot bypass. Retailers utilizing Shopify or commercetools can maintain direct customer relationships by publishing structured API endpoints, preventing intermediaries from commoditizing their brand equity.
+            <strong>Infrastructure Defensibility and Logistics Moats (Stripe, Amazon).</strong> As documented by Morgan Stanley and Goldman Sachs [3], value concentrates at two distinct poles. Front-end conversational providers (OpenAI, Google) control consumer intent, while physical fulfillment networks (Amazon, Walmart) control physical inventory and same-day delivery. Payment infrastructure providers (Stripe, Adyen) maintain durable moats through global acquiring licenses, anti-money-laundering (AML) compliance, and tax settlement capabilities that software aggregators cannot easily replicate.
           </p>
         </div>
 
@@ -1280,7 +1287,7 @@ export async function generateReport() {
                   <td style="padding: 3px 5px; font-weight: 700;">Front-End AI Assistants</td>
                   <td style="padding: 3px 5px;">User Context & Prompts</td>
                   <td style="padding: 3px 5px;">Lack merchant trust & rails</td>
-                  <td style="padding: 3px 5px; font-weight: 600;">Partner with Stripe/Adyen [1]</td>
+                  <td style="padding: 3px 5px; font-weight: 600;">Partner with Stripe/Adyen</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-subtle); background: var(--paper-subtle);">
                   <td style="padding: 3px 5px; font-weight: 700;">Payment Processors</td>
@@ -1304,18 +1311,18 @@ export async function generateReport() {
                   <td style="padding: 3px 5px; font-weight: 700;">Independent Brands</td>
                   <td style="padding: 3px 5px;">Proprietary Product IP</td>
                   <td style="padding: 3px 5px;">Price commoditization risk</td>
-                  <td style="padding: 3px 5px; font-weight: 600;">Expose structured JSON-LD feeds</td>
+                  <td style="padding: 3px 5px; font-weight: 600;">Expose structured JSON-LD feeds [2]</td>
                 </tr>
               </tbody>
             </table>
 
             <div class="exhibit-analysis-box" style="margin-top: 3px; padding: 6px 9px;">
               <strong>Strategic Takeaway.</strong>
-              Value migrates toward the two ends of the transaction stack, specifically front-end intent aggregators holding user context, and physical logistics networks fulfilling verified deliveries. Middle-tier resellers without proprietary data face severe margin compression.
+              Value migrates toward the two ends of the transaction stack, specifically front-end intent aggregators holding user context, and physical logistics networks fulfilling verified deliveries. Middle-tier resellers face severe margin compression [1, 2].
             </div>
 
             <div class="exhibit-source-note" style="margin-top: 4px;">
-              Reference Sources Morgan Stanley Equity Research (2025); Goldman Sachs Global Payments Analysis (2025); CB Insights Big Tech Strategy Report (2025-2026).
+              Reference Sources [1] Accenture Strategy (FY26); [2] Boston Consulting Group (2026); [3] Morgan Stanley Equity Research; [4] Goldman Sachs Global Payments Analysis.
             </div>
           </div>
         </div>
