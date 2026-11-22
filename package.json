@@ -6,6 +6,7 @@
   "scripts": {
     "build:mckinsey": "node bvod-engine/cli.mjs render reports/agentic-commerce-bvod/report.mjs --output reports/agentic-commerce-bvod/The_Business_Value_of_Agentic_Commerce.pdf --preview",
     "build:notion": "node reports/agentic-commerce-notion/report.mjs",
+    "build:handbook": "node reports/agentic-commerce-handbook/report.mjs",
     "build:bvod": "npm run build:mckinsey",
     "new:mckinsey": "node bvod-engine/cli.mjs new",
     "new:notion": "node styles/notion/notion-cli.mjs new",
