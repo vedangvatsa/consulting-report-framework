@@ -39,6 +39,11 @@ const __dirname = path.dirname(__filename);
 export async function generateReport() {
   const spreads = [];
 
+  const coverIllustrationPath = path.resolve(__dirname, '../../assets/illustrations/agentic-commerce-cover.jpg');
+  const coverIllustrationBase64 = fs.existsSync(coverIllustrationPath)
+    ? fs.readFileSync(coverIllustrationPath).toString('base64')
+    : '';
+
   const renderHeader = (category, title, pageNum) => `
     <div class="report-header" style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid var(--ink-heading); padding-bottom: 6px; margin-bottom: 10px;">
       <div style="display: flex; gap: 8px; align-items: baseline;">
@@ -72,24 +77,24 @@ export async function generateReport() {
           <p style="font-size: 14.5px; line-height: 1.5; color: var(--ink-secondary); font-weight: 400; max-width: 520px; margin-bottom: 24px;">
             An Executive Assessment of Autonomous Checkout Infrastructure, Protocol Specifications, and Merchant Deployment Strategies
           </p>
-          <div style="width: 48px; height: 2px; background: var(--ink-heading);"></div>
+          <div style="display: flex; gap: 24px; padding-top: 12px;">
+            <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
+              <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">$1.5T BY 2030</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">Transactions influenced by machine agents</div>
+            </div>
+            <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
+              <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">7-LAYER STACK</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">From discovery protocols to settlement rails</div>
+            </div>
+            <div style="border-left: 2px solid var(--ink-heading); padding-left: 12px;">
+              <div style="font-size: 15px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">57.2% BENCHMARK</div>
+              <div style="font-size: 8.5px; color: var(--ink-secondary); margin-top: 2px;">Task completion on web evaluations</div>
+            </div>
+          </div>
         </div>
 
-        <div style="flex: 0.95; border: 1px solid var(--border); padding: 22px; background: var(--paper-card); border-radius: 4px;">
-          <div style="font-size: 8.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-heading); margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px;">
-            Report Structure & Coverage
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 8px; color: var(--ink-secondary);">
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">02</span><span>Economics, Search Theory and The Agentic Consumer</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">03</span><span>7-Layer Technical Stack and 5-Tier Market Map</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">04</span><span>Commerce Protocols and Standards (ACP, UCP, AP2)</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">05</span><span>Payment Settlement Rails and The Execution Gap</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">06</span><span>Accuracy Benchmarks and Behavioral Decision Science</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">07</span><span>Fraud Defense, Bot Classification and Security</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">08</span><span>Catalog Engineering, ACO and 100,000 Domain Study</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">09</span><span>Strategic Ecosystem Dynamics and Platform Moats</span></div>
-            <div style="display: flex; justify-content: space-between;"><span style="color: var(--ink); font-weight: 600;">10</span><span>18-Month Enterprise Roadmap and Legal Governance</span></div>
-          </div>
+        <div style="flex: 0.95; display: flex; justify-content: center; align-items: center;">
+          <img src="data:image/jpeg;base64,${coverIllustrationBase64}" style="max-width: 100%; max-height: 380px; object-fit: contain; mix-blend-mode: multiply;" alt="Agentic Commerce Cover Art" />
         </div>
       </div>
 
