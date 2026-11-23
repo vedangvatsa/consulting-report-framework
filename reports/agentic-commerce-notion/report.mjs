@@ -44,23 +44,22 @@ export async function generateReport() {
     ? fs.readFileSync(coverIllustrationPath).toString('base64')
     : '';
 
-  const renderHeader = (category, title, pageNum) => `
+  const renderHeader = (category, title, pageNum) => {
+    const pageNumber = pageNum !== undefined ? pageNum : title;
+    return `
     <div class="report-header" style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid var(--ink-heading); padding-bottom: 6px; margin-bottom: 10px;">
-      <div style="display: flex; gap: 8px; align-items: baseline;">
-        <span style="font-size: 8.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--ink-heading); text-transform: uppercase;">${category}</span>
-        <span style="font-size: 8.5px; color: var(--border); font-weight: 300;">|</span>
-        <span style="font-size: 8.5px; color: var(--ink-secondary); font-weight: 600;">${title}</span>
-      </div>
+      <span style="font-size: 8.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--ink-heading); text-transform: uppercase;">${category}</span>
       <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); font-feature-settings: 'tnum';">
-        ${pageNum} / 10
+        ${pageNumber} / 10
       </div>
     </div>
   `;
+  };
 
   const renderFooter = (sourceText) => `
     <div class="report-footer" style="margin-top: auto; padding-top: 6px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 7.2px; color: var(--ink-secondary);">
       <span>${sourceText}</span>
-      <span>Executive Research Briefing</span>
+      <span>Hashtag Web3</span>
     </div>
   `;
 
@@ -118,7 +117,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Macro Foundation</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Economics of Autonomous Purchasing and Delegation</h2>
           </div>
 
@@ -282,7 +280,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (44%) -->
         <div style="flex: 1.05; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Stack Specification</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">The 7 Layers of Autonomous Commerce Architecture</h2>
           </div>
 
@@ -460,7 +457,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Protocol Standards</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Open Protocol Specifications and Agent Handshakes</h2>
           </div>
 
@@ -618,7 +614,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Settlement Mechanics</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Payment Settlement Rails and The Execution Gap</h2>
           </div>
 
@@ -800,7 +795,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Empirical Evaluations</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Agent Accuracy Benchmarks and Decision Science</h2>
           </div>
 
@@ -944,7 +938,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Risk Architecture</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Security Frameworks for Machine-Initiated Traffic</h2>
           </div>
 
@@ -1100,7 +1093,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Catalog Optimization</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Agentic Commerce Optimization and Catalog Engineering</h2>
           </div>
 
@@ -1244,7 +1236,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Ecosystem Context</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">Strategic Ecosystem Dynamics and Platform Moats</h2>
           </div>
 
@@ -1395,7 +1386,6 @@ export async function generateReport() {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Action Program</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em;">18-Month Enterprise Implementation Roadmap</h2>
           </div>
 
