@@ -7,7 +7,6 @@ export function getSpread04(renderHeader, renderFooter) {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Behavioral Foundations</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em; margin-bottom: 4px;">Consumer Delegation Thresholds and Regret Risk Dynamics</h2>
             <div style="font-size: 9.8px; line-height: 1.45; font-weight: 500; color: var(--ink); margin-bottom: 4px;">
               An empirical analysis of consumer delegation willingness, regret risk thresholds, and generational adoption curves across retail product categories.

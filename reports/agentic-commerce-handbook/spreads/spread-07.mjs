@@ -7,7 +7,6 @@ export function getSpread07(renderHeader, renderFooter) {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Protocol Specifications</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em; margin-bottom: 4px;">Comparative Architecture of Core Agent Protocols</h2>
             <div style="font-size: 9.8px; line-height: 1.45; font-weight: 500; color: var(--ink); margin-bottom: 4px;">
               A structural evaluation of four protocols standardizing machine discovery, tool execution, checkout orchestration, and cryptographic settlement.

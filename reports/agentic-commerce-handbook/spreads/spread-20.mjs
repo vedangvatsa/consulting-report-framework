@@ -7,7 +7,6 @@ export function getSpread20(renderHeader, renderFooter) {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Action Program</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em; margin-bottom: 4px;">18-Month Enterprise Implementation Roadmap</h2>
             <div style="font-size: 9.8px; line-height: 1.45; font-weight: 500; color: var(--ink); margin-bottom: 4px;">
               An 18-month execution roadmap across catalog optimization, tokenized checkout, autonomous replenishment, and boardroom governance.

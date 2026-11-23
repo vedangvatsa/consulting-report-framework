@@ -7,7 +7,6 @@ export function getSpread15(renderHeader, renderFooter) {
         <!-- Left Column: Narrative (48%) -->
         <div style="flex: 1.15; display: flex; flex-direction: column;">
           <div style="margin-bottom: 8px;">
-            <div class="section-kicker" style="font-size: 8px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 2px;">Empirical Findings</div>
             <h2 style="font-size: 17px; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.02em; margin-bottom: 4px;">The 100,000 Domain Web Measurement Dataset (Zenodo 24121071)</h2>
             <div style="font-size: 9.8px; line-height: 1.45; font-weight: 500; color: var(--ink); margin-bottom: 4px;">
               A technical audit of 100,000 domains sampled from the Tranco ranking evaluating server rendering, Schema.org entities, llms.txt, and MCP endpoints.

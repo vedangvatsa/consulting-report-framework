@@ -15,9 +15,6 @@ export function getSpread01() {
     <div class="spread cover-spread" style="padding: 24mm 24mm 16mm 24mm; justify-content: space-between;">
       <div style="display: flex; gap: 40px; align-items: center; margin: auto 0;">
         <div style="flex: 1.25;">
-          <div style="font-size: 9px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 12px;">
-            Comprehensive Industry Handbook
-          </div>
           <h1 style="font-size: 44px; line-height: 1.12; font-weight: 800; color: var(--ink-heading); letter-spacing: -0.03em; margin-bottom: 16px;">
             The Business Value of<br/>Agentic Commerce
           </h1>
@@ -50,10 +47,6 @@ export function getSpread01() {
         <div>
           <div style="font-size: 10.5px; font-weight: 700; color: var(--ink-heading);">Vedang Ratan Vatsa</div>
           <div style="font-size: 8.8px; color: var(--ink-secondary); margin-top: 2px;">Founder, Hashtag Web3</div>
-        </div>
-        <div style="text-align: right;">
-          <div style="font-size: 8.8px; font-weight: 600; color: var(--ink-heading);">20-Page Comprehensive Edition</div>
-          <div style="font-size: 8px; color: var(--ink-secondary); margin-top: 2px;">Research and Technical Specifications</div>
         </div>
       </div>
     </div>

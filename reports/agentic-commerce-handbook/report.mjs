@@ -56,23 +56,22 @@ const __dirname = path.dirname(__filename);
 export async function generateReport() {
   const spreads = [];
 
-  const renderHeader = (category, title, pageNum) => `
+  const renderHeader = (category, title, pageNum) => {
+    const pageNumber = pageNum !== undefined ? pageNum : title;
+    return `
     <div class="report-header" style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid var(--ink-heading); padding-bottom: 6px; margin-bottom: 10px;">
-      <div style="display: flex; gap: 8px; align-items: baseline;">
-        <span style="font-size: 8.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--ink-heading); text-transform: uppercase;">${category}</span>
-        <span style="font-size: 8.5px; color: var(--border); font-weight: 300;">|</span>
-        <span style="font-size: 8.5px; color: var(--ink-secondary); font-weight: 600;">${title}</span>
-      </div>
+      <span style="font-size: 8.5px; font-weight: 800; letter-spacing: 0.1em; color: var(--ink-heading); text-transform: uppercase;">${category}</span>
       <div style="font-size: 8.5px; font-weight: 700; color: var(--ink-heading); font-feature-settings: 'tnum';">
-        ${pageNum} / 20
+        ${pageNumber} / 20
       </div>
     </div>
   `;
+  };
 
   const renderFooter = (sourceText) => `
     <div class="report-footer" style="margin-top: auto; padding-top: 6px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 7.2px; color: var(--ink-secondary);">
       <span>${sourceText}</span>
-      <span>Comprehensive Industry Handbook</span>
+      <span>Hashtag Web3</span>
     </div>
   `;
 
